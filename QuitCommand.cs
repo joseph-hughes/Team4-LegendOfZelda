@@ -1,9 +1,9 @@
-﻿namespace Sprint0
+﻿namespace Team4_LegendOfZelda
 {
     public class QuitCommand : ICommand
     {
-        public SpritesGame ThisGame { get; set; }
-        public QuitCommand(SpritesGame thisGame)
+        public LegendOfZelda ThisGame { get; set; }
+        public QuitCommand(LegendOfZelda thisGame)
         {
             ThisGame = thisGame;
         }

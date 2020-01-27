@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Sprint0
+namespace Team4_LegendOfZelda
 {
 #if WINDOWS || LINUX
     /// <summary>
@@ -14,7 +14,7 @@ namespace Sprint0
         [STAThread]
         static void Main()
         {
-            using (var game = new SpritesGame())
+            using (var game = new LegendOfZelda())
                 game.Run();
         }
     }

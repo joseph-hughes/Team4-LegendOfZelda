@@ -3,12 +3,12 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 
-namespace Sprint0
+namespace Team4_LegendOfZelda
 {
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class SpritesGame : Game
+    public class LegendOfZelda : Game
     {
         private ISprite sprite;
         private ISprite credits;
@@ -20,7 +20,7 @@ namespace Sprint0
         private List<ICommand> commandList;
         private Color backgroundColor;
 
-        public SpritesGame()
+        public LegendOfZelda()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -116,7 +116,7 @@ namespace Sprint0
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            foreach(IController controller in controllerList)
+            foreach (IController controller in controllerList)
             {
                 controller.Update();
             }

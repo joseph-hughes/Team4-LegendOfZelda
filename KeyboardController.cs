@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 
-namespace Sprint0
+namespace Team4_LegendOfZelda
 {
     public class KeyboardController : IController
     {

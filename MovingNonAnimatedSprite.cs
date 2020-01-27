@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
-namespace Sprint0
+namespace Team4_LegendOfZelda
 {
     public class MovingNonAnimatedSprite : ISprite
     {

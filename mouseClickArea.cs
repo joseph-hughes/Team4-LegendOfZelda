@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-namespace Sprint0
+namespace Team4_LegendOfZelda
 {
     internal class MouseClickArea : object
     {

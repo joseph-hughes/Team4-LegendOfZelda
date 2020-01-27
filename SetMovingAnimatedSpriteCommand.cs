@@ -2,12 +2,12 @@
 using Microsoft.Xna.Framework.Graphics;
 
 
-namespace Sprint0
+namespace Team4_LegendOfZelda
 {
     public class SetMovingAnimatedSpriteCommand : ICommand
     {
-        public SpritesGame ThisGame { get; set; }
-        public SetMovingAnimatedSpriteCommand(SpritesGame thisGame)
+        public LegendOfZelda ThisGame { get; set; }
+        public SetMovingAnimatedSpriteCommand(LegendOfZelda thisGame)
         {
             ThisGame = thisGame;
         }

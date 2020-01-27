@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 
-namespace Sprint0
+namespace Team4_LegendOfZelda
 {
     public interface ISprite
     {
