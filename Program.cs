@@ -2,7 +2,6 @@
 
 namespace Team4_LegendOfZelda
 {
-#if WINDOWS || LINUX
     /// <summary>
     /// The main class.
     /// </summary>
@@ -18,5 +17,4 @@ namespace Team4_LegendOfZelda
                 game.Run();
         }
     }
-#endif
 }
