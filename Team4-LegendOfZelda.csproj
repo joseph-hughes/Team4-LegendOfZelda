@@ -7,7 +7,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{3317C457-F573-4FDB-8710-686FF90FE284}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Team4_LegendOfZelda</RootNamespace>
     <AssemblyName>Team4-LegendOfZelda</AssemblyName>
@@ -46,8 +46,25 @@
     <StartupObject>Team4_LegendOfZelda.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Game1.cs" />
+    <Compile Include="ICommand.cs" />
+    <Compile Include="IController.cs" />
+    <Compile Include="ISprite.cs" />
+    <Compile Include="KeyboardController.cs" />
+    <Compile Include="mouseClickArea.cs" />
+    <Compile Include="MouseController.cs" />
+    <Compile Include="MovingAnimatedSprite.cs" />
+    <Compile Include="MovingNonAnimatedSprite.cs" />
+    <Compile Include="NonMovingAnimatedSprite.cs" />
+    <Compile Include="NonMovingNonAnimatedSprite.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuitCommand.cs" />
+    <Compile Include="SetMovingAnimatedSpriteCommand.cs" />
+    <Compile Include="SetMovingNonAnimatedSpriteCommand.cs" />
+    <Compile Include="SetNonMovingAnimatedSpriteCommand.cs" />
+    <Compile Include="SetNonMovingNonAnimatedSpriteCommand.cs" />
+    <Compile Include="TextSprite.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
