@@ -82,7 +82,7 @@ namespace Team4_LegendOfZelda
             mouse.RegisterCommand(leftButtonPressed, quadrant3, commandList[3]);
             mouse.RegisterCommand(leftButtonPressed, quadrant4, commandList[4]);
 
-            Window.Title = "Sprint0 - Joseph Hughes.1792";
+            Window.Title = "Sprint2 - Team 4";
             backgroundColor = Color.SteelBlue;
             commandList[1].Execute();
         }
