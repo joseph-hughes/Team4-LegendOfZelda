@@ -50,21 +50,19 @@
     <Compile Include="ICommand.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="ISprite.cs" />
-    <Compile Include="KeyboardController.cs" />
-    <Compile Include="mouseClickArea.cs" />
-    <Compile Include="MouseController.cs" />
-    <Compile Include="Sprite Classes\MovingAnimatedSprite.cs" />
-    <Compile Include="Sprite Classes\MovingNonAnimatedSprite.cs" />
-    <Compile Include="Sprite Classes\NonMovingAnimatedSprite.cs" />
-    <Compile Include="Sprite Classes\NonMovingNonAnimatedSprite.cs" />
+    <Compile Include="IController Classes\KeyboardController.cs" />
+    <Compile Include="ISprite Classes\MovingAnimatedSprite.cs" />
+    <Compile Include="ISprite Classes\MovingNonAnimatedSprite.cs" />
+    <Compile Include="ISprite Classes\NonMovingAnimatedSprite.cs" />
+    <Compile Include="ISprite Classes\NonMovingNonAnimatedSprite.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuitCommand.cs" />
-    <Compile Include="SetMovingAnimatedSpriteCommand.cs" />
-    <Compile Include="SetMovingNonAnimatedSpriteCommand.cs" />
-    <Compile Include="SetNonMovingAnimatedSpriteCommand.cs" />
-    <Compile Include="SetNonMovingNonAnimatedSpriteCommand.cs" />
-    <Compile Include="TextSprite.cs" />
+    <Compile Include="ICommand Classes\QuitCommand.cs" />
+    <Compile Include="ICommand Classes\SetMovingAnimatedSpriteCommand.cs" />
+    <Compile Include="ICommand Classes\SetMovingNonAnimatedSpriteCommand.cs" />
+    <Compile Include="ICommand Classes\SetNonMovingAnimatedSpriteCommand.cs" />
+    <Compile Include="ICommand Classes\SetNonMovingNonAnimatedSpriteCommand.cs" />
+    <Compile Include="ISprite Classes\TextSprite.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
