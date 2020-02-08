@@ -39,8 +39,7 @@ namespace Team4_LegendOfZelda
 
             controllerList = new List<IController>
             {
-                new KeyboardController(),
-                new MouseController()
+                new KeyboardController()
             };
             commandList = new List<ICommand>
             {
@@ -64,24 +63,6 @@ namespace Team4_LegendOfZelda
             keyboard.RegisterCommand(Keys.D4, commandList[4]);
             keyboard.RegisterCommand(Keys.NumPad4, commandList[4]);
 
-            MouseController mouse = (MouseController)controllerList[1];
-            MouseState rightButtonPressed = new MouseState(0, 0, 0, 0, 0, ButtonState.Pressed, 0, 0);
-            MouseState leftButtonPressed = new MouseState(0, 0, 0, ButtonState.Pressed, 0, 0, 0, 0);
-
-            int width = GraphicsDevice.Viewport.Width / 2;
-            int height = GraphicsDevice.Viewport.Height / 2;
-
-            Rectangle quadrant1 = new Rectangle(0, 0, width, height);
-            Rectangle quadrant2 = new Rectangle(width, 0, width, height);
-            Rectangle quadrant3 = new Rectangle(0, height, width, height);
-            Rectangle quadrant4 = new Rectangle(width, height, width, height);
-
-            mouse.RegisterCommand(rightButtonPressed, GraphicsDevice.Viewport.Bounds, commandList[0]);
-            mouse.RegisterCommand(leftButtonPressed, quadrant1, commandList[1]);
-            mouse.RegisterCommand(leftButtonPressed, quadrant2, commandList[2]);
-            mouse.RegisterCommand(leftButtonPressed, quadrant3, commandList[3]);
-            mouse.RegisterCommand(leftButtonPressed, quadrant4, commandList[4]);
-
             Window.Title = "Sprint2 - Team 4";
             backgroundColor = Color.SteelBlue;
             commandList[1].Execute();
@@ -96,7 +77,7 @@ namespace Team4_LegendOfZelda
             spriteBatch = new SpriteBatch(GraphicsDevice);
             font = Content.Load<SpriteFont>("Font");
 
-            string creditString = "Credits\nProgram Made By: Joseph Hughes.1792\nSprite from:";
+            string creditString = "Credits\nProgram Made By: Team 4\nSprites from:";
             credits = new TextSprite(font, creditString, new Vector2(20, 385));
         }
 
