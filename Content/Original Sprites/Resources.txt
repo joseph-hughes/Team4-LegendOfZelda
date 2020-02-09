@@ -1,4 +1,0 @@
-NMNA	-	Link		-	https://www.nesmaps.com/maps/Zelda/sprites/ZeldaSpriteLinkSwingSwordLeft.png
-NMA	-	Simon		-	https://www.spriters-resource.com/submitter/MisterMike/
-MNA	-	Arrow		-	https://www.nesmaps.com/maps/Zelda/sprites/ZeldaSpriteArrow.png
-MA	-	Spiderman	-	http://alvin-earthworm.deviantart.com
