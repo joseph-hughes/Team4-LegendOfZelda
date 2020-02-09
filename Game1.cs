@@ -19,6 +19,7 @@ namespace Team4_LegendOfZelda
         private List<IController> controllerList;
         private List<ICommand> commandList;
         private Color backgroundColor;
+        private IState state;
 
         public LegendOfZelda()
         {
@@ -101,7 +102,7 @@ namespace Team4_LegendOfZelda
             {
                 controller.Update();
             }
-            sprite.Update();
+            state.Update();
 
             base.Update(gameTime);
         }
@@ -128,6 +129,15 @@ namespace Team4_LegendOfZelda
         public void SetSprite(ISprite newSprite)
         {
             sprite = newSprite;
+        }
+
+        /// <summary>
+        /// SetState will reassign the private state variable to some new IState object.
+        /// </summary>
+        /// <param name="newState">The new state object to assign to the game's state.</param>
+        public void SetState(IState newState)
+        {
+            state = newState;
         }
 
         /// <summary>

@@ -46,6 +46,27 @@
     <StartupObject>Team4_LegendOfZelda.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="IState Classes\DamagedEastState.cs" />
+    <Compile Include="IState Classes\DamagedNorthState.cs" />
+    <Compile Include="IState Classes\DamagedSouthState.cs" />
+    <Compile Include="IState Classes\DamagedWestState.cs" />
+    <Compile Include="IState Classes\MovingEastState.cs" />
+    <Compile Include="IState Classes\MovingNorthState.cs" />
+    <Compile Include="IState Classes\MovingSouthState.cs" />
+    <Compile Include="IState Classes\MovingWestState.cs" />
+    <Compile Include="IState Classes\NonMovingEastState.cs" />
+    <Compile Include="IState Classes\NonMovingNorthState.cs" />
+    <Compile Include="IState Classes\NonMovingSouthState.cs" />
+    <Compile Include="IState Classes\NonMovingWestState.cs" />
+    <Compile Include="IState Classes\SwordEastState.cs" />
+    <Compile Include="IState Classes\SwordNorthState.cs" />
+    <Compile Include="IState Classes\SwordSouthState.cs" />
+    <Compile Include="IState Classes\SwordWestState.cs" />
+    <Compile Include="IState Classes\UseItemEastState.cs" />
+    <Compile Include="IState Classes\UseItemNorthState.cs" />
+    <Compile Include="IState Classes\UseItemSouthState.cs" />
+    <Compile Include="IState Classes\UseItemWestState.cs" />
+    <Compile Include="IState.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="IController.cs" />
