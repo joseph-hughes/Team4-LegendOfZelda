@@ -115,10 +115,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ICommand Classes\QuitCommand.cs" />
-    <Compile Include="ICommand Classes\SetMovingAnimatedSpriteCommand.cs" />
-    <Compile Include="ICommand Classes\SetMovingNonAnimatedSpriteCommand.cs" />
-    <Compile Include="ICommand Classes\SetNonMovingAnimatedSpriteCommand.cs" />
-    <Compile Include="ICommand Classes\SetNonMovingNonAnimatedSpriteCommand.cs" />
     <Compile Include="ISprite Classes\TextSprite.cs" />
   </ItemGroup>
   <ItemGroup>
