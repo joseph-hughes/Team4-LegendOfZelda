@@ -46,6 +46,8 @@
     <StartupObject>Team4_LegendOfZelda.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="IEnemy.cs" />
+    <Compile Include="ILevel.cs" />
     <Compile Include="ISprite Classes\Sprite.cs" />
     <Compile Include="IState Classes\DamagedEastState.cs" />
     <Compile Include="IState Classes\DamagedNorthState.cs" />
