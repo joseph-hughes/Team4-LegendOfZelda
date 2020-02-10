@@ -10,7 +10,6 @@ namespace Team4_LegendOfZelda
     /// </summary>
     public class LegendOfZelda : Game
     {
-        private ISprite sprite;
         private ISprite credits;
         private ISprite source;
         private SpriteFont font;
@@ -79,7 +78,7 @@ namespace Team4_LegendOfZelda
             font = Content.Load<SpriteFont>("Font");
 
             string creditString = "Credits\nProgram Made By: Team 4\nSprites from:";
-            credits = new TextSprite(font, creditString, new Vector2(20, 385));
+            credits = new TextSprite(font, creditString);
         }
 
         /// <summary>
@@ -115,20 +114,10 @@ namespace Team4_LegendOfZelda
         {
             GraphicsDevice.Clear(backgroundColor);
 
-            sprite.Draw(spriteBatch);
-            credits.Draw(spriteBatch);
-            source.Draw(spriteBatch);
+            credits.Draw(spriteBatch, new Vector2(20, 385));
+            source.Draw(spriteBatch, new Vector2(20, 440));
 
             base.Draw(gameTime);
-        }
-
-        /// <summary>
-        /// SetSprite will reassign the private sprite variable to some new ISprite object.
-        /// </summary>
-        /// <param name="newSprite">The new sprite object to assign to the game's sprite.</param>
-        public void SetSprite(ISprite newSprite)
-        {
-            sprite = newSprite;
         }
 
         /// <summary>
@@ -146,7 +135,7 @@ namespace Team4_LegendOfZelda
         /// /// <param name="newSource">The new source text to assign to the game's source text sprite.</param>
         public void SetSource(string newSource)
         {
-            source = new TextSprite(font, newSource, new Vector2(20, 440));
+            source = new TextSprite(font, newSource);
         }
     }
 }

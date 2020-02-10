@@ -7,7 +7,7 @@
         {
             ThisGame = thisGame;
         }
-        public void Execute ()
+        public void Execute()
         {
             ThisGame.Exit();
         }

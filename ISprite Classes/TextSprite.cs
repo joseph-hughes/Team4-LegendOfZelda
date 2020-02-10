@@ -1,5 +1,5 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda
 {
@@ -7,17 +7,12 @@ namespace Team4_LegendOfZelda
     {
         private SpriteFont Font { get; set; }
         private string Text { get; set; }
-        private int XLocation { get; set; }
-        private int YLocation { get; set; }
 
         // Constructor
-        public TextSprite(SpriteFont font, string text, Vector2 location)
+        public TextSprite(SpriteFont font, string text)
         {
             Font = font;
             Text = text;
-
-            XLocation = (int)location.X;
-            YLocation = (int)location.Y;
         }
 
         public void Update()
@@ -25,10 +20,10 @@ namespace Team4_LegendOfZelda
             // Nothing to update
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public void Draw(SpriteBatch spriteBatch, Vector2 location)
         {
             spriteBatch.Begin();
-            spriteBatch.DrawString(Font, Text, new Vector2(XLocation, YLocation), Color.Black);
+            spriteBatch.DrawString(Font, Text, location, Color.Black);
             spriteBatch.End();
         }
     }

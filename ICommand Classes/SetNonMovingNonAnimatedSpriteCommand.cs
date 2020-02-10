@@ -11,7 +11,7 @@ namespace Team4_LegendOfZelda
         {
             ThisGame = thisGame;
         }
-        public void Execute ()
+        public void Execute()
         {
             Texture2D sprite = ThisGame.Content.Load<Texture2D>("Link");
             ThisGame.SetSprite(new NonMovingNonAnimatedSprite(sprite, new Vector2(320, 200)));
