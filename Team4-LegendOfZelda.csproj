@@ -73,9 +73,11 @@
     <Compile Include="IController.cs" />
     <Compile Include="ISprite.cs" />
     <Compile Include="IController Classes\KeyboardController.cs" />
-<<<<<<< HEAD
+    <Compile Include="Item Classes\Item.cs" />
+    <Compile Include="Item Classes\ItemFactory.cs" />
+    <Compile Include="Item Classes\ItemObject.cs" />
     <Compile Include="Item Classes\ItemObjectAnimated.cs" />
-    <Compile Include="Item Classes\itemStates\FiveRupiesState.cs" />
+    <Compile Include="Item Classes\ItemState.cs" />
     <Compile Include="Item Classes\itemStates\ArrowState.cs" />
     <Compile Include="Item Classes\itemStates\BlueCandleState.cs" />
     <Compile Include="Item Classes\itemStates\BlueRingState.cs" />
@@ -85,8 +87,11 @@
     <Compile Include="Item Classes\itemStates\BowState.cs" />
     <Compile Include="Item Classes\itemStates\ClockState.cs" />
     <Compile Include="Item Classes\itemStates\CompassState.cs" />
+    <Compile Include="Item Classes\itemStates\FairyState.cs" />
+    <Compile Include="Item Classes\itemStates\FiveRupiesState.cs" />
     <Compile Include="Item Classes\itemStates\FoodState.cs" />
     <Compile Include="Item Classes\itemStates\HeartContainerState.cs" />
+    <Compile Include="Item Classes\itemStates\HeartState.cs" />
     <Compile Include="Item Classes\itemStates\KeyState.cs" />
     <Compile Include="Item Classes\itemStates\LetterState.cs" />
     <Compile Include="Item Classes\itemStates\LifePotionState.cs" />
@@ -100,22 +105,13 @@
     <Compile Include="Item Classes\itemStates\RecorderState.cs" />
     <Compile Include="Item Classes\itemStates\RedCandleState.cs" />
     <Compile Include="Item Classes\itemStates\RedRingState.cs" />
+    <Compile Include="Item Classes\itemStates\RupyState.cs" />
+    <Compile Include="Item Classes\itemStates\SecondPotionState.cs" />
     <Compile Include="Item Classes\itemStates\SilverArrowState.cs" />
     <Compile Include="Item Classes\itemStates\StepladderState.cs" />
     <Compile Include="Item Classes\itemStates\SwordState.cs" />
-    <Compile Include="Item Classes\itemStates\FairyState.cs" />
-    <Compile Include="Item Classes\itemStates\HeartState.cs" />
-    <Compile Include="Item Classes\itemStates\RupyState.cs" />
     <Compile Include="Item Classes\itemStates\TriforceState.cs" />
     <Compile Include="Item Classes\itemStates\WhiteSwordState.cs" />
-    <Compile Include="Item Classes\itemStates\SecondPotionState.cs" />
-    <Compile Include="Item Classes\ItemObject.cs" />
-    <Compile Include="Item Classes\ItemFactory.cs" />
-    <Compile Include="Item Classes\Item.cs" />
-    <Compile Include="Item Classes\ItemState.cs" />
-=======
-    <Compile Include="ISprite Classes\Sprite.cs" />
->>>>>>> bd8eb52c6eed687b5044b9b497f6162f2d3a0c42
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ICommand Classes\QuitCommand.cs" />
