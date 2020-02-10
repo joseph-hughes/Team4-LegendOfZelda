@@ -103,7 +103,6 @@
     <Compile Include="ISpriteFactory.cs" />
     <Compile Include="EnemySpriteFactory.cs" />
     <Compile Include="IEnemy.cs" />
-    <Compile Include="ILevel.cs" />
     <Compile Include="Player Classes\IPlayer.cs" />
     <Compile Include="ISprite Classes\TextureSprite.cs" />
     <Compile Include="Player Classes\Link Classes\Link States\LinkDamagedMovingEastState.cs" />
