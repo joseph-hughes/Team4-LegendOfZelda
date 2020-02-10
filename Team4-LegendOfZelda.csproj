@@ -74,7 +74,6 @@
     <Compile Include="ISprite.cs" />
     <Compile Include="IController Classes\KeyboardController.cs" />
 <<<<<<< HEAD
-<<<<<<< HEAD
     <Compile Include="Item Classes\ItemObjectAnimated.cs" />
     <Compile Include="Item Classes\itemStates\FiveRupiesState.cs" />
     <Compile Include="Item Classes\itemStates\ArrowState.cs" />
@@ -114,9 +113,6 @@
     <Compile Include="Item Classes\ItemFactory.cs" />
     <Compile Include="Item Classes\Item.cs" />
     <Compile Include="Item Classes\ItemState.cs" />
-=======
-    <Compile Include="ISprite Classes\Sprite.cs" />
->>>>>>> bd8eb52c6eed687b5044b9b497f6162f2d3a0c42
 =======
     <Compile Include="ISprite Classes\Sprite.cs" />
 >>>>>>> bd8eb52c6eed687b5044b9b497f6162f2d3a0c42
