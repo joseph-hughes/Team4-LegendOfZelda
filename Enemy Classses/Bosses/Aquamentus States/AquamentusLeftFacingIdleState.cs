@@ -6,9 +6,10 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
     {
         IEnemy enemy;
 
-        public AquamentusLeftFacingIdleState(Aquamentus aquamentus)
+        public AquamentusLeftFacingIdleState(IEnemy enemy)
         {
-            enemy = aquamentus;
+            this.enemy = enemy;
+            this.enemy.Sprite = EnemySpriteFactory.Instance.CreateAquamentusLeftFacingIdleSprite();
         }
 
         public void GoLeft()
@@ -18,7 +19,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
 
         public void GoRight()
         {
-            enemy.Sprite = EnemySpriteFactory.Instance.CreateAquamentusRightFacingIdleSprite();
+            enemy.State = new AquamentusRightFacingIdleState(enemy);
         }
 
         public void GoUp()
@@ -33,7 +34,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
 
         public void Attack()
         {
-            enemy.Sprite = EnemySpriteFactory.Instance.CreateAquamentusLeftFacingAttackSprite();
+            enemy.State = new AquamentusLeftFacingAttackState(enemy);
         }
 
         public void BeHit()
