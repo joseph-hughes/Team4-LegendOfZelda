@@ -12,40 +12,40 @@ namespace Team4_LegendOfZelda
     public class Link : IPlayer
     {
         public ISprite Sprite { get; set; }
-        public IPlayerState state { get; set; }
+        public IState State { get; set; }
         public Vector2 Position { get; set; }
 
         public Link()
         {
-            state = new LinkNonMovingSouthState(this);
+            State = new LinkNonMovingSouthState(this);
         }
         public void South()
         {
-            state.South();
+            State.South();
         }
         public void North()
         {
-            state.North();
+            State.North();
         }
         public void East()
         {
-            state.East();
+            State.East();
         }
         public void West()
         {
-            state.West();
+            State.West();
         }
         public void BeDamaged()
         {
-            state.BeDamaged();
+            State.BeDamaged();
         }
         public void UseItem()
         {
-            state.UseItem();
+            State.UseItem();
         }
-        public void UseSword()
+        public void Attack()
         {
-            state.UseSword();
+            State.Attack();
         }
         public void Update()
         {

@@ -74,6 +74,7 @@ namespace Team4_LegendOfZelda
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             EnemySpriteFactory.Instance.LoadAllTextures(Content);
+            PlayerSpriteFactory.Instance.LoadAllTextures(Content);
 
             font = Content.Load<SpriteFont>("Font");
 

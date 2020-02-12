@@ -7,49 +7,41 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
     class Aquamentus : IEnemy
     {
         public ISprite Sprite { get; set; }
-        public IEnemyState State { get; set; }
+        public IState State { get; set; }
         public Vector2 Position { get; set; }
 
         public Aquamentus()
         {
             State = new AquamentusLeftFacingIdleState(this);
         }
-
-        public void GoLeft()
+        public void South()
         {
-            State.GoLeft();
+            State.South();
         }
-
-        public void GoRight()
+        public void North()
         {
-            State.GoRight();
+            State.North();
         }
-
-        public void GoUp()
+        public void East()
         {
-            State.GoUp();
+            State.East();
         }
-
-        public void GoDown()
+        public void West()
         {
-            State.GoDown();
+            State.West();
         }
-
+        public void BeDamaged()
+        {
+            State.BeDamaged();
+        }
         public void Attack()
         {
             State.Attack();
         }
-
-        public void BeHit()
-        {
-            State.BeHit();
-        }
-
         public void Update()
         {
             // TODO
         }
-
         public void Draw(SpriteBatch spriteBatch)
         {
             Sprite.Draw(spriteBatch, Position);
