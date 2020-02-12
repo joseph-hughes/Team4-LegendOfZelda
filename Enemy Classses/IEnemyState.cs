@@ -2,7 +2,7 @@
 
 namespace Team4_LegendOfZelda
 {
-    interface IEnemyState
+    interface IEnemyState : IState
     {
         void GoLeft();
         void GoRight();
