@@ -2,13 +2,9 @@
 {
     class BookOfMagicState : ItemState
     {
-        public void ProjectileMoving()
+        public Item UseItem()
         {
-
-        }
-        public void UseItem()
-        {
-
+            return ItemFactory.Instance.GetEmptyItem();
         }
     }
 }

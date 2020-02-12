@@ -18,6 +18,7 @@ namespace Team4_LegendOfZelda
         private static GraphicsDeviceManager graphics;
         private List<IController> controllerList;
         private List<ICommand> commandList;
+        private List<ISpriteFactory> spriteFactories;
         private Color backgroundColor;
         private IState state;
 
@@ -60,6 +61,11 @@ namespace Team4_LegendOfZelda
             keyboard.RegisterCommand(Keys.D4, commandList[4]);
             keyboard.RegisterCommand(Keys.NumPad4, commandList[4]);
 
+            spriteFactories = new List<ISpriteFactory>
+            {
+                EnemySpriteFactory.Instance
+            };
+
             Window.Title = "Sprint2 - Team 4";
             backgroundColor = Color.SteelBlue;
             commandList[1].Execute();
@@ -73,7 +79,10 @@ namespace Team4_LegendOfZelda
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            EnemySpriteFactory.Instance.LoadAllTextures(Content);
+            foreach (ISpriteFactory spriteFactory in spriteFactories)
+            {
+                spriteFactory.LoadAllTextures(Content);
+            }
 
             font = Content.Load<SpriteFont>("Font");
 

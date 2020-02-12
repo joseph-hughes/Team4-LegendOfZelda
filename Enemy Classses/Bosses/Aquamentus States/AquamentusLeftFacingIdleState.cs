@@ -2,7 +2,7 @@
 
 namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
 {
-    class AquamentusLeftFacingIdleState : IEnemyState
+    class AquamentusLeftFacingIdleState : IState
     {
         IEnemy enemy;
 
@@ -11,37 +11,34 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateAquamentusLeftFacingIdleSprite();
         }
-
-        public void GoLeft()
+        public void South()
         {
             // Do nothing
         }
-
-        public void GoRight()
+        public void North()
+        {
+            // Do nothing
+        }
+        public void East()
         {
             enemy.State = new AquamentusRightFacingIdleState(enemy);
         }
-
-        public void GoUp()
+        public void West()
         {
             // Do nothing
         }
-
-        public void GoDown()
+        public void BeDamaged()
         {
-            // Do nothing
+            // TODO
         }
-
         public void Attack()
         {
             enemy.State = new AquamentusLeftFacingAttackState(enemy);
         }
-
-        public void BeHit()
+        public void UseItem()
         {
-            // TODO
+            // no action
         }
-
         public void Update()
         {
             throw new System.NotImplementedException();
