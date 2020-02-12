@@ -41,5 +41,10 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
         {
             // TODO
         }
+
+        public void Update()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

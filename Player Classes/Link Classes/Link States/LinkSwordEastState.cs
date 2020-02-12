@@ -2,34 +2,34 @@
 
 namespace Team4_LegendOfZelda.IState_Classes
 {
-    class DamagedNonMovingSouthLinkState : IPlayerState
+    class LinkSwordEastState : IPlayerState
     {
         private Link link;
         public LegendOfZelda ThisGame { get; set; }
-        public DamagedNonMovingSouthLinkState(Link link)
+        public LinkSwordEastState(Link link)
         {
             this.link = link;
             // contrust sprite
         }
         public void South()
         {
-            link.state = new DamagedMovingSouthLinkState(link);
+            // no action
         }
         public void North()
         {
-            link.state = new DamagedNonMovingNorthLinkState(link);
+            // no action
         }
         public void East()
         {
-            link.state = new DamagedNonMovingEastLinkState(link);
+            // no action
         }
         public void West()
         {
-            link.state = new DamagedNonMovingWestLinkState(link);
+            // no action
         }
         public void BeDamaged()
         {
-            // no action
+            link.state = new LinkDamagedNonMovingEastState(link);
         }
         public void UseItem()
         {
@@ -41,7 +41,8 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void Update()
         {
-            // decrement damage timer
+            // sword east
+            link.state = new LinkNonMovingEastState(link);
         }
     }
 }

@@ -3,16 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Team4_LegendOfZelda.IState_Classes;
 
 namespace Team4_LegendOfZelda
 {
-    public class Link
+    public class Link : IPlayer
     {
-        public IPlayerState state;
+        public ISprite Sprite { get; set; }
+        public IPlayerState state { get; set; }
+        public Vector2 Position { get; set; }
+
         public Link()
         {
-            state = new NonMovingSouthLinkState(this);
+            state = new LinkNonMovingSouthState(this);
         }
         public void South()
         {
@@ -34,10 +39,6 @@ namespace Team4_LegendOfZelda
         {
             state.BeDamaged();
         }
-        public void Move()
-        {
-            state.Move();
-        }
         public void UseItem()
         {
             state.UseItem();
@@ -45,6 +46,14 @@ namespace Team4_LegendOfZelda
         public void UseSword()
         {
             state.UseSword();
+        }
+        public void Update()
+        {
+            // TODO
+        }
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            Sprite.Draw(spriteBatch, Position);
         }
     }
 }

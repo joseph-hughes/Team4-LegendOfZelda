@@ -2,46 +2,46 @@
 
 namespace Team4_LegendOfZelda.IState_Classes
 {
-    class NonMovingNorthLinkState : IPlayerState
+    class LinkMovingEastState : IPlayerState
     {
         private Link link;
         public LegendOfZelda ThisGame { get; set; }
-        public NonMovingNorthLinkState(Link link)
+        public LinkMovingEastState(Link link)
         {
             this.link = link;
             // contrust sprite
         }
         public void South()
         {
-            link.state = new NonMovingSouthLinkState(link);
+            link.state = new LinkNonMovingSouthState(link);
         }
         public void North()
         {
-            link.state = new MovingNorthLinkState(link);
+            link.state = new LinkNonMovingNorthState(link);
         }
         public void East()
         {
-            link.state = new NonMovingEastLinkState(link);
+            // no action
         }
         public void West()
         {
-            link.state = new NonMovingWestLinkState(link);
+            link.state = new LinkNonMovingWestState(link);
         }
         public void BeDamaged()
         {
-            link.state = new DamagedNonMovingNorthLinkState(link);
+            link.state = new LinkDamagedMovingEastState(link);
         }
         public void UseItem()
         {
-            link.state = new UseItemNorthLinkState(link);
+            link.state = new LinkUseItemEastState(link);
         }
         public void UseSword()
         {
-            link.state = new SwordNorthLinkState(link);
+            link.state = new LinkSwordEastState(link);
         }
         public void Update()
         {
-            // no action
+            // move east
         }
     }
 }
