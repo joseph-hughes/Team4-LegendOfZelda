@@ -46,9 +46,16 @@
     <StartupObject>Team4_LegendOfZelda.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Enemy Classses\Bosses\Aquamentus States\AquamentusLeftFacingAttackState.cs" />
+    <Compile Include="Enemy Classses\Bosses\Aquamentus States\AquamentusLeftFacingIdleState.cs" />
+    <Compile Include="Enemy Classses\Bosses\Aquamentus States\AquamentusRightFacingAttackState.cs" />
+    <Compile Include="Enemy Classses\Bosses\Aquamentus States\AquamentusRightFacingIdleState.cs" />
+    <Compile Include="Enemy Classses\Bosses\Aquamentus.cs" />
+    <Compile Include="EnemySpriteFactory.cs" />
+    <Compile Include="IEnemyState.cs" />
     <Compile Include="IEnemy.cs" />
     <Compile Include="ILevel.cs" />
-    <Compile Include="ISprite Classes\Sprite.cs" />
+    <Compile Include="ISprite Classes\TextureSprite.cs" />
     <Compile Include="IState Classes\DamagedEastState.cs" />
     <Compile Include="IState Classes\DamagedNorthState.cs" />
     <Compile Include="IState Classes\DamagedSouthState.cs" />
@@ -479,6 +486,7 @@
   <ItemGroup>
     <Folder Include="bin\DesktopGL\AnyCPU\Release\" />
     <Folder Include="bin\DesktopGL\Content\" />
+    <Folder Include="Enemy Classses\Dungeon Enemies\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="obj\DesktopGL\Content\" />
     <Folder Include="obj\Release\" />

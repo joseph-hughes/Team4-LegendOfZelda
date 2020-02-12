@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Team4_LegendOfZelda
+namespace Team4_LegendOfZelda.ISprite_Classes
 {
     public class TextSprite : ISprite
     {

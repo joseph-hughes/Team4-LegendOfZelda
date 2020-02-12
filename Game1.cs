@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
+using Team4_LegendOfZelda.ISprite_Classes;
 
 namespace Team4_LegendOfZelda
 {
@@ -43,11 +44,7 @@ namespace Team4_LegendOfZelda
             };
             commandList = new List<ICommand>
             {
-                new QuitCommand(this),
-                new SetNonMovingNonAnimatedSpriteCommand(this),
-                new SetNonMovingAnimatedSpriteCommand(this),
-                new SetMovingNonAnimatedSpriteCommand(this),
-                new SetMovingAnimatedSpriteCommand(this),
+                new QuitCommand(this)
             };
 
             KeyboardController keyboard = (KeyboardController)controllerList[0];
@@ -75,6 +72,9 @@ namespace Team4_LegendOfZelda
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            EnemySpriteFactory.Instance.LoadAllTextures(Content);
+
             font = Content.Load<SpriteFont>("Font");
 
             string creditString = "Credits\nProgram Made By: Team 4\nSprites from:";
