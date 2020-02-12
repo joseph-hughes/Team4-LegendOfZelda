@@ -3,9 +3,12 @@ namespace Team4_LegendOfZelda.Item_Classes
 {
     class SecondPotionState : ItemState
     {
-        public Item UseItem()
+        public void ProjectileMoving()
         {
-            return ItemFactory.Instance.GetEmptyItem();
+
+        }
+        public void UseItem()
+        {
 
         }
     }

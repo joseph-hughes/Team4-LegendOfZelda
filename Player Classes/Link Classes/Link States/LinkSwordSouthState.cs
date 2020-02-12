@@ -2,7 +2,7 @@
 
 namespace Team4_LegendOfZelda.IState_Classes
 {
-    class LinkSwordSouthState : IState
+    class LinkSwordSouthState : IPlayerState
     {
         private Link link;
         public LegendOfZelda ThisGame { get; set; }
@@ -29,20 +29,20 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void BeDamaged()
         {
-            link.State = new LinkDamagedNonMovingSouthState(link);
+            link.state = new LinkDamagedNonMovingSouthState(link);
         }
         public void UseItem()
         {
             // no action
         }
-        public void Attack()
+        public void UseSword()
         {
             // no action
         }
         public void Update()
         {
             // sword south
-            link.State = new LinkNonMovingSouthState(link);
+            link.state = new LinkNonMovingSouthState(link);
         }
     }
 }

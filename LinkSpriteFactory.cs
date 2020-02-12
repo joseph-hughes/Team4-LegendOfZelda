@@ -4,7 +4,7 @@ using Team4_LegendOfZelda.ISprite_Classes;
 
 namespace Team4_LegendOfZelda
 {
-	public class PlayerSpriteFactory : ISpriteFactory
+	public class LinkSpriteFactory
 	{
 		private Texture2D LinkDamagedMovingSouthTexture;
         private Texture2D LinkDamagedMovingNorthTexture;
@@ -31,9 +31,9 @@ namespace Team4_LegendOfZelda
         private Texture2D LinkUseItemEastTexture;
         private Texture2D LinkUseItemWestTexture;
 
-        private static PlayerSpriteFactory instance = new PlayerSpriteFactory();
+        private static LinkSpriteFactory instance = new LinkSpriteFactory();
 
-		public static PlayerSpriteFactory Instance
+		public static LinkSpriteFactory Instance
 		{
 			get
 			{
@@ -41,7 +41,7 @@ namespace Team4_LegendOfZelda
 			}
 		}
 
-		private PlayerSpriteFactory()
+		private LinkSpriteFactory()
 		{
 		}
 

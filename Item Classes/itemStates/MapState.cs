@@ -2,9 +2,12 @@
 {
     class MapState : ItemState
     {
-        public Item UseItem()
+        public void ProjectileMoving()
         {
-            return ItemFactory.Instance.GetEmptyItem();
+
+        }
+        public void UseItem()
+        {
 
         }
     }

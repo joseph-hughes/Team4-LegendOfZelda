@@ -7,7 +7,7 @@ namespace Team4_LegendOfZelda
     public interface IPlayer
     {
         ISprite Sprite { get; set; }
-        IState State { get; set; }
+        IPlayerState state { get; set; }
         Vector2 Position { get; set; }
         void South();
         void North();
@@ -15,8 +15,7 @@ namespace Team4_LegendOfZelda
         void West();
         void BeDamaged();
         void UseItem();
-        void Attack();
-        void Update();
+        void UseSword();
         void Draw(SpriteBatch spriteBatch);
     }
 }

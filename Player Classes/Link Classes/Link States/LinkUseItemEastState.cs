@@ -2,7 +2,7 @@
 
 namespace Team4_LegendOfZelda.IState_Classes
 {
-    class LinkUseItemEastState : IState
+    class LinkUseItemEastState : IPlayerState
     {
         private Link link;
         public LegendOfZelda ThisGame { get; set; }
@@ -29,20 +29,20 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void BeDamaged()
         {
-            link.State = new LinkDamagedNonMovingEastState(link);
+            link.state = new LinkDamagedNonMovingEastState(link);
         }
         public void UseItem()
         {
             // no action
         }
-        public void Attack()
+        public void UseSword()
         {
             // no action
         }
         public void Update()
         {
             // use item east
-            link.State = new LinkNonMovingEastState(link);
+            link.state = new LinkNonMovingEastState(link);
         }
     }
 }
