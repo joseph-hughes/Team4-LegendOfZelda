@@ -4,15 +4,15 @@ using Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 {
-    class Aquamentus : IEnemy
+    class Dodongo : IEnemy
     {
         public ISprite Sprite { get; set; }
         public IEnemyState State { get; set; }
         public Vector2 Position { get; set; }
 
-        public Aquamentus()
+        public Dodongo()
         {
-            State = new AquamentusLeftFacingIdleState(this);
+            State = new DodongoLeftFacingIdleState(this);
         }
 
         public void GoLeft()
@@ -27,12 +27,12 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 
         public void GoUp()
         {
-            // TODO
+            State.GoUp();
         }
 
         public void GoDown()
         {
-            // TODO
+            State.GoDown();
         }
 
         public void Attack()

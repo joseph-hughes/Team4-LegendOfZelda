@@ -46,11 +46,14 @@
     <StartupObject>Team4_LegendOfZelda.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Enemy Classses\Bosses\Dodongo States\DodongoLeftFacingWalkingState.cs" />
+    <Compile Include="Enemy Classses\Bosses\Dodongo.cs" />
     <Compile Include="Enemy Classses\Bosses\Aquamentus States\AquamentusLeftFacingAttackState.cs" />
     <Compile Include="Enemy Classses\Bosses\Aquamentus States\AquamentusLeftFacingIdleState.cs" />
     <Compile Include="Enemy Classses\Bosses\Aquamentus States\AquamentusRightFacingAttackState.cs" />
     <Compile Include="Enemy Classses\Bosses\Aquamentus States\AquamentusRightFacingIdleState.cs" />
     <Compile Include="Enemy Classses\Bosses\Aquamentus.cs" />
+    <Compile Include="ISpriteFactory.cs" />
     <Compile Include="EnemySpriteFactory.cs" />
     <Compile Include="IEnemyState.cs" />
     <Compile Include="IEnemy.cs" />
