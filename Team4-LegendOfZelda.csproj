@@ -53,6 +53,8 @@
     <Compile Include="Enemy Classses\Bosses\Aquamentus States\AquamentusRightFacingAttackState.cs" />
     <Compile Include="Enemy Classses\Bosses\Aquamentus States\AquamentusRightFacingIdleState.cs" />
     <Compile Include="Enemy Classses\Bosses\Aquamentus.cs" />
+    <Compile Include="Item Classes\ItemObjectEmpty.cs" />
+    <Compile Include="Item Classes\itemStates\EmptyState.cs" />
     <Compile Include="PlayerSpriteFactory.cs" />
     <Compile Include="ISpriteFactory.cs" />
     <Compile Include="EnemySpriteFactory.cs" />
