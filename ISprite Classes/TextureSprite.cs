@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.ISprite_Classes
 {
-    public class TextureSprite : ISprite
+    class TextureSprite : ISprite
     {
         private Texture2D texture;
         private int rows;

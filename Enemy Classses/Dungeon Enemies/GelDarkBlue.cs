@@ -9,9 +9,11 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public IState State { get; set; }
         public Vector2 Position { get; set; }
 
-        public GelDarkBlue()
+        public GelDarkBlue(Vector2 position)
         {
             Sprite = EnemySpriteFactory.Instance.CreateGelDarkBlueSprite();
+            State = new NullState();
+            Position = position;
         }
 
         public void GoNorth()

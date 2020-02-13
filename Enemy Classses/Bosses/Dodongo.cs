@@ -10,9 +10,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         public IState State { get; set; }
         public Vector2 Position { get; set; }
 
-        public Dodongo()
+        public Dodongo(Vector2 position)
         {
             State = new DodongoWestWalkingState(this);
+            Position = position;
         }
 
         public void GoNorth()
