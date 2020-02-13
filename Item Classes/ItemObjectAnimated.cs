@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Team4_LegendOfZelda.ISprite_Classes;
 
 namespace Team4_LegendOfZelda.Item_Classes
 {
@@ -12,7 +13,7 @@ namespace Team4_LegendOfZelda.Item_Classes
 
         public ItemObjectAnimated(Texture2D image, int rows, int columns, int delayBetweenFrames, Vector2 location, ItemState state)
         {
-            itemSprite = new Sprite(image, rows, columns, delayBetweenFrames);
+            itemSprite = new TextureSprite(image, rows, columns, delayBetweenFrames);
             itemState = state;
             itemLocation = location;
         }

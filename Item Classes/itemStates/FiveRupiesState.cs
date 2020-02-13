@@ -4,12 +4,9 @@ namespace Team4_LegendOfZelda.Item_Classes
 {
     class FiveRupiesState : ItemState
     {
-        public void ProjectileMoving()
+        public Item UseItem()
         {
-
-        }
-        public void UseItem()
-        {
+            return ItemFactory.Instance.GetEmptyItem();
 
         }
     }

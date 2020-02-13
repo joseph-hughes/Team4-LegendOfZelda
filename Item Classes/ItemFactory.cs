@@ -43,6 +43,7 @@ namespace Team4_LegendOfZelda.Item_Classes
         private Texture2D triforce;
 
         private static ItemFactory instance = new ItemFactory();
+        public static Item emptyItemObject = new ItemObjectEmpty();
 
         public static ItemFactory Instance
         {
@@ -92,6 +93,10 @@ namespace Team4_LegendOfZelda.Item_Classes
             heart = content.Load<Texture2D>("ItemSprites/AnimatedItems/Heart");
             rupy = content.Load<Texture2D>("ItemSprites/AnimatedItems/Rupy");
             triforce = content.Load<Texture2D>("ItemSprites/AnimatedItems/Triforce");
+        }
+        public Item GetEmptyItem()
+        {
+            return emptyItemObject;
         }
         public Item CreateSecondPotion(Vector2 location)
         {
