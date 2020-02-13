@@ -60,6 +60,7 @@
     <Compile Include="Enemy Classses\Bosses\Aquamentus States\AquamentusEastAttackState.cs" />
     <Compile Include="Enemy Classses\Bosses\Aquamentus States\AquamentusEastIdleState.cs" />
     <Compile Include="Enemy Classses\Bosses\Aquamentus.cs" />
+    <Compile Include="Enemy Classses\Dungeon Enemies\Gel.cs" />
     <Compile Include="Item Classes\ItemObjectEmpty.cs" />
     <Compile Include="Item Classes\itemStates\EmptyState.cs" />
     <Compile Include="PlayerSpriteFactory.cs" />
@@ -504,7 +505,6 @@
   <ItemGroup>
     <Folder Include="bin\DesktopGL\AnyCPU\Release\" />
     <Folder Include="bin\DesktopGL\Content\" />
-    <Folder Include="Enemy Classses\Dungeon Enemies\" />
     <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="obj\DesktopGL\Content\" />
     <Folder Include="obj\Release\" />
