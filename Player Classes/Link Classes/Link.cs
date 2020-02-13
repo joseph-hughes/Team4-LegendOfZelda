@@ -21,15 +21,15 @@ namespace Team4_LegendOfZelda
         }
         public void South()
         {
-            State.South();
+            State.GoSouth();
         }
         public void North()
         {
-            State.North();
+            State.GoNorth();
         }
         public void East()
         {
-            State.East();
+            State.GoEast();
         }
         public void West()
         {
