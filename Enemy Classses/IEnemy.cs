@@ -8,12 +8,13 @@ namespace Team4_LegendOfZelda
         ISprite Sprite { get; set; }
         IState State { get; set; }
         Vector2 Position { get; set; }
-        void South();
-        void North();
-        void East();
-        void West();
+        void GoNorth();
+        void GoEast();
+        void GoSouth();
+        void GoWest();
         void BeDamaged();
         void Attack();
+        void UseItem();
         void Update();
         void Draw(SpriteBatch spriteBatch);
     }

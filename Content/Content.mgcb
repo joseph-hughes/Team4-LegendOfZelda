@@ -13,7 +13,7 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin Bosses/Aquamentus/Aquamentus Left-facing Fire.png
+#begin Bosses/Aquamentus/AquamentusEastAttack.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -23,9 +23,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Bosses/Aquamentus/Aquamentus Left-facing Fire.png
+/build:Bosses/Aquamentus/AquamentusEastAttack.png
 
-#begin Bosses/Aquamentus/Aquamentus Left-facing Non-fire.png
+#begin Bosses/Aquamentus/AquamentusEastIdle.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -35,9 +35,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Bosses/Aquamentus/Aquamentus Left-facing Non-fire.png
+/build:Bosses/Aquamentus/AquamentusEastIdle.png
 
-#begin Bosses/Aquamentus/Aquamentus Right-facing Fire.png
+#begin Bosses/Aquamentus/AquamentusWestAttack.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -47,9 +47,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Bosses/Aquamentus/Aquamentus Right-facing Fire.png
+/build:Bosses/Aquamentus/AquamentusWestAttack.png
 
-#begin Bosses/Aquamentus/Aquamentus Right-facing Non-fire.png
+#begin Bosses/Aquamentus/AquamentusWestIdle.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -59,9 +59,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Bosses/Aquamentus/Aquamentus Right-facing Non-fire.png
+/build:Bosses/Aquamentus/AquamentusWestIdle.png
 
-#begin Bosses/Dodongo/Dodongo Back Hit.png
+#begin Bosses/Dodongo/DodongoEastDamaged.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -71,9 +71,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Bosses/Dodongo/Dodongo Back Hit.png
+/build:Bosses/Dodongo/DodongoEastDamaged.png
 
-#begin Bosses/Dodongo/Dodongo Back Walking.png
+#begin Bosses/Dodongo/DodongoEastWalking.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -83,9 +83,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Bosses/Dodongo/Dodongo Back Walking.png
+/build:Bosses/Dodongo/DodongoEastWalking.png
 
-#begin Bosses/Dodongo/Dodongo Front Hit.png
+#begin Bosses/Dodongo/DodongoNorthDamaged.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -95,9 +95,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Bosses/Dodongo/Dodongo Front Hit.png
+/build:Bosses/Dodongo/DodongoNorthDamaged.png
 
-#begin Bosses/Dodongo/Dodongo Front Walking.png
+#begin Bosses/Dodongo/DodongoNorthWalking.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -107,9 +107,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Bosses/Dodongo/Dodongo Front Walking.png
+/build:Bosses/Dodongo/DodongoNorthWalking.png
 
-#begin Bosses/Dodongo/Dodongo Left-facing Hit.png
+#begin Bosses/Dodongo/DodongoSouthDamaged.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -119,9 +119,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Bosses/Dodongo/Dodongo Left-facing Hit.png
+/build:Bosses/Dodongo/DodongoSouthDamaged.png
 
-#begin Bosses/Dodongo/Dodongo Left-facing Walking.png
+#begin Bosses/Dodongo/DodongoSouthWalking.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -131,9 +131,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Bosses/Dodongo/Dodongo Left-facing Walking.png
+/build:Bosses/Dodongo/DodongoSouthWalking.png
 
-#begin Bosses/Dodongo/Dodongo Right-facing Hit.png
+#begin Bosses/Dodongo/DodongoWestDamaged.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -143,9 +143,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Bosses/Dodongo/Dodongo Right-facing Hit.png
+/build:Bosses/Dodongo/DodongoWestDamaged.png
 
-#begin Bosses/Dodongo/Dodongo Right-facing Walking.png
+#begin Bosses/Dodongo/DodongoWestWalking.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -155,9 +155,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Bosses/Dodongo/Dodongo Right-facing Walking.png
+/build:Bosses/Dodongo/DodongoWestWalking.png
 
-#begin Dungeon Enemies/Gel/Gel Dark Blue.png
+#begin Dungeon Enemies/Gel/GelDarkBlue.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -167,9 +167,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Gel/Gel Dark Blue.png
+/build:Dungeon Enemies/Gel/GelDarkBlue.png
 
-#begin Dungeon Enemies/Goriya/Goriya Blue Back.png
+#begin Dungeon Enemies/Goriya/GoriyaBlueEast.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -179,9 +179,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Goriya/Goriya Blue Back.png
+/build:Dungeon Enemies/Goriya/GoriyaBlueEast.png
 
-#begin Dungeon Enemies/Goriya/Goriya Blue Front.png
+#begin Dungeon Enemies/Goriya/GoriyaBlueNorth.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -191,9 +191,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Goriya/Goriya Blue Front.png
+/build:Dungeon Enemies/Goriya/GoriyaBlueNorth.png
 
-#begin Dungeon Enemies/Goriya/Goriya Blue Left-facing.png
+#begin Dungeon Enemies/Goriya/GoriyaBlueSouth.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -203,9 +203,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Goriya/Goriya Blue Left-facing.png
+/build:Dungeon Enemies/Goriya/GoriyaBlueSouth.png
 
-#begin Dungeon Enemies/Goriya/Goriya Blue Right-facing.png
+#begin Dungeon Enemies/Goriya/GoriyaBlueWest.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -215,9 +215,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Goriya/Goriya Blue Right-facing.png
+/build:Dungeon Enemies/Goriya/GoriyaBlueWest.png
 
-#begin Dungeon Enemies/Goriya/Goriya Red Back.png
+#begin Dungeon Enemies/Goriya/GoriyaRedEast.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -227,9 +227,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Goriya/Goriya Red Back.png
+/build:Dungeon Enemies/Goriya/GoriyaRedEast.png
 
-#begin Dungeon Enemies/Goriya/Goriya Red Front.png
+#begin Dungeon Enemies/Goriya/GoriyaRedNorth.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -239,9 +239,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Goriya/Goriya Red Front.png
+/build:Dungeon Enemies/Goriya/GoriyaRedNorth.png
 
-#begin Dungeon Enemies/Goriya/Goriya Red Left-facing.png
+#begin Dungeon Enemies/Goriya/GoriyaRedSouth.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -251,9 +251,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Goriya/Goriya Red Left-facing.png
+/build:Dungeon Enemies/Goriya/GoriyaRedSouth.png
 
-#begin Dungeon Enemies/Goriya/Goriya Red Right-facing.png
+#begin Dungeon Enemies/Goriya/GoriyaRedWest.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -263,9 +263,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Goriya/Goriya Red Right-facing.png
+/build:Dungeon Enemies/Goriya/GoriyaRedWest.png
 
-#begin Dungeon Enemies/Keese/Keese Blue.png
+#begin Dungeon Enemies/Keese/KeeseBlue.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -275,9 +275,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Keese/Keese Blue.png
+/build:Dungeon Enemies/Keese/KeeseBlue.png
 
-#begin Dungeon Enemies/Keese/Keese Red.png
+#begin Dungeon Enemies/Keese/KeeseRed.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -287,9 +287,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Keese/Keese Red.png
+/build:Dungeon Enemies/Keese/KeeseRed.png
 
-#begin Dungeon Enemies/Rope/Rope Left-facing.png
+#begin Dungeon Enemies/Rope/RopeEast.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -299,9 +299,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Rope/Rope Left-facing.png
+/build:Dungeon Enemies/Rope/RopeEast.png
 
-#begin Dungeon Enemies/Rope/Rope Right-facing.png
+#begin Dungeon Enemies/Rope/RopeWest.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -311,7 +311,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Rope/Rope Right-facing.png
+/build:Dungeon Enemies/Rope/RopeWest.png
 
 #begin Dungeon Enemies/Stalfos/Stalfos.png
 /importer:TextureImporter
@@ -325,7 +325,7 @@
 /processorParam:TextureFormat=Color
 /build:Dungeon Enemies/Stalfos/Stalfos.png
 
-#begin Dungeon Enemies/Trap/Blade Trap.png
+#begin Dungeon Enemies/Trap/BladeTrap.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -335,9 +335,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Trap/Blade Trap.png
+/build:Dungeon Enemies/Trap/BladeTrap.png
 
-#begin Dungeon Enemies/Wall Master/Wall Master Left-facing.png
+#begin Dungeon Enemies/Wall Master/WallMasterEast.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -347,9 +347,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Wall Master/Wall Master Left-facing.png
+/build:Dungeon Enemies/Wall Master/WallMasterEast.png
 
-#begin Dungeon Enemies/Wall Master/Wall Master Right-facing.png
+#begin Dungeon Enemies/Wall Master/WallMasterWest.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -359,9 +359,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Wall Master/Wall Master Right-facing.png
+/build:Dungeon Enemies/Wall Master/WallMasterWest.png
 
-#begin Dungeon Enemies/Zol/Zol Dark Green.png
+#begin Dungeon Enemies/Zol/ZolDarkGreen.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -371,7 +371,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Zol/Zol Dark Green.png
+/build:Dungeon Enemies/Zol/ZolDarkGreen.png
 
 #begin Fireball.png
 /importer:TextureImporter
@@ -812,7 +812,7 @@
 /processorParam:TextureFormat=Color
 /build:ItemSprites/WhiteSword.png
 
-#begin NPCs/Merchant/Merchant Blue.png
+#begin NPCs/Merchant/MerchantBlue.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -822,9 +822,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:NPCs/Merchant/Merchant Blue.png
+/build:NPCs/Merchant/MerchantBlue.png
 
-#begin NPCs/Merchant/Merchant Green.png
+#begin NPCs/Merchant/MerchantGreen.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -834,9 +834,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:NPCs/Merchant/Merchant Green.png
+/build:NPCs/Merchant/MerchantGreen.png
 
-#begin NPCs/Merchant/Merchant Red.png
+#begin NPCs/Merchant/MerchantRed.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -846,9 +846,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:NPCs/Merchant/Merchant Red.png
+/build:NPCs/Merchant/MerchantRed.png
 
-#begin NPCs/Old Man/Old Man.png
+#begin NPCs/Old Man/OldMan.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -858,9 +858,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:NPCs/Old Man/Old Man.png
+/build:NPCs/Old Man/OldMan.png
 
-#begin NPCs/Old Woman/Old Woman.png
+#begin NPCs/Old Woman/OldWoman.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -870,9 +870,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:NPCs/Old Woman/Old Woman.png
+/build:NPCs/Old Woman/OldWoman.png
 
-#begin NPCs/Zelda/Zelda Blue Holding.png
+#begin NPCs/Zelda/ZeldaBlueHolding.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -882,9 +882,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:NPCs/Zelda/Zelda Blue Holding.png
+/build:NPCs/Zelda/ZeldaBlueHolding.png
 
-#begin NPCs/Zelda/Zelda Blue Standing.png
+#begin NPCs/Zelda/ZeldaBlueIdle.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -894,9 +894,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:NPCs/Zelda/Zelda Blue Standing.png
+/build:NPCs/Zelda/ZeldaBlueIdle.png
 
-#begin NPCs/Zelda/Zelda Green Holding.png
+#begin NPCs/Zelda/ZeldaGreenHolding.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -906,9 +906,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:NPCs/Zelda/Zelda Green Holding.png
+/build:NPCs/Zelda/ZeldaGreenHolding.png
 
-#begin NPCs/Zelda/Zelda Green Standing.png
+#begin NPCs/Zelda/ZeldaGreenIdle.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -918,9 +918,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:NPCs/Zelda/Zelda Green Standing.png
+/build:NPCs/Zelda/ZeldaGreenIdle.png
 
-#begin NPCs/Zelda/Zelda Red Holding.png
+#begin NPCs/Zelda/ZeldaRedHolding.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -930,9 +930,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:NPCs/Zelda/Zelda Red Holding.png
+/build:NPCs/Zelda/ZeldaRedHolding.png
 
-#begin NPCs/Zelda/Zelda Red Standing.png
+#begin NPCs/Zelda/ZeldaRedIdle.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -942,5 +942,5 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:NPCs/Zelda/Zelda Red Standing.png
+/build:NPCs/Zelda/ZeldaRedIdle.png
 

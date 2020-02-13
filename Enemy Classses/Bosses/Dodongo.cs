@@ -1,38 +1,43 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States;
+using Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 {
     class Dodongo : IEnemy
     {
         public ISprite Sprite { get; set; }
-        public IEnemyState State { get; set; }
+        public IState State { get; set; }
         public Vector2 Position { get; set; }
 
         public Dodongo()
         {
-            State = new DodongoLeftFacingIdleState(this);
+            State = new DodongoWestWalkingState(this);
         }
 
-        public void GoLeft()
+        public void GoNorth()
         {
-            State.GoLeft();
+            State.GoNorth();
         }
 
-        public void GoRight()
+        public void GoEast()
         {
-            State.GoRight();
+            State.GoEast();
         }
 
-        public void GoUp()
+        public void GoSouth()
         {
-            State.GoUp();
+            State.GoSouth();
         }
 
-        public void GoDown()
+        public void GoWest()
         {
-            State.GoDown();
+            State.GoWest();
+        }
+
+        public void BeDamaged()
+        {
+            State.BeDamaged();
         }
 
         public void Attack()
@@ -40,9 +45,9 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
             State.Attack();
         }
 
-        public void BeHit()
+        public void UseItem()
         {
-            State.BeHit();
+            // Do nothing
         }
 
         public void Update()

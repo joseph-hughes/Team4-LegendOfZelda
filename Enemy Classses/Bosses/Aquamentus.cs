@@ -12,36 +12,49 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 
         public Aquamentus()
         {
-            State = new AquamentusLeftFacingIdleState(this);
+            State = new AquamentusWestIdleState(this);
         }
-        public void South()
+
+        public void GoNorth()
         {
-            State.South();
+            State.GoNorth();
         }
-        public void North()
+
+        public void GoEast()
         {
-            State.North();
+            State.GoEast();
         }
-        public void East()
+
+        public void GoSouth()
         {
-            State.East();
+            State.GoSouth();
         }
-        public void West()
+
+        public void GoWest()
         {
-            State.West();
+            State.GoWest();
         }
+
         public void BeDamaged()
         {
             State.BeDamaged();
         }
+
         public void Attack()
         {
             State.Attack();
         }
+
+        public void UseItem()
+        {
+            // Do nothing
+        }
+
         public void Update()
         {
             // TODO
         }
+
         public void Draw(SpriteBatch spriteBatch)
         {
             Sprite.Draw(spriteBatch, Position);
