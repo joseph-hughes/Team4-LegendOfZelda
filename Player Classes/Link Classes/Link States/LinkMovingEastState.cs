@@ -11,15 +11,15 @@ namespace Team4_LegendOfZelda.IState_Classes
             this.link = link;
             // contrust sprite
         }
-        public void GoSouth()
+        public void South()
         {
             link.State = new LinkNonMovingSouthState(link);
         }
-        public void GoNorth()
+        public void North()
         {
             link.State = new LinkNonMovingNorthState(link);
         }
-        public void GoEast()
+        public void East()
         {
             // no action
         }

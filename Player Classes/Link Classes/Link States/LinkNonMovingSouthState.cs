@@ -13,15 +13,15 @@ namespace Team4_LegendOfZelda.IState_Classes
             //ThisGame.SetSprite(new NonMovingSouthSprite(sprite, new Vector2(320, 200)));
 
         }
-        public void GoSouth()
+        public void South()
         {
             link.State = new LinkMovingSouthState(link);
         }
-        public void GoNorth()
+        public void North()
         {
             link.State = new LinkNonMovingNorthState(link);
         }
-        public void GoEast()
+        public void East()
         {
             link.State = new LinkNonMovingEastState(link);
         }
