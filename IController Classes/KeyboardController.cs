@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Team4_LegendOfZelda
 {
-    class KeyboardController : IController
+    public class KeyboardController : IController
     {
         private Dictionary<Keys, ICommand> controllerMappings;
 

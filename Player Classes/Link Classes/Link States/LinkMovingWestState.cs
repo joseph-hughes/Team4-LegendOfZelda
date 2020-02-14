@@ -5,7 +5,7 @@ namespace Team4_LegendOfZelda.IState_Classes
     class LinkMovingWestState : IState
     {
         private Link link;
-        public LegendOfZeldaGame ThisGame { get; set; }
+        public LegendOfZelda ThisGame { get; set; }
         public LinkMovingWestState(Link link)
         {
             this.link = link;

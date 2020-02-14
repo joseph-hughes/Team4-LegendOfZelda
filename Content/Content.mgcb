@@ -349,30 +349,6 @@
 /processorParam:TextureFormat=Color
 /build:Dungeon Enemies/Wall Master/WallMasterEast.png
 
-#begin Dungeon Enemies/Wall Master/WallMasterUpsideDownEast.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Wall Master/WallMasterUpsideDownEast.png
-
-#begin Dungeon Enemies/Wall Master/WallMasterUpsideDownWest.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Dungeon Enemies/Wall Master/WallMasterUpsideDownWest.png
-
 #begin Dungeon Enemies/Wall Master/WallMasterWest.png
 /importer:TextureImporter
 /processor:TextureProcessor

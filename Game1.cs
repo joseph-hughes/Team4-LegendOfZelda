@@ -9,7 +9,7 @@ namespace Team4_LegendOfZelda
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class LegendOfZeldaGame : Game
+    public class LegendOfZelda : Game
     {
         private ISprite credits;
         private ISprite source;
@@ -22,7 +22,7 @@ namespace Team4_LegendOfZelda
         private Color backgroundColor;
         private IState state;
 
-        public LegendOfZeldaGame()
+        public LegendOfZelda()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";

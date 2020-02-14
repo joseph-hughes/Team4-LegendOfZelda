@@ -44,8 +44,6 @@ namespace Team4_LegendOfZelda
 
 		private Texture2D wallMasterEastTexture;
 		private Texture2D wallMasterWestTexture;
-		private Texture2D wallMasterUpsideDownEastTexture;
-		private Texture2D wallMasterUpsideDownWestTexture;
 
 		private Texture2D zolDarkGreenTexture;
 
@@ -103,8 +101,6 @@ namespace Team4_LegendOfZelda
 
 			wallMasterEastTexture = content.Load<Texture2D>("WallMasterEast");
 			wallMasterWestTexture = content.Load<Texture2D>("WallMasterWest");
-			wallMasterUpsideDownEastTexture = content.Load<Texture2D>("WallMasterUpsideDownEast");
-			wallMasterUpsideDownWestTexture = content.Load<Texture2D>("WallMasterUpsideDownWest");
 
 			zolDarkGreenTexture = content.Load<Texture2D>("ZolDarkGreen");
 		}
@@ -262,16 +258,6 @@ namespace Team4_LegendOfZelda
 		public ISprite CreateWallMasterWestSprite()
 		{
 			return new TextureSprite(wallMasterWestTexture, 1, 2, 5);
-		}
-
-		public ISprite CreateWallMasterUpsideDownEastSprite()
-		{
-			return new TextureSprite(wallMasterUpsideDownEastTexture, 1, 2, 5);
-		}
-
-		public ISprite CreateWallMasterUpsideDownWestSprite()
-		{
-			return new TextureSprite(wallMasterUpsideDownWestTexture, 1, 2, 5);
 		}
 
 		// Zol Sprites
