@@ -46,6 +46,7 @@
     <StartupObject>Team4_LegendOfZelda.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ILevel.cs" />
     <Compile Include="NPCSpriteFactory.cs" />
     <Compile Include="IEnemy Classses\Bosses\Dodongo States\DodongoWestDamagedState.cs" />
     <Compile Include="IEnemy Classses\Bosses\Dodongo States\DodongoSouthDamagedState.cs" />
@@ -349,9 +350,7 @@
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Folder Include="Map Classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
