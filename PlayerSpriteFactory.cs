@@ -75,36 +75,36 @@ namespace Team4_LegendOfZelda
 
 		public ISprite CreateLinkDamagedMovingSouthSprite()
 		{
-			return new TextureSprite(LinkDamagedMovingSouthTexture, 1, 2, 5);
+			return new TextureSprite(LinkDamagedMovingSouthTexture, 1, 4, 5);
 		}
         public ISprite CreateLinkDamagedMovingNorthSprite()
         {
-            return new TextureSprite(LinkDamagedMovingNorthTexture, 1, 2, 5);
+            return new TextureSprite(LinkDamagedMovingNorthTexture, 1, 4, 5);
         }
         public ISprite CreateLinkDamagedMovingEastSprite()
         {
-            return new TextureSprite(LinkDamagedMovingEastTexture, 1, 2, 5);
+            return new TextureSprite(LinkDamagedMovingEastTexture, 1, 4, 5);
         }
         public ISprite CreateLinkDamagedMovingWestSprite()
         {
-            return new TextureSprite(LinkDamagedMovingWestTexture, 1, 2, 5);
+            return new TextureSprite(LinkDamagedMovingWestTexture, 1, 4, 5);
         }
 
         public ISprite CreateLinkDamagedNonMovingSouthSprite()
         {
-            return new TextureSprite(LinkDamagedNonMovingSouthTexture, 1, 1, 5);
+            return new TextureSprite(LinkDamagedNonMovingSouthTexture, 1, 4, 5);
         }
         public ISprite CreateLinkDamagedNonMovingNorthSprite()
         {
-            return new TextureSprite(LinkDamagedNonMovingNorthTexture, 1, 1, 5);
+            return new TextureSprite(LinkDamagedNonMovingNorthTexture, 1, 4, 5);
         }
         public ISprite CreateLinkDamagedNonMovingEastSprite()
         {
-            return new TextureSprite(LinkDamagedNonMovingEastTexture, 1, 1, 5);
+            return new TextureSprite(LinkDamagedNonMovingEastTexture, 1, 4, 5);
         }
         public ISprite CreateLinkDamagedNonMovingWestSprite()
         {
-            return new TextureSprite(LinkDamagedNonMovingWestTexture, 1, 1, 5);
+            return new TextureSprite(LinkDamagedNonMovingWestTexture, 1, 4, 5);
         }
 
         public ISprite CreateLinkMovingSouthSprite()
@@ -143,36 +143,36 @@ namespace Team4_LegendOfZelda
 
         public ISprite CreateLinkSwordSouthSprite()
         {
-            return new TextureSprite(LinkSwordSouthTexture, 1, 2, 5);
+            return new TextureSprite(LinkSwordSouthTexture, 1, 4, 5);
         }
         public ISprite CreateLinkSwordNorthSprite()
         {
-            return new TextureSprite(LinkSwordNorthTexture, 1, 2, 5);
+            return new TextureSprite(LinkSwordNorthTexture, 1, 4, 5);
         }
         public ISprite CreateLinkSwordEastSprite()
         {
-            return new TextureSprite(LinkSwordEastTexture, 1, 2, 5);
+            return new TextureSprite(LinkSwordEastTexture, 4, 1, 5);
         }
         public ISprite CreateLinkSwordWestSprite()
         {
-            return new TextureSprite(LinkSwordWestTexture, 1, 2, 5);
+            return new TextureSprite(LinkSwordWestTexture, 4, 1, 5);
         }
 
         public ISprite CreateLinkUseItemSouthSprite()
         {
-            return new TextureSprite(LinkUseItemSouthTexture, 1, 2, 5);
+            return new TextureSprite(LinkUseItemSouthTexture, 1, 1, 5);
         }
         public ISprite CreateLinkUseItemNorthSprite()
         {
-            return new TextureSprite(LinkUseItemNorthTexture, 1, 2, 5);
+            return new TextureSprite(LinkUseItemNorthTexture, 1, 1, 5);
         }
         public ISprite CreateLinkUseItemEastSprite()
         {
-            return new TextureSprite(LinkUseItemEastTexture, 1, 2, 5);
+            return new TextureSprite(LinkUseItemEastTexture, 1, 1, 5);
         }
         public ISprite CreateLinkUseItemWestSprite()
         {
-            return new TextureSprite(LinkUseItemWestTexture, 1, 2, 5);
+            return new TextureSprite(LinkUseItemWestTexture, 1, 1, 5);
         }
     }
 }
