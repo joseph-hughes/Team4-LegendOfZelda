@@ -130,13 +130,13 @@
     <Compile Include="Player Classes\Link Classes\Link States\LinkUseItemNorthState.cs" />
     <Compile Include="Player Classes\Link Classes\Link States\LinkUseItemSouthState.cs" />
     <Compile Include="IState.cs" />
-    <Compile Include="Game1.cs" />
+    <Compile Include="LegendOfZelda.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="ISprite.cs" />
     <Compile Include="IController Classes\KeyboardController.cs" />
     <Compile Include="Item Classes\Item.cs" />
-    <Compile Include="Item Classes\ItemFactory.cs" />
+    <Compile Include="ItemSpriteFactory.cs" />
     <Compile Include="Item Classes\ItemObject.cs" />
     <Compile Include="Item Classes\ItemObjectAnimated.cs" />
     <Compile Include="Item Classes\ItemState.cs" />

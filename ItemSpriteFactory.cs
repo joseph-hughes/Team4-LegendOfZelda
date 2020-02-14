@@ -1,10 +1,11 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Team4_LegendOfZelda.Item_Classes;
 
-namespace Team4_LegendOfZelda.Item_Classes
+namespace Team4_LegendOfZelda
 {
-    class ItemFactory
+    class ItemSpriteFactory : ISpriteFactory
     {
         private Texture2D secondPotion;
         private Texture2D fiveRupies;
@@ -42,10 +43,10 @@ namespace Team4_LegendOfZelda.Item_Classes
         private Texture2D rupy;
         private Texture2D triforce;
 
-        private static ItemFactory instance = new ItemFactory();
+        private static ItemSpriteFactory instance = new ItemSpriteFactory();
         public static Item emptyItemObject = new ItemObjectEmpty();
 
-        public static ItemFactory Instance
+        public static ItemSpriteFactory Instance
         {
             get
             {
@@ -53,10 +54,10 @@ namespace Team4_LegendOfZelda.Item_Classes
             }
 
         }
-        private ItemFactory()
+        private ItemSpriteFactory()
         {
         }
-        public void LoadAllTextues(ContentManager content)
+        public void LoadAllTextures(ContentManager content)
         {
             secondPotion = content.Load<Texture2D>("ItemSprites/2ndPotion");
             fiveRupies = content.Load<Texture2D>("ItemSprites/5Rupies");

@@ -5,7 +5,7 @@
     
         public Item UseItem()
         {
-            return ItemFactory.Instance.GetEmptyItem();
+            return ItemSpriteFactory.Instance.GetEmptyItem();
 
         }
     }

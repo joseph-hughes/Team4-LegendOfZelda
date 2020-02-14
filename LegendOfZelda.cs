@@ -63,7 +63,10 @@ namespace Team4_LegendOfZelda
 
             spriteFactories = new List<ISpriteFactory>
             {
-                EnemySpriteFactory.Instance
+                PlayerSpriteFactory.Instance,
+                EnemySpriteFactory.Instance,
+                NPCSpriteFactory.Instance,
+                ItemSpriteFactory.Instance
             };
 
             Window.Title = "Sprint2 - Team 4";

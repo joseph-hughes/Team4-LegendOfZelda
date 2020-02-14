@@ -6,7 +6,7 @@ namespace Team4_LegendOfZelda.Item_Classes
     {
         public Item UseItem()
         {
-            return ItemFactory.Instance.GetEmptyItem();
+            return ItemSpriteFactory.Instance.GetEmptyItem();
 
         }
     }
