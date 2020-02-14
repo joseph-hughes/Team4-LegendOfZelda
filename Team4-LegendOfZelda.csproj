@@ -60,6 +60,23 @@
     <Compile Include="Enemy Classses\Bosses\Aquamentus States\AquamentusEastAttackState.cs" />
     <Compile Include="Enemy Classses\Bosses\Aquamentus States\AquamentusEastIdleState.cs" />
     <Compile Include="Enemy Classses\Bosses\Aquamentus.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Enemy Classses\Dungeon Enemies\BladeTrap.cs" />
+    <Compile Include="Enemy Classses\Dungeon Enemies\ZolDarkGreen.cs" />
+    <Compile Include="Enemy Classses\Dungeon Enemies\WallMaster States\WallMasterUpsideDownEastState.cs" />
+    <Compile Include="Enemy Classses\Dungeon Enemies\WallMaster States\WallMasterUpsideDownWestState.cs" />
+    <Compile Include="Enemy Classses\Dungeon Enemies\WallMasterUpsideDown.cs" />
+    <Compile Include="Enemy Classses\Dungeon Enemies\WallMaster States\WallMasterWestState.cs" />
+    <Compile Include="Enemy Classses\Dungeon Enemies\WallMaster States\WallMasterEastState.cs" />
+    <Compile Include="Enemy Classses\Dungeon Enemies\WallMaster.cs" />
+    <Compile Include="Enemy Classses\Dungeon Enemies\Stalfos.cs" />
+    <Compile Include="Enemy Classses\Dungeon Enemies\Rope States\RopeWestState.cs" />
+    <Compile Include="Enemy Classses\Dungeon Enemies\Rope States\RopeEastState.cs" />
+    <Compile Include="Enemy Classses\Dungeon Enemies\Rope.cs" />
+    <Compile Include="Enemy Classses\Dungeon Enemies\KeeseRed.cs" />
+    <Compile Include="Enemy Classses\Dungeon Enemies\KeeseBlue.cs" />
+>>>>>>> parent of b2e0d9b... Starting implementing NPCs and moved around some files
     <Compile Include="Enemy Classses\Dungeon Enemies\GoriyaRed.cs" />
     <Compile Include="Enemy Classses\Dungeon Enemies\GoriyaBlue States\GoriyaBlueWestAttackState.cs" />
     <Compile Include="Enemy Classses\Dungeon Enemies\GoriyaBlue States\GoriyaBlueSouthAttackState.cs" />
