@@ -12,22 +12,22 @@
             // Create boomerang
         }
 
-        public void GoNorth()
+        public void North()
         {
             // Do nothing
         }
 
-        public void GoEast()
+        public void East()
         {
             // Do nothing
         }
 
-        public void GoSouth()
+        public void South()
         {
             // Do nothing
         }
 
-        public void GoWest()
+        public void West()
         {
             // Do nothing
         }

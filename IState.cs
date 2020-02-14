@@ -2,10 +2,10 @@
 {
     public interface IState
     {
-        void GoNorth();
-        void GoEast();
-        void GoSouth();
-        void GoWest();
+        void North();
+        void East();
+        void South();
+        void West();
         void BeDamaged();
         void Attack();
         void UseItem();

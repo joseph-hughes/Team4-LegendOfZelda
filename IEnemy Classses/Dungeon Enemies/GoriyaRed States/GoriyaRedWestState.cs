@@ -10,22 +10,22 @@
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateGoriyaRedWestSprite();
         }
 
-        public void GoNorth()
+        public void North()
         {
             enemy.State = new GoriyaRedNorthState(enemy);
         }
 
-        public void GoEast()
+        public void East()
         {
             enemy.State = new GoriyaRedEastState(enemy);
         }
 
-        public void GoSouth()
+        public void South()
         {
             enemy.State = new GoriyaRedSouthState(enemy);
         }
 
-        public void GoWest()
+        public void West()
         {
             // Do nothing
         }

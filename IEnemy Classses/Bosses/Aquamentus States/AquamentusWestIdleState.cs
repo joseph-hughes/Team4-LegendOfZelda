@@ -10,22 +10,22 @@
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateAquamentusWestIdleSprite();
         }
 
-        public void GoNorth()
+        public void North()
         {
             // Do nothing
         }
 
-        public void GoEast()
+        public void East()
         {
             enemy.State = new AquamentusEastIdleState(enemy);
         }
 
-        public void GoSouth()
+        public void South()
         {
             // Do nothing
         }
 
-        public void GoWest()
+        public void West()
         {
             // Do nothing
         }

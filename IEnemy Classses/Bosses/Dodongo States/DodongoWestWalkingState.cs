@@ -10,22 +10,22 @@
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateDodongoWestWalkingSprite();
         }
 
-        public void GoNorth()
+        public void North()
         {
             enemy.State = new DodongoNorthWalkingState(enemy);
         }
 
-        public void GoEast()
+        public void East()
         {
             enemy.State = new DodongoEastWalkingState(enemy);
         }
 
-        public void GoSouth()
+        public void South()
         {
             enemy.State = new DodongoSouthWalkingState(enemy);
         }
 
-        public void GoWest()
+        public void West()
         {
             // Do nothing
         }

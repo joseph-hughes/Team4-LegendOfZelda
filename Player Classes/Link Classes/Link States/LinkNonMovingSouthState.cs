@@ -25,7 +25,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         {
             link.State = new LinkNonMovingEastState(link);
         }
-        public void GoWest()
+        public void West()
         {
             link.State = new LinkNonMovingWestState(link);
         }

@@ -23,7 +23,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         {
             link.State = new LinkDamagedNonMovingEastState(link);
         }
-        public void GoWest()
+        public void West()
         {
             link.State = new LinkDamagedMovingWestState(link);
         }

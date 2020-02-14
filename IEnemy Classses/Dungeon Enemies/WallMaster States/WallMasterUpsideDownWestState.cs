@@ -10,22 +10,22 @@
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateWallMasterUpsideDownWestSprite();
         }
 
-        public void GoNorth()
+        public void North()
         {
             // Do nothing
         }
 
-        public void GoEast()
+        public void East()
         {
             enemy.State = new WallMasterUpsideDownEastState(enemy);
         }
 
-        public void GoSouth()
+        public void South()
         {
             // Do nothing
         }
 
-        public void GoWest()
+        public void West()
         {
             // Do nothing
         }

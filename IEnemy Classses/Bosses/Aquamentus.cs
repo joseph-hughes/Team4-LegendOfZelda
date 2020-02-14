@@ -18,22 +18,22 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 
         public void GoNorth()
         {
-            State.GoNorth();
+            State.North();
         }
 
         public void GoEast()
         {
-            State.GoEast();
+            State.East();
         }
 
         public void GoSouth()
         {
-            State.GoSouth();
+            State.South();
         }
 
         public void GoWest()
         {
-            State.GoWest();
+            State.West();
         }
 
         public void BeDamaged()

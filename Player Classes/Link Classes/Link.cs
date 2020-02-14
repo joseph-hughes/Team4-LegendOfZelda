@@ -33,7 +33,7 @@ namespace Team4_LegendOfZelda
         }
         public void West()
         {
-            State.GoWest();
+            State.West();
         }
         public void BeDamaged()
         {
