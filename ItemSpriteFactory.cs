@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Team4_LegendOfZelda.ISprite_Classes;
 using Team4_LegendOfZelda.Item_Classes;
 
 namespace Team4_LegendOfZelda
@@ -43,8 +44,9 @@ namespace Team4_LegendOfZelda
         private Texture2D rupy;
         private Texture2D triforce;
 
+        private Texture2D EmptyImage;
+
         private static ItemSpriteFactory instance = new ItemSpriteFactory();
-        public static Item emptyItemObject = new ItemObjectEmpty();
 
         public static ItemSpriteFactory Instance
         {
@@ -94,148 +96,152 @@ namespace Team4_LegendOfZelda
             heart = content.Load<Texture2D>("ItemSprites/AnimatedItems/Heart");
             rupy = content.Load<Texture2D>("ItemSprites/AnimatedItems/Rupy");
             triforce = content.Load<Texture2D>("ItemSprites/AnimatedItems/Triforce");
+
+            EmptyImage = content.Load<Texture2D>("ItemSprites/EmptyImage");
         }
-        public Item GetEmptyItem()
+        //empty item
+        public ISprite CreateEmptyItem()
         {
-            return emptyItemObject;
+            return new TextureSprite(EmptyImage);
         }
-        public Item CreateSecondPotion(Vector2 location)
+        //non-animated
+        public ISprite CreateSecondPotion()
         {
-            return new ItemObject(secondPotion, location, new SecondPotionState());
+            return new TextureSprite(secondPotion);
         }
-        public Item CreateFiveRupies(Vector2 location)
+        public ISprite CreateFiveRupies()
         {
-            return new ItemObject(fiveRupies, location, new FiveRupiesState());
+            return new TextureSprite(fiveRupies);
         }
-        public Item CreateArrow(Vector2 location)
+        public ISprite CreateArrow()
         {
-            return new ItemObject(arrow, location, new ArrowState());
+            return new TextureSprite(arrow);
         }
-        public Item CreateBlueCandle(Vector2 location)
+        public ISprite CreateBlueCandle()
         {
-            return new ItemObject(blueCandle, location, new BlueCandleState());
+            return new TextureSprite(blueCandle);
         }
-        public Item CreateBlueRing(Vector2 location)
+        public ISprite CreateBlueRing()
         {
-            return new ItemObject(blueRing, location, new BlueRingState());
+            return new TextureSprite(blueRing);
         }
-        public Item CreateBomb(Vector2 location)
+        public ISprite CreateBomb()
         {
-            return new ItemObject(bomb, location, new BombState());
+            return new TextureSprite(bomb);
         }
-        public Item CreateBookOfMagic(Vector2 location)
+        public ISprite CreateBookOfMagic()
         {
-            return new ItemObject(bookOfMagic, location, new BookOfMagicState());
+            return new TextureSprite(bookOfMagic);
         }
-        public Item CreateBoomerang(Vector2 location)
+        public ISprite CreateBoomerang()
         {
-            return new ItemObject(boomerang, location, new BoomerangState());
+            return new TextureSprite(boomerang);
         }
-        public Item CreateBow(Vector2 location)
+        public ISprite CreateBow()
         {
-            return new ItemObject(bow, location, new BowState());
+            return new TextureSprite(bow);
         }
-        public Item CreateClock(Vector2 location)
+        public ISprite CreateClock()
         {
-            return new ItemObject(clock, location, new ClockState());
+            return new TextureSprite(clock);
         }
-        public Item CreateCompass(Vector2 location)
+        public ISprite CreateCompass()
         {
-            return new ItemObject(compass, location, new CompassState());
+            return new TextureSprite(compass);
         }
-        public Item CreateFood(Vector2 location)
+        public ISprite CreateFood()
         {
-            return new ItemObject(food, location, new FoodState());
+            return new TextureSprite(food);
         }
-        public Item CreateHeartContainer(Vector2 location)
+        public ISprite CreateHeartContainer()
         {
-            return new ItemObject(heartContainer, location, new HeartContainerState());
+            return new TextureSprite(heartContainer);
         }
-        public Item CreateKey(Vector2 location)
+        public ISprite CreateKey()
         {
-            return new ItemObject(key, location, new KeyState());
+            return new TextureSprite(key);
         }
-        public Item CreateLetter(Vector2 location)
+        public ISprite CreateLetter()
         {
-            return new ItemObject(letter, location, new LetterState());
+            return new TextureSprite(letter);
         }
-        public Item CreateLifePotion(Vector2 location)
+        public ISprite CreateLifePotion()
         {
-            return new ItemObject(lifePotion, location, new LifePotionState());
+            return new TextureSprite(lifePotion);
         }
-        public Item CreateMagicalBoomerang(Vector2 location)
+        public ISprite CreateMagicalBoomerang()
         {
-            return new ItemObject(magicalBoomerang, location, new MagicalBoomerangState());
+            return new TextureSprite(magicalBoomerang);
         }
-        public Item CreateMagicalKey(Vector2 location)
+        public ISprite CreateMagicalKey()
         {
-            return new ItemObject(magicalKey, location, new MagicalKeyState());
+            return new TextureSprite(magicalKey);
         }
-        public Item CreateMagicalRod(Vector2 location)
+        public ISprite CreateMagicalRod()
         {
-            return new ItemObject(magicalRod, location, new MagicalRodState());
+            return new TextureSprite(magicalRod);
         }
-        public Item CreateMagicalShield(Vector2 location)
+        public ISprite CreateMagicalShield()
         {
-            return new ItemObject(magicalShield, location, new MagicalShieldState());
+            return new TextureSprite(magicalShield);
         }
-        public Item CreateMap(Vector2 location)
+        public ISprite CreateMap()
         {
-            return new ItemObject(map, location, new MapState());
+            return new TextureSprite(map);
         }
-        public Item CreatePowerBracelet(Vector2 location)
+        public ISprite CreatePowerBracelet()
         {
-            return new ItemObject(powerBracelet, location, new PowerBraceletState());
+            return new TextureSprite(powerBracelet);
         }
-        public Item CreateRaft(Vector2 location)
+        public ISprite CreateRaft()
         {
-            return new ItemObject(raft, location, new RaftState());
+            return new TextureSprite(raft);
         }
-        public Item CreateRecorder(Vector2 location)
+        public ISprite CreateRecorder()
         {
-            return new ItemObject(recorder, location, new RecorderState());
+            return new TextureSprite(recorder);
         }
-        public Item CreateRedCandle(Vector2 location)
+        public ISprite CreateRedCandle()
         {
-            return new ItemObject(redCandle, location, new RedCandleState());
+            return new TextureSprite(redCandle);
         }
-        public Item CreateRedRing(Vector2 location)
+        public ISprite CreateRedRing()
         {
-            return new ItemObject(redRing, location, new RedRingState());
+            return new TextureSprite(redRing);
         }
-        public Item CreateSilverArrow(Vector2 location)
+        public ISprite CreateSilverArrow()
         {
-            return new ItemObject(silverArrow, location, new SilverArrowState());
+            return new TextureSprite(silverArrow);
         }
-        public Item CreateStepladder(Vector2 location)
+        public ISprite CreateStepladder()
         {
-            return new ItemObject(stepladder, location, new StepladderState());
+            return new TextureSprite(stepladder);
         }
-        public Item CreateSword(Vector2 location)
+        public ISprite CreateSword()
         {
-            return new ItemObject(sword, location, new SwordState());
+            return new TextureSprite(sword);
         }
-        public Item CreateWhiteSword(Vector2 location)
+        public ISprite CreateWhiteSword()
         {
-            return new ItemObject(whiteSword, location, new WhiteSwordState());
+            return new TextureSprite(whiteSword);
         }
 
-
-        public Item CreateFairy(Vector2 location)
+        //animated
+        public ISprite CreateFairy()
         {
-            return new ItemObjectAnimated(fairy,1, 2, 5, location, new FairyState());
+            return new TextureSprite(fairy, 1, 2, 5);
         }
-        public Item CreateHeart(Vector2 location)
+        public ISprite CreateHeart()
         {
-            return new ItemObjectAnimated(heart, 1, 2, 5, location, new HeartState());
+            return new TextureSprite(heart, 1, 2, 5);
         }
-        public Item CreateRupy(Vector2 location)
+        public ISprite CreateRupy()
         {
-            return new ItemObjectAnimated(rupy, 1, 2, 5, location, new RupyState());
+            return new TextureSprite(rupy, 1, 2, 5);
         }
-        public Item CreateTriforce(Vector2 location)
+        public ISprite CreateTriforce()
         {
-            return new ItemObjectAnimated(triforce, 1, 2, 5, location, new TriforceState());
+            return new TextureSprite(triforce, 1, 2, 5);
         }
     }
 }
