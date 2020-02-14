@@ -5,25 +5,25 @@ namespace Team4_LegendOfZelda.IState_Classes
     class LinkDamagedMovingWestState : IState
     {
         private Link link;
-        public LegendOfZelda ThisGame { get; set; }
+        public LegendOfZeldaGame ThisGame { get; set; }
         public LinkDamagedMovingWestState(Link link)
         {
             this.link = link;
             // contrust sprite
         }
-        public void South()
+        public void GoSouth()
         {
             link.State = new LinkDamagedNonMovingSouthState(link);
         }
-        public void North()
+        public void GoNorth()
         {
             link.State = new LinkDamagedNonMovingNorthState(link);
         }
-        public void East()
+        public void GoEast()
         {
             link.State = new LinkDamagedNonMovingEastState(link);
         }
-        public void West()
+        public void GoWest()
         {
             // no action
         }

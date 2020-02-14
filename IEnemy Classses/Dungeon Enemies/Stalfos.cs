@@ -1,47 +1,61 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States;
 
-namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
+namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
-    class Aquamentus : IEnemy
+    class Stalfos : IEnemy
     {
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
 
-        public Aquamentus()
+        public Stalfos(Vector2 position)
         {
-            State = new AquamentusLeftFacingIdleState(this);
+            Sprite = EnemySpriteFactory.Instance.CreateStalfosSprite();
+            State = new NullState();
+            Position = position;
         }
-        public void South()
+
+        public void GoNorth()
         {
-            State.South();
+            // TODO
         }
-        public void North()
+
+        public void GoEast()
         {
-            State.North();
+            // TODO
         }
-        public void East()
+
+        public void GoSouth()
         {
-            State.East();
+            // TODO
         }
-        public void West()
+
+        public void GoWest()
         {
-            State.West();
+            // TODO
         }
+
         public void BeDamaged()
         {
-            State.BeDamaged();
+            // TODO
         }
+
         public void Attack()
         {
-            State.Attack();
+            // TODO
         }
+
+        public void UseItem()
+        {
+            // Do nothing
+        }
+
         public void Update()
         {
             // TODO
         }
+
         public void Draw(SpriteBatch spriteBatch)
         {
             Sprite.Draw(spriteBatch, Position);

@@ -1,15 +1,19 @@
-﻿namespace Team4_LegendOfZelda
+﻿using Microsoft.Xna.Framework;
+
+namespace Team4_LegendOfZelda
 {
-    public class QuitCommand : ICommand
+    class QuitCommand : ICommand
     {
-        public LegendOfZelda ThisGame { get; set; }
-        public QuitCommand(LegendOfZelda thisGame)
+        public Game game { get; set; }
+
+        public QuitCommand(Game game)
         {
-            ThisGame = thisGame;
+            this.game = game;
         }
+
         public void Execute()
         {
-            ThisGame.Exit();
+            game.Exit();
         }
     }
 }

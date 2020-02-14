@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.ISprite_Classes
 {
-    public class TextSprite : ISprite
+    class TextSprite : ISprite
     {
         private SpriteFont Font { get; set; }
         private string Text { get; set; }

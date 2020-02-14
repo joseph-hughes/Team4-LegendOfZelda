@@ -4,7 +4,7 @@ using Team4_LegendOfZelda.ISprite_Classes;
 
 namespace Team4_LegendOfZelda
 {
-	public class PlayerSpriteFactory
+	public class PlayerSpriteFactory : ISpriteFactory
 	{
 		private Texture2D LinkDamagedMovingSouthTexture;
         private Texture2D LinkDamagedMovingNorthTexture;

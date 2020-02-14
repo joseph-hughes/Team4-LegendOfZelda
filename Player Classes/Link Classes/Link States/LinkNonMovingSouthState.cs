@@ -5,7 +5,7 @@ namespace Team4_LegendOfZelda.IState_Classes
     class LinkNonMovingSouthState : IState
     {
         private Link link;
-        public LegendOfZelda ThisGame { get; set; }
+        public LegendOfZeldaGame ThisGame { get; set; }
         public LinkNonMovingSouthState(Link link)
         {
             this.link = link;
@@ -13,19 +13,19 @@ namespace Team4_LegendOfZelda.IState_Classes
             //ThisGame.SetSprite(new NonMovingSouthSprite(sprite, new Vector2(320, 200)));
 
         }
-        public void South()
+        public void GoSouth()
         {
             link.State = new LinkMovingSouthState(link);
         }
-        public void North()
+        public void GoNorth()
         {
             link.State = new LinkNonMovingNorthState(link);
         }
-        public void East()
+        public void GoEast()
         {
             link.State = new LinkNonMovingEastState(link);
         }
-        public void West()
+        public void GoWest()
         {
             link.State = new LinkNonMovingWestState(link);
         }

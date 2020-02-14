@@ -2,7 +2,6 @@
 {
     public interface ItemState
     {
-        void UseItem();
-        void ProjectileMoving();
+        Item UseItem();
     }
 }

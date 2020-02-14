@@ -5,25 +5,25 @@ namespace Team4_LegendOfZelda.IState_Classes
     class LinkUseItemEastState : IState
     {
         private Link link;
-        public LegendOfZelda ThisGame { get; set; }
+        public LegendOfZeldaGame ThisGame { get; set; }
         public LinkUseItemEastState(Link link)
         {
             this.link = link;
             // contrust sprite
         }
-        public void South()
+        public void GoSouth()
         {
             // no action
         }
-        public void North()
+        public void GoNorth()
         {
             // no action
         }
-        public void East()
+        public void GoEast()
         {
             // no action
         }
-        public void West()
+        public void GoWest()
         {
             // no action
         }
