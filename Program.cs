@@ -13,7 +13,7 @@ namespace Team4_LegendOfZelda
         [STAThread]
         static void Main()
         {
-            using (var game = new LegendOfZelda())
+            using (var game = new LegendOfZeldaGame())
             {
                 game.Run();
             }

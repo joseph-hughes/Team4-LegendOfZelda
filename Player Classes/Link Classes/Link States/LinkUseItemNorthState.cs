@@ -5,7 +5,7 @@ namespace Team4_LegendOfZelda.IState_Classes
     class LinkUseItemNorthState : IState
     {
         private Link link;
-        public LegendOfZelda ThisGame { get; set; }
+        public LegendOfZeldaGame ThisGame { get; set; }
         public LinkUseItemNorthState(Link link)
         {
             this.link = link;
