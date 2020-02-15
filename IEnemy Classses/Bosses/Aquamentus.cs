@@ -16,41 +16,6 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
             Position = position;
         }
 
-        public void GoNorth()
-        {
-            State.North();
-        }
-
-        public void GoEast()
-        {
-            State.East();
-        }
-
-        public void GoSouth()
-        {
-            State.South();
-        }
-
-        public void GoWest()
-        {
-            State.West();
-        }
-
-        public void BeDamaged()
-        {
-            State.BeDamaged();
-        }
-
-        public void Attack()
-        {
-            State.Attack();
-        }
-
-        public void UseItem()
-        {
-            // Do nothing
-        }
-
         public void Update()
         {
             // TODO
