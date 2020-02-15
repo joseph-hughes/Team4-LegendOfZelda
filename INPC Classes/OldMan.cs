@@ -16,41 +16,6 @@ namespace Team4_LegendOfZelda.NPC_Classes
             Position = position;
         }
 
-        public void GoNorth()
-        {
-            // TODO
-        }
-
-        public void GoEast()
-        {
-            // TODO
-        }
-
-        public void GoSouth()
-        {
-            // TODO
-        }
-
-        public void GoWest()
-        {
-            // TODO
-        }
-
-        public void BeDamaged()
-        {
-            // TODO
-        }
-
-        public void Attack()
-        {
-            // TODO
-        }
-
-        public void UseItem()
-        {
-            // Do nothing
-        }
-
         public void Update()
         {
             // TODO
