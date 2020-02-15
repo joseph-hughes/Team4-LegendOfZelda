@@ -46,13 +46,22 @@
     <StartupObject>Team4_LegendOfZelda.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="commandRegister.cs" />
+    <Compile Include="cycleItem.cs" />
+    <Compile Include="cycleItemPrevious.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="ISprite.cs" />
     <Compile Include="KeyboardController.cs" />
+    <Compile Include="linkAttack.cs" />
+    <Compile Include="linkChangeItem.cs" />
     <Compile Include="mouseClickArea.cs" />
     <Compile Include="MouseController.cs" />
+    <Compile Include="moveLinkDown.cs" />
+    <Compile Include="moveLinkLeft.cs" />
+    <Compile Include="moveLinkRight.cs" />
+    <Compile Include="moveLinkUp.cs" />
     <Compile Include="MovingAnimatedSprite.cs" />
     <Compile Include="MovingNonAnimatedSprite.cs" />
     <Compile Include="NonMovingAnimatedSprite.cs" />
@@ -60,10 +69,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuitCommand.cs" />
+    <Compile Include="resetGame.cs" />
     <Compile Include="SetMovingAnimatedSpriteCommand.cs" />
     <Compile Include="SetMovingNonAnimatedSpriteCommand.cs" />
     <Compile Include="SetNonMovingAnimatedSpriteCommand.cs" />
     <Compile Include="SetNonMovingNonAnimatedSpriteCommand.cs" />
+    <Compile Include="takeDamage.cs" />
     <Compile Include="TextSprite.cs" />
   </ItemGroup>
   <ItemGroup>
