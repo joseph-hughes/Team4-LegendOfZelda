@@ -58,16 +58,18 @@ namespace Team4_LegendOfZelda
 
             KeyboardController keyboard = (KeyboardController)controllerList[0];
 
-            keyboard.RegisterCommand(Keys.D0, commandList[0]);
-            keyboard.RegisterCommand(Keys.NumPad0, commandList[0]);
-            keyboard.RegisterCommand(Keys.D1, commandList[1]);
-            keyboard.RegisterCommand(Keys.NumPad1, commandList[1]);
-            keyboard.RegisterCommand(Keys.D2, commandList[2]);
-            keyboard.RegisterCommand(Keys.NumPad2, commandList[2]);
-            keyboard.RegisterCommand(Keys.D3, commandList[3]);
-            keyboard.RegisterCommand(Keys.NumPad3, commandList[3]);
-            keyboard.RegisterCommand(Keys.D4, commandList[4]);
-            keyboard.RegisterCommand(Keys.NumPad4, commandList[4]);
+            keyboard.RegisterCommand(Keys.W, commandList[0]);
+            keyboard.RegisterCommand(Keys.A, commandList[0]);
+            keyboard.RegisterCommand(Keys.S, commandList[1]);
+            keyboard.RegisterCommand(Keys.D, commandList[1]);
+            keyboard.RegisterCommand(Keys.Z, commandList[2]);
+            keyboard.RegisterCommand(Keys.N, commandList[2]);
+            keyboard.RegisterCommand(Keys.Q, commandList[3]);
+            keyboard.RegisterCommand(Keys.R, commandList[3]);
+            keyboard.RegisterCommand(Keys.U, commandList[4]);
+            keyboard.RegisterCommand(Keys.I, commandList[4]);
+            keyboard.RegisterCommand(Keys.O, commandList[4]);
+            keyboard.RegisterCommand(Keys.P, commandList[4]);
 
             spriteFactories = new List<ISpriteFactory>
             {

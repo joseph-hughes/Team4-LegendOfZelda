@@ -8,7 +8,7 @@ namespace Team4_LegendOfZelda
 {
     public class moveLinkDown : ICommand
     {
-        private PlayerSpriteFactory spriteFactory = PlayerSpriteFactory.Instance;
+        public Link player { get; set; }
         public LegendOfZelda ThisGame { get; set; }
         public moveLinkDown(LegendOfZelda thisGame)
         {
@@ -16,7 +16,7 @@ namespace Team4_LegendOfZelda
         }
         public void Execute()
         {
-            spriteFactory.CreateLinkMovingSouthSprite().Update();
+            player.South();
         }
     }
 }

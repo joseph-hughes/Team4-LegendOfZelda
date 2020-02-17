@@ -55,7 +55,7 @@
     <Compile Include="ICommand Classes\moveLinkDown.cs" />
     <Compile Include="ICommand Classes\moveLinkLeft.cs" />
     <Compile Include="ICommand Classes\moveLinkRight.cs" />
-    <Compile Include="ICommand Classes\`1.cs" />
+    <Compile Include="ICommand Classes\moveLinkUp.cs" />
     <Compile Include="ICommand Classes\resetGame.cs" />
     <Compile Include="ICommand Classes\takeDamage.cs" />
     <Compile Include="ILevel.cs" />

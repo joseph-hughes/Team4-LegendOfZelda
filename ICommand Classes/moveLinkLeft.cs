@@ -9,7 +9,7 @@ namespace Team4_LegendOfZelda
 
     public class moveLinkLeft : ICommand
     {
-        private PlayerSpriteFactory spriteFactory = PlayerSpriteFactory.Instance;
+        public Link player { get; set; }
 
         public LegendOfZelda ThisGame { get; set; }
         public moveLinkLeft(LegendOfZelda thisGame)
@@ -18,7 +18,7 @@ namespace Team4_LegendOfZelda
         }
         public void Execute()
         {
-            spriteFactory.CreateLinkMovingWestSprite().Update();
+            player.West();
         }
     }
 }
