@@ -46,7 +46,18 @@
     <StartupObject>Team4_LegendOfZelda.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ICommand Classes\commandRegister.cs" />
     <Compile Include="ICommand Classes\CreateAllItemsCommand.cs" />
+    <Compile Include="ICommand Classes\cycleItemPrevious.cs" />
+    <Compile Include="ICommand Classes\cylceItem.cs" />
+    <Compile Include="ICommand Classes\linkAttack.cs" />
+    <Compile Include="ICommand Classes\linkChangeItem.cs" />
+    <Compile Include="ICommand Classes\moveLinkDown.cs" />
+    <Compile Include="ICommand Classes\moveLinkLeft.cs" />
+    <Compile Include="ICommand Classes\moveLinkRight.cs" />
+    <Compile Include="ICommand Classes\`1.cs" />
+    <Compile Include="ICommand Classes\resetGame.cs" />
+    <Compile Include="ICommand Classes\takeDamage.cs" />
     <Compile Include="ILevel.cs" />
     <Compile Include="NPCSpriteFactory.cs" />
     <Compile Include="IEnemy Classses\Bosses\Dodongo States\DodongoWestDamagedState.cs" />

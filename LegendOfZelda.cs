@@ -20,7 +20,11 @@ namespace Team4_LegendOfZelda
         private List<ICommand> commandList;
         private List<ISpriteFactory> spriteFactories;
         private Color backgroundColor;
+<<<<<<< Updated upstream:LegendOfZelda.cs
         private IState state;
+=======
+        private commandRegister comRegister = new commandRegister();
+>>>>>>> Stashed changes:Game1.cs
 
         public LegendOfZelda()
         {
@@ -43,10 +47,14 @@ namespace Team4_LegendOfZelda
             {
                 new KeyboardController()
             };
+<<<<<<< Updated upstream:LegendOfZelda.cs
             commandList = new List<ICommand>
             {
                 new QuitCommand(this)
             };
+=======
+            commandList = comRegister.getCommandList(this);
+>>>>>>> Stashed changes:Game1.cs
 
             KeyboardController keyboard = (KeyboardController)controllerList[0];
 
