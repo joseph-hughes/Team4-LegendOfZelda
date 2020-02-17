@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.Item_Classes
 {
@@ -6,6 +7,6 @@ namespace Team4_LegendOfZelda.Item_Classes
     {
         void Update();
         void Draw(SpriteBatch spriteBatch);
-        void UseItem();
+        void UseItem(Vector2 location);
     }
 }

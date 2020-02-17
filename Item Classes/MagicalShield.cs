@@ -23,9 +23,9 @@ namespace Team4_LegendOfZelda.Item_Classes
         {
             itemSprite.Draw(spriteBatch, itemLocation);
         }
-        public void UseItem()
+        public void UseItem(Vector2 location)
         {
-
+            itemLocation = location;
         }
     }
 }
