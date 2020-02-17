@@ -32,64 +32,62 @@ namespace Team4_LegendOfZelda.MapClasses
         public void Initialize()
         {
             
-            Vector2 bcv = new Vector2(40, 40);
+            Vector2 item_test_vector = new Vector2(40, 40);
             backgroundtexture = content.Load<Texture2D>("MapSprites/emptyroom");
 
             items = new List<Iitem>
             {
-                new BlueCandle(bcv),
-                new BlueRing(bcv),
-                new Bomb(bcv),
-                new BookOfMagic(bcv),
-                new Bow(bcv),
-                new Clock(bcv),
-                new Compass(bcv),
-                new EmptyItem(bcv),
-                new Fairy(bcv),
-                new FiveRupies(bcv),
-                new Food(bcv),
-                new Heart(bcv),
-                new HeartContainer(bcv),
-                new Key(bcv),
-                new Letter(bcv),
-                new LifePotion(bcv),
-                new MagicalKey(bcv),
-                new MagicalRod(bcv),
-                new MagicalShield(bcv),
-                new Map(bcv),
-                new PowerBracelet(bcv),
-                new Raft(bcv),
-                new Recorder(bcv),
-                new RedCandle(bcv),
-                new RedRing(bcv),
-                new Rupy(bcv),
-                new SecondPotion(bcv),
-                new SilverArrow(bcv),
-                new Stepladder(bcv),
-                new Sword(bcv),
-                new Triforce(bcv),
-                new WhiteSword(bcv)
-
-
-
+                new BlueCandle(item_test_vector),
+                new BlueRing(item_test_vector),
+                new Bomb(item_test_vector),
+                new BookOfMagic(item_test_vector),
+                new Bow(item_test_vector),
+                new Clock(item_test_vector),
+                new Compass(item_test_vector),
+                new EmptyItem(item_test_vector),
+                new Fairy(item_test_vector),
+                new FiveRupies(item_test_vector),
+                new Food(item_test_vector),
+                new Heart(item_test_vector),
+                new HeartContainer(item_test_vector),
+                new Key(item_test_vector),
+                new Letter(item_test_vector),
+                new LifePotion(item_test_vector),
+                new MagicalKey(item_test_vector),
+                new MagicalRod(item_test_vector),
+                new MagicalShield(item_test_vector),
+                new Map(item_test_vector),
+                new PowerBracelet(item_test_vector),
+                new Raft(item_test_vector),
+                new Recorder(item_test_vector),
+                new RedCandle(item_test_vector),
+                new RedRing(item_test_vector),
+                new Rupy(item_test_vector),
+                new SecondPotion(item_test_vector),
+                new SilverArrow(item_test_vector),
+                new Stepladder(item_test_vector),
+                new Sword(item_test_vector),
+                new Triforce(item_test_vector),
+                new WhiteSword(item_test_vector)
             };
             currentItem = items[item_index];
 
+            Vector2 enemy_test_vector = new Vector2(140, 140);
             enemies = new List<IEnemy>
             {
-                new Aquamentus(bcv),
-                new Dodongo(bcv),
-                new BladeTrap(bcv),
-                new GelDarkBlue(bcv),
-                new GoriyaRed(bcv),
-                new GoriyaBlue(bcv),
-                new KeeseBlue(bcv),
-                new KeeseRed(bcv),
-                new Rope(bcv),
-                new Stalfos(bcv),
-                new WallMaster(bcv),
-                new WallMasterUpsideDown(bcv),
-                new ZolDarkGreen(bcv)
+                new Aquamentus(enemy_test_vector),
+                new Dodongo(enemy_test_vector),
+                new BladeTrap(enemy_test_vector),
+                new GelDarkBlue(enemy_test_vector),
+                new GoriyaRed(enemy_test_vector),
+                new GoriyaBlue(enemy_test_vector),
+                new KeeseBlue(enemy_test_vector),
+                new KeeseRed(enemy_test_vector),
+                new Rope(enemy_test_vector),
+                new Stalfos(enemy_test_vector),
+                new WallMaster(enemy_test_vector),
+                new WallMasterUpsideDown(enemy_test_vector),
+                new ZolDarkGreen(enemy_test_vector)
 
             };
             currentEnemy = enemies[enemy_index];
