@@ -9,7 +9,7 @@ namespace Team4_LegendOfZelda
     public class moveLinkUp : ICommand
     {
        
-        public Link player { get; set; }
+        public IPlayer player { get; set; }
         
         public moveLinkUp(LegendOfZelda game)
         {

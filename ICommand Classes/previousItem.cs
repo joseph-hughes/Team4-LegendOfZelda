@@ -9,16 +9,16 @@ namespace Team4_LegendOfZelda
 
     public class previousItem : ICommand
     {
-        private Sprint2Level level = new Sprint2Level();
+        public ILevel level;
 
 
-        public previousItem(Sprint2Level level)
+        public previousItem(LegendOfZelda game)
         {
-            this.level = level;
+            this.level = game.level;
         }
         public void Execute()
         {
-            level.previousItem();
+            level.PreviousItem();
         }
     }
 }

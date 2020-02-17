@@ -9,13 +9,13 @@ namespace Team4_LegendOfZelda
 
     public class nextItem : ICommand
     {
-    
-        private Sprint2Level level = new Sprint2Level();
+
+        public ILevel level;
 
 
-        public nextItem(Sprint2Level level)
+        public nextItem(LegendOfZelda game)
         {
-            this.level = level;
+            this.level = game.level;
         }
         public void Execute()
         {

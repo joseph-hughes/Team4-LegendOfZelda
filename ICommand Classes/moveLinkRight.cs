@@ -8,7 +8,7 @@ namespace Team4_LegendOfZelda
 {
     public class moveLinkRight : ICommand
     {
-        public Link player { get; set; }
+        public IPlayer player { get; set; }
         public LegendOfZelda ThisGame { get; set; }
         public moveLinkRight(LegendOfZelda thisGame)
         {

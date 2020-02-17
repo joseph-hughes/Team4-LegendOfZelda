@@ -13,8 +13,8 @@ namespace Team4_LegendOfZelda.MapClasses
     public class Sprint2Level:ILevel
     {
         ISprite background;
-        List<Iitem> items;
-        Iitem currentItem;
+        List<IItem> items;
+        IItem currentItem;
         List<IEnemy> enemies;
         IEnemy currentEnemy;
         private Texture2D backgroundtexture;
@@ -35,7 +35,7 @@ namespace Team4_LegendOfZelda.MapClasses
             Vector2 item_test_vector = new Vector2(40, 40);
             backgroundtexture = content.Load<Texture2D>("MapSprites/emptyroom");
 
-            items = new List<Iitem>
+            items = new List<IItem>
             {
                 new BlueCandle(item_test_vector),
                 new BlueRing(item_test_vector),

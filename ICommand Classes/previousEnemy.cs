@@ -9,17 +9,17 @@ namespace Team4_LegendOfZelda
 
     public class previousEnemy : ICommand
     {
-     
-        private Sprint2Level level = new Sprint2Level();
+
+        public ILevel level;
 
 
-        public previousEnemy(Sprint2Level level)
+        public previousEnemy(LegendOfZelda game)
         {
-            this.level = level;
+            this.level = game.level;
         }
         public void Execute()
         {
-            game.level.previousEnemy();
+            level.PreviousEnemy();
         }
     }
 }
