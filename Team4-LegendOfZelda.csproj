@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="ICommand Classes\CreateAllItemsCommand.cs" />
     <Compile Include="ILevel.cs" />
+    <Compile Include="INPC Classes\OldWoman.cs" />
     <Compile Include="NPCSpriteFactory.cs" />
     <Compile Include="IEnemy Classses\Bosses\Dodongo States\DodongoWestDamagedState.cs" />
     <Compile Include="IEnemy Classses\Bosses\Dodongo States\DodongoSouthDamagedState.cs" />
