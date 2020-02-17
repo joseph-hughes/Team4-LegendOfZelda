@@ -13,11 +13,11 @@ namespace Team4_LegendOfZelda
 		private Texture2D merchantBlueTexture;
 		private Texture2D merchantRedTexture;
 
-		private Texture2D zeldaGreenTexture;
+		private Texture2D zeldaGreenIdleTexture;
 		private Texture2D zeldaGreenHoldingTexture;
-		private Texture2D zeldaBlueTexture;
+		private Texture2D zeldaBlueIdleTexture;
 		private Texture2D zeldaBlueHoldingTexture;
-		private Texture2D zeldaRedTexture;
+		private Texture2D zeldaRedIdleTexture;
 		private Texture2D zeldaRedHoldingTexture;
 
 		private static NPCSpriteFactory instance = new NPCSpriteFactory();
@@ -44,11 +44,11 @@ namespace Team4_LegendOfZelda
 			merchantBlueTexture = content.Load<Texture2D>("MerchantBlue");
 			merchantRedTexture = content.Load<Texture2D>("MerchantRed");
 
-			zeldaGreenTexture = content.Load<Texture2D>("ZeldaGreenIdle");
+			zeldaGreenIdleTexture = content.Load<Texture2D>("ZeldaGreenIdle");
 			zeldaGreenHoldingTexture = content.Load<Texture2D>("ZeldaGreenHolding");
-			zeldaBlueTexture = content.Load<Texture2D>("ZeldaBlueIdle");
+			zeldaBlueIdleTexture = content.Load<Texture2D>("ZeldaBlueIdle");
 			zeldaBlueHoldingTexture = content.Load<Texture2D>("ZeldaBlueHolding");
-			zeldaRedTexture = content.Load<Texture2D>("ZeldaRedIdle");
+			zeldaRedIdleTexture = content.Load<Texture2D>("ZeldaRedIdle");
 			zeldaRedHoldingTexture = content.Load<Texture2D>("ZeldaRedHolding");
 		}
 
@@ -81,9 +81,9 @@ namespace Team4_LegendOfZelda
 		}
 
 		// Zelda Sprites
-		public ISprite CreateZeldaGreenSprite()
+		public ISprite CreateZeldaGreenIdleSprite()
 		{
-			return new TextureSprite(zeldaGreenTexture);
+			return new TextureSprite(zeldaGreenIdleTexture);
 		}
 
 		public ISprite CreateZeldaGreenHoldingSprite()
@@ -91,9 +91,9 @@ namespace Team4_LegendOfZelda
 			return new TextureSprite(zeldaGreenHoldingTexture);
 		}
 
-		public ISprite CreateZeldaBlueSprite()
+		public ISprite CreateZeldaBlueIdleSprite()
 		{
-			return new TextureSprite(zeldaBlueTexture);
+			return new TextureSprite(zeldaBlueIdleTexture);
 		}
 
 		public ISprite CreateZeldaBlueHoldingSprite()
@@ -101,9 +101,9 @@ namespace Team4_LegendOfZelda
 			return new TextureSprite(zeldaBlueHoldingTexture);
 		}
 
-		public ISprite CreateZeldaRedSprite()
+		public ISprite CreateZeldaRedIdleSprite()
 		{
-			return new TextureSprite(zeldaRedTexture);
+			return new TextureSprite(zeldaRedIdleTexture);
 		}
 
 		public ISprite CreateZeldaRedHoldingSprite()
