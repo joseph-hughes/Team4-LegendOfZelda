@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.IState_Classes
 {
@@ -9,7 +10,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         public LinkMovingEastState(Link link)
         {
             this.link = link;
-            // contrust sprite
+            this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkMovingEastSprite();
         }
         public void South()
         {
@@ -29,19 +30,23 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void BeDamaged()
         {
-            link.State = new LinkDamagedMovingEastState(link);
+            int dtimer = 10;
+            link.State = new LinkDamagedMovingEastState(link, dtimer);
         }
         public void UseItem()
         {
-            link.State = new LinkUseItemEastState(link);
+            int utimer = 4;
+            link.State = new LinkUseItemEastState(link, utimer);
         }
         public void Attack()
         {
-            link.State = new LinkSwordEastState(link);
+            int stimer = 4;
+            link.State = new LinkSwordEastState(link, stimer);
         }
         public void Update()
         {
-            // move east
+            if (link.Position.X < ThisGame.GraphicsDevice.Viewport.Width)
+                link.Position = new Vector2(link.Position.X + 1, link.Position.Y);
         }
     }
 }

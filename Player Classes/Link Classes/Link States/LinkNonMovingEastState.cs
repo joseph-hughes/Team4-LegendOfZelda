@@ -9,7 +9,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         public LinkNonMovingEastState(Link link)
         {
             this.link = link;
-            // contrust sprite
+            this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkNonMovingEastSprite();
         }
         public void South()
         {
@@ -29,15 +29,18 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void BeDamaged()
         {
-            link.State = new LinkDamagedNonMovingEastState(link);
+            int dtimer = 10;
+            link.State = new LinkDamagedNonMovingEastState(link, dtimer);
         }
         public void UseItem()
         {
-            link.State = new LinkUseItemEastState(link);
+            int utimer = 4;
+            link.State = new LinkUseItemEastState(link, utimer);
         }
         public void Attack()
         {
-            link.State = new LinkSwordEastState(link);
+            int stimer = 4;
+            link.State = new LinkSwordEastState(link, stimer);
         }
         public void Update()
         {
