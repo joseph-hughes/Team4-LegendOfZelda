@@ -188,12 +188,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ICommand Classes\QuitCommand.cs" />
     <Compile Include="ISprite Classes\TextSprite.cs" />
-    <Compile Include="Map Classes\IMap.cs" />
-    <Compile Include="IRoomState.cs" />
-    <Compile Include="Map Classes\Room1.cs" />
-    <Compile Include="Map Classes\Room2.cs" />
-    <Compile Include="Map Classes\room3.cs" />
-    <Compile Include="Map Classes\LinkRoom.cs" />
+    <Compile Include="Map Classes\Sprint2Level.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
