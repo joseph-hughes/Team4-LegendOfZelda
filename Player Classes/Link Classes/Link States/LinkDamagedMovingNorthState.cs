@@ -21,7 +21,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void North()
         {
-            // no action
+            // no action 
         }
         public void East()
         {
