@@ -9,13 +9,13 @@ namespace Team4_LegendOfZelda
     public class linkAttack : ICommand
     {
         public Link player { get; set; }
-        public linkAttack(LegendOfZelda thisGame)
+        public linkAttack(LegendOfZelda game)
         {
-            ThisGame = thisGame;
+            this.player = game.player;
         }
         public void Execute()
         {
-            
+            player.Attack();
         }
     }
 }

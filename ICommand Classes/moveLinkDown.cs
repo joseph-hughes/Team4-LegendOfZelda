@@ -9,10 +9,10 @@ namespace Team4_LegendOfZelda
     public class moveLinkDown : ICommand
     {
         public Link player { get; set; }
-        public LegendOfZelda ThisGame { get; set; }
-        public moveLinkDown(LegendOfZelda thisGame)
+        
+        public moveLinkDown(LegendOfZelda game)
         {
-            ThisGame = thisGame;
+            player = game.player;
         }
         public void Execute()
         {

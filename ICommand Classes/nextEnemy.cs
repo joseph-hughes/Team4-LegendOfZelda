@@ -4,9 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Team4_LegendOfZelda.ICommand_Classes
+namespace Team4_LegendOfZelda
 {
-    class Class1
+
+    public class nextEnemy : ICommand
     {
+        public LegendOfZelda game { get; set; }
+
+
+        public moveLinkLeft(LegendOfZelda thisGame)
+        {
+            this.game = thisGame;
+        }
+        public void Execute()
+        {
+            game.level.NextEnemy();
+        }
     }
 }

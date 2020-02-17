@@ -48,14 +48,16 @@
   <ItemGroup>
     <Compile Include="ICommand Classes\commandRegister.cs" />
     <Compile Include="ICommand Classes\CreateAllItemsCommand.cs" />
-    <Compile Include="ICommand Classes\cycleItemPrevious.cs" />
-    <Compile Include="ICommand Classes\cylceItem.cs" />
     <Compile Include="ICommand Classes\linkAttack.cs" />
     <Compile Include="ICommand Classes\linkChangeItem.cs" />
     <Compile Include="ICommand Classes\moveLinkDown.cs" />
     <Compile Include="ICommand Classes\moveLinkLeft.cs" />
     <Compile Include="ICommand Classes\moveLinkRight.cs" />
     <Compile Include="ICommand Classes\moveLinkUp.cs" />
+    <Compile Include="ICommand Classes\nextEnemy.cs" />
+    <Compile Include="ICommand Classes\nextItem.cs" />
+    <Compile Include="ICommand Classes\previousEnemy.cs" />
+    <Compile Include="ICommand Classes\previousItem.cs" />
     <Compile Include="ICommand Classes\resetGame.cs" />
     <Compile Include="ICommand Classes\takeDamage.cs" />
     <Compile Include="ILevel.cs" />

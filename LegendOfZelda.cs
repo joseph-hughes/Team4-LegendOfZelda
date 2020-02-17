@@ -48,28 +48,29 @@ namespace Team4_LegendOfZelda
                 new KeyboardController()
             };
 <<<<<<< Updated upstream:LegendOfZelda.cs
-            commandList = new List<ICommand>
-            {
-                new QuitCommand(this)
-            };
+            
 =======
             commandList = comRegister.getCommandList(this);
 >>>>>>> Stashed changes:Game1.cs
 
             KeyboardController keyboard = (KeyboardController)controllerList[0];
 
-            keyboard.RegisterCommand(Keys.W, commandList[0]);
-            keyboard.RegisterCommand(Keys.A, commandList[0]);
-            keyboard.RegisterCommand(Keys.S, commandList[1]);
+            keyboard.RegisterCommand(Keys.W, commandList[5]);
+            keyboard.RegisterCommand(Keys.A, commandList[3]);
+            keyboard.RegisterCommand(Keys.S, commandList[2]);
             keyboard.RegisterCommand(Keys.D, commandList[1]);
-            keyboard.RegisterCommand(Keys.Z, commandList[2]);
-            keyboard.RegisterCommand(Keys.N, commandList[2]);
-            keyboard.RegisterCommand(Keys.Q, commandList[3]);
-            keyboard.RegisterCommand(Keys.R, commandList[3]);
-            keyboard.RegisterCommand(Keys.U, commandList[4]);
-            keyboard.RegisterCommand(Keys.I, commandList[4]);
-            keyboard.RegisterCommand(Keys.O, commandList[4]);
-            keyboard.RegisterCommand(Keys.P, commandList[4]);
+            keyboard.RegisterCommand(Keys.Up, commandList[5]);
+            keyboard.RegisterCommand(Keys.Left, commandList[3]);
+            keyboard.RegisterCommand(Keys.Down, commandList[2]);
+            keyboard.RegisterCommand(Keys.Right, commandList[1]);
+            keyboard.RegisterCommand(Keys.Z, commandList[10]);
+            keyboard.RegisterCommand(Keys.N, commandList[10]);
+            keyboard.RegisterCommand(Keys.Q, commandList[0]);
+            keyboard.RegisterCommand(Keys.R, commandList[1]);
+            keyboard.RegisterCommand(Keys.U, commandList[6]);
+            keyboard.RegisterCommand(Keys.I, commandList[7]);
+            keyboard.RegisterCommand(Keys.O, commandList[8]);
+            keyboard.RegisterCommand(Keys.P, commandList[9]);
 
             spriteFactories = new List<ISpriteFactory>
             {

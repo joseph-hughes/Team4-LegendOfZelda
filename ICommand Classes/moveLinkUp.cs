@@ -10,10 +10,10 @@ namespace Team4_LegendOfZelda
     {
        
         public Link player { get; set; }
-        public LegendOfZelda ThisGame { get; set; }
-        public moveLinkUp(LegendOfZelda thisGame)
+        
+        public moveLinkUp(LegendOfZelda game)
         {
-            ThisGame = thisGame;
+            this.player = game.player;
         }
         public void Execute()
         {
