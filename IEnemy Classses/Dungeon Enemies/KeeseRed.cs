@@ -5,12 +5,14 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     class KeeseRed : IEnemy
     {
+        public ILevel Level { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
 
-        public KeeseRed(Vector2 position)
+        public KeeseRed(ILevel level, Vector2 position)
         {
+            Level = level;
             Sprite = EnemySpriteFactory.Instance.CreateKeeseRedSprite();
             State = new NullState();
             Position = position;

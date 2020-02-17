@@ -6,12 +6,14 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     class GoriyaBlue : IEnemy
     {
+        public ILevel Level { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
 
-        public GoriyaBlue(Vector2 position)
+        public GoriyaBlue(ILevel level, Vector2 position)
         {
+            Level = level;
             State = new GoriyaBlueWestState(this);
             Position = position;
         }

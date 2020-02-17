@@ -6,12 +6,14 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     class WallMasterUpsideDown : IEnemy
     {
+        public ILevel Level { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
 
-        public WallMasterUpsideDown(Vector2 position)
+        public WallMasterUpsideDown(ILevel level, Vector2 position)
         {
+            Level = level;
             State = new WallMasterUpsideDownWestState(this);
             Position = position;
         }
