@@ -342,6 +342,12 @@
     <Content Include="Content\Link\Link UseItem North.png" />
     <Content Include="Content\Link\Link UseItem South.png" />
     <Content Include="Content\Link\Link UseItem West.png" />
+    <Content Include="Content\MapSprites\emptyroom.png" />
+    <Content Include="Content\MapSprites\emptyroom_black_blackground.png" />
+    <Content Include="Content\MapSprites\fullmap.png" />
+    <Content Include="Content\MapSprites\river block.png" />
+    <Content Include="Content\MapSprites\single block.png" />
+    <Content Include="Content\MapSprites\stair block.png" />
     <Content Include="Content\NPCs\Merchant\MerchantBlue.png" />
     <Content Include="Content\NPCs\Merchant\MerchantGreen.png" />
     <Content Include="Content\NPCs\Merchant\MerchantRed.png" />
@@ -353,6 +359,8 @@
     <Content Include="Content\NPCs\Zelda\ZeldaGreenIdle.png" />
     <Content Include="Content\NPCs\Zelda\ZeldaRedHolding.png" />
     <Content Include="Content\NPCs\Zelda\ZeldaRedIdle.png" />
+    <Content Include="Content\Projectile Sprites\FlyingBoomerang.png" />
+    <Content Include="Content\Projectile Sprites\FlyingMagicalBoomerang.png" />
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup />
