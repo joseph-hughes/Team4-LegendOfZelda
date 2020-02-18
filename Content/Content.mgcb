@@ -1,7 +1,7 @@
 
 #----------------------------- Global Properties ----------------------------#
 
-/outputDir:bin
+/outputDir:..\bin\DesktopGL\AnyCPU\Debug\Content
 /intermediateDir:obj
 /platform:Windows
 /config:
@@ -1363,3 +1363,4 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Projectiles/Flame.png
+

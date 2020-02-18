@@ -31,13 +31,13 @@ namespace Team4_LegendOfZelda
 
 		public void LoadAllTextures(ContentManager content)
 		{
-			arrowUp = content.Load<Texture2D>("ArrowUp");
-			arrowDown = content.Load<Texture2D>("ArrowDown");
-			arrowLeft = content.Load<Texture2D>("ArrowLeft");
-			arrowRight = content.Load<Texture2D>("ArrowRight");
-			fireball = content.Load<Texture2D>("fireball");
-			boomerang = content.Load<Texture2D>("boomerang");
-			magicBoomerang = content.Load<Texture2D>("magicBoomerang");
+			arrowUp = content.Load<Texture2D>("Projectiles/ArrowUp");
+			arrowDown = content.Load<Texture2D>("Projectiles/ArrowDown");
+			arrowLeft = content.Load<Texture2D>("Projectiles/ArrowLeft");
+			arrowRight = content.Load<Texture2D>("Projectiles/ArrowRight");
+			fireball = content.Load<Texture2D>("Projectiles/Fireball");
+			boomerang = content.Load<Texture2D>("Projectile Sprites/FlyingBoomerang");
+			magicBoomerang = content.Load<Texture2D>("Projectile Sprites/FlyingMagicalBoomerang");
 		}
 
 		public ISprite CreateArrowUpSprite()

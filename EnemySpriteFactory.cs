@@ -65,48 +65,48 @@ namespace Team4_LegendOfZelda
 
 		public void LoadAllTextures(ContentManager content)
 		{
-			aquamentusEastIdleTexture = content.Load<Texture2D>("AquamentusEastIdle");
-			aquamentusEastAttackTexture = content.Load<Texture2D>("AquamentusEastAttack");
-			aquamentusWestIdleTexture = content.Load<Texture2D>("AquamentusWestIdle");
-			aquamentusWestAttackTexture = content.Load<Texture2D>("AquamentusWestAttack");
+			aquamentusEastIdleTexture = content.Load<Texture2D>("Bosses/Aquamentus/AquamentusEastIdle");
+			aquamentusEastAttackTexture = content.Load<Texture2D>("Bosses/Aquamentus/AquamentusEastAttack");
+			aquamentusWestIdleTexture = content.Load<Texture2D>("Bosses/Aquamentus/AquamentusWestIdle");
+			aquamentusWestAttackTexture = content.Load<Texture2D>("Bosses/Aquamentus/AquamentusWestAttack");
 
-			dodongoNorthWalkingTexture = content.Load<Texture2D>("DodongoNorthWalking");
-			dodongoNorthDamagedTexture = content.Load<Texture2D>("DodongoNorthDamaged");
-			dodongoEastWalkingTexture = content.Load<Texture2D>("DodongoEastWalking");
-			dodongoEastDamagedTexture = content.Load<Texture2D>("DodongoEastDamaged");
-			dodongoSouthWalkingTexture = content.Load<Texture2D>("DodongoSouthWalking");
-			dodongoSouthDamagedTexture = content.Load<Texture2D>("DodongoSouthDamaged");
-			dodongoWestWalkingTexture = content.Load<Texture2D>("DodongoWestWalking");
-			dodongoWestDamagedTexture = content.Load<Texture2D>("DodongoWestDamaged");
+			dodongoNorthWalkingTexture = content.Load<Texture2D>("Bosses/Dodongo/DodongoNorthWalking");
+			dodongoNorthDamagedTexture = content.Load<Texture2D>("Bosses/Dodongo/DodongoNorthDamaged");
+			dodongoEastWalkingTexture = content.Load<Texture2D>("Bosses/Dodongo/DodongoEastWalking");
+			dodongoEastDamagedTexture = content.Load<Texture2D>("Bosses/Dodongo/DodongoEastDamaged");
+			dodongoSouthWalkingTexture = content.Load<Texture2D>("Bosses/Dodongo/DodongoSouthWalking");
+			dodongoSouthDamagedTexture = content.Load<Texture2D>("Bosses/Dodongo/DodongoSouthDamaged");
+			dodongoWestWalkingTexture = content.Load<Texture2D>("Bosses/Dodongo/DodongoWestWalking");
+			dodongoWestDamagedTexture = content.Load<Texture2D>("Bosses/Dodongo/DodongoWestDamaged");
 
-			gelDarkBlueTexture = content.Load<Texture2D>("GelDarkBlue");
+			gelDarkBlueTexture = content.Load<Texture2D>("Dungeon Enemies/Gel/GelDarkBlue");
 
-			goriyaBlueNorthTexture = content.Load<Texture2D>("GoriyaBlueNorth");
-			goriyaBlueEastTexture = content.Load<Texture2D>("GoriyaBlueEast");
-			goriyaBlueSouthTexture = content.Load<Texture2D>("GoriyaBlueSouth");
-			goriyaBlueWestTexture = content.Load<Texture2D>("GoriyaBlueWest");
+			goriyaBlueNorthTexture = content.Load<Texture2D>("Dungeon Enemies/Goriya/GoriyaBlueNorth");
+			goriyaBlueEastTexture = content.Load<Texture2D>("Dungeon Enemies/Goriya/GoriyaBlueEast");
+			goriyaBlueSouthTexture = content.Load<Texture2D>("Dungeon Enemies/Goriya/GoriyaBlueSouth");
+			goriyaBlueWestTexture = content.Load<Texture2D>("Dungeon Enemies/Goriya/GoriyaBlueWest");
 
-			goriyaRedNorthTexture = content.Load<Texture2D>("GoriyaRedNorth");
-			goriyaRedEastTexture = content.Load<Texture2D>("GoriyaRedEast");
-			goriyaRedSouthTexture = content.Load<Texture2D>("GoriyaRedSouth");
-			goriyaRedWestTexture = content.Load<Texture2D>("GoriyaRedWest");
+			goriyaRedNorthTexture = content.Load<Texture2D>("Dungeon Enemies/Goriya/GoriyaRedNorth");
+			goriyaRedEastTexture = content.Load<Texture2D>("Dungeon Enemies/Goriya/GoriyaRedEast");
+			goriyaRedSouthTexture = content.Load<Texture2D>("Dungeon Enemies/Goriya/GoriyaRedSouth");
+			goriyaRedWestTexture = content.Load<Texture2D>("Dungeon Enemies/Goriya/GoriyaRedWest");
 
-			keeseBlueTexture = content.Load<Texture2D>("KeeseBlue");
-			keeseRedTexture = content.Load<Texture2D>("KeeseRed");
+			keeseBlueTexture = content.Load<Texture2D>("Dungeon Enemies/Keese/KeeseBlue");
+			keeseRedTexture = content.Load<Texture2D>("Dungeon Enemies/Keese/KeeseRed");
 
-			ropeEastTexture = content.Load<Texture2D>("RopeEast");
-			ropeWestTexture = content.Load<Texture2D>("RopeWest");
+			ropeEastTexture = content.Load<Texture2D>("Dungeon Enemies/Rope/RopeEast");
+			ropeWestTexture = content.Load<Texture2D>("Dungeon Enemies/Rope/RopeWest");
 
-			stalfosTexture = content.Load<Texture2D>("Stalfos");
+			stalfosTexture = content.Load<Texture2D>("Dungeon Enemies/Stalfos/Stalfos");
 
-			bladeTrapTexture = content.Load<Texture2D>("BladeTrap");
+			bladeTrapTexture = content.Load<Texture2D>("Dungeon Enemies/Trap/BladeTrap");
 
-			wallMasterEastTexture = content.Load<Texture2D>("WallMasterEast");
-			wallMasterWestTexture = content.Load<Texture2D>("WallMasterWest");
-			wallMasterUpsideDownEastTexture = content.Load<Texture2D>("WallMasterUpsideDownEast");
-			wallMasterUpsideDownWestTexture = content.Load<Texture2D>("WallMasterUpsideDownWest");
+			wallMasterEastTexture = content.Load<Texture2D>("Dungeon Enemies/Wall Master/WallMasterEast");
+			wallMasterWestTexture = content.Load<Texture2D>("Dungeon Enemies/Wall Master/WallMasterWest");
+			wallMasterUpsideDownEastTexture = content.Load<Texture2D>("Dungeon Enemies/Wall Master/WallMasterUpsideDownEast");
+			wallMasterUpsideDownWestTexture = content.Load<Texture2D>("Dungeon Enemies/Wall Master/WallMasterUpsideDownWest");
 
-			zolDarkGreenTexture = content.Load<Texture2D>("ZolDarkGreen");
+			zolDarkGreenTexture = content.Load<Texture2D>("Dungeon Enemies/Zol/ZolDarkGreen");
 		}
 
 		// Aquamentus Sprites

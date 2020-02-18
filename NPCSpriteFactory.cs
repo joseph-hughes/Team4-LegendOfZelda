@@ -36,20 +36,20 @@ namespace Team4_LegendOfZelda
 
 		public void LoadAllTextures(ContentManager content)
 		{
-			oldManTexture = content.Load<Texture2D>("OldMan");
+			oldManTexture = content.Load<Texture2D>("NPCs/Old Man/OldMan");
 
-			oldWomanTexture = content.Load<Texture2D>("OldWoman");
+			oldWomanTexture = content.Load<Texture2D>("NPCs/Old Woman/OldWoman");
 
-			merchantGreenTexture = content.Load<Texture2D>("MerchantGreen");
-			merchantBlueTexture = content.Load<Texture2D>("MerchantBlue");
-			merchantRedTexture = content.Load<Texture2D>("MerchantRed");
+			merchantGreenTexture = content.Load<Texture2D>("NPCs/Merchant/MerchantGreen");
+			merchantBlueTexture = content.Load<Texture2D>("NPCs/Merchant/MerchantBlue");
+			merchantRedTexture = content.Load<Texture2D>("NPCs/Merchant/MerchantRed");
 
-			zeldaGreenIdleTexture = content.Load<Texture2D>("ZeldaGreenIdle");
-			zeldaGreenHoldingTexture = content.Load<Texture2D>("ZeldaGreenHolding");
-			zeldaBlueIdleTexture = content.Load<Texture2D>("ZeldaBlueIdle");
-			zeldaBlueHoldingTexture = content.Load<Texture2D>("ZeldaBlueHolding");
-			zeldaRedIdleTexture = content.Load<Texture2D>("ZeldaRedIdle");
-			zeldaRedHoldingTexture = content.Load<Texture2D>("ZeldaRedHolding");
+			zeldaGreenIdleTexture = content.Load<Texture2D>("NPCs/Zelda/ZeldaGreenIdle");
+			zeldaGreenHoldingTexture = content.Load<Texture2D>("NPCs/Zelda/ZeldaGreenHolding");
+			zeldaBlueIdleTexture = content.Load<Texture2D>("NPCs/Zelda/ZeldaBlueIdle");
+			zeldaBlueHoldingTexture = content.Load<Texture2D>("NPCs/Zelda/ZeldaBlueHolding");
+			zeldaRedIdleTexture = content.Load<Texture2D>("NPCs/Zelda/ZeldaRedIdle");
+			zeldaRedHoldingTexture = content.Load<Texture2D>("NPCs/Zelda/ZeldaRedHolding");
 		}
 
 		// Old Man Sprites
