@@ -5,11 +5,14 @@ namespace Team4_LegendOfZelda.IState_Classes
     class LinkUseItemNorthState : IState
     {
         private Link link;
+        private int timer;
+
         public LegendOfZelda ThisGame { get; set; }
-        public LinkUseItemNorthState(Link link)
+        public LinkUseItemNorthState(Link link, int timer)
         {
             this.link = link;
-            // contrust sprite
+            this.timer = timer;
+            this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkUseItemNorthSprite();
         }
         public void South()
         {
@@ -29,7 +32,8 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void BeDamaged()
         {
-            link.State = new LinkDamagedNonMovingNorthState(link);
+            int dtimer = 10;
+            link.State = new LinkDamagedNonMovingNorthState(link, dtimer);
         }
         public void UseItem()
         {
@@ -41,8 +45,9 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void Update()
         {
-            // use item north
-            link.State = new LinkNonMovingNorthState(link);
+            this.timer -= 1;
+            if (this.timer == 0)
+                link.State = new LinkNonMovingNorthState(link);
         }
     }
 }

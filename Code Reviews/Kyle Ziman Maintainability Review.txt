@@ -1,0 +1,18 @@
+﻿Author of Code Review:	Kyle Ziman
+
+Date of Code Review:	02/17/2020
+
+Sprint number:			Sprint 2
+
+Name of .cs file:		Bomb.cs
+
+Author of .cs file:		Mingkun Tian
+
+Number of minutes:		15 minutes
+
+Comments:				The maintainability of this code is good but there can be some improvements. This class has very high cohesion as every line is functionally related to the task of creating
+						the bomb item. the only area of improvement for cohesion is in the createbomb call as this class then becomes dependent on that call to function.
+						The largest area for improvement comes from the high coupling for this program as there is both data coupling from the passed value of location as well as control coupling from
+						the draw function to the game window. However, these coupling occurences seem to help improve the readability of the code as well.
+						Another area to improve on might be the use of comments as, while not directly related to maintainability of the code can be useful upon future visits to the code to understand
+						ones thought processes.

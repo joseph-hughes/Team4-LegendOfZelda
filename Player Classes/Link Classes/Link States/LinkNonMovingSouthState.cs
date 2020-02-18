@@ -9,8 +9,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         public LinkNonMovingSouthState(Link link)
         {
             this.link = link;
-            //Texture2D sprite = ThisGame.Content.Load<Texture2D>("Link");
-            //ThisGame.SetSprite(new NonMovingSouthSprite(sprite, new Vector2(320, 200)));
+            this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkNonMovingSouthSprite();
 
         }
         public void South()
@@ -31,15 +30,18 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void BeDamaged()
         {
-            link.State = new LinkDamagedNonMovingSouthState(link);
+            int dtimer = 10;
+            link.State = new LinkDamagedNonMovingSouthState(link, dtimer);
         }
         public void UseItem()
         {
-            link.State = new LinkUseItemSouthState(link);
+            int utimer = 4;
+            link.State = new LinkUseItemSouthState(link, utimer);
         }
         public void Attack()
         {
-            link.State = new LinkSwordSouthState(link);
+            int stimer = 4;
+            link.State = new LinkSwordSouthState(link, stimer);
         }
         public void Update()
         {

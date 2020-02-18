@@ -1,0 +1,16 @@
+﻿Author of Code Review:	Kyle Ziman
+
+Date of Code Review:	02/17/2020
+
+Sprint number:			Sprint 2
+
+Name of .cs file:		LinkMovingSouthState.cs
+
+Author of .cs file:		Steven Lister
+
+Number of minutes:		7 minutes
+
+Comments:				Overall this class has high readablity. From the name of the class one can determine that the class has to do with the state in which Link is moving south.
+						From there it can be seen that there are several methods each of which correspond to events that can occur to the player character. In each of these methods
+						There is either a line of code transitioning links state to that state or a comment explaining that no action will be taken if this code is called. Finally,
+						the update method shows what is currently happening in this state if no transition is called.
