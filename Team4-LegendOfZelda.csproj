@@ -535,7 +535,9 @@
     <None Include="Content\bin\Windows\NPCs\Zelda\Zelda Green Standing.xnb" />
     <None Include="Content\bin\Windows\NPCs\Zelda\Zelda Red Holding.xnb" />
     <None Include="Content\bin\Windows\NPCs\Zelda\Zelda Red Standing.xnb" />
-    <None Include="Content\Content.mgcb" />
+    <Content Include="Content\Content.mgcb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Content\Font.spritefont" />
     <None Include="Content\obj\.mgcontent" />
     <None Include="Content\obj\.mgstats" />

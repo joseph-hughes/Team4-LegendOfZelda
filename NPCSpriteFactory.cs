@@ -24,7 +24,7 @@ namespace Team4_LegendOfZelda
 
 		public void LoadAllTextures(ContentManager content)
 		{
-			oldManTexture = content.Load<Texture2D>("OldMan");
+			oldManTexture = content.Load<Texture2D>("NPCs/Old Man/OldMan");
 		}
 
 		// Old Man Sprites
