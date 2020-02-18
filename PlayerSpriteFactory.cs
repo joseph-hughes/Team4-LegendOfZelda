@@ -60,10 +60,10 @@ namespace Team4_LegendOfZelda
             LinkMovingNorthTexture = content.Load<Texture2D>("Link/Link Moving North");
             LinkMovingEastTexture = content.Load<Texture2D>("Link/Link Moving East");
             LinkMovingWestTexture = content.Load<Texture2D>("Link/Link Moving West");
-            LinkNonMovingSouthTexture = content.Load<Texture2D>("Link/Link Moving South");
-            LinkNonMovingNorthTexture = content.Load<Texture2D>("Link/Link Moving South");
-            LinkNonMovingEastTexture = content.Load<Texture2D>("Link/Link Moving South");
-            LinkNonMovingWestTexture = content.Load<Texture2D>("Link/Link Moving South");
+            LinkNonMovingSouthTexture = content.Load<Texture2D>("Link/Link NonMoving South");
+            LinkNonMovingNorthTexture = content.Load<Texture2D>("Link/Link NonMoving North");
+            LinkNonMovingEastTexture = content.Load<Texture2D>("Link/Link NonMoving East");
+            LinkNonMovingWestTexture = content.Load<Texture2D>("Link/Link NonMoving West");
             LinkSwordSouthTexture = content.Load<Texture2D>("Link/Link Sword South");
             LinkSwordNorthTexture = content.Load<Texture2D>("Link/Link Sword North");
             LinkSwordEastTexture = content.Load<Texture2D>("Link/Link Sword East");
