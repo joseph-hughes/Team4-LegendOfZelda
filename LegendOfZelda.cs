@@ -67,6 +67,7 @@ namespace Team4_LegendOfZelda
             keyboard.RegisterCommand(Keys.P, commandList[9]);
 
             level = new Sprint2Level();
+            level.Initialize(Content);
             player = new Link();
 
             Window.Title = "Sprint2 - Team 4";
@@ -84,6 +85,7 @@ namespace Team4_LegendOfZelda
             PlayerSpriteFactory.Instance.LoadAllTextures(Content);
             EnemySpriteFactory.Instance.LoadAllTextures(Content);
             NPCSpriteFactory.Instance.LoadAllTextures(Content);
+
 
 
         }
@@ -108,8 +110,7 @@ namespace Team4_LegendOfZelda
             {
                 controller.Update();
             }
-            state.Update();
-
+            player.Update();
             level.Update();
 
             base.Update(gameTime);
@@ -123,6 +124,7 @@ namespace Team4_LegendOfZelda
         {
             GraphicsDevice.Clear(backgroundColor);
 
+            player.Draw(spriteBatch);
             level.Draw(spriteBatch);
 
             base.Draw(gameTime);

@@ -4,7 +4,7 @@ namespace Team4_LegendOfZelda
 {
     public interface ILevel
     {
-        void Initialize();
+        void Initialize(Microsoft.Xna.Framework.Content.ContentManager content);
         void Update();
         void Draw(SpriteBatch spriteBatch);
         void NextItem();

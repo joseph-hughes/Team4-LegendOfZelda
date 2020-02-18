@@ -17,7 +17,6 @@ namespace Team4_LegendOfZelda.MapClasses
         List<IEnemy> enemies;
         IEnemy currentEnemy;
         private Texture2D backgroundtexture;
-        ContentManager content;
         int item_index;
         int enemy_index;
 
@@ -28,7 +27,7 @@ namespace Team4_LegendOfZelda.MapClasses
         }
 
 
-        public void Initialize()
+        public void Initialize(ContentManager content)
         {
 
             Vector2 item_test_vector = new Vector2(40, 40);
