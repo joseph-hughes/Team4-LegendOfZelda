@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.IState_Classes
 {
@@ -46,10 +45,15 @@ namespace Team4_LegendOfZelda.IState_Classes
         public void Update()
         {
             if (link.Position.X < ThisGame.GraphicsDevice.Viewport.Width)
+            {
                 link.Position = new Vector2(link.Position.X + 1, link.Position.Y);
+            }
+
             this.timer -= 1;
             if (this.timer == 0)
+            {
                 link.State = new LinkMovingEastState(link);
+            }
         }
     }
 }

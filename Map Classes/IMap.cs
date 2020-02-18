@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.MapClasses
 {
@@ -12,6 +10,6 @@ namespace Team4_LegendOfZelda.MapClasses
         void room3();
         void Update();
         void Draw(SpriteBatch spriteBatch);
-        
+
     }
 }

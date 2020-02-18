@@ -2,7 +2,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
-using Team4_LegendOfZelda.ISprite_Classes;
 using Team4_LegendOfZelda.MapClasses;
 
 namespace Team4_LegendOfZelda
@@ -45,7 +44,7 @@ namespace Team4_LegendOfZelda
             {
                 new KeyboardController()
             };
-            
+
             commandList = comRegister.getCommandList(this);
 
             KeyboardController keyboard = (KeyboardController)controllerList[0];
@@ -81,11 +80,11 @@ namespace Team4_LegendOfZelda
         /// </summary>
         protected override void LoadContent()
         {
-
+            ItemSpriteFactory.Instance.LoadAllTextures(Content);
             PlayerSpriteFactory.Instance.LoadAllTextures(Content);
             EnemySpriteFactory.Instance.LoadAllTextures(Content);
             NPCSpriteFactory.Instance.LoadAllTextures(Content);
-            ItemSpriteFactory.Instance.LoadAllTextures(Content);
+
 
         }
 

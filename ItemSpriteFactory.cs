@@ -1,8 +1,6 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
+﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Team4_LegendOfZelda.ISprite_Classes;
-using Team4_LegendOfZelda.Item_Classes;
 
 namespace Team4_LegendOfZelda
 {

@@ -2,8 +2,8 @@
 
 namespace Team4_LegendOfZelda
 {
-	public interface ISpriteFactory
-	{
-		void LoadAllTextures(ContentManager content);
-	}
+    public interface ISpriteFactory
+    {
+        void LoadAllTextures(ContentManager content);
+    }
 }

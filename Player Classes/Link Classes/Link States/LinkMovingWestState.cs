@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.IState_Classes
 {
@@ -46,7 +45,9 @@ namespace Team4_LegendOfZelda.IState_Classes
         public void Update()
         {
             if (link.Position.X > 0)
+            {
                 link.Position = new Vector2(link.Position.X - 1, link.Position.Y);
+            }
         }
     }
 }

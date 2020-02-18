@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Team4_LegendOfZelda.Item_Classes;
-using Team4_LegendOfZelda.ISprite_Classes;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
+using System.Collections.Generic;
 using Team4_LegendOfZelda.IEnemy_Classses.Bosses;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies;
+using Team4_LegendOfZelda.ISprite_Classes;
+using Team4_LegendOfZelda.Item_Classes;
 
 namespace Team4_LegendOfZelda.MapClasses
 {
-    public class Sprint2Level:ILevel
+    public class Sprint2Level : ILevel
     {
         ISprite background;
         List<IItem> items;
@@ -28,10 +27,10 @@ namespace Team4_LegendOfZelda.MapClasses
             enemy_index = 0;
         }
 
-        
+
         public void Initialize()
         {
-            
+
             Vector2 item_test_vector = new Vector2(40, 40);
             backgroundtexture = content.Load<Texture2D>("MapSprites/emptyroom");
 
@@ -100,7 +99,7 @@ namespace Team4_LegendOfZelda.MapClasses
 
         public void NextItem()
         {
-            item_index = (item_index+1)%(items.Count);
+            item_index = (item_index + 1) % (items.Count);
             currentItem = items[item_index];
         }
 
