@@ -270,6 +270,8 @@
   <ItemGroup>
     <Content Include="Code Reviews\Kyle Ziman Maintainability Review.txt" />
     <Content Include="Code Reviews\Kyle Ziman Readability Review.txt" />
+    <Content Include="Code Reviews\Steven Lister Maintainability Review.txt" />
+    <Content Include="Code Reviews\Steven Lister Readability Review.txt" />
     <Content Include="Content\Bosses\Aquamentus\AquamentusEastAttack.png" />
     <Content Include="Content\Bosses\Aquamentus\AquamentusEastIdle.png" />
     <Content Include="Content\Bosses\Aquamentus\AquamentusWestAttack.png" />
