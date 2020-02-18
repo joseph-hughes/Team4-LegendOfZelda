@@ -265,7 +265,9 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Code Reviews\Joseph Hughes Maintainability Review.txt" />
     <Content Include="Code Reviews\Kyle Ziman Maintainability Review.txt" />
+    <Content Include="Code Reviews\Joseph Hughes Readability Review.txt" />
     <Content Include="Code Reviews\Kyle Ziman Readability Review.txt" />
     <Content Include="Code Reviews\Minkun Tian Maintainability Review.txt" />
     <Content Include="Code Reviews\Minkun Tian Readability Review.txt" />
