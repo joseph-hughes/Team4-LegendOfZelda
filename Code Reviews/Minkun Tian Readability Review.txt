@@ -1,0 +1,16 @@
+Author of Code Review:	Mingkun Tian
+
+Date of Code Review:	02/17/2020
+
+Sprint number:			Sprint 2
+
+Name of .cs file:		Link.cs
+
+Author of .cs file:		Steven Lister
+
+Number of minutes:		15 minutes
+
+Comments:		Generally, the readablity for this class is good. It has methods that impliments Link's behavior
+			like turning around and being damaged. In each method, link change his state into a new state
+			so that link can has diffierent behaviors. And in the Draw method, link sprite is drawing in the screen
+			with the width constrains so that link wouldn't go out of screen. 
