@@ -47,30 +47,30 @@ namespace Team4_LegendOfZelda
 
 		public void LoadAllTextures(ContentManager content)
 		{
-            LinkDamagedMovingSouthTexture = content.Load<Texture2D>("Link Damaged Moving South");
-            LinkDamagedMovingNorthTexture = content.Load<Texture2D>("Link Damaged Moving North");
-            LinkDamagedMovingEastTexture = content.Load<Texture2D>("Link Damaged Moving East");
-            LinkDamagedMovingWestTexture = content.Load<Texture2D>("Link Damaged Moving West");
-            LinkDamagedNonMovingSouthTexture = content.Load<Texture2D>("Link Damaged NonMoving South");
-            LinkDamagedNonMovingNorthTexture = content.Load<Texture2D>("Link Damaged NonMoving North");
-            LinkDamagedNonMovingEastTexture = content.Load<Texture2D>("Link Damaged NonMoving East");
-            LinkDamagedNonMovingWestTexture = content.Load<Texture2D>("Link Damaged NonMoving West");
-            LinkMovingSouthTexture = content.Load<Texture2D>("Link Moving South");
-            LinkMovingNorthTexture = content.Load<Texture2D>("Link Moving North");
-            LinkMovingEastTexture = content.Load<Texture2D>("Link Moving East");
-            LinkMovingWestTexture = content.Load<Texture2D>("Link Moving West");
-            LinkNonMovingSouthTexture = content.Load<Texture2D>("Link NonMoving South");
-            LinkNonMovingNorthTexture = content.Load<Texture2D>("Link NonMoving North");
-            LinkNonMovingEastTexture = content.Load<Texture2D>("Link NonMoving East");
-            LinkNonMovingWestTexture = content.Load<Texture2D>("Link NonMoving West");
-            LinkSwordSouthTexture = content.Load<Texture2D>("Link Sword South");
-            LinkSwordNorthTexture = content.Load<Texture2D>("Link Sword North");
-            LinkSwordEastTexture = content.Load<Texture2D>("Link Sword East");
-            LinkSwordWestTexture = content.Load<Texture2D>("Link Sword West");
-            LinkUseItemSouthTexture = content.Load<Texture2D>("Link UseItem South");
-            LinkUseItemNorthTexture = content.Load<Texture2D>("Link UseItem North");
-            LinkUseItemEastTexture = content.Load<Texture2D>("Link UseItem East");
-            LinkUseItemWestTexture = content.Load<Texture2D>("Link UseItem West");
+            LinkDamagedMovingSouthTexture = content.Load<Texture2D>("Link/Link Damaged Moving South");
+            LinkDamagedMovingNorthTexture = content.Load<Texture2D>("Link/Link Damaged Moving North");
+            LinkDamagedMovingEastTexture = content.Load<Texture2D>("Link/Link Damaged Moving East");
+            LinkDamagedMovingWestTexture = content.Load<Texture2D>("Link/Link Damaged Moving West");
+            LinkDamagedNonMovingSouthTexture = content.Load<Texture2D>("Link/Link Damaged NonMoving South");
+            LinkDamagedNonMovingNorthTexture = content.Load<Texture2D>("Link/Link Damaged NonMoving North");
+            LinkDamagedNonMovingEastTexture = content.Load<Texture2D>("Link/Link Damaged NonMoving East");
+            LinkDamagedNonMovingWestTexture = content.Load<Texture2D>("Link/Link Damaged NonMoving West");
+            LinkMovingSouthTexture = content.Load<Texture2D>("Link/Link Moving South");
+            LinkMovingNorthTexture = content.Load<Texture2D>("Link/Link Moving North");
+            LinkMovingEastTexture = content.Load<Texture2D>("Link/Link Moving East");
+            LinkMovingWestTexture = content.Load<Texture2D>("Link/Link Moving West");
+            LinkNonMovingSouthTexture = content.Load<Texture2D>("Link/Link NonMoving South");
+            LinkNonMovingNorthTexture = content.Load<Texture2D>("Link/Link NonMoving North");
+            LinkNonMovingEastTexture = content.Load<Texture2D>("Link/Link NonMoving East");
+            LinkNonMovingWestTexture = content.Load<Texture2D>("Link/Link NonMoving West");
+            LinkSwordSouthTexture = content.Load<Texture2D>("Link/Link Sword South");
+            LinkSwordNorthTexture = content.Load<Texture2D>("Link/Link Sword North");
+            LinkSwordEastTexture = content.Load<Texture2D>("Link/Link Sword East");
+            LinkSwordWestTexture = content.Load<Texture2D>("Link/Link Sword West");
+            LinkUseItemSouthTexture = content.Load<Texture2D>("Link/Link UseItem South");
+            LinkUseItemNorthTexture = content.Load<Texture2D>("Link/Link UseItem North");
+            LinkUseItemEastTexture = content.Load<Texture2D>("Link/Link UseItem East");
+            LinkUseItemWestTexture = content.Load<Texture2D>("Link/Link UseItem West");
         }
 
 		public ISprite CreateLinkDamagedMovingSouthSprite()
