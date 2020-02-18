@@ -22,10 +22,17 @@ namespace Team4_LegendOfZelda
         {
         }
 
+<<<<<<< HEAD
         public void LoadAllTextures(ContentManager content)
         {
-            oldManTexture = content.Load<Texture2D>("OldMan");
+            oldManTexture = content.Load<Texture2D>("NPCs/Old Man/OldMan");
         }
+=======
+		public void LoadAllTextures(ContentManager content)
+		{
+			oldManTexture = content.Load<Texture2D>("NPCs/Old Man/OldMan");
+		}
+>>>>>>> 5e32a5afb77c0b46721c2c077b0e6f0e1c803dab
 
         // Old Man Sprites
         public ISprite CreateOldManSprite()
