@@ -11,26 +11,21 @@ namespace Team4_LegendOfZelda
     /// </summary>
     public class LegendOfZelda : Game
     {
-        private ISprite credits;
-        private ISprite source;
-        private SpriteFont font;
         private SpriteBatch spriteBatch;
         private static GraphicsDeviceManager graphics;
         private List<IController> controllerList;
         private List<ICommand> commandList;
         private List<ISpriteFactory> spriteFactories;
         private Color backgroundColor;
-<<<<<<< Updated upstream:LegendOfZelda.cs
-        private IState state;
-=======
-        private commandRegister comRegister = new commandRegister();
->>>>>>> Stashed changes:Game1.cs
+        private commandRegister comRegister;
+        private ILevel level;
 
         public LegendOfZelda()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            IsMouseVisible = true;
+            IsMouseVisible = false;
+            comRegister = new commandRegister();
         }
 
         /// <summary>
@@ -47,11 +42,8 @@ namespace Team4_LegendOfZelda
             {
                 new KeyboardController()
             };
-<<<<<<< Updated upstream:LegendOfZelda.cs
-            
-=======
+
             commandList = comRegister.getCommandList(this);
->>>>>>> Stashed changes:Game1.cs
 
             KeyboardController keyboard = (KeyboardController)controllerList[0];
 
@@ -97,11 +89,6 @@ namespace Team4_LegendOfZelda
             {
                 spriteFactory.LoadAllTextures(Content);
             }
-
-            font = Content.Load<SpriteFont>("Font");
-
-            string creditString = "Credits\nProgram Made By: Team 4\nSprites from:";
-            credits = new TextSprite(font, creditString);
         }
 
         /// <summary>
@@ -141,24 +128,6 @@ namespace Team4_LegendOfZelda
             source.Draw(spriteBatch, new Vector2(20, 440));
 
             base.Draw(gameTime);
-        }
-
-        /// <summary>
-        /// SetState will reassign the private state variable to some new IState object.
-        /// </summary>
-        /// <param name="newState">The new state object to assign to the game's state.</param>
-        public void SetState(IState newState)
-        {
-            state = newState;
-        }
-
-        /// <summary>
-        /// SetSource will reassign the private text variable to some new ISprite object.
-        /// </summary>
-        /// /// <param name="newSource">The new source text to assign to the game's source text sprite.</param>
-        public void SetSource(string newSource)
-        {
-            source = new TextSprite(font, newSource);
         }
     }
 }
