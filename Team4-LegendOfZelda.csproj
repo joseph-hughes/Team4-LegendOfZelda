@@ -299,6 +299,8 @@
     <Content Include="Content\Dungeon Enemies\Wall Master\WallMasterUpsideDownWest.png" />
     <Content Include="Content\Dungeon Enemies\Wall Master\WallMasterWest.png" />
     <Content Include="Content\Dungeon Enemies\Zol\ZolDarkGreen.png" />
+    <Content Include="Content\Fireball.png" />
+    <Content Include="Content\Flame.png" />
     <Content Include="Content\ItemSprites\2ndPotion.png" />
     <Content Include="Content\ItemSprites\5Rupies.png" />
     <Content Include="Content\ItemSprites\AnimatedItems\Fairy.png" />
@@ -373,6 +375,12 @@
     <Content Include="Content\NPCs\Zelda\ZeldaRedIdle.png" />
     <Content Include="Content\Projectile Sprites\FlyingBoomerang.png" />
     <Content Include="Content\Projectile Sprites\FlyingMagicalBoomerang.png" />
+    <Content Include="Content\Projectiles\ArrowDown.png" />
+    <Content Include="Content\Projectiles\ArrowLeft.png" />
+    <Content Include="Content\Projectiles\ArrowRight.png" />
+    <Content Include="Content\Projectiles\ArrowUp.png" />
+    <Content Include="Content\Projectiles\Fireball.png" />
+    <Content Include="Content\Projectiles\Flame.png" />
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup />
