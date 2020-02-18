@@ -348,6 +348,10 @@
     <Content Include="Content\Link\Link Moving North.png" />
     <Content Include="Content\Link\Link Moving South.png" />
     <Content Include="Content\Link\Link Moving West.png" />
+    <Content Include="Content\Link\Link NonMoving East.png" />
+    <Content Include="Content\Link\Link NonMoving North.png" />
+    <Content Include="Content\Link\Link NonMoving South.png" />
+    <Content Include="Content\Link\Link NonMoving West.png" />
     <Content Include="Content\Link\Link Sword East.png" />
     <Content Include="Content\Link\Link Sword North.png" />
     <Content Include="Content\Link\Link Sword South.png" />
