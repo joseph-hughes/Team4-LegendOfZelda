@@ -2,7 +2,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
-using Team4_LegendOfZelda.ISprite_Classes;
 
 namespace Team4_LegendOfZelda
 {
@@ -17,15 +16,15 @@ namespace Team4_LegendOfZelda
         private List<ICommand> commandList;
         private List<ISpriteFactory> spriteFactories;
         private Color backgroundColor;
-        private commandRegister comRegister;
-        private ILevel level;
+
+        public ILevel Level { get; set; }
+        public IPlayer Player { get; set; }
 
         public LegendOfZelda()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = false;
-            comRegister = new commandRegister();
         }
 
         /// <summary>
@@ -38,12 +37,32 @@ namespace Team4_LegendOfZelda
         {
             base.Initialize();
 
+            Level.Initialize(Content);
+
+            player = new Link(new Vector2(30, 100));
+
             controllerList = new List<IController>
             {
                 new KeyboardController()
             };
 
-            commandList = comRegister.getCommandList(this);
+            commandList = new List<ICommand>
+            {
+                new QuitCommand(this),          //0
+                new resetGame(this),            //1
+                new moveLinkDown(player),       //2
+                new moveLinkLeft(player),       //3
+                new moveLinkRight(player),      //4
+                new moveLinkUp(player),         //5
+                new nextItem(level),            //6
+                new previousItem(level),        //7
+                new nextEnemy(level),           //8
+                new previousEnemy(level),       //9
+                new linkAttack(player),         //10
+                new linkChangeItem(player),     //11
+                new takeDamage(player),         //12
+
+            };
 
             KeyboardController keyboard = (KeyboardController)controllerList[0];
 
@@ -111,7 +130,9 @@ namespace Team4_LegendOfZelda
             {
                 controller.Update();
             }
-            state.Update();
+
+            level.Update();
+            player.Update();
 
             base.Update(gameTime);
         }
@@ -124,8 +145,8 @@ namespace Team4_LegendOfZelda
         {
             GraphicsDevice.Clear(backgroundColor);
 
-            credits.Draw(spriteBatch, new Vector2(20, 385));
-            source.Draw(spriteBatch, new Vector2(20, 440));
+            level.Draw(spriteBatch);
+            player.Draw(spriteBatch);
 
             base.Draw(gameTime);
         }

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda
 {
@@ -10,8 +7,7 @@ namespace Team4_LegendOfZelda
     public class nextEnemy : ICommand
     {
  
-        private Sprint2Level level = new Sprint2Level();
-
+        private Sprint2Level level;
 
         public nextEnemy(Sprint2Level level)
         {
@@ -19,7 +15,7 @@ namespace Team4_LegendOfZelda
         }
         public void Execute()
         {
-            game.level.NextEnemy();
+            level.NextEnemy();
         }
     }
 }
