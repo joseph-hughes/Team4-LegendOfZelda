@@ -50,8 +50,6 @@
     <Compile Include="Projectile Classes\MagicBoomerangProjectile.cs" />
     <Compile Include="Projectile Classes\FireballProjectile.cs" />
     <Compile Include="Projectile Classes\ArrowProjectile.cs" />
-    <Compile Include="ICommand Classes\commandRegister.cs" />
-    <Compile Include="ICommand Classes\CreateAllItemsCommand.cs" />
     <Compile Include="IEnemy Classses\Bosses\AquamentusEast.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaRed States\GoriyaRedEastAttackState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaRed States\GoriyaRedEastState.cs" />
@@ -69,19 +67,18 @@
     <Compile Include="INPC Classes\MerchantBlue.cs" />
     <Compile Include="INPC Classes\MerchantGreen.cs" />
     <Compile Include="INPC Classes\OldWoman.cs" />
-    <Compile Include="ICommand Classes\linkAttack.cs" />
-    <Compile Include="ICommand Classes\linkChangeItem.cs" />
-    <Compile Include="ICommand Classes\moveLinkDown.cs" />
-    <Compile Include="ICommand Classes\moveLinkLeft.cs" />
-    <Compile Include="ICommand Classes\moveLinkRight.cs" />
-    <Compile Include="ICommand Classes\moveLinkUp.cs" />
-    <Compile Include="ICommand Classes\nextEnemy.cs" />
-    <Compile Include="ICommand Classes\nextItem.cs" />
-    <Compile Include="ICommand Classes\previousEnemy.cs" />
-    <Compile Include="ICommand Classes\previousItem.cs" />
-    <Compile Include="ICommand Classes\resetGame.cs" />
-    <Compile Include="ICommand Classes\takeDamage.cs" />
-    <Compile Include="ILevel.cs" />
+    <Compile Include="ICommand Classes\LinkAttackCommand.cs" />
+    <Compile Include="ICommand Classes\LinkChangeItemCommand.cs" />
+    <Compile Include="ICommand Classes\MoveLinkSouthCommand.cs" />
+    <Compile Include="ICommand Classes\MoveLinkWestCommand.cs" />
+    <Compile Include="ICommand Classes\MoveLinkEastCommand.cs" />
+    <Compile Include="ICommand Classes\MoveLinkNorthCommand.cs" />
+    <Compile Include="ICommand Classes\NextEnemyCommand.cs" />
+    <Compile Include="ICommand Classes\NextItemCommand.cs" />
+    <Compile Include="ICommand Classes\PreviousEnemyCommand.cs" />
+    <Compile Include="ICommand Classes\PreviousItemCommand.cs" />
+    <Compile Include="ICommand Classes\ResetGameCommand.cs" />
+    <Compile Include="ICommand Classes\LinkBeDamagedCommand.cs" />
     <Compile Include="IProjectile.cs" />
     <Compile Include="NPCSpriteFactory.cs" />
     <Compile Include="IEnemy Classses\Bosses\Dodongo States\DodongoWestDamagedState.cs" />
@@ -205,7 +202,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ICommand Classes\QuitCommand.cs" />
     <Compile Include="ISprite Classes\TextSprite.cs" />
-    <Compile Include="Map Classes\Sprint2Level.cs" />
+    <Compile Include="ILevel Classes\Sprint2Level.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -304,6 +301,8 @@
     <Content Include="Content\Dungeon Enemies\Wall Master\WallMasterUpsideDownWest.png" />
     <Content Include="Content\Dungeon Enemies\Wall Master\WallMasterWest.png" />
     <Content Include="Content\Dungeon Enemies\Zol\ZolDarkGreen.png" />
+    <Content Include="Content\Fireball.png" />
+    <Content Include="Content\Flame.png" />
     <Content Include="Content\ItemSprites\2ndPotion.png" />
     <Content Include="Content\ItemSprites\5Rupies.png" />
     <Content Include="Content\ItemSprites\AnimatedItems\Fairy.png" />
@@ -351,6 +350,10 @@
     <Content Include="Content\Link\Link Moving North.png" />
     <Content Include="Content\Link\Link Moving South.png" />
     <Content Include="Content\Link\Link Moving West.png" />
+    <Content Include="Content\Link\Link NonMoving East.png" />
+    <Content Include="Content\Link\Link NonMoving North.png" />
+    <Content Include="Content\Link\Link NonMoving South.png" />
+    <Content Include="Content\Link\Link NonMoving West.png" />
     <Content Include="Content\Link\Link Sword East.png" />
     <Content Include="Content\Link\Link Sword North.png" />
     <Content Include="Content\Link\Link Sword South.png" />
@@ -378,6 +381,12 @@
     <Content Include="Content\NPCs\Zelda\ZeldaRedIdle.png" />
     <Content Include="Content\Projectile Sprites\FlyingBoomerang.png" />
     <Content Include="Content\Projectile Sprites\FlyingMagicalBoomerang.png" />
+    <Content Include="Content\Projectiles\ArrowDown.png" />
+    <Content Include="Content\Projectiles\ArrowLeft.png" />
+    <Content Include="Content\Projectiles\ArrowRight.png" />
+    <Content Include="Content\Projectiles\ArrowUp.png" />
+    <Content Include="Content\Projectiles\Fireball.png" />
+    <Content Include="Content\Projectiles\Flame.png" />
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup />
