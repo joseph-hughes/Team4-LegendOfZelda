@@ -47,7 +47,7 @@
 
         public void Update()
         {
-            // TODO
+            enemy.Position = new Microsoft.Xna.Framework.Vector2(((int)enemy.Position.X - 1) % 800, enemy.Position.Y);
         }
     }
 }

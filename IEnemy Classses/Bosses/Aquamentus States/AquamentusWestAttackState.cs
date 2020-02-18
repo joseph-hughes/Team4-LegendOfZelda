@@ -3,6 +3,7 @@
     class AquamentusWestAttackState : IState
     {
         IEnemy enemy;
+        int count, maxCount;
 
         public AquamentusWestAttackState(IEnemy enemy)
         {
@@ -17,7 +18,7 @@
 
         public void East()
         {
-            enemy.State = new AquamentusEastAttackState(enemy);
+            // Do nothing
         }
 
         public void South()
@@ -42,7 +43,12 @@
         }
         public void Update()
         {
-            // TODO
+            count++;
+            if (count > maxCount)
+            {
+                // Create fireballs
+                enemy.State = new AquamentusWestIdleState(enemy);
+            }
         }
     }
 }

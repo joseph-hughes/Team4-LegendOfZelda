@@ -3,11 +3,15 @@
     class AquamentusEastAttackState : IState
     {
         IEnemy enemy;
+        int count, maxCount;
 
         public AquamentusEastAttackState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateAquamentusEastAttackSprite();
+
+            count = 0;
+            maxCount = 60;
         }
 
         public void North()
@@ -27,7 +31,7 @@
 
         public void West()
         {
-            enemy.State = new AquamentusWestAttackState(enemy);
+            // Do nothing
         }
 
         public void BeDamaged()
@@ -39,13 +43,20 @@
         {
             // Do nothing
         }
+
         public void UseItem()
         {
             // Do nothing
         }
+
         public void Update()
         {
-            // TODO
+            count++;
+            if (count > maxCount)
+            {
+                // Create fireballs
+                enemy.State = new AquamentusEastIdleState(enemy);
+            }
         }
     }
 }
