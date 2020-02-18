@@ -4,12 +4,16 @@
     {
         IEnemy enemy;
         // Projectile item
+        int count, maxCount;
 
         public GoriyaBlueWestAttackState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateGoriyaBlueWestSprite();
             // Create boomerang
+
+            count = 0;
+            maxCount = 60;
         }
 
         public void North()
@@ -49,7 +53,11 @@
 
         public void Update()
         {
-            // TODO
+            count++;
+            if (count > maxCount)
+            {
+                enemy.State = new GoriyaBlueWestState(enemy);
+            }
         }
     }
 }

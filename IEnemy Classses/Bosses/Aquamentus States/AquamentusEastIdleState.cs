@@ -27,7 +27,7 @@
 
         public void West()
         {
-            enemy.State = new AquamentusWestIdleState(enemy);
+            // Do nothing
         }
 
         public void BeDamaged()
@@ -47,7 +47,7 @@
 
         public void Update()
         {
-            // TODO
+            // Do nothing
         }
     }
 }

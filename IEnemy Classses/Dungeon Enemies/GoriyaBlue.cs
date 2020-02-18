@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaBlue_States;
 
@@ -6,54 +7,56 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     class GoriyaBlue : IEnemy
     {
+        public ILevel Level { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
+        int count, maxCount;
+        Random rand;
 
-        public GoriyaBlue(Vector2 position)
+        public GoriyaBlue(ILevel level, Vector2 position)
         {
+            Level = level;
             State = new GoriyaBlueWestState(this);
             Position = position;
-        }
 
-        public void GoNorth()
-        {
-            State.North();
-        }
-
-        public void GoEast()
-        {
-            State.East();
-        }
-
-        public void GoSouth()
-        {
-            State.South();
-        }
-
-        public void GoWest()
-        {
-            State.West();
-        }
-
-        public void BeDamaged()
-        {
-            State.BeDamaged();
-        }
-
-        public void Attack()
-        {
-            State.Attack();
-        }
-
-        public void UseItem()
-        {
-            // Do nothing
+            count = 0;
+            maxCount = 240;
+            rand = new Random();
         }
 
         public void Update()
         {
-            // TODO
+            State.Update();
+            count++;
+            if (count > maxCount)
+            {
+                switch (rand.Next(0, 6))
+                {
+                    case 0:
+                        State.North();
+                        break;
+                    case 1:
+                        State.East();
+                        break;
+                    case 2:
+                        State.South();
+                        break;
+                    case 3:
+                        State.West();
+                        break;
+                    case 4:
+                        State.Attack();
+                        break;
+                    case 5:
+                        State.BeDamaged();
+                        break;
+                    default:
+                        // Do nothing, this is not supposed to happen
+                        break;
+                }
+                count = 0;
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)

@@ -47,7 +47,7 @@
 
         public void Update()
         {
-            // TODO
+            // Do nothing
         }
     }
 }

@@ -3,15 +3,15 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.NPC_Classes
 {
-    class OldMan : INPC
+    class MerchantRed : INPC
     {
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
 
-        public OldMan(Vector2 position)
+        public MerchantRed(Vector2 position)
         {
-            Sprite = NPCSpriteFactory.Instance.CreateOldManSprite();
+            Sprite = NPCSpriteFactory.Instance.CreateMerchantRedSprite();
             State = new NullState();
             Position = position;
         }

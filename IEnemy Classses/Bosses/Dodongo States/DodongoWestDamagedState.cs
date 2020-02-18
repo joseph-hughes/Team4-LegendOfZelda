@@ -3,11 +3,15 @@
     class DodongoWestDamagedState : IState
     {
         IEnemy enemy;
+        int count, maxCount;
 
         public DodongoWestDamagedState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateDodongoWestDamagedSprite();
+
+            count = 0;
+            maxCount = 120;
         }
 
         public void North()
@@ -47,7 +51,11 @@
 
         public void Update()
         {
-            // TODO
+            count++;
+            if (count > maxCount)
+            {
+                enemy.State = new DodongoWestWalkingState(enemy);
+            }
         }
     }
 }
