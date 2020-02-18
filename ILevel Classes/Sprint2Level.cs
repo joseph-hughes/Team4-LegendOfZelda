@@ -90,6 +90,8 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             };
             currentEnemy = EnemyList[enemyIndex];
 
+            ProjectileList = new List<IProjectile>();
+
             background = new TextureSprite(backgroundtexture);
         }
 

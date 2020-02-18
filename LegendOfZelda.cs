@@ -45,6 +45,7 @@ namespace Team4_LegendOfZelda
         {
             base.Initialize();
 
+            Level = new Sprint2Level();
             Level.Initialize(Content);
 
             Player = new Link(new Vector2(30, 100));
