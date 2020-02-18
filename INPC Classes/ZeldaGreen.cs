@@ -11,7 +11,7 @@ namespace Team4_LegendOfZelda.NPC_Classes
 
         public ZeldaGreen(Vector2 position)
         {
-            Sprite = NPCSpriteFactory.Instance.CreateZeldaGreenSprite();
+            Sprite = NPCSpriteFactory.Instance.CreateZeldaGreenIdleSprite();
             State = new NullState();
             Position = position;
         }

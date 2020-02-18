@@ -11,7 +11,7 @@ namespace Team4_LegendOfZelda.NPC_Classes
 
         public ZeldaBlue(Vector2 position)
         {
-            Sprite = NPCSpriteFactory.Instance.CreateZeldaBlueSprite();
+            Sprite = NPCSpriteFactory.Instance.CreateZeldaBlueIdleSprite();
             State = new NullState();
             Position = position;
         }
