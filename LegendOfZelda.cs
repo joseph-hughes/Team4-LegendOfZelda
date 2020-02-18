@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
-using Team4_LegendOfZelda.ISprite_Classes;
+using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda
 {
@@ -17,15 +17,22 @@ namespace Team4_LegendOfZelda
         private List<ICommand> commandList;
         private List<ISpriteFactory> spriteFactories;
         private Color backgroundColor;
-        private commandRegister comRegister;
-        private ILevel level;
+
+        public Sprint2Level Level { get; set; }
+        public IPlayer Player { get; set; }
 
         public LegendOfZelda()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = false;
-            comRegister = new commandRegister();
+            spriteFactories = new List<ISpriteFactory>
+            {
+                PlayerSpriteFactory.Instance,
+                EnemySpriteFactory.Instance,
+                NPCSpriteFactory.Instance,
+                ItemSpriteFactory.Instance
+            };
         }
 
         /// <summary>
@@ -38,12 +45,30 @@ namespace Team4_LegendOfZelda
         {
             base.Initialize();
 
+            Level.Initialize(Content);
+
+            Player = new Link(new Vector2(30, 100));
+
             controllerList = new List<IController>
             {
                 new KeyboardController()
             };
 
-            commandList = comRegister.getCommandList(this);
+            commandList = new List<ICommand>
+            {
+                new QuitCommand(this),                 //0
+                new ResetGameCommand(this),            //1
+                new MoveLinkSouthCommand(Player),       //2
+                new MoveLinkWestCommand(Player),       //3
+                new MoveLinkEastCommand(Player),      //4
+                new MoveLinkNorthCommand(Player),         //5
+                new NextItemCommand(Level),            //6
+                new PreviousItemCommand(Level),        //7
+                new NextEnemyCommand(Level),           //8
+                new PreviousEnemyCommand(Level),       //9
+                new LinkAttackCommand(Player),         //10
+                new LinkBeDamagedCommand(Player)      //11
+            };
 
             KeyboardController keyboard = (KeyboardController)controllerList[0];
 
@@ -63,14 +88,6 @@ namespace Team4_LegendOfZelda
             keyboard.RegisterCommand(Keys.I, commandList[7]);
             keyboard.RegisterCommand(Keys.O, commandList[8]);
             keyboard.RegisterCommand(Keys.P, commandList[9]);
-
-            spriteFactories = new List<ISpriteFactory>
-            {
-                PlayerSpriteFactory.Instance,
-                EnemySpriteFactory.Instance,
-                NPCSpriteFactory.Instance,
-                ItemSpriteFactory.Instance
-            };
 
             Window.Title = "Sprint2 - Team 4";
             backgroundColor = Color.SteelBlue;
@@ -111,7 +128,9 @@ namespace Team4_LegendOfZelda
             {
                 controller.Update();
             }
-            state.Update();
+
+            Level.Update();
+            Player.Update();
 
             base.Update(gameTime);
         }
@@ -124,8 +143,8 @@ namespace Team4_LegendOfZelda
         {
             GraphicsDevice.Clear(backgroundColor);
 
-            credits.Draw(spriteBatch, new Vector2(20, 385));
-            source.Draw(spriteBatch, new Vector2(20, 440));
+            Level.Draw(spriteBatch);
+            Player.Draw(spriteBatch);
 
             base.Draw(gameTime);
         }
