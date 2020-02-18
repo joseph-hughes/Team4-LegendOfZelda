@@ -1,17 +1,22 @@
-﻿using Team4_LegendOfZelda.ILevel_Classes;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Team4_LegendOfZelda
 {
 
-    public class NextItemCommand : ICommand
+    public class nextItem : ICommand
     {
+    
         private Sprint2Level level = new Sprint2Level();
 
-        public NextItemCommand(Sprint2Level level)
+
+        public nextItem(Sprint2Level level)
         {
             this.level = level;
         }
-
         public void Execute()
         {
             level.NextItem();

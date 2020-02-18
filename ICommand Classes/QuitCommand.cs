@@ -2,15 +2,14 @@
 {
     public class QuitCommand : ICommand
     {
-        private LegendOfZelda game;
-
-        public QuitCommand(LegendOfZelda game)
+        public LegendOfZelda ThisGame { get; set; }
+        public QuitCommand(LegendOfZelda thisGame)
         {
-            this.game = game;
+            ThisGame = thisGame;
         }
         public void Execute()
         {
-            game.Exit();
+            ThisGame.Exit();
         }
     }
 }

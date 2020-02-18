@@ -15,10 +15,9 @@ namespace Team4_LegendOfZelda
         public IState State { get; set; }
         public Vector2 Position { get; set; }
 
-        public Link(Vector2 position)
+        public Link()
         {
             State = new LinkNonMovingSouthState(this);
-            Position = position;
         }
         public void South()
         {

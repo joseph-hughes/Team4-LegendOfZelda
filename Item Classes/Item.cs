@@ -1,10 +1,9 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 
-namespace Team4_LegendOfZelda
+namespace Team4_LegendOfZelda.Item_Classes
 {
-    interface ILevel
+    public interface Item
     {
-        void Initialize();
         void Update();
         void Draw(SpriteBatch spriteBatch);
     }

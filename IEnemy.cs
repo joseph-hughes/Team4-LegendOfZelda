@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda
 {
-    public interface IEnemy
+    interface IEnemy
     {
         ILevel Level { get; set; }
         ISprite Sprite { get; set; }
