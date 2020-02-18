@@ -14,7 +14,9 @@ namespace Team4_LegendOfZelda
         static void Main()
         {
             using (var game = new LegendOfZelda())
+            {
                 game.Run();
+            }
         }
     }
 }
