@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Team4_LegendOfZelda.Item_Classes
+namespace Team4_LegendOfZelda
 {
     public interface Iitem
     {

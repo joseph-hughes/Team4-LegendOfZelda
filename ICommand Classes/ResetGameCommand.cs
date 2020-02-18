@@ -1,16 +1,16 @@
 ﻿namespace Team4_LegendOfZelda
 {
-    public class QuitCommand : ICommand
+    public class ResetGameCommand : ICommand
     {
         private LegendOfZelda game;
 
-        public QuitCommand(LegendOfZelda game)
+        public ResetGameCommand(LegendOfZelda game)
         {
             this.game = game;
         }
         public void Execute()
         {
-            game.Exit();
+            game = new LegendOfZelda();
         }
     }
 }
