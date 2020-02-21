@@ -50,6 +50,7 @@ namespace Team4_LegendOfZelda
         }
         public void Update()
         {
+            Sprite.Update();
             State.Update();
         }
         public void Draw(SpriteBatch spriteBatch)
