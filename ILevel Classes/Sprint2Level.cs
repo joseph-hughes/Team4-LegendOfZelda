@@ -12,10 +12,10 @@ namespace Team4_LegendOfZelda.ILevel_Classes
     public class Sprint2Level:ILevel
     {
         public List<IEnemy> EnemyList { get; set; }
-        public List<Iitem> ItemList { get; set; }
+        public List<IItem> ItemList { get; set; }
         public List<IProjectile> ProjectileList { get; set; }
         private ISprite background;
-        private Iitem currentItem;
+        private IItem currentItem;
         private IEnemy currentEnemy;
         private Texture2D backgroundtexture;
         int itemIndex;
@@ -33,7 +33,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             Vector2 itemStartLocation = new Vector2(400, 150);
             backgroundtexture = content.Load<Texture2D>("MapSprites/emptyroom");
 
-            ItemList = new List<Iitem>
+            ItemList = new List<IItem>
             {
                 new BlueCandle(itemStartLocation),
                 new BlueRing(itemStartLocation),
