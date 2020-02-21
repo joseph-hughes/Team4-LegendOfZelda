@@ -24,6 +24,8 @@ namespace Team4_LegendOfZelda
         public LegendOfZelda()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.PreferredBackBufferWidth = 768;
+            graphics.PreferredBackBufferHeight = 528;
             Content.RootDirectory = "Content";
             IsMouseVisible = false;
             spriteFactories = new List<ISpriteFactory>
@@ -92,7 +94,6 @@ namespace Team4_LegendOfZelda
 
             Window.Title = "Sprint2 - Team 4";
             backgroundColor = Color.SteelBlue;
-            commandList[1].Execute();
         }
 
         /// <summary>
@@ -107,6 +108,7 @@ namespace Team4_LegendOfZelda
             {
                 spriteFactory.LoadAllTextures(Content);
             }
+
         }
 
         /// <summary>

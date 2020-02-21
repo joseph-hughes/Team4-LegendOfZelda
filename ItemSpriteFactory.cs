@@ -64,7 +64,7 @@ namespace Team4_LegendOfZelda
             secondPotion = content.Load<Texture2D>("ItemSprites/2ndPotion");
             fiveRupies = content.Load<Texture2D>("ItemSprites/5Rupies");
             arrow = content.Load<Texture2D>("ItemSprites/5Rupies");
-            blueCandle = content.Load<Texture2D>("ItemSprites/BlueCandle");
+            blueCandle = content.Load<Texture2D>("Link/Link NonMoving East");
             blueRing = content.Load<Texture2D>("ItemSprites/BlueRing");
             bomb = content.Load<Texture2D>("ItemSprites/Bomb");
             bookOfMagic = content.Load<Texture2D>("ItemSprites/BookOfMagic");
