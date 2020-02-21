@@ -14,7 +14,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void South()
         {
-            link.Position = new Vector2(link.Position.X, link.Position.Y + 1);
+            link.Position = new Vector2(link.Position.X, link.Position.Y + 2);
         }
         public void North()
         {

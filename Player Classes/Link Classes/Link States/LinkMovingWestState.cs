@@ -26,7 +26,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void West()
         {
-            link.Position = new Vector2(link.Position.X - 1, link.Position.Y);
+            link.Position = new Vector2(link.Position.X - 2, link.Position.Y);
         }
         public void BeDamaged()
         {
