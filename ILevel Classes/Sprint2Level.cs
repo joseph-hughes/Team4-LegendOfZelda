@@ -12,10 +12,10 @@ namespace Team4_LegendOfZelda.ILevel_Classes
     public class Sprint2Level:ILevel
     {
         public List<IEnemy> EnemyList { get; set; }
-        public List<Iitem> ItemList { get; set; }
+        public List<IItem> ItemList { get; set; }
         public List<IProjectile> ProjectileList { get; set; }
         private ISprite background;
-        private Iitem currentItem;
+        private IItem currentItem;
         private IEnemy currentEnemy;
         private Texture2D backgroundtexture;
         int itemIndex;
@@ -30,43 +30,43 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         public void Initialize(ContentManager content)
         {
             
-            Vector2 itemStartLocation = new Vector2(40, 40);
+            Vector2 itemStartLocation = new Vector2(400, 200);
             backgroundtexture = content.Load<Texture2D>("MapSprites/emptyroom");
 
-            ItemList = new List<Iitem>
+            ItemList = new List<IItem>
             {
                 new BlueCandle(itemStartLocation),
-                new BlueRing(itemStartLocation),
-                new Bomb(itemStartLocation),
-                new BookOfMagic(itemStartLocation),
-                new Bow(itemStartLocation),
-                new Clock(itemStartLocation),
-                new Compass(itemStartLocation),
-                new EmptyItem(itemStartLocation),
-                new Fairy(itemStartLocation),
-                new FiveRupies(itemStartLocation),
-                new Food(itemStartLocation),
-                new Heart(itemStartLocation),
-                new HeartContainer(itemStartLocation),
-                new Key(itemStartLocation),
-                new Letter(itemStartLocation),
-                new LifePotion(itemStartLocation),
-                new MagicalKey(itemStartLocation),
-                new MagicalRod(itemStartLocation),
-                new MagicalShield(itemStartLocation),
-                new Map(itemStartLocation),
-                new PowerBracelet(itemStartLocation),
-                new Raft(itemStartLocation),
-                new Recorder(itemStartLocation),
-                new RedCandle(itemStartLocation),
-                new RedRing(itemStartLocation),
-                new Rupy(itemStartLocation),
-                new SecondPotion(itemStartLocation),
-                new SilverArrow(itemStartLocation),
-                new Stepladder(itemStartLocation),
-                new Sword(itemStartLocation),
-                new Triforce(itemStartLocation),
-                new WhiteSword(itemStartLocation)
+                //new BlueRing(itemStartLocation),
+                //new Bomb(itemStartLocation),
+                //new BookOfMagic(itemStartLocation),
+                //new Bow(itemStartLocation),
+                //new Clock(itemStartLocation),
+                //new Compass(itemStartLocation),
+                //new EmptyItem(itemStartLocation),
+                //new Fairy(itemStartLocation),
+                //new FiveRupies(itemStartLocation),
+                //new Food(itemStartLocation),
+                //new Heart(itemStartLocation),
+                //new HeartContainer(itemStartLocation),
+                //new Key(itemStartLocation),
+                //new Letter(itemStartLocation),
+                //new LifePotion(itemStartLocation),
+                //new MagicalKey(itemStartLocation),
+                //new MagicalRod(itemStartLocation),
+                //new MagicalShield(itemStartLocation),
+                //new Map(itemStartLocation),
+                //new PowerBracelet(itemStartLocation),
+                //new Raft(itemStartLocation),
+                //new Recorder(itemStartLocation),
+                //new RedCandle(itemStartLocation),
+                //new RedRing(itemStartLocation),
+                //new Rupy(itemStartLocation),
+                //new SecondPotion(itemStartLocation),
+                //new SilverArrow(itemStartLocation),
+                //new Stepladder(itemStartLocation),
+                //new Sword(itemStartLocation),
+                //new Triforce(itemStartLocation),
+                //new WhiteSword(itemStartLocation)
             };
             currentItem = ItemList[itemIndex];
 

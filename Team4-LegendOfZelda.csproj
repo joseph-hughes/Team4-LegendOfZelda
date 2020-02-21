@@ -159,7 +159,7 @@
     <Compile Include="IController.cs" />
     <Compile Include="ISprite.cs" />
     <Compile Include="IController Classes\KeyboardController.cs" />
-    <Compile Include="Iitem.cs" />
+    <Compile Include="IItem.cs" />
     <Compile Include="ItemSpriteFactory.cs" />
     <Compile Include="Item Classes\projectile\Arrow.cs" />
     <Compile Include="Item Classes\BlueCandle.cs" />

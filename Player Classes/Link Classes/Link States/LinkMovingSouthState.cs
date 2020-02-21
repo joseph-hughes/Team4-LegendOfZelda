@@ -6,7 +6,7 @@ namespace Team4_LegendOfZelda.IState_Classes
     class LinkMovingSouthState : IState
     {
         private Link link;
-        public LegendOfZelda ThisGame { get; set; }
+
         public LinkMovingSouthState(Link link)
         {
             this.link = link;
@@ -14,7 +14,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void South()
         {
-            // no action
+            link.Position = new Vector2(link.Position.X, link.Position.Y + 1);
         }
         public void North()
         {
@@ -45,8 +45,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void Update()
         {
-            if (link.Position.Y < ThisGame.GraphicsDevice.Viewport.Height)
-                link.Position = new Vector2(link.Position.X, link.Position.Y + 1);
+            // TODO
         }
     }
 }

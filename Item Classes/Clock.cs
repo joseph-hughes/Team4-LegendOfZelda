@@ -5,7 +5,7 @@ using Team4_LegendOfZelda.ISprite_Classes;
 
 namespace Team4_LegendOfZelda.Item_Classes
 {
-    class Clock : Iitem
+    class Clock : IItem
     {
         ISprite itemSprite;
         Vector2 itemLocation;

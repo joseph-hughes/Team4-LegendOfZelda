@@ -1,32 +1,30 @@
-﻿
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Team4_LegendOfZelda.ISprite_Classes;
 
 namespace Team4_LegendOfZelda.Item_Classes
 {
-    class BlueCandle : Iitem
+    class BlueCandle : IItem
     {
-        ISprite itemSprite;
-        Vector2 itemLocation;
+        public ISprite Sprite { get; set; }
+        public Vector2 Location { get; set; }
 
         public BlueCandle(Vector2 location)
         {
-            itemSprite = ItemSpriteFactory.Instance.CreateBlueCandle();
-            itemLocation = location;
+            Sprite = ItemSpriteFactory.Instance.CreateBlueCandle();
+            Location = location;
         }
         public void Update()
         {
-
+            // TODO
         }
         public void Draw(SpriteBatch spriteBatch)
         {
-            itemSprite.Draw(spriteBatch, itemLocation);
+            Sprite.Draw(spriteBatch, Location);
         }
 
         public void UseItem(Vector2 location)
         {
-            itemLocation = location;
+            Location = location;
         }
     }
 }
