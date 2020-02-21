@@ -5,7 +5,7 @@ using Team4_LegendOfZelda.ISprite_Classes;
 
 namespace Team4_LegendOfZelda.Item_Classes
 {
-    class RedRing : Iitem
+    class RedRing : IItem
     {
         ISprite itemSprite;
         Vector2 itemLocation;
