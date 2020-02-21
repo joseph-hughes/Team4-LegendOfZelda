@@ -55,60 +55,60 @@ namespace Team4_LegendOfZelda
 		// Old Man Sprites
 		public ISprite CreateOldManSprite()
 		{
-			return new TextureSprite(oldManTexture);
+			return new TextureSprite(oldManTexture, 3);
 		}
 
 		// Old Woman Sprites
 		public ISprite CreateOldWomanSprite()
 		{
-			return new TextureSprite(oldWomanTexture);
+			return new TextureSprite(oldWomanTexture, 3);
 		}
 
 		// Merchant Sprites
 		public ISprite CreateMerchantGreenSprite()
 		{
-			return new TextureSprite(merchantGreenTexture);
+			return new TextureSprite(merchantGreenTexture, 3);
 		}
 
 		public ISprite CreateMerchantBlueSprite()
 		{
-			return new TextureSprite(merchantBlueTexture);
+			return new TextureSprite(merchantBlueTexture, 3);
 		}
 
 		public ISprite CreateMerchantRedSprite()
 		{
-			return new TextureSprite(merchantRedTexture);
+			return new TextureSprite(merchantRedTexture, 3);
 		}
 
 		// Zelda Sprites
 		public ISprite CreateZeldaGreenIdleSprite()
 		{
-			return new TextureSprite(zeldaGreenIdleTexture);
+			return new TextureSprite(zeldaGreenIdleTexture, 3);
 		}
 
 		public ISprite CreateZeldaGreenHoldingSprite()
 		{
-			return new TextureSprite(zeldaGreenHoldingTexture);
+			return new TextureSprite(zeldaGreenHoldingTexture, 3);
 		}
 
 		public ISprite CreateZeldaBlueIdleSprite()
 		{
-			return new TextureSprite(zeldaBlueIdleTexture);
+			return new TextureSprite(zeldaBlueIdleTexture, 3);
 		}
 
 		public ISprite CreateZeldaBlueHoldingSprite()
 		{
-			return new TextureSprite(zeldaBlueHoldingTexture);
+			return new TextureSprite(zeldaBlueHoldingTexture, 3);
 		}
 
 		public ISprite CreateZeldaRedIdleSprite()
 		{
-			return new TextureSprite(zeldaRedIdleTexture);
+			return new TextureSprite(zeldaRedIdleTexture, 3);
 		}
 
 		public ISprite CreateZeldaRedHoldingSprite()
 		{
-			return new TextureSprite(zeldaRedHoldingTexture);
+			return new TextureSprite(zeldaRedHoldingTexture, 3);
 		}
 	}
 }
