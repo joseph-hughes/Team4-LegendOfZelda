@@ -1,0 +1,16 @@
+﻿Author of Code Review:	Steven Lister
+
+Date of Code Review:	02/17/2020
+
+Sprint number:			Sprint 2
+
+Name of .cs file:		Sprint2Level.cs
+
+Author of .cs file:		Peter Su
+
+Number of minutes:		10 minutes
+
+Comments:				The maintainability of this code is fairly good. The main drawback of this class is that the items for the level are all loaded in at the beginning of the class.
+						This loading in of items should be moved to another class so that you don't need such a long segment of code at the beginning of each level class. However, when it
+						comes to the enemies this is actually an effective way to customize each level. Since each level has a unique set of enemies, it is better to leave the decision of
+						which enemies should be loaded into the level to the implementer of a specific level's class. Comments would also be a welcome addition to this class.

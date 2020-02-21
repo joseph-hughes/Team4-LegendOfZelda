@@ -1,0 +1,16 @@
+﻿Author of Code Review:	Steven Lister
+
+Date of Code Review:	02/17/2020
+
+Sprint number:			Sprint 2
+
+Name of .cs file:		KeeseBlue.cs
+
+Author of .cs file:		Joey Hughes
+
+Number of minutes:		10 minutes
+
+Comments:				This class is pretty easy to understand as the variable names are descriptive and it has but a few methods. The biggest threat to its readability is the lack of comments.
+						For example, the "count" and "maxcount" variables do not indicate their purpose even though their name is descriptive. Aside from this, the logic is easily understandable and
+						nothing within the class is overcomplicated due to the encapsulation of many actions within other classes. Since the method names from those external classes are clear, so are
+						the lines where they're used within this class.

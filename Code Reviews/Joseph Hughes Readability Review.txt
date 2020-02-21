@@ -1,0 +1,17 @@
+﻿Author of Code Review:	Joseph Hughes
+
+Date of Code Review:	02/17/2020
+
+Sprint number:			Sprint 2
+
+Name of .cs file:		Arrow.cs
+
+Author of .cs file:		Mingkun Tian
+
+Number of minutes:		3 minutes
+
+Comments:				This class is very easy to read, since it has descriptive variable
+						names and method calls. It would be unnecessary to add any comments,
+						which is great to see. I personally, however, would prefer lines between
+						methods, because the separation makes it easier for me to see the different
+						blocks of code.

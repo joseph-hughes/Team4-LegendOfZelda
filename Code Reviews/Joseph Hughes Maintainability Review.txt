@@ -1,0 +1,20 @@
+﻿Author of Code Review:	Joseph Hughes
+
+Date of Code Review:	02/17/2020
+
+Sprint number:			Sprint 2
+
+Name of .cs file:		Bomb.cs
+
+Author of .cs file:		Steven Lister
+
+Number of minutes:		5 minutes
+
+Comments:				This code does not have much cohesion, since it keeps track of the
+						sprite that will be printed, the location of the sprite, and the state
+						of the player. This could lead to some possible maintainability issues,
+						since this class would have to be altered if any one of its fields is
+						changed. Further, this class does not actually do that much, since it
+						just tells state to do something and the sprite to do something. This
+						functionality of the class could also be more complete by adding in more
+						fields for Link's health and list of items in his inventory.

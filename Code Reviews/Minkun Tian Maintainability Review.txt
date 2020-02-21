@@ -1,0 +1,16 @@
+Author of Code Review:	Mingkun Tian
+
+Date of Code Review:	02/17/2020
+
+Sprint number:			Sprint 2
+
+Name of .cs file:		ArrowProjectile.cs
+
+Author of .cs file:		Kyle Ziman
+
+Number of minutes:		15 minutes
+
+Comments:		The maintainability of this code is good. Though this class is in slightly low 
+ 			cohesion, it is a fundamental class that required to has many parameters set up inside. The 
+			largest improvement of this class might be trying to decouple the set angle process into a 
+			new class, which can be used by the rest of projectile classes for initialization. 
