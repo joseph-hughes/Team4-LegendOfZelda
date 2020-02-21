@@ -42,33 +42,33 @@ namespace Team4_LegendOfZelda
 
 		public ISprite CreateArrowUpSprite()
 		{
-			return new TextureSprite(arrowUp);
+			return new TextureSprite(arrowUp, 3);
 		}
 		public ISprite CreateArrowDownSprite()
 		{
-			return new TextureSprite(arrowDown);
+			return new TextureSprite(arrowDown, 3);
 		}
 		public ISprite CreateArrowLeftSprite()
 		{
-			return new TextureSprite(arrowLeft);
+			return new TextureSprite(arrowLeft, 3);
 		}
 		public ISprite CreateArrowRightSprite()
 		{
-			return new TextureSprite(arrowRight);
+			return new TextureSprite(arrowRight, 3);
 		}
 		public ISprite CreateFireballSprite()
 		{
-			return new TextureSprite(fireball, 1, 4, 5);
+			return new TextureSprite(fireball, 3, 1, 4, 5);
 		}
 
 		public ISprite CreateBoomerangSprite()
 		{
-			return new TextureSprite(boomerang, 1, 8, 5);
+			return new TextureSprite(boomerang, 3, 1, 8, 5);
 		}
 
 		public ISprite CreateMagicBoomerangSprite()
 		{
-			return new TextureSprite(magicBoomerang, 1, 8, 5);
+			return new TextureSprite(magicBoomerang, 3, 1, 8, 5);
 		}
 	}
 }
