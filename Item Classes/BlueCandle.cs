@@ -12,7 +12,7 @@ namespace Team4_LegendOfZelda.Item_Classes
 
         public BlueCandle(Vector2 location)
         {
-            itemSprite = PlayerSpriteFactory.Instance.CreateLinkUseItemNorthSprite();
+            itemSprite = ItemSpriteFactory.Instance.CreateBlueCandle(); ;
             itemLocation = location;
         }
         public void Update()

@@ -17,7 +17,7 @@ namespace Team4_LegendOfZelda.Item_Classes
         }
         public void Update()
         {
-
+            itemSprite.Update();
         }
         public void Draw(SpriteBatch spriteBatch)
         {
