@@ -126,19 +126,19 @@ namespace Team4_LegendOfZelda
 
         public ISprite CreateLinkNonMovingSouthSprite()
         {
-            return new TextureSprite(LinkNonMovingSouthTexture, 0.48f, 1, 1, 5);
+            return new TextureSprite(LinkNonMovingSouthTexture, 0.48f);
         }
         public ISprite CreateLinkNonMovingNorthSprite()
         {
-            return new TextureSprite(LinkNonMovingNorthTexture, 0.48f, 1, 1, 5);
+            return new TextureSprite(LinkNonMovingNorthTexture, 0.48f);
         }
         public ISprite CreateLinkNonMovingEastSprite()
         {
-            return new TextureSprite(LinkNonMovingEastTexture, 0.48f, 1, 1, 5);
+            return new TextureSprite(LinkNonMovingEastTexture, 0.48f);
         }
         public ISprite CreateLinkNonMovingWestSprite()
         {
-            return new TextureSprite(LinkNonMovingWestTexture, 0.48f, 1, 1, 5);
+            return new TextureSprite(LinkNonMovingWestTexture, 0.48f);
         }
 
         public ISprite CreateLinkSwordSouthSprite()

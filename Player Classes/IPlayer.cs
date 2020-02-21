@@ -9,9 +9,9 @@ namespace Team4_LegendOfZelda
         ISprite Sprite { get; set; }
         IState State { get; set; }
         Vector2 Position { get; set; }
-        void South();
         void North();
         void East();
+        void South();
         void West();
         void BeDamaged();
         void UseItem();

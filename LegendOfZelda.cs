@@ -22,9 +22,11 @@ namespace Team4_LegendOfZelda
 
         public LegendOfZelda()
         {
-            graphics = new GraphicsDeviceManager(this);
-            graphics.PreferredBackBufferWidth = 768;
-            graphics.PreferredBackBufferHeight = 528;
+            graphics = new GraphicsDeviceManager(this)
+            {
+                PreferredBackBufferWidth = 768,
+                PreferredBackBufferHeight = 528
+            };
             Content.RootDirectory = "Content";
             IsMouseVisible = false;
             spriteFactories = new List<ISpriteFactory>
@@ -62,8 +64,8 @@ namespace Team4_LegendOfZelda
                 new ResetGameCommand(this),            //1
                 new MoveLinkNorthCommand(player),      //2
                 new MoveLinkEastCommand(player),       //3
-                new MoveLinkSouthCommand(player),       //4
-                new MoveLinkWestCommand(player),      //5
+                new MoveLinkSouthCommand(player),      //4
+                new MoveLinkWestCommand(player),        //5
                 new NextItemCommand(level),            //6
                 new PreviousItemCommand(level),        //7
                 new NextEnemyCommand(level),           //8
@@ -154,7 +156,6 @@ namespace Team4_LegendOfZelda
         public void Restart()
         {
             Initialize();
-            LoadContent();
         }
     }
 }
