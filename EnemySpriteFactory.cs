@@ -250,7 +250,7 @@ namespace Team4_LegendOfZelda
 		// Blade Trap Sprites
 		public ISprite CreateBladeTrapSprite()
 		{
-			return new TextureSprite(bladeTrapTexture, 3, 1, 2, 5);
+			return new TextureSprite(bladeTrapTexture, 3);
 		}
 
 		// Wall Master Sprites
