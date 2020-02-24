@@ -5,7 +5,7 @@ namespace Team4_LegendOfZelda.IState_Classes
     class LinkNonMovingEastState : IState
     {
         private Link link;
-        public LegendOfZelda ThisGame { get; set; }
+        
         public LinkNonMovingEastState(Link link)
         {
             this.link = link;
@@ -26,6 +26,10 @@ namespace Team4_LegendOfZelda.IState_Classes
         public void West()
         {
             link.State = new LinkNonMovingWestState(link);
+        }
+        public void Idle()
+        {
+            // Do nothing
         }
         public void BeDamaged()
         {

@@ -30,6 +30,10 @@ namespace Team4_LegendOfZelda.IState_Classes
         {
             link.State = new LinkDamagedNonMovingWestState(link, timer);
         }
+        public void Idle()
+        {
+            // Do nothing
+        }
         public void BeDamaged()
         {
             // no action
