@@ -25,6 +25,11 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
             rand = new Random();
         }
 
+        public void Idle()
+        {
+            State.Idle();
+        }
+
         public void Update()
         {
             State.Update();
