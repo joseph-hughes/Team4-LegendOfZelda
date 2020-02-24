@@ -6,10 +6,12 @@ namespace Team4_LegendOfZelda
     public class KeyboardController : IController
     {
         private Dictionary<Keys, ICommand> controllerMappings;
+        private List<Keys> previousPressedKeys;
 
         public KeyboardController()
         {
             controllerMappings = new Dictionary<Keys, ICommand>();
+            previousPressedKeys = new List<Keys>();
         }
 
         public void RegisterCommand(Keys key, ICommand command)
@@ -19,15 +21,17 @@ namespace Team4_LegendOfZelda
 
         public void Update()
         {
-            Keys[] pressedKeys = Keyboard.GetState().GetPressedKeys();
+            List<Keys> pressedKeys = new List<Keys>(Keyboard.GetState().GetPressedKeys());
 
             foreach (Keys key in pressedKeys)
             {
-                if (controllerMappings.ContainsKey(key))
+                if (controllerMappings.ContainsKey(key) && !previousPressedKeys.Contains(key))
                 {
                     controllerMappings[key].Execute();
                 }
             }
+
+            previousPressedKeys = pressedKeys;
         }
     }
 }
