@@ -86,6 +86,7 @@ namespace Team4_LegendOfZelda
             keyboard.RegisterCommand(Keys.Left, commandList[5]);
             keyboard.RegisterCommand(Keys.Z, commandList[10]);
             keyboard.RegisterCommand(Keys.N, commandList[10]);
+            keyboard.RegisterCommand(Keys.E, commandList[11]);
             keyboard.RegisterCommand(Keys.Q, commandList[0]);
             keyboard.RegisterCommand(Keys.R, commandList[1]);
             keyboard.RegisterCommand(Keys.U, commandList[6]);

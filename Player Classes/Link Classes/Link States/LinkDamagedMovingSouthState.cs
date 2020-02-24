@@ -45,8 +45,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void Update()
         {
-            if (link.Position.Y < ThisGame.GraphicsDevice.Viewport.Height)
-                link.Position = new Vector2(link.Position.X, link.Position.Y + 1);
+            link.Position = new Vector2(link.Position.X, link.Position.Y - 2);
             this.timer -= 1;
             if (this.timer == 0)
                 link.State = new LinkMovingSouthState(link);
