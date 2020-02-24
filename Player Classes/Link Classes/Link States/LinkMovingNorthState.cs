@@ -28,6 +28,10 @@ namespace Team4_LegendOfZelda.IState_Classes
         {
             link.State = new LinkNonMovingWestState(link);
         }
+        public void Idle()
+        {
+            link.State = new LinkNonMovingNorthState(link);
+        }
         public void BeDamaged()
         {
             int dtimer = 10;
