@@ -20,34 +20,47 @@ namespace Team4_LegendOfZelda
             State = new LinkNonMovingSouthState(this);
             Position = position;
         }
-        public void South()
-        {
-            State.South();
-        }
+
         public void North()
         {
             State.North();
         }
+
         public void East()
         {
             State.East();
         }
+
+        public void South()
+        {
+            State.South();
+        }
+
         public void West()
         {
             State.West();
         }
+
+        public void Idle()
+        {
+            State.Idle();
+        }
+
         public void BeDamaged()
         {
             State.BeDamaged();
         }
+
         public void UseItem()
         {
             State.UseItem();
         }
+
         public void Attack()
         {
             State.Attack();
         }
+
         public void Update()
         {
             Sprite.Update();
