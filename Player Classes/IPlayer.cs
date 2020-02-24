@@ -13,6 +13,7 @@ namespace Team4_LegendOfZelda
         void East();
         void South();
         void West();
+        void Idle();
         void BeDamaged();
         void UseItem();
         void Attack();
