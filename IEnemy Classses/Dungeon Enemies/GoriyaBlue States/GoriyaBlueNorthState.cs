@@ -30,6 +30,11 @@
             enemy.State = new GoriyaBlueWestState(enemy);
         }
 
+        public void Idle()
+        {
+            // TODO
+        }
+
         public void BeDamaged()
         {
             // TODO
