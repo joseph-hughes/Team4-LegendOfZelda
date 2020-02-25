@@ -15,6 +15,7 @@ namespace Team4_LegendOfZelda
         private static GraphicsDeviceManager graphics;
         private List<IController> controllerList;
         private List<ICommand> commandList;
+        private List<Keys> keyList;
         private List<ISpriteFactory> spriteFactories;
         private Color backgroundColor;
         private Sprint2Level level;
@@ -71,10 +72,24 @@ namespace Team4_LegendOfZelda
                 new NextEnemyCommand(level),           //8
                 new PreviousEnemyCommand(level),       //9
                 new LinkAttackCommand(player),         //10
-                new LinkBeDamagedCommand(player)       //11
+                new LinkBeDamagedCommand(player),      //11
+                new LinkIdleCommand(player),           //12
             };
 
             KeyboardController keyboard = (KeyboardController)controllerList[0];
+            keyList = new List<Keys>
+            {
+                Keys.W,
+                Keys.A,
+                Keys.S,
+                Keys.D,
+                Keys.Up,
+                Keys.Left,
+                Keys.Down,
+                Keys.Right,
+            };
+
+            keyboard.RegisterUnpressedKeysCommand(keyList, commandList[12]);
 
             keyboard.RegisterCommand(Keys.W, commandList[2]);
             keyboard.RegisterCommand(Keys.D, commandList[3]);
@@ -93,7 +108,7 @@ namespace Team4_LegendOfZelda
             keyboard.RegisterCommand(Keys.I, commandList[7]);
             keyboard.RegisterCommand(Keys.O, commandList[8]);
             keyboard.RegisterCommand(Keys.P, commandList[9]);
-
+          
             Window.Title = "Sprint2 - Team 4";
             backgroundColor = Color.SteelBlue;
         }

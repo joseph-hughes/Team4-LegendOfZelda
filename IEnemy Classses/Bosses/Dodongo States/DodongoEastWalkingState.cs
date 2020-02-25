@@ -30,6 +30,11 @@
             enemy.State = new DodongoWestWalkingState(enemy);
         }
 
+        public void Idle()
+        {
+            // TODO
+        }
+
         public void BeDamaged()
         {
             enemy.State = new DodongoEastDamagedState(enemy);

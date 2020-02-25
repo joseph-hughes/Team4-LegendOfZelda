@@ -28,6 +28,11 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
             rand = new Random();
         }
 
+        public void Idle()
+        {
+            State.Idle();
+        }
+
         public void Update()
         {
             switch (direction)
