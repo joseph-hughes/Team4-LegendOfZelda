@@ -35,7 +35,8 @@ namespace Team4_LegendOfZelda
                 PlayerSpriteFactory.Instance,
                 EnemySpriteFactory.Instance,
                 NPCSpriteFactory.Instance,
-                ItemSpriteFactory.Instance
+                ItemSpriteFactory.Instance,
+                ProjectileSpriteFactory.Instance
             };
         }
 
@@ -61,19 +62,24 @@ namespace Team4_LegendOfZelda
 
             commandList = new List<ICommand>
             {
-                new QuitCommand(this),                 //0
-                new ResetGameCommand(this),            //1
-                new MoveLinkNorthCommand(player),      //2
-                new MoveLinkEastCommand(player),       //3
-                new MoveLinkSouthCommand(player),      //4
-                new MoveLinkWestCommand(player),        //5
-                new NextItemCommand(level),            //6
-                new PreviousItemCommand(level),        //7
-                new NextEnemyCommand(level),           //8
-                new PreviousEnemyCommand(level),       //9
-                new LinkAttackCommand(player),         //10
-                new LinkBeDamagedCommand(player),      //11
-                new LinkIdleCommand(player),           //12
+                new QuitCommand(this),                          //0
+                new ResetGameCommand(this),                     //1
+                new MoveLinkNorthCommand(player),               //2
+                new MoveLinkEastCommand(player),                //3
+                new MoveLinkSouthCommand(player),               //4
+                new MoveLinkWestCommand(player),                //5
+                new NextItemCommand(level),                     //6
+                new PreviousItemCommand(level),                 //7
+                new NextEnemyCommand(level),                    //8
+                new PreviousEnemyCommand(level),                //9
+                new LinkAttackCommand(player),                  //10
+                new LinkBeDamagedCommand(player),               //11
+                new LinkIdleCommand(player),                    //12
+                new LinkUseArrowCommand(player, level),         //13
+                new LinkUseBoomerangCommand(player, level),     //14
+                new LinkUseFireballCommand(player, level),      //15
+                new LinkUseMagicBoomerangCommand(player, level) //16
+
             };
 
             KeyboardController keyboard = (KeyboardController)controllerList[0];
@@ -108,7 +114,10 @@ namespace Team4_LegendOfZelda
             keyboard.RegisterCommand(Keys.I, commandList[7]);
             keyboard.RegisterCommand(Keys.O, commandList[8]);
             keyboard.RegisterCommand(Keys.P, commandList[9]);
-          
+            keyboard.RegisterCommand(Keys.D1, commandList[13]);
+            keyboard.RegisterCommand(Keys.D2, commandList[14]);
+            keyboard.RegisterCommand(Keys.D3, commandList[15]);
+            keyboard.RegisterCommand(Keys.D4, commandList[16]);
             Window.Title = "Sprint2 - Team 4";
             backgroundColor = Color.SteelBlue;
         }

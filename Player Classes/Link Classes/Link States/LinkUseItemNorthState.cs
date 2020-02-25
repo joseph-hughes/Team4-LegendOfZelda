@@ -6,6 +6,7 @@ namespace Team4_LegendOfZelda.IState_Classes
     {
         private Link link;
         private int timer;
+        private int ID;
 
    
         public LinkUseItemNorthState(Link link, int timer)
@@ -13,6 +14,23 @@ namespace Team4_LegendOfZelda.IState_Classes
             this.link = link;
             this.timer = timer;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkUseItemNorthSprite();
+            this.ID = link.currentUseItemID;
+            if (ID == 0)
+            {
+                this.link.currentProjectile = new ArrowProjectile(link.Position, 0);
+            }
+            else if (ID == 1)
+            {
+                this.link.currentProjectile = new BoomerangProjectile(link.Position, 0);
+            }
+            else if (ID == 2)
+            {
+                this.link.currentProjectile = new FireballProjectile(link.Position, 0);
+            }
+            else if (ID == 3)
+            {
+                this.link.currentProjectile = new MagicBoomerangProjectile(link.Position, 0);
+            }
         }
         public void South()
         {

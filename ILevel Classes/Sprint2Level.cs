@@ -14,6 +14,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         public List<IEnemy> EnemyList { get; set; }
         public List<IItem> ItemList { get; set; }
         public List<IProjectile> ProjectileList { get; set; }
+
         private ISprite background;
         private IItem currentItem;
         private IEnemy currentEnemy;
@@ -144,7 +145,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             currentItem.Draw(spriteBatch);
             foreach (IProjectile projectile in ProjectileList)
             {
-                projectile.Update();
+                projectile.Draw(spriteBatch);
             }
         }
 

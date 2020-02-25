@@ -47,6 +47,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ICommand Classes\LinkIdleCommand.cs" />
+    <Compile Include="ICommand Classes\LinkUseMagicBoomerangCommand.cs" />
+    <Compile Include="ICommand Classes\LinkUseFireballCommand.cs" />
+    <Compile Include="ICommand Classes\LinkUseBoomerangCommand.cs" />
     <Compile Include="Projectile Classes\BoomerangProjectile.cs" />
     <Compile Include="Projectile Classes\MagicBoomerangProjectile.cs" />
     <Compile Include="Projectile Classes\FireballProjectile.cs" />
@@ -69,7 +72,7 @@
     <Compile Include="INPC Classes\MerchantGreen.cs" />
     <Compile Include="INPC Classes\OldWoman.cs" />
     <Compile Include="ICommand Classes\LinkAttackCommand.cs" />
-    <Compile Include="ICommand Classes\LinkChangeItemCommand.cs" />
+    <Compile Include="ICommand Classes\LinkUseArrowCommand.cs" />
     <Compile Include="ICommand Classes\MoveLinkSouthCommand.cs" />
     <Compile Include="ICommand Classes\MoveLinkWestCommand.cs" />
     <Compile Include="ICommand Classes\MoveLinkEastCommand.cs" />
