@@ -89,10 +89,7 @@ namespace Team4_LegendOfZelda
                 Keys.Right,
             };
 
-            foreach (Keys key in keyList)
-            {
-                keyboard.RegisterUnpressedKeysCommand(key, commandList[12]);
-            }
+            keyboard.RegisterUnpressedKeysCommand(keyList, commandList[12]);
 
             keyboard.RegisterCommand(Keys.W, commandList[2]);
             keyboard.RegisterCommand(Keys.D, commandList[3]);

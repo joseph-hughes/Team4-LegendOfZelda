@@ -22,7 +22,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void East()
         {
-            link.Position = new Vector2(link.Position.X + 2, link.Position.Y);
+            // Do nothing
         }
         public void West()
         {
@@ -49,7 +49,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void Update()
         {
-            // TODO
+            link.Position = new Vector2(link.Position.X + 2, link.Position.Y);
         }
     }
 }
