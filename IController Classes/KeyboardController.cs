@@ -6,12 +6,13 @@ namespace Team4_LegendOfZelda
     public class KeyboardController : IController
     {
         private Dictionary<Keys, ICommand> controllerMappings;
-        private Dictionary<Keys, ICommand> unpressedKeysMappings;
+        private Dictionary<List<Keys>, ICommand> unpressedKeysMappings;
         private List<Keys> previousPressedKeys;
 
         public KeyboardController()
         {
             controllerMappings = new Dictionary<Keys, ICommand>();
+            unpressedKeysMappings = new Dictionary<List<Keys>, ICommand>();
             previousPressedKeys = new List<Keys>();
         }
 
@@ -20,15 +21,14 @@ namespace Team4_LegendOfZelda
             controllerMappings.Add(key, command);
         }
 
-        public void RegisterUnpressedKeysCommand(Keys key, ICommand command)
+        public void RegisterUnpressedKeysCommand(List<Keys> keyList, ICommand command)
         {
-            unpressedKeysMappings.Add(key, command);
+            unpressedKeysMappings.Add(keyList, command);
         }
 
         public void Update()
         {
             List<Keys> pressedKeys = new List<Keys>(Keyboard.GetState().GetPressedKeys());
-            bool keysPressed = false;
 
             foreach (Keys key in pressedKeys)
             {
@@ -38,11 +38,21 @@ namespace Team4_LegendOfZelda
                 }
             }
 
-            foreach (Keys key in unpressedKeysMappings.Keys)
+            foreach (List<Keys> keyList in unpressedKeysMappings.Keys)
             {
-                if (!pressedKeys.Contains(key))
+                bool keysUnpressed = true;
+
+                foreach (Keys key in keyList)
                 {
-                    unpressedKeysMappings[key].Execute();
+                    if (pressedKeys.Contains(key))
+                    {
+                        keysUnpressed = false;
+                    }
+                }
+
+                if (keysUnpressed)
+                {
+                    unpressedKeysMappings[keyList].Execute();
                 }
             }
 
