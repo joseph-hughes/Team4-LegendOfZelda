@@ -30,7 +30,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void West()
         {
-            // no action
+            // Do nothing
         }
         public void Idle()
         {
@@ -50,8 +50,8 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void Update()
         {
-            if (link.Position.X > 0)
-                link.Position = new Vector2(link.Position.X - 1, link.Position.Y);
+            link.Position = new Vector2(link.Position.X - 1, link.Position.Y);
+
             this.timer -= 1;
             if (this.timer == 0)
                 link.State = new LinkMovingWestState(link);

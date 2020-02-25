@@ -35,15 +35,15 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void BeDamaged()
         {
-            // no action
+            // Do nothing
         }
         public void UseItem()
         {
-            // no action
+            // Do nothing
         }
         public void Attack()
         {
-            // no action
+            // Do nothing
         }
         public void Update()
         {
