@@ -15,17 +15,17 @@ namespace Team4_LegendOfZelda.IState_Classes
 
         public void North()
         {
-            link.State = new LinkNonMovingNorthState(link);
+            link.State = new LinkMovingNorthState(link);
         }
 
         public void East()
         {
-            link.State = new LinkNonMovingEastState(link);
+            link.State = new LinkMovingEastState(link);
         }
 
         public void South()
         {
-            link.State = new LinkNonMovingSouthState(link);
+            link.State = new LinkMovingSouthState(link);
         }
 
         public void West()
