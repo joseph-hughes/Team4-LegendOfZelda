@@ -18,11 +18,11 @@ namespace Team4_LegendOfZelda.IState_Classes
        
         public void North()
         {
-            link.State = new LinkDamagedNonMovingNorthState(link, timer);
+            link.State = new LinkDamagedMovingNorthState(link, timer);
         }
         public void East()
         {
-            link.State = new LinkDamagedNonMovingEastState(link, timer);
+            link.State = new LinkDamagedMovingEastState(link, timer);
         }
         public void South()
         {
@@ -30,7 +30,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void West()
         {
-            link.State = new LinkDamagedNonMovingWestState(link, timer);
+            link.State = new LinkDamagedMovingWestState(link, timer);
         }
         public void Idle()
         {
