@@ -25,9 +25,31 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
             rand = new Random();
         }
 
+        public void North()
+        {
+            State.North();
+        }
+
+        public void East()
+        {
+            State.East();
+        }
+
+        public void South()
+        {
+            State.South();
+        }
+
+        public void West()
+        {
+            State.West();
+        }
+
         public void Update()
         {
             State.Update();
+            Sprite.Update();
+
             count++;
             if (count > maxCount)
             {

@@ -28,8 +28,30 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
             rand = new Random();
         }
 
+        public void North()
+        {
+            // Do nothing
+        }
+
+        public void East()
+        {
+            // Do nothing
+        }
+
+        public void South()
+        {
+            // Do nothing
+        }
+
+        public void West()
+        {
+            // Do nothing
+        }
+
         public void Update()
         {
+            Sprite.Update();
+
             switch (direction)
             {
                 case Direction.NORTH:
