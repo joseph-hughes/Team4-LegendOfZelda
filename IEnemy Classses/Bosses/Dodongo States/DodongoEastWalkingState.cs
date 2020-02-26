@@ -52,7 +52,7 @@
 
         public void Update()
         {
-            enemy.Position = new Microsoft.Xna.Framework.Vector2(((int)enemy.Position.X + 1) % 800, enemy.Position.Y);
+            enemy.Position = new Microsoft.Xna.Framework.Vector2(((int)enemy.Position.X + 1) % 768, enemy.Position.Y);
         }
     }
 }

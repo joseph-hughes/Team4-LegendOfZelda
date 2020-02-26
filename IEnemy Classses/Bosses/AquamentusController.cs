@@ -34,7 +34,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
                     }
                     else
                     {
-                        enemy.Position = new Vector2(768, enemy.Position.Y);
+                        enemy.Position = new Vector2(768 - (int)enemy.Position.X, enemy.Position.Y);
                     }
                     
                     

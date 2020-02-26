@@ -50,6 +50,13 @@
     <Compile Include="ICommand Classes\LinkUseMagicBoomerangCommand.cs" />
     <Compile Include="ICommand Classes\LinkUseFireballCommand.cs" />
     <Compile Include="ICommand Classes\LinkUseBoomerangCommand.cs" />
+    <Compile Include="IEnemy Classses\Bosses\DodongoController.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrap States\BladeTrapWestState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrap States\BladeTrapSouthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrap States\BladeTrapEastState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrap States\BladeTrapNorthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrap States\BladeTrapIdleState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrapController.cs" />
     <Compile Include="Projectile Classes\BoomerangProjectile.cs" />
     <Compile Include="Projectile Classes\MagicBoomerangProjectile.cs" />
     <Compile Include="Projectile Classes\FireballProjectile.cs" />

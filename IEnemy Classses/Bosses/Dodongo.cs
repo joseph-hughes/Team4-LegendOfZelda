@@ -10,7 +10,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
-        private DodongoController controller;
+        private IController controller;
 
         public Dodongo(ILevel level, Vector2 position)
         {
