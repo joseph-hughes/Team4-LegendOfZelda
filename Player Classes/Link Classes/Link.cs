@@ -16,9 +16,11 @@ namespace Team4_LegendOfZelda
         public Vector2 Position { get; set; }
         public int currentUseItemID { get; set; }
         public IProjectile currentProjectile { get; set; }
-        public const int damage_timer = 100;
+        public const int damage_timer = 80;
         public const int use_item_timer = 20;
         public const int sword_timer = 20;
+        public const int knockback_distance = 80;
+        public const int knockback_timer = 5;
 
         public IItem currentItem { get; set; }
         public Link(Vector2 position)

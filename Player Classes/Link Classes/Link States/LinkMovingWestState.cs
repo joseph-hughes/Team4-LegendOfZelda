@@ -40,7 +40,7 @@ namespace Team4_LegendOfZelda.IState_Classes
 
         public void BeDamaged()
         {
-            link.State = new LinkDamagedMovingWestState(link, Link.damage_timer);
+            link.State = new LinkKnockbackWestState(link, Link.knockback_timer);
         }
 
         public void UseItem()

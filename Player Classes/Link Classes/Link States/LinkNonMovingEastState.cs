@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.IState_Classes
 {
@@ -39,7 +40,7 @@ namespace Team4_LegendOfZelda.IState_Classes
 
         public void BeDamaged()
         {
-            link.State = new LinkDamagedMovingEastState(link, Link.damage_timer);
+            link.State = new LinkKnockbackEastState(link, Link.knockback_timer);
         }
 
         public void UseItem()

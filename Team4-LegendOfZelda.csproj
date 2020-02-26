@@ -50,6 +50,10 @@
     <Compile Include="ICommand Classes\LinkUseMagicBoomerangCommand.cs" />
     <Compile Include="ICommand Classes\LinkUseFireballCommand.cs" />
     <Compile Include="ICommand Classes\LinkUseBoomerangCommand.cs" />
+    <Compile Include="Player Classes\Link Classes\Link States\LinkKnockbackEastState.cs" />
+    <Compile Include="Player Classes\Link Classes\Link States\LinkKnockbackNorthState.cs" />
+    <Compile Include="Player Classes\Link Classes\Link States\LinkKnockbackSouthState.cs" />
+    <Compile Include="Player Classes\Link Classes\Link States\LinkKnockbackWestState.cs" />
     <Compile Include="Projectile Classes\BoomerangProjectile.cs" />
     <Compile Include="Projectile Classes\MagicBoomerangProjectile.cs" />
     <Compile Include="Projectile Classes\FireballProjectile.cs" />

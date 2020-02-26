@@ -33,7 +33,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void Idle()
         {
-            // Do nothing
+            link.State = new LinkDamagedNonMovingEastState(link, timer);
         }
         public void BeDamaged()
         {
@@ -49,7 +49,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void Update()
         {
-            link.Position = new Vector2(link.Position.X + 1, link.Position.Y);
+            link.Position = new Vector2(link.Position.X + 2, link.Position.Y);
 
             this.timer -= 1;
             if (this.timer == 0)

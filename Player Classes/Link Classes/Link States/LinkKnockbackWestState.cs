@@ -3,54 +3,66 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.IState_Classes
 {
-    class LinkSwordSouthState : IState
+    class LinkKnockbackWestState : IState
     {
         private Link link;
         private int timer;
-      
-        public LinkSwordSouthState(Link link, int timer)
+
+        public LinkKnockbackWestState(Link link, int timer)
         {
             this.link = link;
             this.timer = timer;
-            this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkSwordSouthSprite();
+            this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkDamagedMovingWestSprite();
         }
-        public void South()
-        {
-            // no action
-        }
+
         public void North()
         {
-            // no action
+            // Do nothing
         }
+
         public void East()
         {
-            // no action
+            // Do nothing
         }
+
+        public void South()
+        {
+            // Do nothing
+        }
+
         public void West()
         {
-            // no action
+            // Do nothing
         }
+
         public void Idle()
         {
             // Do nothing
         }
+
         public void BeDamaged()
         {
-            link.State = new LinkKnockbackSouthState(link, Link.knockback_timer);
+            // Do nothing
         }
+
         public void UseItem()
         {
-            // no action
+            // Do nothing
         }
+
         public void Attack()
         {
-            // no action
+            // Do nothing
         }
+
         public void Update()
         {
+            link.Position = new Vector2(link.Position.X + (Link.knockback_distance / Link.knockback_timer), link.Position.Y);
+
             this.timer -= 1;
             if (this.timer == 0)
-                link.State = new LinkNonMovingSouthState(link);
+                link.State = new LinkDamagedNonMovingWestState(link, Link.damage_timer);
         }
     }
 }
+
