@@ -46,6 +46,7 @@
     <StartupObject>Team4_LegendOfZelda.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="IEnemy Classses\Bosses\AquamentusController.cs" />
     <Compile Include="Projectile Classes\BoomerangProjectile.cs" />
     <Compile Include="Projectile Classes\MagicBoomerangProjectile.cs" />
     <Compile Include="Projectile Classes\FireballProjectile.cs" />
