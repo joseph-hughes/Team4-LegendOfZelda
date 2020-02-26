@@ -45,6 +45,11 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
             // Do nothing
         }
 
+        public void Idle()
+        {
+            // Do nothing
+        }
+        
         public void BeDamaged()
         {
             // Do nothing

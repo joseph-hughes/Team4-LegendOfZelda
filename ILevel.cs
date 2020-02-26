@@ -8,6 +8,7 @@ namespace Team4_LegendOfZelda
     {
         List<IItem> ItemList { get; set; }
         List<IEnemy> EnemyList { get; set; }
+        List<IProjectile> ProjectileList { get; set; }
         void Initialize(ContentManager content);
         void Update();
         void Draw(SpriteBatch spriteBatch);

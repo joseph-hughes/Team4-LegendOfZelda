@@ -14,40 +14,56 @@ namespace Team4_LegendOfZelda
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
+        public int currentUseItemID { get; set; }
+        public IProjectile currentProjectile { get; set; }
 
+        public IItem currentItem { get; set; }
         public Link(Vector2 position)
         {
             State = new LinkNonMovingSouthState(this);
             Position = position;
         }
-        public void South()
-        {
-            State.South();
-        }
+
         public void North()
         {
             State.North();
         }
+
         public void East()
         {
             State.East();
         }
+
+        public void South()
+        {
+            State.South();
+        }
+
         public void West()
         {
             State.West();
         }
+
+        public void Idle()
+        {
+            State.Idle();
+        }
+
         public void BeDamaged()
         {
             State.BeDamaged();
         }
+
         public void UseItem()
         {
             State.UseItem();
         }
+
         public void Attack()
         {
             State.Attack();
         }
+
         public void Update()
         {
             Sprite.Update();

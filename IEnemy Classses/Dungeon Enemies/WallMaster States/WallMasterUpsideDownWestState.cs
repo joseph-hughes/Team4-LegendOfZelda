@@ -29,7 +29,10 @@
         {
             // Do nothing
         }
-
+        public void Idle()
+        {
+            // Do nothing
+        }
         public void BeDamaged()
         {
             // TODO

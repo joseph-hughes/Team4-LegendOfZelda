@@ -6,7 +6,7 @@ namespace Team4_LegendOfZelda.IState_Classes
     {
         private Link link;
         private int timer;
-        public LegendOfZelda ThisGame { get; set; }
+      
         public LinkSwordSouthState(Link link, int timer)
         {
             this.link = link;
@@ -28,6 +28,10 @@ namespace Team4_LegendOfZelda.IState_Classes
         public void West()
         {
             // no action
+        }
+        public void Idle()
+        {
+            // Do nothing
         }
         public void BeDamaged()
         {

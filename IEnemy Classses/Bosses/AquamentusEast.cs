@@ -24,7 +24,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         {
             State.North();
         }
-
+        
         public void East()
         {
             State.East();
@@ -38,6 +38,11 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         public void West()
         {
             State.West();
+        }
+        
+        public void Idle()
+        {
+            State.Idle();
         }
 
         public void BeDamaged()

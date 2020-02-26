@@ -9,8 +9,6 @@ namespace Team4_LegendOfZelda
         public Vector2 Position { get; set; }
 
         public int Angle { get; set; }
-
-
         public ArrowProjectile(Vector2 position, int angle)
         {
             if (angle == 0)
@@ -43,11 +41,12 @@ namespace Team4_LegendOfZelda
 
             if (Angle == 0)
             {
-                Y += speed;
-                if (Y > 480)
+                Y -= speed;
+                if (Y < 0)
                 {
-                    Y = 0;
+                    Y = 480;
                 }
+
 
             }
             else if (Angle == 90)
@@ -60,10 +59,10 @@ namespace Team4_LegendOfZelda
             }
             else if (Angle == 180)
             {
-                Y -= speed;
-                if (Y < 0)
+                Y += speed;
+                if (Y > 480)
                 {
-                    Y = 480;
+                    Y = 0;
                 }
             }
             else if (Angle == 270)
@@ -78,9 +77,14 @@ namespace Team4_LegendOfZelda
             Position = new Vector2(X, Y);
         }
 
-        public void Draw(SpriteBatch spriteBatch, Vector2 position)
+        public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, position);
+            Sprite.Draw(spriteBatch, Position);
+        }
+
+        public bool Equals(IProjectile projectile)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

@@ -46,12 +46,17 @@
     <StartupObject>Team4_LegendOfZelda.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="IEnemy Classses\Bosses\AquamentusController.cs" />
+    <Compile Include="ICommand Classes\LinkIdleCommand.cs" />
+    <Compile Include="ICommand Classes\LinkUseMagicBoomerangCommand.cs" />
+    <Compile Include="ICommand Classes\LinkUseFireballCommand.cs" />
+    <Compile Include="ICommand Classes\LinkUseBoomerangCommand.cs" />
     <Compile Include="Projectile Classes\BoomerangProjectile.cs" />
     <Compile Include="Projectile Classes\MagicBoomerangProjectile.cs" />
     <Compile Include="Projectile Classes\FireballProjectile.cs" />
     <Compile Include="Projectile Classes\ArrowProjectile.cs" />
+    <Compile Include="IEnemy Classses\Bosses\AquamentusController.cs" />
     <Compile Include="IEnemy Classses\Bosses\AquamentusEast.cs" />
+    <Compile Include="IEnemy Classses\Bosses\AquamentusWest.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaRed States\GoriyaRedEastAttackState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaRed States\GoriyaRedEastState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaRed States\GoriyaRedNorthAttackState.cs" />
@@ -69,7 +74,7 @@
     <Compile Include="INPC Classes\MerchantGreen.cs" />
     <Compile Include="INPC Classes\OldWoman.cs" />
     <Compile Include="ICommand Classes\LinkAttackCommand.cs" />
-    <Compile Include="ICommand Classes\LinkChangeItemCommand.cs" />
+    <Compile Include="ICommand Classes\LinkUseArrowCommand.cs" />
     <Compile Include="ICommand Classes\MoveLinkSouthCommand.cs" />
     <Compile Include="ICommand Classes\MoveLinkWestCommand.cs" />
     <Compile Include="ICommand Classes\MoveLinkEastCommand.cs" />
@@ -95,7 +100,6 @@
     <Compile Include="IEnemy Classses\Bosses\Aquamentus States\AquamentusWestIdleState.cs" />
     <Compile Include="IEnemy Classses\Bosses\Aquamentus States\AquamentusEastAttackState.cs" />
     <Compile Include="IEnemy Classses\Bosses\Aquamentus States\AquamentusEastIdleState.cs" />
-    <Compile Include="IEnemy Classses\Bosses\AquamentusWest.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrap.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\WallMaster States\WallMasterUpsideDownEastState.cs" />

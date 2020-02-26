@@ -29,6 +29,10 @@
         {
             enemy.State = new WallMasterWestState(enemy);
         }
+        public void Idle()
+        {
+            // Do nothing
+        }
 
         public void BeDamaged()
         {

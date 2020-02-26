@@ -48,6 +48,11 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
             State.West();
         }
 
+        public void Idle()
+        {
+            State.Idle();
+        }
+        
         public void BeDamaged()
         {
             State.BeDamaged();
@@ -62,7 +67,6 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         {
             State.UseItem();
         }
-
 
         public void Update()
         {

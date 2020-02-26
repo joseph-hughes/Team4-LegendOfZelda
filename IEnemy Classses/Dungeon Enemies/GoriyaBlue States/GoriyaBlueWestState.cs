@@ -30,6 +30,11 @@
             // Do nothing
         }
 
+        public void Idle()
+        {
+            // TODO
+        }
+
         public void BeDamaged()
         {
             // TODO
