@@ -28,7 +28,16 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
                     enemy.Position = new Vector2(((int)enemy.Position.X + 2) % 768, enemy.Position.Y);
                     break;
                 case Direction.WEST:
-                    enemy.Position = new Vector2(((int)enemy.Position.X - 2) % 768, enemy.Position.Y);
+                    if (enemy.Position.X >= 2)
+                    {
+                        enemy.Position = new Vector2(((int)enemy.Position.X - 2) % 768, enemy.Position.Y);
+                    }
+                    else
+                    {
+                        enemy.Position = new Vector2(768, enemy.Position.Y);
+                    }
+                    
+                    
                     break;
                 default:
                     // Do nothing, this is not supposed to happen
