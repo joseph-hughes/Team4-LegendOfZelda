@@ -54,7 +54,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
             attackCount--;
             if (attackCount <= 0)
             {
-                enemy.State.Attack();
+                enemy.Attack();
                 attackCount = rand.Next(MIN_ATTACK_COUNTS, MAX_ATTACK_COUNTS + 1);
             }
         }
