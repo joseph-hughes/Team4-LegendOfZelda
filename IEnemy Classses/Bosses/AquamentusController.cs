@@ -6,7 +6,8 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
     class AquamentusController : IController
     {
         private IEnemy enemy;
-        private int count, maxCount;
+        private static int MAX_DIRECTION_COUNTS = 60, MIN_ATTACK_COUNTS = 100, MAX_ATTACK_COUNTS = 180;
+        private int directionCount, attackCount;
         private Random rand;
         private enum Direction { EAST, WEST };
         private Direction direction;
@@ -14,11 +15,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         public AquamentusController(IEnemy enemy)
         {
             this.enemy = enemy;
-
-            count = 0;
-            maxCount = 60;
-            direction = Direction.EAST;
             rand = new Random();
+            directionCount = MAX_DIRECTION_COUNTS;
+            attackCount = rand.Next(MIN_ATTACK_COUNTS, MAX_ATTACK_COUNTS + 1);
+            direction = Direction.EAST;
         }
         public void Update()
         {
@@ -44,25 +44,18 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
                     break;
             }
 
-            count++;
-            if (count > maxCount)
+            directionCount--;
+            if (directionCount <= 0)
             {
-                switch (rand.Next(0, 3))
-                {
-                    case 0:
-                        direction = Direction.EAST;
-                        break;
-                    case 1:
-                        direction = Direction.WEST;
-                        break;
-                    case 2:
-                        enemy.State.Attack();
-                        break;
-                    default:
-                        // Do nothing, this is not supposed to happen
-                        break;
-                }
-                count = 0;
+                direction = 1 - direction;
+                directionCount = MAX_DIRECTION_COUNTS;
+            }
+
+            attackCount--;
+            if (attackCount <= 0)
+            {
+                enemy.State.Attack();
+                attackCount = rand.Next(MIN_ATTACK_COUNTS, MAX_ATTACK_COUNTS + 1);
             }
         }
     }
