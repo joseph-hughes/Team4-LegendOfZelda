@@ -54,7 +54,9 @@
     <Compile Include="Projectile Classes\MagicBoomerangProjectile.cs" />
     <Compile Include="Projectile Classes\FireballProjectile.cs" />
     <Compile Include="Projectile Classes\ArrowProjectile.cs" />
+    <Compile Include="IEnemy Classses\Bosses\AquamentusController.cs" />
     <Compile Include="IEnemy Classses\Bosses\AquamentusEast.cs" />
+    <Compile Include="IEnemy Classses\Bosses\AquamentusWest.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaRed States\GoriyaRedEastAttackState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaRed States\GoriyaRedEastState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaRed States\GoriyaRedNorthAttackState.cs" />
@@ -98,7 +100,6 @@
     <Compile Include="IEnemy Classses\Bosses\Aquamentus States\AquamentusWestIdleState.cs" />
     <Compile Include="IEnemy Classses\Bosses\Aquamentus States\AquamentusEastAttackState.cs" />
     <Compile Include="IEnemy Classses\Bosses\Aquamentus States\AquamentusEastIdleState.cs" />
-    <Compile Include="IEnemy Classses\Bosses\AquamentusWest.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrap.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\WallMaster States\WallMasterUpsideDownEastState.cs" />
