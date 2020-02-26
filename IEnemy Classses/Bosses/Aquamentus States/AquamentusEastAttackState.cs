@@ -11,7 +11,7 @@
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateAquamentusEastAttackSprite();
 
             count = 0;
-            maxCount = 30;
+            maxCount = 60;
         }
 
         public void North()
