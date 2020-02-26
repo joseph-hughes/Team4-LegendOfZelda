@@ -1,6 +1,6 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GelDarkBlue_States;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
@@ -16,34 +16,34 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         {
             Level = level;
             Sprite = EnemySpriteFactory.Instance.CreateGelDarkBlueSprite();
-            State = new NullState();
+            State = new GelDarkBlueIdleState(this);
             Position = position;
             controller = new GelDarkBlueController(this);
         }
 
         public void North()
         {
-            // Do nothing
+            State.North();
         }
 
         public void East()
         {
-            // Do nothing
+            State.East();
         }
 
         public void South()
         {
-            // Do nothing
+            State.South();
         }
 
         public void West()
         {
-            // Do nothing
+            State.West();
         }
 
         public void Idle()
         {
-            // Do nothing
+            State.Idle();
         }
         
         public void BeDamaged()
@@ -64,6 +64,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public void Update()
         {
             controller.Update();
+            State.Update();
             Sprite.Update();
         }
 
