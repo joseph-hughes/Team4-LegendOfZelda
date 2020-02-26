@@ -54,8 +54,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void BeDamaged()
         {
-            int dtimer = 10;
-            link.State = new LinkDamagedNonMovingSouthState(link, dtimer);
+            link.State = new LinkDamagedNonMovingSouthState(link, Link.damage_timer);
         }
         public void UseItem()
         {

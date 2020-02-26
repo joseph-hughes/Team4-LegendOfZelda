@@ -39,20 +39,17 @@ namespace Team4_LegendOfZelda.IState_Classes
 
         public void BeDamaged()
         {
-            int dtimer = 10;
-            link.State = new LinkDamagedMovingEastState(link, dtimer);
+            link.State = new LinkDamagedMovingEastState(link, Link.damage_timer);
         }
 
         public void UseItem()
         {
-            int utimer = 4;
-            link.State = new LinkUseItemEastState(link, utimer);
+            link.State = new LinkUseItemEastState(link, Link.use_item_timer);
         }
 
         public void Attack()
         {
-            int stimer = 4;
-            link.State = new LinkSwordEastState(link, stimer);
+            link.State = new LinkSwordEastState(link, Link.sword_timer);
         }
 
         public void Update()
