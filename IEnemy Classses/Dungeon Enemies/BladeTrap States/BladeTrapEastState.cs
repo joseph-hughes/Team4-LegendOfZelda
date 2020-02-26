@@ -5,7 +5,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
     class BladeTrapEastState : IState
     {
         private IEnemy enemy;
-        private static int MAX_DISPLACEMENT = 160;
+        private static int MAX_DISPLACEMENT = 240;
         private int displacement;
 
         public BladeTrapEastState(IEnemy enemy)
@@ -58,8 +58,8 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
         {
             if (displacement > 0)
             {
-                enemy.Position = new Vector2(((int)enemy.Position.X + 8) % 768, enemy.Position.Y);
-                displacement -= 8;
+                enemy.Position = new Vector2(((int)enemy.Position.X + 16) % 768, enemy.Position.Y);
+                displacement -= 16;
             }
             else
             {

@@ -57,6 +57,7 @@
     <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrap States\BladeTrapNorthState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrap States\BladeTrapIdleState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrapController.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\GelDarkBlueController.cs" />
     <Compile Include="Projectile Classes\BoomerangProjectile.cs" />
     <Compile Include="Projectile Classes\MagicBoomerangProjectile.cs" />
     <Compile Include="Projectile Classes\FireballProjectile.cs" />
