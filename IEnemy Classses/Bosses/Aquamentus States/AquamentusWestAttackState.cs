@@ -3,13 +3,16 @@
     class AquamentusWestAttackState : IState
     {
         IEnemy enemy;
+        IProjectile fireball;
+        ILevel Level;
         int count, maxCount;
 
-        public AquamentusWestAttackState(IEnemy enemy)
+        public AquamentusWestAttackState(ILevel level, IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateAquamentusWestAttackSprite();
 
+            Level = level;
             count = 0;
             maxCount = 60;
         }
@@ -60,7 +63,9 @@
             if (count > maxCount)
             {
                 // Create fireballs
-                enemy.State = new AquamentusWestIdleState(enemy);
+                fireball = new FireballProjectile(this.enemy.Position, 270);
+                Level.ProjectileList.Add(fireball);
+                enemy.State = new AquamentusWestIdleState(Level, enemy);
             }
         }
     }

@@ -15,7 +15,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         public AquamentusWest(ILevel level, Vector2 position)
         {
             Level = level;
-            State = new AquamentusWestIdleState(this);
+            State = new AquamentusWestIdleState(Level, this);
             Position = position;
             controller = new AquamentusController(this);
         }

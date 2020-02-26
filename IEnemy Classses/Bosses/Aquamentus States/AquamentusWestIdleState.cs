@@ -3,11 +3,13 @@
     class AquamentusWestIdleState : IState
     {
         IEnemy enemy;
+        ILevel Level;
 
-        public AquamentusWestIdleState(IEnemy enemy)
+        public AquamentusWestIdleState(ILevel level, IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateAquamentusWestIdleSprite();
+            Level = level;
         }
 
         public void North()
@@ -42,7 +44,7 @@
 
         public void Attack()
         {
-            enemy.State = new AquamentusWestAttackState(enemy);
+            enemy.State = new AquamentusWestAttackState(Level, enemy);
         }
 
         public void UseItem()
