@@ -45,6 +45,21 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
             State.West();
         }
 
+        public void BeDamaged()
+        {
+            State.BeDamaged();
+        }
+
+        public void Attack()
+        {
+            State.Attack();
+        }
+
+        public void UseItem()
+        {
+            State.UseItem();
+        }
+
         public void Update()
         {
             State.Update();
