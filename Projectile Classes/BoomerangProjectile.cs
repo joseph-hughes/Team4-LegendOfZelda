@@ -9,55 +9,38 @@ namespace Team4_LegendOfZelda
         public Vector2 Position { get; set; }
 
         public int Angle { get; set; }
+
+        public float speed { get; set; }
         public BoomerangProjectile(Vector2 position, int angle)
         {
             Sprite = ProjectileSpriteFactory.Instance.CreateBoomerangSprite();
             Position = position;
             Angle = angle;
-
+            speed = 5f;
         }
 
         public void Update()
         {
             float Y = Position.Y;
             float X = Position.X;
-            int speed = 5;
 
             if (Angle == 0)
             {
                 Y -= speed;
-                if (Y < 0)
-                {
-                    Y = 480;
-                }
-
-
             }
             else if (Angle == 90)
             {
                 X += speed;
-                if (X > 800)
-                {
-                    X = 0;
-                }
             }
             else if (Angle == 180)
             {
                 Y += speed;
-                if (Y > 480)
-                {
-                    Y = 0;
-                }
             }
             else if (Angle == 270)
             {
                 X -= speed;
-                if (X < 0)
-                {
-                    X = 800;
-                }
             }
-
+            speed -= 0.07f;
             Position = new Vector2(X, Y);
             Sprite.Update();
 
@@ -65,7 +48,11 @@ namespace Team4_LegendOfZelda
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, Position);
+            if (speed >= -5f) 
+            { 
+                Sprite.Draw(spriteBatch, Position); 
+            }
+            
         }
     }
 }

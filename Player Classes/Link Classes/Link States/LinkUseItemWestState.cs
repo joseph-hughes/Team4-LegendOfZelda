@@ -16,21 +16,22 @@ namespace Team4_LegendOfZelda.IState_Classes
             this.timer = timer;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkUseItemWestSprite();
             this.ID = link.currentUseItemID;
+            Vector2 position = new Vector2(link.Position.X + 20, link.Position.Y + 20);
             if (ID == 0)
             {
-                this.link.currentProjectile = new ArrowProjectile(link.Position, 270);
+                this.link.currentProjectile = new ArrowProjectile(position, 270);
             }
             else if (ID == 1)
             {
-                this.link.currentProjectile = new BoomerangProjectile(link.Position, 270);
+                this.link.currentProjectile = new BoomerangProjectile(position, 270);
             }
             else if (ID == 2)
             {
-                this.link.currentProjectile = new FireballProjectile(link.Position, 270);
+                this.link.currentProjectile = new FireballProjectile(position, 270);
             }
             else if (ID == 3)
             {
-                this.link.currentProjectile = new MagicBoomerangProjectile(link.Position, 270);
+                this.link.currentProjectile = new MagicBoomerangProjectile(position, 270);
             }
         }
         public void South()

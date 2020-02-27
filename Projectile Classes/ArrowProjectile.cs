@@ -44,7 +44,7 @@ namespace Team4_LegendOfZelda
                 Y -= speed;
                 if (Y < 0)
                 {
-                    Y = 480;
+                    
                 }
 
 
@@ -54,7 +54,7 @@ namespace Team4_LegendOfZelda
                 X += speed;
                 if (X > 800)
                 {
-                    X = 0;
+                    
                 }
             }
             else if (Angle == 180)
@@ -62,7 +62,7 @@ namespace Team4_LegendOfZelda
                 Y += speed;
                 if (Y > 480)
                 {
-                    Y = 0;
+                    
                 }
             }
             else if (Angle == 270)
@@ -70,7 +70,7 @@ namespace Team4_LegendOfZelda
                 X -= speed;
                 if (X < 0)
                 {
-                    X = 800;
+                   
                 }
             }
 
