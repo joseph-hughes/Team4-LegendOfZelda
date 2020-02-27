@@ -6,47 +6,56 @@ namespace Team4_LegendOfZelda.IState_Classes
     class LinkMovingWestState : IState
     {
         private Link link;
-        public LegendOfZelda ThisGame { get; set; }
+        
         public LinkMovingWestState(Link link)
         {
             this.link = link;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkMovingWestSprite();
         }
-        public void South()
-        {
-            link.State = new LinkNonMovingSouthState(link);
-        }
+
         public void North()
         {
-            link.State = new LinkNonMovingNorthState(link);
+            link.State = new LinkMovingNorthState(link);
         }
+
         public void East()
         {
-            link.State = new LinkNonMovingEastState(link);
+            link.State = new LinkMovingEastState(link);
         }
+
+        public void South()
+        {
+            link.State = new LinkMovingSouthState(link);
+        }
+
         public void West()
         {
-            // no action
+            // Do nothing
         }
+
+        public void Idle()
+        {
+            link.State = new LinkNonMovingWestState(link);
+        }
+
         public void BeDamaged()
         {
-            int dtimer = 10;
-            link.State = new LinkDamagedMovingWestState(link, dtimer);
+            link.State = new LinkKnockbackWestState(link, Link.knockback_timer);
         }
+
         public void UseItem()
         {
-            int utimer = 4;
-            link.State = new LinkUseItemWestState(link, utimer);
+            link.State = new LinkUseItemWestState(link, Link.use_item_timer);
         }
+
         public void Attack()
         {
-            int stimer = 4;
-            link.State = new LinkSwordWestState(link, stimer);
+            link.State = new LinkSwordWestState(link, Link.sword_timer);
         }
+
         public void Update()
         {
-            if (link.Position.X > 0)
-                link.Position = new Vector2(link.Position.X - 1, link.Position.Y);
+            link.Position = new Vector2(link.Position.X - 2, link.Position.Y);
         }
     }
 }

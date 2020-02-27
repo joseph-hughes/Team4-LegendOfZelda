@@ -25,9 +25,51 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
             rand = new Random();
         }
 
+        public void North()
+        {
+            State.North();
+        }
+
+        public void East()
+        {
+            State.East();
+        }
+
+        public void South()
+        {
+            State.South();
+        }
+
+        public void West()
+        {
+            State.West();
+        }
+
+        public void Idle()
+        {
+            State.Idle();
+        }
+        
+        public void BeDamaged()
+        {
+            State.BeDamaged();
+        }
+
+        public void Attack()
+        {
+            State.Attack();
+        }
+
+        public void UseItem()
+        {
+            State.UseItem();
+        }
+
         public void Update()
         {
             State.Update();
+            Sprite.Update();
+            
             count++;
             if (count > maxCount)
             {

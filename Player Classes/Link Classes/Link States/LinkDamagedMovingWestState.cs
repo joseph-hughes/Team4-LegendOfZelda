@@ -8,28 +8,33 @@ namespace Team4_LegendOfZelda.IState_Classes
         private Link link;
         private int timer;
 
-        public LegendOfZelda ThisGame { get; set; }
+        
         public LinkDamagedMovingWestState(Link link, int timer)
         {
             this.link = link;
             this.timer = timer;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkDamagedMovingWestSprite();
         }
-        public void South()
-        {
-            link.State = new LinkDamagedNonMovingSouthState(link, timer);
-        }
+      
         public void North()
         {
-            link.State = new LinkDamagedNonMovingNorthState(link, timer);
+            link.State = new LinkDamagedMovingNorthState(link, timer);
         }
         public void East()
         {
-            link.State = new LinkDamagedNonMovingEastState(link, timer);
+            link.State = new LinkDamagedMovingEastState(link, timer);
+        }
+        public void South()
+        {
+            link.State = new LinkDamagedMovingSouthState(link, timer);
         }
         public void West()
         {
-            // no action
+            // Do nothing
+        }
+        public void Idle()
+        {
+            link.State = new LinkDamagedNonMovingWestState(link, timer);
         }
         public void BeDamaged()
         {
@@ -45,8 +50,8 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void Update()
         {
-            if (link.Position.X > 0)
-                link.Position = new Vector2(link.Position.X - 1, link.Position.Y);
+            link.Position = new Vector2(link.Position.X - 2, link.Position.Y);
+
             this.timer -= 1;
             if (this.timer == 0)
                 link.State = new LinkMovingWestState(link);

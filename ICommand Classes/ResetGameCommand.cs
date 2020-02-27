@@ -10,7 +10,7 @@
         }
         public void Execute()
         {
-            game = new LegendOfZelda();
+            game.Restart();
         }
     }
 }

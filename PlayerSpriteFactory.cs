@@ -75,104 +75,104 @@ namespace Team4_LegendOfZelda
 
 		public ISprite CreateLinkDamagedMovingSouthSprite()
 		{
-			return new TextureSprite(LinkDamagedMovingSouthTexture, 1, 4, 5);
+			return new TextureSprite(LinkDamagedMovingSouthTexture, 0.48f, 1, 4, 5);
 		}
         public ISprite CreateLinkDamagedMovingNorthSprite()
         {
-            return new TextureSprite(LinkDamagedMovingNorthTexture, 1, 4, 5);
+            return new TextureSprite(LinkDamagedMovingNorthTexture, 0.48f, 1, 4, 5);
         }
         public ISprite CreateLinkDamagedMovingEastSprite()
         {
-            return new TextureSprite(LinkDamagedMovingEastTexture, 1, 4, 5);
+            return new TextureSprite(LinkDamagedMovingEastTexture, 0.48f, 1, 4, 5);
         }
         public ISprite CreateLinkDamagedMovingWestSprite()
         {
-            return new TextureSprite(LinkDamagedMovingWestTexture, 1, 4, 5);
+            return new TextureSprite(LinkDamagedMovingWestTexture, 0.48f, 1, 4, 5);
         }
 
         public ISprite CreateLinkDamagedNonMovingSouthSprite()
         {
-            return new TextureSprite(LinkDamagedNonMovingSouthTexture, 1, 4, 5);
+            return new TextureSprite(LinkDamagedNonMovingSouthTexture, 0.48f, 1, 4, 5);
         }
         public ISprite CreateLinkDamagedNonMovingNorthSprite()
         {
-            return new TextureSprite(LinkDamagedNonMovingNorthTexture, 1, 4, 5);
+            return new TextureSprite(LinkDamagedNonMovingNorthTexture, 0.48f, 1, 4, 5);
         }
         public ISprite CreateLinkDamagedNonMovingEastSprite()
         {
-            return new TextureSprite(LinkDamagedNonMovingEastTexture, 1, 4, 5);
+            return new TextureSprite(LinkDamagedNonMovingEastTexture, 0.48f, 1, 4, 5);
         }
         public ISprite CreateLinkDamagedNonMovingWestSprite()
         {
-            return new TextureSprite(LinkDamagedNonMovingWestTexture, 1, 4, 5);
+            return new TextureSprite(LinkDamagedNonMovingWestTexture, 0.48f, 1, 4, 5);
         }
 
         public ISprite CreateLinkMovingSouthSprite()
         {
-            return new TextureSprite(LinkMovingSouthTexture, 1, 2, 5);
+            return new TextureSprite(LinkMovingSouthTexture, 0.48f, 1, 2, 5);
         }
         public ISprite CreateLinkMovingNorthSprite()
         {
-            return new TextureSprite(LinkMovingNorthTexture, 1, 2, 5);
+            return new TextureSprite(LinkMovingNorthTexture, 0.48f, 1, 2, 5);
         }
         public ISprite CreateLinkMovingEastSprite()
         {
-            return new TextureSprite(LinkMovingEastTexture, 1, 2, 5);
+            return new TextureSprite(LinkMovingEastTexture, 0.48f, 1, 2, 5);
         }
         public ISprite CreateLinkMovingWestSprite()
         {
-            return new TextureSprite(LinkMovingWestTexture, 1, 2, 5);
+            return new TextureSprite(LinkMovingWestTexture, 0.48f, 1, 2, 5);
         }
 
         public ISprite CreateLinkNonMovingSouthSprite()
         {
-            return new TextureSprite(LinkNonMovingSouthTexture, 1, 1, 5);
+            return new TextureSprite(LinkNonMovingSouthTexture, 0.48f);
         }
         public ISprite CreateLinkNonMovingNorthSprite()
         {
-            return new TextureSprite(LinkNonMovingNorthTexture, 1, 1, 5);
+            return new TextureSprite(LinkNonMovingNorthTexture, 0.48f);
         }
         public ISprite CreateLinkNonMovingEastSprite()
         {
-            return new TextureSprite(LinkNonMovingEastTexture, 1, 1, 5);
+            return new TextureSprite(LinkNonMovingEastTexture, 0.48f);
         }
         public ISprite CreateLinkNonMovingWestSprite()
         {
-            return new TextureSprite(LinkNonMovingWestTexture, 1, 1, 5);
+            return new TextureSprite(LinkNonMovingWestTexture, 0.48f);
         }
 
         public ISprite CreateLinkSwordSouthSprite()
         {
-            return new TextureSprite(LinkSwordSouthTexture, 1, 4, 5);
+            return new TextureSprite(LinkSwordSouthTexture, 0.48f, 1, 4, 5);
         }
         public ISprite CreateLinkSwordNorthSprite()
         {
-            return new TextureSprite(LinkSwordNorthTexture, 1, 4, 5);
+            return new TextureSprite(LinkSwordNorthTexture, 0.48f, 1, 4, 5);
         }
         public ISprite CreateLinkSwordEastSprite()
         {
-            return new TextureSprite(LinkSwordEastTexture, 4, 1, 5);
+            return new TextureSprite(LinkSwordEastTexture, 0.48f, 4, 1, 5);
         }
         public ISprite CreateLinkSwordWestSprite()
         {
-            return new TextureSprite(LinkSwordWestTexture, 4, 1, 5);
+            return new TextureSprite(LinkSwordWestTexture, 0.48f, 4, 1, 5);
         }
 
         public ISprite CreateLinkUseItemSouthSprite()
         {
-            return new TextureSprite(LinkUseItemSouthTexture, 1, 1, 5);
+            return new TextureSprite(LinkUseItemSouthTexture, 0.48f, 1, 1, 5);
         }
         public ISprite CreateLinkUseItemNorthSprite()
         {
-            return new TextureSprite(LinkUseItemNorthTexture, 1, 1, 5);
+            return new TextureSprite(LinkUseItemNorthTexture, 0.48f, 1, 1, 5);
         }
         public ISprite CreateLinkUseItemEastSprite()
         {
-            return new TextureSprite(LinkUseItemEastTexture, 1, 1, 5);
+            return new TextureSprite(LinkUseItemEastTexture, 0.48f, 1, 1, 5);
         }
         public ISprite CreateLinkUseItemWestSprite()
         {
-            return new TextureSprite(LinkUseItemWestTexture, 1, 1, 5);
+            return new TextureSprite(LinkUseItemWestTexture, 0.48f, 1, 1, 5);
         }
     }
 }

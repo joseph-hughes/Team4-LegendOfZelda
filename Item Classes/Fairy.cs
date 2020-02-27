@@ -5,7 +5,7 @@ using Team4_LegendOfZelda.ISprite_Classes;
 
 namespace Team4_LegendOfZelda.Item_Classes
 {
-    class Fairy : Iitem
+    class Fairy : IItem
     {
         ISprite itemSprite;
         Vector2 itemLocation;
@@ -17,7 +17,7 @@ namespace Team4_LegendOfZelda.Item_Classes
         }
         public void Update()
         {
-
+            itemSprite.Update();
         }
         public void Draw(SpriteBatch spriteBatch)
         {

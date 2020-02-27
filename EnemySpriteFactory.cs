@@ -112,172 +112,172 @@ namespace Team4_LegendOfZelda
 		// Aquamentus Sprites
 		public ISprite CreateAquamentusEastIdleSprite()
 		{
-			return new TextureSprite(aquamentusEastIdleTexture, 1, 2, 5);
+			return new TextureSprite(aquamentusEastIdleTexture, 3, 1, 2, 5);
 		}
 
 		public ISprite CreateAquamentusEastAttackSprite()
 		{
-			return new TextureSprite(aquamentusEastAttackTexture, 1, 2, 5);
+			return new TextureSprite(aquamentusEastAttackTexture, 3, 1, 2, 5);
 		}
 
 		public ISprite CreateAquamentusWestIdleSprite()
 		{
-			return new TextureSprite(aquamentusWestIdleTexture, 1, 2, 5);
+			return new TextureSprite(aquamentusWestIdleTexture, 3, 1, 2, 5);
 		}
 
 		public ISprite CreateAquamentusWestAttackSprite()
 		{
-			return new TextureSprite(aquamentusWestAttackTexture, 1, 2, 5);
+			return new TextureSprite(aquamentusWestAttackTexture, 3, 1, 2, 5);
 		}
 
 		// Dondongo Sprites
 		public ISprite CreateDodongoNorthWalkingSprite()
 		{
-			return new TextureSprite(dodongoNorthWalkingTexture, 1, 2, 5);
+			return new TextureSprite(dodongoNorthWalkingTexture, 3, 1, 2, 5);
 		}
 
 		public ISprite CreateDodongoNorthDamagedSprite()
 		{
-			return new TextureSprite(dodongoNorthDamagedTexture);
+			return new TextureSprite(dodongoNorthDamagedTexture, 3);
 		}
 
 		public ISprite CreateDodongoEastWalkingSprite()
 		{
-			return new TextureSprite(dodongoEastWalkingTexture, 1, 2, 5);
+			return new TextureSprite(dodongoEastWalkingTexture, 3, 1, 2, 5);
 		}
 
 		public ISprite CreateDodongoEastDamagedSprite()
 		{
-			return new TextureSprite(dodongoEastDamagedTexture);
+			return new TextureSprite(dodongoEastDamagedTexture, 3);
 		}
 
 		public ISprite CreateDodongoSouthWalkingSprite()
 		{
-			return new TextureSprite(dodongoSouthWalkingTexture, 1, 2, 5);
+			return new TextureSprite(dodongoSouthWalkingTexture, 3, 1, 2, 5);
 		}
 
 		public ISprite CreateDodongoSouthDamagedSprite()
 		{
-			return new TextureSprite(dodongoSouthDamagedTexture);
+			return new TextureSprite(dodongoSouthDamagedTexture, 3);
 		}
 
 		public ISprite CreateDodongoWestWalkingSprite()
 		{
-			return new TextureSprite(dodongoWestWalkingTexture, 1, 2, 5);
+			return new TextureSprite(dodongoWestWalkingTexture, 3, 1, 2, 5);
 		}
 
 		public ISprite CreateDodongoWestDamagedSprite()
 		{
-			return new TextureSprite(dodongoWestDamagedTexture);
+			return new TextureSprite(dodongoWestDamagedTexture, 3);
 		}
 
 		// Gel Sprites
 		public ISprite CreateGelDarkBlueSprite()
 		{
-			return new TextureSprite(gelDarkBlueTexture, 1, 2, 5);
+			return new TextureSprite(gelDarkBlueTexture, 3, 1, 2, 5);
 		}
 
 		// Goriya Blue Sprites
 		public ISprite CreateGoriyaBlueNorthSprite()
 		{
-			return new TextureSprite(goriyaBlueNorthTexture, 1, 2, 5);
+			return new TextureSprite(goriyaBlueNorthTexture, 3, 1, 2, 5);
 		}
 
 		public ISprite CreateGoriyaBlueEastSprite()
 		{
-			return new TextureSprite(goriyaBlueEastTexture, 1, 2, 5);
+			return new TextureSprite(goriyaBlueEastTexture, 3, 1, 2, 5);
 		}
 
 		public ISprite CreateGoriyaBlueSouthSprite()
 		{
-			return new TextureSprite(goriyaBlueSouthTexture, 1, 2, 5);
+			return new TextureSprite(goriyaBlueSouthTexture, 3, 1, 2, 5);
 		}
 
 		public ISprite CreateGoriyaBlueWestSprite()
 		{
-			return new TextureSprite(goriyaBlueWestTexture, 1, 2, 5);
+			return new TextureSprite(goriyaBlueWestTexture, 3, 1, 2, 5);
 		}
 
 		// Goriya Red Sprites
 		public ISprite CreateGoriyaRedNorthSprite()
 		{
-			return new TextureSprite(goriyaRedNorthTexture, 1, 2, 5);
+			return new TextureSprite(goriyaRedNorthTexture, 3, 1, 2, 5);
 		}
 
 		public ISprite CreateGoriyaRedEastSprite()
 		{
-			return new TextureSprite(goriyaRedEastTexture, 1, 2, 5);
+			return new TextureSprite(goriyaRedEastTexture, 3, 1, 2, 5);
 		}
 
 		public ISprite CreateGoriyaRedSouthSprite()
 		{
-			return new TextureSprite(goriyaRedSouthTexture, 1, 2, 5);
+			return new TextureSprite(goriyaRedSouthTexture, 3, 1, 2, 5);
 		}
 
 		public ISprite CreateGoriyaRedWestSprite()
 		{
-			return new TextureSprite(goriyaRedWestTexture, 1, 2, 5);
+			return new TextureSprite(goriyaRedWestTexture, 3, 1, 2, 5);
 		}
 
 		// Keese Sprites
 		public ISprite CreateKeeseBlueSprite()
 		{
-			return new TextureSprite(keeseBlueTexture, 1, 2, 5);
+			return new TextureSprite(keeseBlueTexture, 3, 1, 2, 5);
 		}
 
 		public ISprite CreateKeeseRedSprite()
 		{
-			return new TextureSprite(keeseRedTexture, 1, 2, 5);
+			return new TextureSprite(keeseRedTexture, 3, 1, 2, 5);
 		}
 
 		// Rope Sprites
 		public ISprite CreateRopeEastSprite()
 		{
-			return new TextureSprite(ropeEastTexture, 1, 2, 5);
+			return new TextureSprite(ropeEastTexture, 3, 1, 2, 5);
 		}
 
 		public ISprite CreateRopeWestSprite()
 		{
-			return new TextureSprite(ropeWestTexture, 1, 2, 5);
+			return new TextureSprite(ropeWestTexture, 3, 1, 2, 5);
 		}
 
 		// Stalfos Sprites
 		public ISprite CreateStalfosSprite()
 		{
-			return new TextureSprite(stalfosTexture, 1, 2, 5);
+			return new TextureSprite(stalfosTexture, 3, 1, 2, 5);
 		}
 
 		// Blade Trap Sprites
 		public ISprite CreateBladeTrapSprite()
 		{
-			return new TextureSprite(bladeTrapTexture, 1, 2, 5);
+			return new TextureSprite(bladeTrapTexture, 3);
 		}
 
 		// Wall Master Sprites
 		public ISprite CreateWallMasterEastSprite()
 		{
-			return new TextureSprite(wallMasterEastTexture, 1, 2, 5);
+			return new TextureSprite(wallMasterEastTexture, 3, 1, 2, 5);
 		}
 
 		public ISprite CreateWallMasterWestSprite()
 		{
-			return new TextureSprite(wallMasterWestTexture, 1, 2, 5);
+			return new TextureSprite(wallMasterWestTexture, 3, 1, 2, 5);
 		}
 
 		public ISprite CreateWallMasterUpsideDownEastSprite()
 		{
-			return new TextureSprite(wallMasterUpsideDownEastTexture, 1, 2, 5);
+			return new TextureSprite(wallMasterUpsideDownEastTexture, 3, 1, 2, 5);
 		}
 
 		public ISprite CreateWallMasterUpsideDownWestSprite()
 		{
-			return new TextureSprite(wallMasterUpsideDownWestTexture, 1, 2, 5);
+			return new TextureSprite(wallMasterUpsideDownWestTexture, 3, 1, 2, 5);
 		}
 
 		// Zol Sprites
 		public ISprite CreateZolDarkGreenSprite()
 		{
-			return new TextureSprite(zolDarkGreenTexture, 1, 2, 5);
+			return new TextureSprite(zolDarkGreenTexture, 3, 1, 2, 5);
 		}
 	}
 }

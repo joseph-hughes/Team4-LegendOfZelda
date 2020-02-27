@@ -28,22 +28,32 @@
         {
             // Do nothing
         }
+
         public void West()
         {
             // Do nothing
         }
+
+        public void Idle()
+        {
+            // TODO
+        }
+
         public void BeDamaged()
         {
             // TODO
         }
+
         public void Attack()
         {
             // Do nothing
         }
+
         public void UseItem()
         {
             // Do nothing
         }
+
         public void Update()
         {
             count++;

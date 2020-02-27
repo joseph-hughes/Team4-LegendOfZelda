@@ -102,146 +102,146 @@ namespace Team4_LegendOfZelda
         //empty item
         public ISprite CreateEmptyItem()
         {
-            return new TextureSprite(EmptyImage);
+            return new TextureSprite(EmptyImage, 0);
         }
         //non-animated
         public ISprite CreateSecondPotion()
         {
-            return new TextureSprite(secondPotion);
+            return new TextureSprite(secondPotion, 3);
         }
         public ISprite CreateFiveRupies()
         {
-            return new TextureSprite(fiveRupies);
+            return new TextureSprite(fiveRupies, 3);
         }
         public ISprite CreateArrow()
         {
-            return new TextureSprite(arrow);
+            return new TextureSprite(arrow, 3);
         }
         public ISprite CreateBlueCandle()
         {
-            return new TextureSprite(blueCandle);
+            return new TextureSprite(blueCandle, 3);
         }
         public ISprite CreateBlueRing()
         {
-            return new TextureSprite(blueRing);
+            return new TextureSprite(blueRing, 3);
         }
         public ISprite CreateBomb()
         {
-            return new TextureSprite(bomb);
+            return new TextureSprite(bomb, 3);
         }
         public ISprite CreateBookOfMagic()
         {
-            return new TextureSprite(bookOfMagic);
+            return new TextureSprite(bookOfMagic, 3);
         }
         public ISprite CreateBoomerang()
         {
-            return new TextureSprite(boomerang);
+            return new TextureSprite(boomerang, 3);
         }
         public ISprite CreateBow()
         {
-            return new TextureSprite(bow);
+            return new TextureSprite(bow, 3);
         }
         public ISprite CreateClock()
         {
-            return new TextureSprite(clock);
+            return new TextureSprite(clock, 3);
         }
         public ISprite CreateCompass()
         {
-            return new TextureSprite(compass);
+            return new TextureSprite(compass, 3);
         }
         public ISprite CreateFood()
         {
-            return new TextureSprite(food);
+            return new TextureSprite(food, 3);
         }
         public ISprite CreateHeartContainer()
         {
-            return new TextureSprite(heartContainer);
+            return new TextureSprite(heartContainer, 3);
         }
         public ISprite CreateKey()
         {
-            return new TextureSprite(key);
+            return new TextureSprite(key, 3);
         }
         public ISprite CreateLetter()
         {
-            return new TextureSprite(letter);
+            return new TextureSprite(letter, 3);
         }
         public ISprite CreateLifePotion()
         {
-            return new TextureSprite(lifePotion);
+            return new TextureSprite(lifePotion, 3);
         }
         public ISprite CreateMagicalBoomerang()
         {
-            return new TextureSprite(magicalBoomerang);
+            return new TextureSprite(magicalBoomerang, 3);
         }
         public ISprite CreateMagicalKey()
         {
-            return new TextureSprite(magicalKey);
+            return new TextureSprite(magicalKey, 3);
         }
         public ISprite CreateMagicalRod()
         {
-            return new TextureSprite(magicalRod);
+            return new TextureSprite(magicalRod, 3);
         }
         public ISprite CreateMagicalShield()
         {
-            return new TextureSprite(magicalShield);
+            return new TextureSprite(magicalShield, 3);
         }
         public ISprite CreateMap()
         {
-            return new TextureSprite(map);
+            return new TextureSprite(map, 3);
         }
         public ISprite CreatePowerBracelet()
         {
-            return new TextureSprite(powerBracelet);
+            return new TextureSprite(powerBracelet, 3);
         }
         public ISprite CreateRaft()
         {
-            return new TextureSprite(raft);
+            return new TextureSprite(raft, 3);
         }
         public ISprite CreateRecorder()
         {
-            return new TextureSprite(recorder);
+            return new TextureSprite(recorder, 3);
         }
         public ISprite CreateRedCandle()
         {
-            return new TextureSprite(redCandle);
+            return new TextureSprite(redCandle, 3);
         }
         public ISprite CreateRedRing()
         {
-            return new TextureSprite(redRing);
+            return new TextureSprite(redRing, 3);
         }
         public ISprite CreateSilverArrow()
         {
-            return new TextureSprite(silverArrow);
+            return new TextureSprite(silverArrow, 3);
         }
         public ISprite CreateStepladder()
         {
-            return new TextureSprite(stepladder);
+            return new TextureSprite(stepladder, 3);
         }
         public ISprite CreateSword()
         {
-            return new TextureSprite(sword);
+            return new TextureSprite(sword, 3);
         }
         public ISprite CreateWhiteSword()
         {
-            return new TextureSprite(whiteSword);
+            return new TextureSprite(whiteSword, 3);
         }
 
         //animated
         public ISprite CreateFairy()
         {
-            return new TextureSprite(fairy, 1, 2, 5);
+            return new TextureSprite(fairy, 3, 1, 2, 5);
         }
         public ISprite CreateHeart()
         {
-            return new TextureSprite(heart, 1, 2, 5);
+            return new TextureSprite(heart, 3, 1, 2, 5);
         }
         public ISprite CreateRupy()
         {
-            return new TextureSprite(rupy, 1, 2, 5);
+            return new TextureSprite(rupy, 3, 1, 2, 5);
         }
         public ISprite CreateTriforce()
         {
-            return new TextureSprite(triforce, 1, 2, 5);
+            return new TextureSprite(triforce, 3, 1, 2, 5);
         }
     }
 }

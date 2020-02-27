@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.IState_Classes
 {
@@ -6,7 +7,7 @@ namespace Team4_LegendOfZelda.IState_Classes
     {
         private Link link;
         private int timer;
-        public LegendOfZelda ThisGame { get; set; }
+      
         public LinkSwordSouthState(Link link, int timer)
         {
             this.link = link;
@@ -29,10 +30,13 @@ namespace Team4_LegendOfZelda.IState_Classes
         {
             // no action
         }
+        public void Idle()
+        {
+            // Do nothing
+        }
         public void BeDamaged()
         {
-            int dtimer = 10;
-            link.State = new LinkDamagedNonMovingSouthState(link, dtimer);
+            link.State = new LinkKnockbackSouthState(link, Link.knockback_timer);
         }
         public void UseItem()
         {

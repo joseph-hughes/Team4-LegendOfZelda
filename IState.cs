@@ -6,6 +6,7 @@
         void East();
         void South();
         void West();
+        void Idle();
         void BeDamaged();
         void Attack();
         void UseItem();

@@ -15,15 +15,19 @@ namespace Team4_LegendOfZelda
         private static GraphicsDeviceManager graphics;
         private List<IController> controllerList;
         private List<ICommand> commandList;
+        private List<Keys> keyList;
         private List<ISpriteFactory> spriteFactories;
         private Color backgroundColor;
-
-        public Sprint2Level Level { get; set; }
-        public IPlayer Player { get; set; }
+        private Sprint2Level level;
+        private IPlayer player;
 
         public LegendOfZelda()
         {
-            graphics = new GraphicsDeviceManager(this);
+            graphics = new GraphicsDeviceManager(this)
+            {
+                PreferredBackBufferWidth = 768,
+                PreferredBackBufferHeight = 528
+            };
             Content.RootDirectory = "Content";
             IsMouseVisible = false;
             spriteFactories = new List<ISpriteFactory>
@@ -31,7 +35,8 @@ namespace Team4_LegendOfZelda
                 PlayerSpriteFactory.Instance,
                 EnemySpriteFactory.Instance,
                 NPCSpriteFactory.Instance,
-                ItemSpriteFactory.Instance
+                ItemSpriteFactory.Instance,
+                ProjectileSpriteFactory.Instance
             };
         }
 
@@ -45,10 +50,10 @@ namespace Team4_LegendOfZelda
         {
             base.Initialize();
 
-            Level = new Sprint2Level();
-            Level.Initialize(Content);
+            level = new Sprint2Level();
+            level.Initialize(Content);
 
-            Player = new Link(new Vector2(30, 100));
+            player = new Link(new Vector2(30, 100));
 
             controllerList = new List<IController>
             {
@@ -57,42 +62,64 @@ namespace Team4_LegendOfZelda
 
             commandList = new List<ICommand>
             {
-                new QuitCommand(this),                 //0
-                new ResetGameCommand(this),            //1
-                new MoveLinkSouthCommand(Player),       //2
-                new MoveLinkWestCommand(Player),       //3
-                new MoveLinkEastCommand(Player),      //4
-                new MoveLinkNorthCommand(Player),         //5
-                new NextItemCommand(Level),            //6
-                new PreviousItemCommand(Level),        //7
-                new NextEnemyCommand(Level),           //8
-                new PreviousEnemyCommand(Level),       //9
-                new LinkAttackCommand(Player),         //10
-                new LinkBeDamagedCommand(Player)      //11
+                new QuitCommand(this),                          //0
+                new ResetGameCommand(this),                     //1
+                new MoveLinkNorthCommand(player),               //2
+                new MoveLinkEastCommand(player),                //3
+                new MoveLinkSouthCommand(player),               //4
+                new MoveLinkWestCommand(player),                //5
+                new NextItemCommand(level),                     //6
+                new PreviousItemCommand(level),                 //7
+                new NextEnemyCommand(level),                    //8
+                new PreviousEnemyCommand(level),                //9
+                new LinkAttackCommand(player),                  //10
+                new LinkBeDamagedCommand(player),               //11
+                new LinkIdleCommand(player),                    //12
+                new LinkUseArrowCommand(player, level),         //13
+                new LinkUseBoomerangCommand(player, level),     //14
+                new LinkUseFireballCommand(player, level),      //15
+                new LinkUseMagicBoomerangCommand(player, level) //16
+
             };
 
             KeyboardController keyboard = (KeyboardController)controllerList[0];
+            keyList = new List<Keys>
+            {
+                Keys.W,
+                Keys.A,
+                Keys.S,
+                Keys.D,
+                Keys.Up,
+                Keys.Left,
+                Keys.Down,
+                Keys.Right,
+            };
 
-            keyboard.RegisterCommand(Keys.W, commandList[5]);
-            keyboard.RegisterCommand(Keys.A, commandList[3]);
-            keyboard.RegisterCommand(Keys.S, commandList[2]);
-            keyboard.RegisterCommand(Keys.D, commandList[1]);
-            keyboard.RegisterCommand(Keys.Up, commandList[5]);
-            keyboard.RegisterCommand(Keys.Left, commandList[3]);
-            keyboard.RegisterCommand(Keys.Down, commandList[2]);
-            keyboard.RegisterCommand(Keys.Right, commandList[1]);
+            keyboard.RegisterUnpressedKeysCommand(keyList, commandList[12]);
+
+            keyboard.RegisterCommand(Keys.W, commandList[2]);
+            keyboard.RegisterCommand(Keys.D, commandList[3]);
+            keyboard.RegisterCommand(Keys.S, commandList[4]);
+            keyboard.RegisterCommand(Keys.A, commandList[5]);
+            keyboard.RegisterCommand(Keys.Up, commandList[2]);
+            keyboard.RegisterCommand(Keys.Right, commandList[3]);
+            keyboard.RegisterCommand(Keys.Down, commandList[4]);
+            keyboard.RegisterCommand(Keys.Left, commandList[5]);
             keyboard.RegisterCommand(Keys.Z, commandList[10]);
             keyboard.RegisterCommand(Keys.N, commandList[10]);
+            keyboard.RegisterCommand(Keys.E, commandList[11]);
             keyboard.RegisterCommand(Keys.Q, commandList[0]);
             keyboard.RegisterCommand(Keys.R, commandList[1]);
             keyboard.RegisterCommand(Keys.U, commandList[6]);
             keyboard.RegisterCommand(Keys.I, commandList[7]);
             keyboard.RegisterCommand(Keys.O, commandList[8]);
             keyboard.RegisterCommand(Keys.P, commandList[9]);
-
+            keyboard.RegisterCommand(Keys.D1, commandList[13]);
+            keyboard.RegisterCommand(Keys.D2, commandList[14]);
+            keyboard.RegisterCommand(Keys.D3, commandList[15]);
+            keyboard.RegisterCommand(Keys.D4, commandList[16]);
             Window.Title = "Sprint2 - Team 4";
             backgroundColor = Color.SteelBlue;
-            commandList[1].Execute();
         }
 
         /// <summary>
@@ -107,6 +134,7 @@ namespace Team4_LegendOfZelda
             {
                 spriteFactory.LoadAllTextures(Content);
             }
+
         }
 
         /// <summary>
@@ -130,8 +158,8 @@ namespace Team4_LegendOfZelda
                 controller.Update();
             }
 
-            Level.Update();
-            Player.Update();
+            level.Update();
+            player.Update();
 
             base.Update(gameTime);
         }
@@ -144,10 +172,15 @@ namespace Team4_LegendOfZelda
         {
             GraphicsDevice.Clear(backgroundColor);
 
-            Level.Draw(spriteBatch);
-            Player.Draw(spriteBatch);
+            level.Draw(spriteBatch);
+            player.Draw(spriteBatch);
 
             base.Draw(gameTime);
+        }
+
+        public void Restart()
+        {
+            Initialize();
         }
     }
 }

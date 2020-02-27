@@ -1,16 +1,16 @@
 ﻿namespace Team4_LegendOfZelda
 {
-    public class LinkChangeItemCommand : ICommand
+    public class LinkIdleCommand : ICommand
     {
         private IPlayer player;
-
-        public LinkChangeItemCommand(IPlayer player)
+        
+        public LinkIdleCommand(IPlayer player)
         {
             this.player = player;
         }
         public void Execute()
         {
-            // TODO
+            player.Idle();
         }
     }
 }
