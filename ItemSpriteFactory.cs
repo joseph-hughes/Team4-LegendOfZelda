@@ -1,8 +1,6 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
+﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Team4_LegendOfZelda.ISprite_Classes;
-using Team4_LegendOfZelda.Item_Classes;
 
 namespace Team4_LegendOfZelda
 {
@@ -102,146 +100,146 @@ namespace Team4_LegendOfZelda
         //empty item
         public ISprite CreateEmptyItem()
         {
-            return new TextureSprite(EmptyImage, 0);
+            return new TextureSprite(EmptyImage);
         }
         //non-animated
         public ISprite CreateSecondPotion()
         {
-            return new TextureSprite(secondPotion, 3);
+            return new TextureSprite(secondPotion);
         }
         public ISprite CreateFiveRupies()
         {
-            return new TextureSprite(fiveRupies, 3);
+            return new TextureSprite(fiveRupies);
         }
         public ISprite CreateArrow()
         {
-            return new TextureSprite(arrow, 3);
+            return new TextureSprite(arrow);
         }
         public ISprite CreateBlueCandle()
         {
-            return new TextureSprite(blueCandle, 3);
+            return new TextureSprite(blueCandle);
         }
         public ISprite CreateBlueRing()
         {
-            return new TextureSprite(blueRing, 3);
+            return new TextureSprite(blueRing);
         }
         public ISprite CreateBomb()
         {
-            return new TextureSprite(bomb, 3);
+            return new TextureSprite(bomb);
         }
         public ISprite CreateBookOfMagic()
         {
-            return new TextureSprite(bookOfMagic, 3);
+            return new TextureSprite(bookOfMagic);
         }
         public ISprite CreateBoomerang()
         {
-            return new TextureSprite(boomerang, 3);
+            return new TextureSprite(boomerang);
         }
         public ISprite CreateBow()
         {
-            return new TextureSprite(bow, 3);
+            return new TextureSprite(bow);
         }
         public ISprite CreateClock()
         {
-            return new TextureSprite(clock, 3);
+            return new TextureSprite(clock);
         }
         public ISprite CreateCompass()
         {
-            return new TextureSprite(compass, 3);
+            return new TextureSprite(compass);
         }
         public ISprite CreateFood()
         {
-            return new TextureSprite(food, 3);
+            return new TextureSprite(food);
         }
         public ISprite CreateHeartContainer()
         {
-            return new TextureSprite(heartContainer, 3);
+            return new TextureSprite(heartContainer);
         }
         public ISprite CreateKey()
         {
-            return new TextureSprite(key, 3);
+            return new TextureSprite(key);
         }
         public ISprite CreateLetter()
         {
-            return new TextureSprite(letter, 3);
+            return new TextureSprite(letter);
         }
         public ISprite CreateLifePotion()
         {
-            return new TextureSprite(lifePotion, 3);
+            return new TextureSprite(lifePotion);
         }
         public ISprite CreateMagicalBoomerang()
         {
-            return new TextureSprite(magicalBoomerang, 3);
+            return new TextureSprite(magicalBoomerang);
         }
         public ISprite CreateMagicalKey()
         {
-            return new TextureSprite(magicalKey, 3);
+            return new TextureSprite(magicalKey);
         }
         public ISprite CreateMagicalRod()
         {
-            return new TextureSprite(magicalRod, 3);
+            return new TextureSprite(magicalRod);
         }
         public ISprite CreateMagicalShield()
         {
-            return new TextureSprite(magicalShield, 3);
+            return new TextureSprite(magicalShield);
         }
         public ISprite CreateMap()
         {
-            return new TextureSprite(map, 3);
+            return new TextureSprite(map);
         }
         public ISprite CreatePowerBracelet()
         {
-            return new TextureSprite(powerBracelet, 3);
+            return new TextureSprite(powerBracelet);
         }
         public ISprite CreateRaft()
         {
-            return new TextureSprite(raft, 3);
+            return new TextureSprite(raft);
         }
         public ISprite CreateRecorder()
         {
-            return new TextureSprite(recorder, 3);
+            return new TextureSprite(recorder);
         }
         public ISprite CreateRedCandle()
         {
-            return new TextureSprite(redCandle, 3);
+            return new TextureSprite(redCandle);
         }
         public ISprite CreateRedRing()
         {
-            return new TextureSprite(redRing, 3);
+            return new TextureSprite(redRing);
         }
         public ISprite CreateSilverArrow()
         {
-            return new TextureSprite(silverArrow, 3);
+            return new TextureSprite(silverArrow);
         }
         public ISprite CreateStepladder()
         {
-            return new TextureSprite(stepladder, 3);
+            return new TextureSprite(stepladder);
         }
         public ISprite CreateSword()
         {
-            return new TextureSprite(sword, 3);
+            return new TextureSprite(sword);
         }
         public ISprite CreateWhiteSword()
         {
-            return new TextureSprite(whiteSword, 3);
+            return new TextureSprite(whiteSword);
         }
 
         //animated
         public ISprite CreateFairy()
         {
-            return new TextureSprite(fairy, 3, 1, 2, 5);
+            return new TextureSprite(fairy, 1, 2, 5);
         }
         public ISprite CreateHeart()
         {
-            return new TextureSprite(heart, 3, 1, 2, 5);
+            return new TextureSprite(heart, 1, 2, 5);
         }
         public ISprite CreateRupy()
         {
-            return new TextureSprite(rupy, 3, 1, 2, 5);
+            return new TextureSprite(rupy, 1, 2, 5);
         }
         public ISprite CreateTriforce()
         {
-            return new TextureSprite(triforce, 3, 1, 2, 5);
+            return new TextureSprite(triforce, 1, 2, 5);
         }
     }
 }

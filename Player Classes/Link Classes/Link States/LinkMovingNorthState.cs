@@ -1,16 +1,19 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.IState_Classes
 {
     class LinkMovingNorthState : IState
     {
         private Link link;
+        private const int width = 16;
+        private const int height = 16;
 
         public LinkMovingNorthState(Link link)
         {
             this.link = link;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkMovingNorthSprite();
+            this.link.Rectangle = new Rectangle((int)this.link.Position.X, (int)this.link.Position.Y, (int)(this.link.Scale * width), (int)(this.link.Scale * height));
+
         }
 
         public void North()
@@ -56,6 +59,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         public void Update()
         {
             link.Position = new Vector2(link.Position.X, link.Position.Y - 2);
+            link.Rectangle = new Rectangle((int)link.Position.X, (int)link.Position.Y, (int)(link.Scale * width), (int)(link.Scale * height));
         }
     }
 }

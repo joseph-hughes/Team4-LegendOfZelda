@@ -8,6 +8,7 @@ namespace Team4_LegendOfZelda
         ISprite Sprite { get; set; }
         IState State { get; set; }
         Vector2 Position { get; set; }
+        float Scale { get; set; }
         void Update();
         void Draw(SpriteBatch spriteBatch);
     }

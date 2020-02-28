@@ -3,7 +3,7 @@
     public class MoveLinkNorthCommand : ICommand
     {
         private IPlayer player;
-        
+
         public MoveLinkNorthCommand(IPlayer player)
         {
             this.player = player;

@@ -1,31 +1,38 @@
 ﻿
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Team4_LegendOfZelda.ISprite_Classes;
 
 namespace Team4_LegendOfZelda.Item_Classes
 {
     class Food : IItem
     {
-        ISprite itemSprite;
-        Vector2 itemLocation;
+        private const int width = 8;
+        private const int height = 16;
+        private ISprite itemSprite;
+        public Rectangle Rectangle;
+        public float Scale { get; set; }
+        public Vector2 itemLocation { get; set; }
 
         public Food(Vector2 location)
         {
             itemSprite = ItemSpriteFactory.Instance.CreateFood();
             itemLocation = location;
+            Scale = 3f;
+            Rectangle = new Rectangle((int)location.X, (int)location.Y, (int)(width * Scale), (int)(height * Scale));
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            itemSprite.Draw(spriteBatch, Rectangle);
         }
         public void Update()
         {
+            Rectangle = new Rectangle((int)itemLocation.X, (int)itemLocation.Y, (int)(width * Scale), (int)(height * Scale));
+        }
 
-        }
-        public void Draw(SpriteBatch spriteBatch)
+        public void UseItem()
         {
-            itemSprite.Draw(spriteBatch, itemLocation);
-        }
-        public void UseItem(Vector2 location)
-        {
-            itemLocation = location;
+            //TODO
         }
     }
 }

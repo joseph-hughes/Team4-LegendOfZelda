@@ -14,22 +14,20 @@ namespace Team4_LegendOfZelda.ISprite_Classes
         private int totalFrames;
         private int width;
         private int height;
-        private float scale;
         private Rectangle sourceRectangle;
         private bool animated;
 
         // Constructor
-        public TextureSprite(Texture2D texture, float scale)
+        public TextureSprite(Texture2D texture)
         {
             this.texture = texture;
             animated = false;
             width = texture.Width;
             height = texture.Height;
-            this.scale = scale;
             sourceRectangle = new Rectangle(0, 0, width, height);
         }
 
-        public TextureSprite(Texture2D texture, float scale, int sheetRows, int sheetColumns, int delayBetweenFrames)
+        public TextureSprite(Texture2D texture, int sheetRows, int sheetColumns, int delayBetweenFrames)
         {
             this.texture = texture;
 
@@ -44,7 +42,6 @@ namespace Team4_LegendOfZelda.ISprite_Classes
 
             width = texture.Width / columns;
             height = texture.Height / rows;
-            this.scale = scale;
 
             sourceRectangle = new Rectangle(0, 0, width, height);
 
@@ -68,9 +65,8 @@ namespace Team4_LegendOfZelda.ISprite_Classes
             }
         }
 
-        public void Draw(SpriteBatch spriteBatch, Vector2 position)
+        public void Draw(SpriteBatch spriteBatch, Rectangle destinationRectangle)
         {
-            Rectangle destinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(width * scale), (int)(height * scale));
             spriteBatch.Begin();
             spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, Color.White);
             spriteBatch.End();

@@ -1,13 +1,18 @@
-﻿namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
+﻿using Microsoft.Xna.Framework;
+
+namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
 {
     class AquamentusEastIdleState : IState
     {
         IEnemy enemy;
+        private const int width = 24;
+        private const int height = 32;
 
         public AquamentusEastIdleState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateAquamentusEastIdleSprite();
+            this.enemy.Rectangle = new Rectangle((int)this.enemy.Position.X, (int)this.enemy.Position.Y, (int)(this.enemy.Scale * width), (int)(this.enemy.Scale * height));
         }
 
         public void North()

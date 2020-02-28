@@ -8,6 +8,8 @@ namespace Team4_LegendOfZelda
         ISprite Sprite { get; set; }
         IState State { get; set; }
         Vector2 Position { get; set; }
+        Rectangle Rectangle { get; set; }
+        float Scale { get; set; }
         void North();
         void East();
         void South();

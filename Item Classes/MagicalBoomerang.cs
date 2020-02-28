@@ -4,18 +4,18 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.Item_Classes
 {
-    class WhiteSword : IItem
+    class MagicalBoomerang : IItem
     {
-        private const int width = 7;
-        private const int height = 16;
+        private const int width = 5;
+        private const int height = 8;
         private ISprite itemSprite;
         public Rectangle Rectangle;
         public float Scale { get; set; }
         public Vector2 itemLocation { get; set; }
 
-        public WhiteSword(Vector2 location)
+        public MagicalBoomerang(Vector2 location)
         {
-            itemSprite = ItemSpriteFactory.Instance.CreateWhiteSword();
+            itemSprite = ItemSpriteFactory.Instance.CreateMagicalBoomerang();
             itemLocation = location;
             Scale = 3f;
             Rectangle = new Rectangle((int)location.X, (int)location.Y, (int)(width * Scale), (int)(height * Scale));

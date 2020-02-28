@@ -5,8 +5,10 @@ namespace Team4_LegendOfZelda
 {
     public interface IItem
     {
-        void Update();
+        Vector2 itemLocation { get; set; }
+        float Scale { get; set; }
         void Draw(SpriteBatch spriteBatch);
-        void UseItem(Vector2 location);
+        void Update();
+        void UseItem();
     }
 }

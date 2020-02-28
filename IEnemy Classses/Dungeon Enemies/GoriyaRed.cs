@@ -1,6 +1,6 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaRed_States;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
@@ -11,17 +11,20 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
+        public Rectangle Rectangle { get; set; }
+        public float Scale { get; set; }
         int count, maxCount;
         Random rand;
 
         public GoriyaRed(ILevel level, Vector2 position)
         {
             Level = level;
-            State = new GoriyaRedWestState(this);
             Position = position;
+            Scale = 3f;
+            State = new GoriyaRedWestState(this);
 
             count = 0;
-            maxCount = 240;
+            maxCount = 10;
             rand = new Random();
         }
 
@@ -49,7 +52,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         {
             State.Idle();
         }
-        
+
         public void BeDamaged()
         {
             State.BeDamaged();
@@ -69,7 +72,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         {
             State.Update();
             Sprite.Update();
-            
+
             count++;
             if (count > maxCount)
             {
@@ -103,7 +106,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, Position);
+            Sprite.Draw(spriteBatch, Rectangle);
         }
     }
 }

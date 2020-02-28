@@ -20,10 +20,10 @@ namespace Team4_LegendOfZelda.ISprite_Classes
             // Nothing to update
         }
 
-        public void Draw(SpriteBatch spriteBatch, Vector2 location)
+        public void Draw(SpriteBatch spriteBatch, Rectangle destinationRectangle)
         {
             spriteBatch.Begin();
-            spriteBatch.DrawString(Font, Text, location, Color.Black);
+            spriteBatch.DrawString(Font, Text, new Vector2(destinationRectangle.X, destinationRectangle.Y), Color.Black);
             spriteBatch.End();
         }
     }

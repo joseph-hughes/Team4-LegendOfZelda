@@ -36,8 +36,8 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
                     {
                         enemy.Position = new Vector2(768, enemy.Position.Y);
                     }
-                    
-                    
+
+
                     break;
                 default:
                     // Do nothing, this is not supposed to happen

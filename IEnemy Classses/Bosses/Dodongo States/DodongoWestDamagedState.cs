@@ -1,14 +1,19 @@
-﻿namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
+﻿using Microsoft.Xna.Framework;
+
+namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
 {
     class DodongoWestDamagedState : IState
     {
         IEnemy enemy;
+        private const int width = 32;
+        private const int height = 16;
         int count, maxCount;
 
         public DodongoWestDamagedState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateDodongoWestDamagedSprite();
+            this.enemy.Rectangle = new Rectangle((int)this.enemy.Position.X, (int)this.enemy.Position.Y, (int)(this.enemy.Scale * width), (int)(this.enemy.Scale * height));
 
             count = 0;
             maxCount = 120;

@@ -1,16 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.IState_Classes
 {
     class LinkNonMovingNorthState : IState
     {
         private Link link;
-        
+        private const int width = 16;
+        private const int height = 16;
         public LinkNonMovingNorthState(Link link)
         {
             this.link = link;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkNonMovingNorthSprite();
+            this.link.Rectangle = new Rectangle((int)this.link.Position.X, (int)this.link.Position.Y, (int)(this.link.Scale * width), (int)(this.link.Scale * height));
         }
 
         public void North()

@@ -170,12 +170,12 @@
     <Compile Include="IController Classes\KeyboardController.cs" />
     <Compile Include="IItem.cs" />
     <Compile Include="ItemSpriteFactory.cs" />
-    <Compile Include="Item Classes\projectile\Arrow.cs" />
+    <Compile Include="Item Classes\Arrow.cs" />
     <Compile Include="Item Classes\BlueCandle.cs" />
     <Compile Include="Item Classes\BlueRing.cs" />
     <Compile Include="Item Classes\Bomb.cs" />
     <Compile Include="Item Classes\BookOfMagic.cs" />
-    <Compile Include="Item Classes\projectile\Boomerang.cs" />
+    <Compile Include="Item Classes\Boomerang.cs" />
     <Compile Include="Item Classes\Bow.cs" />
     <Compile Include="Item Classes\Clock.cs" />
     <Compile Include="Item Classes\Compass.cs" />
@@ -187,7 +187,7 @@
     <Compile Include="Item Classes\Key.cs" />
     <Compile Include="Item Classes\Letter.cs" />
     <Compile Include="Item Classes\LifePotion.cs" />
-    <Compile Include="Item Classes\projectile\MagicalBoomerang.cs" />
+    <Compile Include="Item Classes\MagicalBoomerang.cs" />
     <Compile Include="Item Classes\MagicalKey.cs" />
     <Compile Include="Item Classes\MagicalRod.cs" />
     <Compile Include="Item Classes\MagicalShield.cs" />

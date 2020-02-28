@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Team4_LegendOfZelda.IState_Classes;
 
 namespace Team4_LegendOfZelda
 {
@@ -9,6 +8,8 @@ namespace Team4_LegendOfZelda
         ISprite Sprite { get; set; }
         IState State { get; set; }
         Vector2 Position { get; set; }
+        Rectangle Rectangle { get; set; }
+        float Scale { get; set; }
         IProjectile currentProjectile { get; set; }
         IItem currentItem { get; set; }
         int currentUseItemID { get; set; }

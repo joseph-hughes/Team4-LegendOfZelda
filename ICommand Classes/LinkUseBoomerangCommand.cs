@@ -8,7 +8,7 @@
         public LinkUseBoomerangCommand(IPlayer player, ILevel level)
         {
             this.player = player;
-            this.level = level; 
+            this.level = level;
         }
         public void Execute()
         {

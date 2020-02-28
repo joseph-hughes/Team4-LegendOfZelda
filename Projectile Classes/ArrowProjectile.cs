@@ -7,29 +7,45 @@ namespace Team4_LegendOfZelda
     {
         public ISprite Sprite { get; set; }
         public Vector2 Position { get; set; }
-
+        public Rectangle Rectangle { get; set; }
+        public float Scale { get; set; }
         public int Angle { get; set; }
+        private int width;
+        private int height;
+
         public ArrowProjectile(Vector2 position, int angle)
         {
+            Position = position;
+            Scale = 3f;
+            Angle = angle;
+
             if (angle == 0)
             {
                 Sprite = ProjectileSpriteFactory.Instance.CreateArrowUpSprite();
+                width = 5;
+                height = 16;
             }
             else if (angle == 90)
             {
                 Sprite = ProjectileSpriteFactory.Instance.CreateArrowRightSprite();
+                width = 16;
+                height = 5;
             }
             else if (angle == 180)
             {
                 Sprite = ProjectileSpriteFactory.Instance.CreateArrowDownSprite();
+                width = 5;
+                height = 16;
             }
             else if (angle == 270)
             {
                 Sprite = ProjectileSpriteFactory.Instance.CreateArrowLeftSprite();
+                width = 16;
+                height = 5;
             }
 
-            Position = position;
-            Angle = angle;
+            Rectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(width * Scale), (int)(height * Scale));
+
 
         }
 
@@ -75,11 +91,12 @@ namespace Team4_LegendOfZelda
             }
 
             Position = new Vector2(X, Y);
+            Rectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(width * Scale), (int)(height * Scale));
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, Position);
+            Sprite.Draw(spriteBatch, Rectangle);
         }
 
         public bool Equals(IProjectile projectile)

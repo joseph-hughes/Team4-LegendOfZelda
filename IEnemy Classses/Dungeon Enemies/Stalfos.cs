@@ -1,6 +1,6 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
@@ -10,6 +10,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
+        public Rectangle Rectangle { get; set; }
+        public float Scale { get; set; }
+        private const int width = 15;
+        private const int height = 16;
         int count, maxCount;
         Random rand;
         enum Direction { NORTH, EAST, SOUTH, WEST };
@@ -18,12 +22,15 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public Stalfos(ILevel level, Vector2 position)
         {
             Level = level;
-            Sprite = EnemySpriteFactory.Instance.CreateStalfosSprite();
-            State = new NullState();
             Position = position;
+            Scale = 3f;
+
+            Sprite = EnemySpriteFactory.Instance.CreateStalfosSprite();
+            Rectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(Scale * width), (int)(Scale * height));
+            State = new NullState();
 
             count = 0;
-            maxCount = 240;
+            maxCount = 10;
             direction = Direction.NORTH;
             rand = new Random();
         }
@@ -52,7 +59,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         {
             // Do nothing
         }
-        
+
         public void BeDamaged()
         {
             // Do nothing
@@ -114,11 +121,12 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
                 }
                 count = 0;
             }
+            Rectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(Scale * width), (int)(Scale * height));
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, Position);
+            Sprite.Draw(spriteBatch, Rectangle);
         }
     }
 }

@@ -1,11 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.IState_Classes
 {
     class LinkUseItemSouthState : IState
     {
         private Link link;
+        private const int width = 16;
+        private const int height = 16;
         private int timer;
         private int ID;
 
@@ -14,8 +15,9 @@ namespace Team4_LegendOfZelda.IState_Classes
         {
             this.link = link;
             this.timer = timer;
-            this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkUseItemSouthSprite(); 
-            this.ID = link.currentUseItemID;
+            this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkUseItemSouthSprite();
+            this.link.Rectangle = new Rectangle((int)this.link.Position.X, (int)this.link.Position.Y, (int)(this.link.Scale * width), (int)(this.link.Scale * height));
+            ID = link.currentUseItemID;
             if (ID == 0)
             {
                 this.link.currentProjectile = new ArrowProjectile(link.Position, 180);
@@ -69,7 +71,9 @@ namespace Team4_LegendOfZelda.IState_Classes
         {
             this.timer -= 1;
             if (this.timer == 0)
+            {
                 link.State = new LinkNonMovingSouthState(link);
+            }
         }
     }
 }

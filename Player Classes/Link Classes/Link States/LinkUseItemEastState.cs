@@ -1,26 +1,28 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.IState_Classes
 {
     class LinkUseItemEastState : IState
     {
         private Link link;
+        private const int width = 16;
+        private const int height = 16;
         private int timer;
         private int ID;
 
-   
+
         public LinkUseItemEastState(Link link, int timer)
         {
             this.link = link;
             this.timer = timer;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkUseItemEastSprite();
-            this.ID = link.currentUseItemID;
+            this.link.Rectangle = new Rectangle((int)this.link.Position.X, (int)this.link.Position.Y, (int)(this.link.Scale * width), (int)(this.link.Scale * height));
+            ID = link.currentUseItemID;
             if (ID == 0)
             {
                 this.link.currentProjectile = new ArrowProjectile(link.Position, 90);
             }
-            else if(ID == 1)
+            else if (ID == 1)
             {
                 this.link.currentProjectile = new BoomerangProjectile(link.Position, 90);
             }
@@ -69,7 +71,9 @@ namespace Team4_LegendOfZelda.IState_Classes
         {
             this.timer -= 1;
             if (this.timer == 0)
+            {
                 link.State = new LinkNonMovingEastState(link);
+            }
         }
     }
 }

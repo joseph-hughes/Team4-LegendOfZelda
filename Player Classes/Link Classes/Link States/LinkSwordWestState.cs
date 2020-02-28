@@ -1,19 +1,21 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.IState_Classes
 {
     class LinkSwordWestState : IState
     {
         private Link link;
+        private const int width = 27;
+        private const int height = 16;
         private int timer;
 
-      
+
         public LinkSwordWestState(Link link, int timer)
         {
             this.link = link;
             this.timer = timer;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkSwordWestSprite();
+            this.link.Rectangle = new Rectangle((int)(this.link.Position.X - this.link.Scale * (width - height)), (int)this.link.Position.Y, (int)(this.link.Scale * width), (int)(this.link.Scale * height));
         }
         public void South()
         {
@@ -51,7 +53,9 @@ namespace Team4_LegendOfZelda.IState_Classes
         {
             this.timer -= 1;
             if (this.timer == 0)
+            {
                 link.State = new LinkNonMovingWestState(link);
+            }
         }
     }
 }

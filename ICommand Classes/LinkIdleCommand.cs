@@ -3,7 +3,7 @@
     public class LinkIdleCommand : ICommand
     {
         private IPlayer player;
-        
+
         public LinkIdleCommand(IPlayer player)
         {
             this.player = player;

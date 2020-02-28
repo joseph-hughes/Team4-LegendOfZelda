@@ -1,13 +1,17 @@
-﻿namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.WallMaster_States
+﻿using Microsoft.Xna.Framework;
+
+namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.WallMaster_States
 {
     class WallMasterWestState : IState
     {
         IEnemy enemy;
-
+        private const int width = 16;
+        private const int height = 16;
         public WallMasterWestState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateWallMasterWestSprite();
+            this.enemy.Rectangle = new Rectangle((int)this.enemy.Position.X, (int)this.enemy.Position.Y, (int)(this.enemy.Scale * width), (int)(this.enemy.Scale * height));
         }
 
         public void North()
@@ -51,7 +55,7 @@
 
         public void Update()
         {
-            // Do nothing
+            enemy.Rectangle = new Rectangle((int)enemy.Position.X, (int)enemy.Position.Y, (int)(enemy.Scale * width), (int)(enemy.Scale * height));
         }
     }
 }

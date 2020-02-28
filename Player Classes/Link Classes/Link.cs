@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Team4_LegendOfZelda.IState_Classes;
 
@@ -14,6 +9,8 @@ namespace Team4_LegendOfZelda
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
+        public Rectangle Rectangle { get; set; }
+        public float Scale { get; set; }
         public int currentUseItemID { get; set; }
         public IProjectile currentProjectile { get; set; }
         public const int damage_timer = 80;
@@ -25,6 +22,8 @@ namespace Team4_LegendOfZelda
         public IItem currentItem { get; set; }
         public Link(Vector2 position)
         {
+            Position = position;
+            Scale = 3f;
             State = new LinkNonMovingSouthState(this);
             Position = position;
         }
@@ -76,7 +75,7 @@ namespace Team4_LegendOfZelda
         }
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, Position);
+            Sprite.Draw(spriteBatch, Rectangle);
         }
     }
 }

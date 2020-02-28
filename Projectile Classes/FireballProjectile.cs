@@ -7,13 +7,19 @@ namespace Team4_LegendOfZelda
     {
         public ISprite Sprite { get; set; }
         public Vector2 Position { get; set; }
-
+        public Rectangle Rectangle { get; set; }
+        public float Scale { get; set; }
         public int Angle { get; set; }
+        private const int width = 8;
+        private const int height = 10;
+
         public FireballProjectile(Vector2 position, int angle)
         {
-            Sprite = ProjectileSpriteFactory.Instance.CreateFireballSprite();
             Position = position;
+            Scale = 3f;
             Angle = angle;
+            Sprite = ProjectileSpriteFactory.Instance.CreateFireballSprite();
+            Rectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(width * Scale), (int)(height * Scale));
 
         }
 
@@ -59,12 +65,13 @@ namespace Team4_LegendOfZelda
             }
 
             Position = new Vector2(X, Y);
+            Rectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(width * Scale), (int)(height * Scale));
             Sprite.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, Position);
+            Sprite.Draw(spriteBatch, Rectangle);
         }
     }
 }

@@ -1,15 +1,15 @@
-﻿using System.Collections.Generic;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Team4_LegendOfZelda.Item_Classes;
-using Team4_LegendOfZelda.ISprite_Classes;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
+using System.Collections.Generic;
 using Team4_LegendOfZelda.IEnemy_Classses.Bosses;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies;
+using Team4_LegendOfZelda.ISprite_Classes;
+using Team4_LegendOfZelda.Item_Classes;
 
 namespace Team4_LegendOfZelda.ILevel_Classes
 {
-    public class Sprint2Level:ILevel
+    public class Sprint2Level : ILevel
     {
         public List<IEnemy> EnemyList { get; set; }
         public List<IItem> ItemList { get; set; }
@@ -30,7 +30,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 
         public void Initialize(ContentManager content)
         {
-            
+
             Vector2 itemStartLocation = new Vector2(400, 150);
             backgroundtexture = content.Load<Texture2D>("MapSprites/emptyroom");
 
@@ -93,12 +93,12 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 
             ProjectileList = new List<IProjectile>();
 
-            background = new TextureSprite(backgroundtexture, 3);
+            background = new TextureSprite(backgroundtexture);
         }
 
         public void NextItem()
         {
-            itemIndex = (itemIndex+1) % ItemList.Count;
+            itemIndex = (itemIndex + 1) % ItemList.Count;
             currentItem = ItemList[itemIndex];
         }
 
@@ -140,7 +140,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            background.Draw(spriteBatch, new Vector2(0, 0));
+            background.Draw(spriteBatch, new Rectangle(0, 0, 768, 528));
             currentEnemy.Draw(spriteBatch);
             currentItem.Draw(spriteBatch);
             foreach (IProjectile projectile in ProjectileList)

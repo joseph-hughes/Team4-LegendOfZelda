@@ -10,14 +10,19 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
+        public Rectangle Rectangle { get; set; }
+        public float Scale { get; set; }
         private IController controller;
 
         public AquamentusWest(ILevel level, Vector2 position)
         {
             Level = level;
-            State = new AquamentusWestIdleState(this);
+            Scale = 3f;
             Position = position;
+
+            State = new AquamentusWestIdleState(this);
             controller = new AquamentusController(this);
+
         }
 
         public void North()
@@ -44,7 +49,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         {
             State.Idle();
         }
-        
+
         public void BeDamaged()
         {
             State.BeDamaged();
@@ -69,7 +74,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, Position);
+            Sprite.Draw(spriteBatch, Rectangle);
         }
     }
 }

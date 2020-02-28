@@ -1,6 +1,6 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
@@ -11,17 +11,20 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
+        public Rectangle Rectangle { get; set; }
+        public float Scale { get; set; }
         int count, maxCount;
         Random rand;
 
         public Dodongo(ILevel level, Vector2 position)
         {
             Level = level;
-            State = new DodongoWestWalkingState(this);
+            Scale = 3f;
             Position = position;
+            State = new DodongoWestWalkingState(this);
 
             count = 0;
-            maxCount = 240;
+            maxCount = 60;
             rand = new Random();
         }
 
@@ -49,7 +52,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         {
             State.Idle();
         }
-        
+
         public void BeDamaged()
         {
             State.BeDamaged();
@@ -103,7 +106,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, Position);
+            Sprite.Draw(spriteBatch, Rectangle);
         }
     }
 }
