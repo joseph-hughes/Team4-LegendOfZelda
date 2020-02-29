@@ -40,6 +40,7 @@ namespace Team4_LegendOfZelda
 			magicBoomerang = content.Load<Texture2D>("Projectile Sprites/FlyingMagicalBoomerang");
 		}
 
+
 		public ISprite CreateArrowUpSprite()
 		{
 			return new TextureSprite(arrowUp, 3);

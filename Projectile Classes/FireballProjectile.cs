@@ -14,21 +14,20 @@ namespace Team4_LegendOfZelda
             Sprite = ProjectileSpriteFactory.Instance.CreateFireballSprite();
             Position = position;
             Angle = angle;
-
         }
 
         public void Update()
         {
             float Y = Position.Y;
             float X = Position.X;
-            int speed = 5;
+            int speed = 3;
 
             if (Angle == 0)
             {
                 Y -= speed;
                 if (Y < 0)
                 {
-                    Y = 480;
+                    //TODO
                 }
 
 
@@ -38,7 +37,7 @@ namespace Team4_LegendOfZelda
                 X += speed;
                 if (X > 800)
                 {
-                    X = 0;
+                    //TODO
                 }
             }
             else if (Angle == 180)
@@ -46,7 +45,7 @@ namespace Team4_LegendOfZelda
                 Y += speed;
                 if (Y > 480)
                 {
-                    Y = 0;
+                   //TODO
                 }
             }
             else if (Angle == 270)
@@ -54,7 +53,7 @@ namespace Team4_LegendOfZelda
                 X -= speed;
                 if (X < 0)
                 {
-                    X = 800;
+                    //TODO
                 }
             }
 
