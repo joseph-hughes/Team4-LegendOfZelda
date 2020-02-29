@@ -46,6 +46,10 @@
     <StartupObject>Team4_LegendOfZelda.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ICollider Classes\Collider\BoxDector.cs" />
+    <Compile Include="ICollider Classes\Collider\Trigger.cs" />
+    <Compile Include="ICollider Classes\ITrigger.cs" />
+    <Compile Include="ICollider Classes\IDector.cs" />
     <Compile Include="ICommand Classes\Commands\LinkIdleCommand.cs" />
     <Compile Include="ICommand Classes\Commands\LinkUseMagicBoomerangCommand.cs" />
     <Compile Include="ICommand Classes\Commands\LinkUseFireballCommand.cs" />
