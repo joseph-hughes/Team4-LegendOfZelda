@@ -9,7 +9,7 @@ using Team4_LegendOfZelda.Item_Classes;
 
 namespace Team4_LegendOfZelda.ILevel_Classes
 {
-    public class Sprint2Level : ILevel
+    public class Sprint2Level
     {
         public List<IEnemy> EnemyList { get; set; }
         public List<IItem> ItemList { get; set; }
