@@ -2,6 +2,8 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
+using Team4_LegendOfZelda.ICollider_Classes;
+using Team4_LegendOfZelda.ICollider_Classes.Collider;
 using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda
@@ -20,6 +22,7 @@ namespace Team4_LegendOfZelda
         private Color backgroundColor;
         private Sprint2Level level;
         private IPlayer player;
+        private IDector dector;
 
         public LegendOfZelda()
         {
@@ -54,6 +57,9 @@ namespace Team4_LegendOfZelda
             level.Initialize(Content);
 
             player = new Link(new Vector2(30, 100));
+
+            dector = new BoxDector(player);
+            dector.Update(level);
 
             controllerList = new List<IController>
             {
@@ -158,8 +164,11 @@ namespace Team4_LegendOfZelda
                 controller.Update();
             }
 
+            dector.Detact();
+
             level.Update();
             player.Update();
+            dector.Update(level);
 
             base.Update(gameTime);
         }

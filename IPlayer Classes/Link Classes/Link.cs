@@ -13,6 +13,8 @@ namespace Team4_LegendOfZelda
         public float Scale { get; set; }
         public int currentUseItemID { get; set; }
         public IProjectile currentProjectile { get; set; }
+        public int attackDirection { get; set; } // 0 for north, clockwise, -1 for no action
+        public bool isDamaged { get; set; }
         public const int damage_timer = 80;
         public const int use_item_timer = 20;
         public const int sword_timer = 20;
@@ -24,6 +26,8 @@ namespace Team4_LegendOfZelda
         {
             Position = position;
             Scale = 3f;
+            attackDirection = -1;
+            isDamaged = false;
             State = new LinkNonMovingSouthState(this);
             Position = position;
         }

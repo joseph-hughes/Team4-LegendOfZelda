@@ -11,9 +11,11 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 {
     public class Sprint2Level : ILevel
     {
+        public List<IBlock> BlockList { get; set; }
         public List<IEnemy> EnemyList { get; set; }
         public List<IItem> ItemList { get; set; }
-        public List<IProjectile> ProjectileList { get; set; }
+        public List<IProjectile> PlayerProjectileList { get; set; }
+        public List<IProjectile> EnemyProjectileList { get; set; }
 
         private ISprite background;
         private IItem currentItem;
@@ -30,9 +32,11 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 
         public void Initialize(ContentManager content)
         {
+            backgroundtexture = content.Load<Texture2D>("MapSprites/emptyroom");
+            background = new TextureSprite(backgroundtexture);
 
             Vector2 itemStartLocation = new Vector2(400, 150);
-            backgroundtexture = content.Load<Texture2D>("MapSprites/emptyroom");
+            Vector2 enemyStartLocation = new Vector2(140, 140);
 
             ItemList = new List<IItem>
             {
@@ -69,13 +73,11 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                 new Triforce(itemStartLocation),
                 new WhiteSword(itemStartLocation)
             };
-            currentItem = ItemList[itemIndex];
 
-            Vector2 enemyStartLocation = new Vector2(140, 140);
             EnemyList = new List<IEnemy>
             {
-                new AquamentusWest(this, enemyStartLocation),
                 new Dodongo(this, enemyStartLocation),
+                new AquamentusWest(this, enemyStartLocation),
                 new BladeTrap(this, enemyStartLocation),
                 new GelDarkBlue(this, enemyStartLocation),
                 new GoriyaRed(this, enemyStartLocation),
@@ -89,11 +91,17 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                 new ZolDarkGreen(this, enemyStartLocation)
 
             };
+            BlockList = new List<IBlock>{
+                new Block(new Rectangle(600, 0, 100, 500))
+            };
+
+            currentItem = ItemList[itemIndex];
             currentEnemy = EnemyList[enemyIndex];
 
-            ProjectileList = new List<IProjectile>();
+            PlayerProjectileList = new List<IProjectile>();
+            EnemyProjectileList = new List<IProjectile>();
 
-            background = new TextureSprite(backgroundtexture);
+
         }
 
         public void NextItem()
@@ -132,10 +140,15 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         {
             currentEnemy.Update();
             currentItem.Update();
-            foreach (IProjectile projectile in ProjectileList)
+            foreach (IProjectile projectile in PlayerProjectileList)
             {
                 projectile.Update();
             }
+            foreach (IProjectile projectile in EnemyProjectileList)
+            {
+                projectile.Update();
+            }
+
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -143,7 +156,11 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             background.Draw(spriteBatch, new Rectangle(0, 0, 768, 528));
             currentEnemy.Draw(spriteBatch);
             currentItem.Draw(spriteBatch);
-            foreach (IProjectile projectile in ProjectileList)
+            foreach (IProjectile projectile in PlayerProjectileList)
+            {
+                projectile.Draw(spriteBatch);
+            }
+            foreach (IProjectile projectile in EnemyProjectileList)
             {
                 projectile.Draw(spriteBatch);
             }

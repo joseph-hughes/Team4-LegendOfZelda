@@ -52,6 +52,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         public void Attack()
         {
             link.State = new LinkSwordWestState(link, Link.sword_timer);
+            link.attackDirection = 3;
         }
 
         public void Update()

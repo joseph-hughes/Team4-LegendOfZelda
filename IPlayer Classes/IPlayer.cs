@@ -13,6 +13,8 @@ namespace Team4_LegendOfZelda
         IProjectile currentProjectile { get; set; }
         IItem currentItem { get; set; }
         int currentUseItemID { get; set; }
+        int attackDirection { get; set; }
+        bool isDamaged { get; set; }
         void North();
         void East();
         void South();

@@ -63,6 +63,7 @@ namespace Team4_LegendOfZelda.IState_Classes
             if (this.timer == 0)
             {
                 link.State = new LinkNonMovingEastState(link);
+                link.isDamaged = false;
             }
         }
     }

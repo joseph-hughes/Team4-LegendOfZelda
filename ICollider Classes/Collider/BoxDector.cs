@@ -1,9 +1,5 @@
-﻿using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 {
@@ -11,34 +7,155 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
     {
         public ILevel level { get; set; }
         public IPlayer player { get; set; }
-        private Dictionary<object, Rectangle> rectanglesMap;
-        public BoxDector(ILevel level, IPlayer player)
+        public List<ITrigger> triggerList { get; set; }
+        public BoxDector(IPlayer player)
         {
-            this.level = level;
             this.player = player;
-
-            foreach (IEnemy enemy in level.EnemyList)
-            {
-                rectanglesMap.Add(enemy, enemy.Rectangle);
-            }
-            foreach (IItem item in level.ItemList)
-            {
-                rectanglesMap.Add(item, item.Rectangle);
-            }
-            foreach (IProjectile projectile in level.ItemList)
-            {
-                rectanglesMap.Add(projectile, projectile.Rectangle);
-            }
-            rectanglesMap.Add(player, player.Rectangle);
+            triggerList = new List<ITrigger>();
         }
 
         public void Detact()
         {
+            //direction clockwise, 0 for north
+            foreach (IItem currentItem in level.ItemList)
+            {
+                if (player.Rectangle.Intersects(currentItem.Rectangle))
+                {
+                    //triggerList.Add(new PlayerItemTrigger(Player, Item, level));
+                }
+            }
+            foreach (IEnemy currentEnemy in level.EnemyList)
+            {
+                if (player.Rectangle.Intersects(currentEnemy.Rectangle))
+                {
+                    float dx = player.Rectangle.X - currentEnemy.Rectangle.X;
+                    float dy = player.Rectangle.Y - currentEnemy.Rectangle.Y;
+
+                    //top bottom collision
+                    if (System.Math.Abs(dx) < System.Math.Abs(dy))
+                    {
+                        if (dy > 0)
+                        {
+                            triggerList.Add(new PlayerEnemyTrigger(player, currentEnemy, level, 0));
+                        }
+                        else
+                        {
+                            triggerList.Add(new PlayerEnemyTrigger(player, currentEnemy, level, 2));
+                        }
+                    }
+                    //left right collision
+                    else
+                    {
+                        if (dx > 0)
+                        {
+                            triggerList.Add(new PlayerEnemyTrigger(player, currentEnemy, level, 1));
+                        }
+                        else
+                        {
+                            triggerList.Add(new PlayerEnemyTrigger(player, currentEnemy, level, 3));
+                        }
+                    }
+
+                }
+
+            }
+            foreach (IProjectile currentEnemyProjectile in level.EnemyProjectileList)
+            {
+                if (currentEnemyProjectile.Rectangle.Intersects(player.Rectangle))
+                {
+                    float dx = currentEnemyProjectile.Rectangle.X - player.Rectangle.X;
+                    float dy = currentEnemyProjectile.Rectangle.Y - player.Rectangle.Y;
+
+                    //top bottom collision
+                    if (System.Math.Abs(dx) < System.Math.Abs(dy))
+                    {
+                        if (dy > 0)
+                        {
+                            //top collision (player bottem collision)
+                            //triggerList.Add(new EnemyProjectilePlayerTrigger(EnemyProjectile, Player, level, Top));
+                        }
+                        else
+                        {
+                            //bottom collision (player top collision)
+                            //triggerList.Add(new EnemyProjectilePlayerTrigger(EnemyProjectile, Player, level, Bottom));
+                        }
+                    }
+                    //left right collision
+                    else
+                    {
+                        if (dx > 0)
+                        {
+                            //left collision (player right collision)
+                            //triggerList.Add(new EnemyProjectilePlayerTrigger(EnemyProjectile, Player, level, Left));
+                        }
+                        else
+                        {
+                            //right collision (player left collision)
+                            //triggerList.Add(new EnemyProjectilePlayerTrigger(EnemyProjectile, Player, level, Right));
+                        }
+                    }
+
+                }
+            }
+            foreach (IProjectile currentPlayerProjectile in level.PlayerProjectileList)
+            {
+                foreach (IEnemy currentEnemy in level.EnemyList)
+                {
+                    if (currentPlayerProjectile.Rectangle.Intersects(currentEnemy.Rectangle))
+                    {
+                        float dx = currentPlayerProjectile.Rectangle.X - currentEnemy.Rectangle.X;
+                        float dy = currentPlayerProjectile.Rectangle.Y - currentEnemy.Rectangle.Y;
+
+                        //up down collision
+                        if (System.Math.Abs(dx) < System.Math.Abs(dy))
+                        {
+                            if (dy > 0)
+                            {
+                                //top collision (Enemy bottem collision)
+                                //triggerList.Add(new EnemyProjectilePlayerTrigger(PlayerProjectile, Enemy, level, Top));
+                            }
+                            else
+                            {
+                                //bottom collision (Enemy top collision)
+                                //triggerList.Add(new EnemyProjectilePlayerTrigger(PlayerProjectile, Enemy, level, Bottom));
+                            }
+                        }
+                        //left right collision
+                        else
+                        {
+                            if (dx > 0)
+                            {
+                                //left collision (Enemy right collision)
+                                //triggerList.Add(new EnemyProjectilePlayerTrigger(PlayerProjectile, Enemy, level, Left));
+                            }
+                            else
+                            {
+                                //right collision (Enemy left collision)
+                                //triggerList.Add(new EnemyProjectilePlayerTrigger(PlayerProjectile, Enemy, level, Right));
+                            }
+                        }
+
+                    }
+                }
+                foreach (IBlock currentBlock in level.BlockList)
+                {
+                    if (currentPlayerProjectile.Rectangle.Intersects(currentBlock.Rectangle))
+                    {
+                        triggerList.Add(new PlayerProjectileBlockTrigger(currentPlayerProjectile, level));
+                    }
+                }
+            }
 
         }
 
-        public void Update()
+        public void Update(ILevel level)
         {
+            this.level = level;
+            foreach (ITrigger trigger in triggerList)
+            {
+                trigger.Execute();
+            }
+            triggerList = new List<ITrigger>();
 
         }
     }

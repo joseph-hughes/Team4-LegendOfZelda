@@ -47,13 +47,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ICollider Classes\Collider\BoxDector.cs" />
-    <Compile Include="ICollider Classes\Collider\Trigger.cs" />
+    <Compile Include="ICollider Classes\Collider\PlayerEnemyTrigger.cs" />
+    <Compile Include="ICollider Classes\Collider\PlayerProjectileBlockTrigger.cs" />
     <Compile Include="ICollider Classes\ITrigger.cs" />
     <Compile Include="ICollider Classes\IDector.cs" />
     <Compile Include="ICommand Classes\Commands\LinkIdleCommand.cs" />
     <Compile Include="ICommand Classes\Commands\LinkUseMagicBoomerangCommand.cs" />
     <Compile Include="ICommand Classes\Commands\LinkUseFireballCommand.cs" />
     <Compile Include="ICommand Classes\Commands\LinkUseBoomerangCommand.cs" />
+    <Compile Include="ILevel Classes\Levels\Block.cs" />
+    <Compile Include="ILevel Classes\IBlock.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackEastState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackNorthState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackSouthState.cs" />

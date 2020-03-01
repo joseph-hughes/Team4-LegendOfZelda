@@ -8,6 +8,6 @@ namespace Team4_LegendOfZelda.ICollider_Classes
 {
     interface ITrigger
     {
-        void isCollded(Object obj1, Object obj2);
+        void Execute();
     }
 }
