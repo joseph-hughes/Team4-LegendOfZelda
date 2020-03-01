@@ -51,6 +51,7 @@
     <Compile Include="ICommand Classes\Commands\LinkUseFireballCommand.cs" />
     <Compile Include="ICommand Classes\Commands\LinkUseBoomerangCommand.cs" />
     <Compile Include="ILevel Classes\IRoom.cs" />
+    <Compile Include="ILevel Classes\Levels\Level1.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackEastState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackNorthState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackSouthState.cs" />
