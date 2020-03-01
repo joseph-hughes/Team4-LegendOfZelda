@@ -72,6 +72,29 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         {
             State.Update();
             Sprite.Update();
+            count++;
+            if (count > maxCount)
+            {
+                switch (rand.Next(0, 4))
+                {
+                    case 0:
+                        State.North();
+                        break;
+                    case 1:
+                        State.South();
+                        break;
+                    case 2:
+                        State.East();
+                        break;
+                    case 3:
+                        State.West();
+                        break;
+                    default:
+                        // Do nothing, this is not supposed to happen
+                        break;
+                }
+                count = 0;
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
