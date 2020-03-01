@@ -164,11 +164,13 @@ namespace Team4_LegendOfZelda
                 controller.Update();
             }
 
-            dector.Detact();
-
             level.Update();
             player.Update();
+
+            dector.Detact();
             dector.Update(level);
+
+
 
             base.Update(gameTime);
         }

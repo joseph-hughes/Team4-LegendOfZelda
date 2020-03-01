@@ -14,6 +14,8 @@ namespace Team4_LegendOfZelda.IState_Classes
         {
             this.link = link;
             this.timer = timer;
+            this.link.attackDirection = 3;
+            this.link.isDamaged = false;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkSwordWestSprite();
             this.link.Rectangle = new Rectangle((int)(this.link.Position.X - this.link.Scale * (width - height)), (int)this.link.Position.Y, (int)(this.link.Scale * width), (int)(this.link.Scale * height));
         }
@@ -55,7 +57,6 @@ namespace Team4_LegendOfZelda.IState_Classes
             if (this.timer == 0)
             {
                 link.State = new LinkNonMovingWestState(link);
-                link.attackDirection = -1;
             }
         }
     }

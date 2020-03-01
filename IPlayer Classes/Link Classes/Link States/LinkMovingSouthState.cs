@@ -11,6 +11,8 @@ namespace Team4_LegendOfZelda.IState_Classes
         public LinkMovingSouthState(Link link)
         {
             this.link = link;
+            this.link.attackDirection = -1;
+            this.link.isDamaged = false;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkMovingSouthSprite();
             this.link.Rectangle = new Rectangle((int)this.link.Position.X, (int)this.link.Position.Y, (int)(this.link.Scale * width), (int)(this.link.Scale * height));
 

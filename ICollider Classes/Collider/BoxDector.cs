@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.ICollider_Classes.Collider
@@ -8,9 +9,9 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         public ILevel level { get; set; }
         public IPlayer player { get; set; }
         public List<ITrigger> triggerList { get; set; }
-        public BoxDector(IPlayer player)
+        public BoxDector(IPlayer Player)
         {
-            this.player = player;
+            player = Player;
             triggerList = new List<ITrigger>();
         }
 
@@ -26,7 +27,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             }
             foreach (IEnemy currentEnemy in level.EnemyList)
             {
-                if (player.Rectangle.Intersects(currentEnemy.Rectangle))
+                if (currentEnemy.Rectangle.Intersects(player.Rectangle))
                 {
                     float dx = player.Rectangle.X - currentEnemy.Rectangle.X;
                     float dy = player.Rectangle.Y - currentEnemy.Rectangle.Y;
@@ -48,11 +49,11 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                     {
                         if (dx > 0)
                         {
-                            triggerList.Add(new PlayerEnemyTrigger(player, currentEnemy, level, 1));
+                            triggerList.Add(new PlayerEnemyTrigger(player, currentEnemy, level, 3));
                         }
                         else
                         {
-                            triggerList.Add(new PlayerEnemyTrigger(player, currentEnemy, level, 3));
+                            triggerList.Add(new PlayerEnemyTrigger(player, currentEnemy, level, 1));
                         }
                     }
 
@@ -148,9 +149,9 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 
         }
 
-        public void Update(ILevel level)
+        public void Update(ILevel Level)
         {
-            this.level = level;
+            level = Level;
             foreach (ITrigger trigger in triggerList)
             {
                 trigger.Execute();

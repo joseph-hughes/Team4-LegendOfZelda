@@ -77,18 +77,6 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             EnemyList = new List<IEnemy>
             {
                 new Dodongo(this, enemyStartLocation),
-                new AquamentusWest(this, enemyStartLocation),
-                new BladeTrap(this, enemyStartLocation),
-                new GelDarkBlue(this, enemyStartLocation),
-                new GoriyaRed(this, enemyStartLocation),
-                new GoriyaBlue(this, enemyStartLocation),
-                new KeeseBlue(this, enemyStartLocation),
-                new KeeseRed(this, enemyStartLocation),
-                new Rope(this, enemyStartLocation),
-                new Stalfos(this, enemyStartLocation),
-                new WallMaster(this, enemyStartLocation),
-                new WallMasterUpsideDown(this, enemyStartLocation),
-                new ZolDarkGreen(this, enemyStartLocation)
 
             };
             BlockList = new List<IBlock>{
