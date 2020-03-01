@@ -1,15 +1,18 @@
 ﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using System.Collections.Generic;
+using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda
 {
     public interface ILevel
     {
-        List<IItem> ItemList { get; set; }
-        List<IEnemy> EnemyList { get; set; }
-        List<IProjectile> ProjectileList { get; set; }
-        void Initialize(ContentManager content);
+        IRoom CurrentRoom { get; set; }
+        void Initialize(ContentManager content, IPlayer player);
+        void North();
+        void East();
+        void South();
+        void West();
+        void Other();
         void Update();
         void Draw(SpriteBatch spriteBatch);
     }
