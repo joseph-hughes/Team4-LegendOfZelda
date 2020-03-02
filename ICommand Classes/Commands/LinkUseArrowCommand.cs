@@ -12,9 +12,8 @@
         }
         public void Execute()
         {
-            player.currentUseItemID = 0;
             player.UseItem();
-            level.PlayerProjectileList.Add(player.currentProjectile);
+            level.PlayerProjectileList.Add(new ArrowProjectile(player.itemPosition, player.Direction * 90));
 
         }
     }

@@ -12,9 +12,8 @@
         }
         public void Execute()
         {
-            player.currentUseItemID = 2;
             player.UseItem();
-            level.PlayerProjectileList.Add(player.currentProjectile);
+            level.PlayerProjectileList.Add(new FireballProjectile(player.itemPosition, player.Direction * 90));
 
         }
     }

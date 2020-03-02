@@ -5,8 +5,6 @@ namespace Team4_LegendOfZelda.IState_Classes
     class LinkDamagedMovingSouthState : IState
     {
         private Link link;
-        private const int width = 16;
-        private const int height = 16;
         private int timer;
 
 
@@ -20,7 +18,6 @@ namespace Team4_LegendOfZelda.IState_Classes
             this.link.isKnocked = false;
             this.link.isDamaged = true;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkDamagedMovingSouthSprite();
-            this.link.Rectangle = new Rectangle((int)this.link.Position.X, (int)this.link.Position.Y, (int)(this.link.Scale * width), (int)(this.link.Scale * height));
         }
 
         public void North()
@@ -58,7 +55,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         public void Update()
         {
             link.Position = new Vector2(link.Position.X, link.Position.Y + link.Velocity);
-            link.Rectangle = new Rectangle((int)link.Position.X, (int)link.Position.Y, (int)(link.Scale * width), (int)(link.Scale * height));
+            link.LinkRectangle = new Rectangle((int)link.Position.X, (int)link.Position.Y, (int)(link.Scale * Link.linkWidth), (int)(link.Scale * Link.linkHeight));
 
             this.timer -= 1;
             if (this.timer == 0)

@@ -1,12 +1,8 @@
-﻿using Microsoft.Xna.Framework;
-
-namespace Team4_LegendOfZelda.IState_Classes
+﻿namespace Team4_LegendOfZelda.IState_Classes
 {
     class LinkNonMovingWestState : IState
     {
         private Link link;
-        private const int width = 16;
-        private const int height = 16;
         public LinkNonMovingWestState(Link link)
         {
             this.link = link;
@@ -15,7 +11,6 @@ namespace Team4_LegendOfZelda.IState_Classes
             this.link.isKnocked = false;
             this.link.isDamaged = false;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkNonMovingWestSprite();
-            this.link.Rectangle = new Rectangle((int)this.link.Position.X, (int)this.link.Position.Y, (int)(this.link.Scale * width), (int)(this.link.Scale * height));
         }
 
         public void North()

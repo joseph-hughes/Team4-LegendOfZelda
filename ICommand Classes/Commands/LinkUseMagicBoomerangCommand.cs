@@ -12,9 +12,8 @@
         }
         public void Execute()
         {
-            player.currentUseItemID = 3;
             player.UseItem();
-            level.PlayerProjectileList.Add(player.currentProjectile);
+            level.PlayerProjectileList.Add(new MagicBoomerangProjectile(player.itemPosition, player.Direction * 90));
 
         }
     }

@@ -3,7 +3,6 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using Team4_LegendOfZelda.IEnemy_Classses.Bosses;
-using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies;
 using Team4_LegendOfZelda.ISprite_Classes;
 using Team4_LegendOfZelda.Item_Classes;
 
@@ -130,9 +129,9 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 
         public void Update()
         {
-            if (EnemyProjectileList.Count ==0) 
-            { 
-                EnemyProjectileList.Add(new FireballProjectile(new Vector2(600, 94), 180)); 
+            if (EnemyProjectileList.Count == 0)
+            {
+                EnemyProjectileList.Add(new FireballProjectile(new Vector2(600, 94), 180));
             }
             currentEnemy.Update();
             currentItem.Update();

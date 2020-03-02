@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Team4_LegendOfZelda.ILevel_Classes;
+﻿using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 {
@@ -11,7 +6,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
     {
         private IPlayer player;
         private IBlock block;
-        private int direction; 
+
         public PlayerBlockTrigger(IPlayer Player, IBlock Block)
         {
             player = Player;
@@ -19,9 +14,10 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         }
         public void Execute()
         {
+            int direction;
 
-            float dx = player.Rectangle.X - block.Rectangle.X;
-            float dy = player.Rectangle.Y - block.Rectangle.Y;
+            float dx = player.LinkRectangle.X - block.Rectangle.X;
+            float dy = player.LinkRectangle.Y - block.Rectangle.Y;
 
             if (System.Math.Abs(dx) < System.Math.Abs(dy))
             {
@@ -38,13 +34,13 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 }
                 else
                     if (player.isKnocked)
-                    {
-                      direction = 3;
-                    }
-                    else
-                    {
-                      direction = 1;
-                    }
+                {
+                    direction = 3;
+                }
+                else
+                {
+                    direction = 1;
+                }
 
             }
             else

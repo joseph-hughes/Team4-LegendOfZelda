@@ -8,11 +8,10 @@ namespace Team4_LegendOfZelda
         ISprite Sprite { get; set; }
         IState State { get; set; }
         Vector2 Position { get; set; }
-        Rectangle Rectangle { get; set; }
+        Rectangle LinkRectangle { get; set; }
+        Rectangle LinkSwordRectangle { get; set; }
         float Scale { get; set; }
-        IProjectile currentProjectile { get; set; }
-        IItem currentItem { get; set; }
-        int currentUseItemID { get; set; }
+        Vector2 itemPosition { get; set; }
         int Direction { get; set; }
         int Velocity { get; set; }
         bool isAttacking { get; set; }

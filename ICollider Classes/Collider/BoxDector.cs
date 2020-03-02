@@ -1,5 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.ICollider_Classes.Collider
@@ -20,14 +19,14 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             //direction clockwise, 0 for north
             foreach (IItem currentItem in Level.ItemList)
             {
-                if (player.Rectangle.Intersects(currentItem.Rectangle))
+                if (player.LinkRectangle.Intersects(currentItem.Rectangle))
                 {
                     //triggerList.Add(new PlayerItemTrigger(Player, Item, level));
                 }
             }
             foreach (IEnemy currentEnemy in Level.EnemyList)
             {
-                if (currentEnemy.Rectangle.Intersects(player.Rectangle))
+                if (currentEnemy.Rectangle.Intersects(player.LinkRectangle) || currentEnemy.Rectangle.Intersects(player.LinkSwordRectangle))
                 {
                     TriggerList.Add(new PlayerEnemyTrigger(player, currentEnemy, Level));
 
@@ -36,7 +35,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             }
             foreach (IBlock currentBlock in Level.BlockList)
             {
-                if (player.Rectangle.Intersects(currentBlock.Rectangle))
+                if (player.LinkRectangle.Intersects(currentBlock.Rectangle))
                 {
                     TriggerList.Add(new PlayerBlockTrigger(player, currentBlock));
                 }
@@ -44,7 +43,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 
             foreach (IProjectile currentEnemyProjectile in Level.EnemyProjectileList)
             {
-                if (currentEnemyProjectile.Rectangle.Intersects(player.Rectangle))
+                if (currentEnemyProjectile.Rectangle.Intersects(player.LinkRectangle))
                 {
                     TriggerList.Add(new EnemyProjectilePlayerTrigger(currentEnemyProjectile, player, Level));
                 }

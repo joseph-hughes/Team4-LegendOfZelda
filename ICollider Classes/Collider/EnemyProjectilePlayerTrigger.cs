@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Team4_LegendOfZelda.ILevel_Classes;
+﻿using Microsoft.Xna.Framework;
 using Team4_LegendOfZelda.IState_Classes;
 
 namespace Team4_LegendOfZelda.ICollider_Classes.Collider
@@ -24,33 +19,43 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         {
             level.EnemyProjectileList.Remove(projectile);
 
-            float dx = projectile.Rectangle.X - player.Rectangle.X;
-            float dy = projectile.Rectangle.Y - player.Rectangle.Y;
+            if (!player.isDamaged)
+            {
 
-            //top bottom collision
-            if (System.Math.Abs(dx) < System.Math.Abs(dy))
-            {
-                if (dy > 0)
+                float dx = projectile.Rectangle.X - player.LinkRectangle.X;
+                float dy = projectile.Rectangle.Y - player.LinkRectangle.Y;
+
+                //top bottom collision
+                if (System.Math.Abs(dx) < System.Math.Abs(dy))
                 {
-                    player.State = new LinkKnockbackSouthState(player, Link.knockback_timer);
+                    if (dy > 0)
+                    {
+                        player.LinkSwordRectangle = Rectangle.Empty;
+                        player.State = new LinkKnockbackSouthState(player, Link.knockback_timer);
+                    }
+                    else
+                    {
+                        player.LinkSwordRectangle = Rectangle.Empty;
+                        player.State = new LinkKnockbackNorthState(player, Link.knockback_timer);
+                    }
                 }
+                //left right collision
                 else
                 {
-                    player.State = new LinkKnockbackNorthState(player, Link.knockback_timer);
+                    if (dx > 0)
+                    {
+                        player.LinkSwordRectangle = Rectangle.Empty;
+                        player.State = new LinkKnockbackEastState(player, Link.knockback_timer);
+                    }
+                    else
+                    {
+                        player.LinkSwordRectangle = Rectangle.Empty;
+                        player.State = new LinkKnockbackWestState(player, Link.knockback_timer);
+                    }
                 }
             }
-            //left right collision
-            else
-            {
-                if (dx > 0)
-                {
-                    player.State = new LinkKnockbackEastState(player, Link.knockback_timer);
-                }
-                else
-                {
-                    player.State = new LinkKnockbackWestState(player, Link.knockback_timer);
-                }
-            }
+
+
         }
     }
 }
