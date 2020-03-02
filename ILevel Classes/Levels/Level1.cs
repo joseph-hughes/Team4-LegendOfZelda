@@ -45,7 +45,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            CurrentRoom.Draw();
+            CurrentRoom.Draw(spriteBatch);
         }
     }
 }
