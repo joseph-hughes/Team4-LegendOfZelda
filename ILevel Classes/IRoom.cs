@@ -15,6 +15,6 @@
         IRoom Other { get; set; }
 
         void Update();
-        void Draw();
+        void Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch spriteBatch);
     }
 }
