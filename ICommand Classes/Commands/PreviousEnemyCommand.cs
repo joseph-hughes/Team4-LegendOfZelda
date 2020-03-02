@@ -5,16 +5,16 @@ namespace Team4_LegendOfZelda
 
     public class PreviousEnemyCommand : ICommand
     {
-        private Sprint2Level level = new Sprint2Level();
+        private Sprint2Room room;
 
-        public PreviousEnemyCommand(Sprint2Level level)
+        public PreviousEnemyCommand(Sprint2Room room)
         {
-            this.level = level;
+            this.room = room;
         }
 
         public void Execute()
         {
-            level.PreviousEnemy();
+            room.PreviousEnemy();
         }
     }
 }
