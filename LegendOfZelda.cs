@@ -56,7 +56,7 @@ namespace Team4_LegendOfZelda
             level = new Sprint2Level();
             level.Initialize(Content);
 
-            player = new Link(new Vector2(30, 100));
+            player = new Link(new Vector2(96, 240));
 
             dector = new BoxDector(player);
             dector.Update(level);
@@ -164,11 +164,13 @@ namespace Team4_LegendOfZelda
                 controller.Update();
             }
 
+            dector.Detact();
+            dector.Update(level);
+
             level.Update();
             player.Update();
 
-            dector.Detact();
-            dector.Update(level);
+
 
 
 

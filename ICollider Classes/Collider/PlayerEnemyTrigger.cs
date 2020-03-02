@@ -13,27 +13,49 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         private IPlayer player;
         private IEnemy enemy;
         private int direction; 
-        public PlayerEnemyTrigger(IPlayer Player, IEnemy Enemy, ILevel Level, int Direction)
+        public PlayerEnemyTrigger(IPlayer Player, IEnemy Enemy, ILevel Level)
         {
             level = Level;
             player = Player;
             enemy = Enemy;
-            direction = Direction;
 
+            float dx = player.Rectangle.X - Enemy.Rectangle.X;
+            float dy = player.Rectangle.Y - Enemy.Rectangle.Y;
 
+            //top bottom collision
+            if (System.Math.Abs(dx) < System.Math.Abs(dy))
+            {
+                if (dy > 0)
+                {
+                    direction = 0;
+                }
+                else
+                {
+                    direction = 2;
+                }
+            }
+            //left right collision
+            else
+            {
+                if (dx > 0)
+                {
+                    direction = 3;
+                }
+                else
+                {
+                    direction = 1;
+                }
+            }
         }
         public void Execute()
         {
-            if (player.attackDirection == direction)
+            if (player.isAttacking&& player.Direction == direction)
             {
                 enemy.State.BeDamaged();
             }
             else
             {
-                if (!player.isDamaged)
-                {
-                    player.State.BeDamaged();
-                }
+                player.BeDamaged();
             }
         }
     }

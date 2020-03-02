@@ -11,7 +11,10 @@ namespace Team4_LegendOfZelda.IState_Classes
         public LinkMovingWestState(Link link)
         {
             this.link = link;
-            this.link.attackDirection = -1;
+            this.link.Direction = 3;
+            this.link.Velocity = 2;
+            this.link.isAttacking = false;
+            this.link.isKnocked = false;
             this.link.isDamaged = false;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkMovingWestSprite();
             this.link.Rectangle = new Rectangle((int)this.link.Position.X, (int)this.link.Position.Y, (int)(this.link.Scale * width), (int)(this.link.Scale * height));
@@ -56,12 +59,11 @@ namespace Team4_LegendOfZelda.IState_Classes
         public void Attack()
         {
             link.State = new LinkSwordWestState(link, Link.sword_timer);
-            link.attackDirection = 3;
         }
 
         public void Update()
         {
-            link.Position = new Vector2(link.Position.X - 2, link.Position.Y);
+            link.Position = new Vector2(link.Position.X - link.Velocity, link.Position.Y);
             link.Rectangle = new Rectangle((int)link.Position.X, (int)link.Position.Y, (int)(link.Scale * width), (int)(link.Scale * height));
         }
     }

@@ -13,23 +13,22 @@ namespace Team4_LegendOfZelda
         public float Scale { get; set; }
         public int currentUseItemID { get; set; }
         public IProjectile currentProjectile { get; set; }
-        public int attackDirection { get; set; } // 0 for north, clockwise, -1 for no action
+        public int Direction { get; set; } // 0 for north, clockwise
+        public int Velocity { get; set; }
+        public bool isAttacking { get; set; }
+        public bool isKnocked { get; set; }
         public bool isDamaged { get; set; }
         public const int damage_timer = 80;
         public const int use_item_timer = 20;
         public const int sword_timer = 20;
-        public const int knockback_distance = 80;
-        public const int knockback_timer = 5;
+        public const int knockback_timer = 10;
 
         public IItem currentItem { get; set; }
         public Link(Vector2 position)
         {
             Position = position;
             Scale = 3f;
-            attackDirection = -1;
-            isDamaged = false;
             State = new LinkNonMovingSouthState(this);
-            Position = position;
         }
 
         public void North()

@@ -36,7 +36,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             background = new TextureSprite(backgroundtexture);
 
             Vector2 itemStartLocation = new Vector2(400, 150);
-            Vector2 enemyStartLocation = new Vector2(140, 140);
+            Vector2 enemyStartLocation = new Vector2(300, 240);
 
             ItemList = new List<IItem>
             {
@@ -80,7 +80,11 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 
             };
             BlockList = new List<IBlock>{
-                new Block(new Rectangle(600, 0, 100, 500))
+                new Block(new Rectangle(0, 0, 93, 525)),
+                new Block(new Rectangle(0, 0, 765, 93)),
+                new Block(new Rectangle(0, 432, 765, 93)),
+                new Block(new Rectangle(672, 0, 93, 525))
+
             };
 
             currentItem = ItemList[itemIndex];
@@ -126,6 +130,10 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 
         public void Update()
         {
+            if (EnemyProjectileList.Count ==0) 
+            { 
+                EnemyProjectileList.Add(new FireballProjectile(new Vector2(600, 94), 180)); 
+            }
             currentEnemy.Update();
             currentItem.Update();
             foreach (IProjectile projectile in PlayerProjectileList)
