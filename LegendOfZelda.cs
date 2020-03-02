@@ -69,10 +69,10 @@ namespace Team4_LegendOfZelda
                 new MoveLinkEastCommand(player),                //3
                 new MoveLinkSouthCommand(player),               //4
                 new MoveLinkWestCommand(player),                //5
-                new NextItemCommand(level),                     //6
-                new PreviousItemCommand(level),                 //7
-                new NextEnemyCommand(level),                    //8
-                new PreviousEnemyCommand(level),                //9
+                new NextItemCommand((Sprint2Room)level.CurrentRoom),                     //6
+                new PreviousItemCommand((Sprint2Room)level.CurrentRoom),                 //7
+                new NextEnemyCommand((Sprint2Room)level.CurrentRoom),                    //8
+                new PreviousEnemyCommand((Sprint2Room)level.CurrentRoom),                //9
                 new LinkAttackCommand(player),                  //10
                 new LinkBeDamagedCommand(player),               //11
                 new LinkIdleCommand(player),                    //12
