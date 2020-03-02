@@ -14,7 +14,7 @@
         {
             player.currentUseItemID = 2;
             player.UseItem();
-            level.ProjectileList.Add(player.currentProjectile);
+            level.CurrentRoom.Projectiles.Add(player.currentProjectile);
 
         }
     }
