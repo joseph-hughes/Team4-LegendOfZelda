@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 using Team4_LegendOfZelda.ILevel_Classes;
+using Team4_LegendOfZelda.ILevel_Classes.Levels;
 
 namespace Team4_LegendOfZelda
 {
@@ -51,7 +52,7 @@ namespace Team4_LegendOfZelda
             base.Initialize();
 
             level = new Sprint2Level();
-            level.Initialize(Content);
+            level.Initialize(Content, player);
 
             player = new Link(new Vector2(30, 100));
 
