@@ -1,12 +1,13 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States;
+using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 {
     class AquamentusEast : IEnemy
     {
-        public ILevel Level { get; set; }
+        public IRoom Room { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
@@ -14,9 +15,9 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         public float Scale { get; set; }
         private IController controller;
 
-        public AquamentusEast(ILevel level, Vector2 position)
+        public AquamentusEast(IRoom room, Vector2 position)
         {
-            Level = level;
+            Room = room;
             Scale = 3f;
             Position = position;
 

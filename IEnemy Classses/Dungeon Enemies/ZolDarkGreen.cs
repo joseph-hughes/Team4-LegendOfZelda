@@ -1,12 +1,13 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
+using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     class ZolDarkGreen : IEnemy
     {
-        public ILevel Level { get; set; }
+        public IRoom Room { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
@@ -17,9 +18,9 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         int count, maxCount;
         Random rand;
 
-        public ZolDarkGreen(ILevel level, Vector2 position)
+        public ZolDarkGreen(IRoom room, Vector2 position)
         {
-            Level = level;
+            Room = room;
             Position = position;
             Scale = 3f;
 
