@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-
-namespace Team4_LegendOfZelda.ILevel_Classes
+﻿namespace Team4_LegendOfZelda.ILevel_Classes
 {
     public interface IRoom
     {
         IPlayer Player { get; set; }
-        List<IEnemy> Enemies { get; set; }
-        List<IItem> Items { get; set; }
-        List<IProjectile> Projectiles { get; set; }
+        System.Collections.Generic.List<IEnemy> Enemies { get; set; }
+        System.Collections.Generic.List<IItem> Items { get; set; }
+        System.Collections.Generic.List<IProjectile> Projectiles { get; set; }
         //List<IBlock> Blocks { get; set; }
         //List<IBoundary> Boundaries { get; set; }
         IRoom North { get; set; }
