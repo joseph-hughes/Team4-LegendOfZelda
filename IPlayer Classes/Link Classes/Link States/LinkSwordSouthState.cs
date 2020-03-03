@@ -42,7 +42,6 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void BeDamaged()
         {
-            link.LinkSwordRectangle = Rectangle.Empty;
             link.State = new LinkKnockbackSouthState(link, Link.knockback_timer);
         }
         public void UseItem()

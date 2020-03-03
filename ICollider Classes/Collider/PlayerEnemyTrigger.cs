@@ -29,12 +29,10 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                     {
                         if (dy > 0)
                         {
-                            player.LinkSwordRectangle = Rectangle.Empty;
                             player.State = new LinkKnockbackNorthState(player, Link.knockback_timer);
                         }
                         else
                         {
-                            player.LinkSwordRectangle = Rectangle.Empty;
                             player.State = new LinkKnockbackSouthState(player, Link.knockback_timer);
                         }
                     }
@@ -43,12 +41,10 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                     {
                         if (dx > 0)
                         {
-                            player.LinkSwordRectangle = Rectangle.Empty;
                             player.State = new LinkKnockbackWestState(player, Link.knockback_timer);
                         }
                         else
                         {
-                            player.LinkSwordRectangle = Rectangle.Empty;
                             player.State = new LinkKnockbackEastState(player, Link.knockback_timer);
                         }
                     }
