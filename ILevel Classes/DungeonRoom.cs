@@ -17,10 +17,53 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         public IRoom Other { get; set; }
 
         public DungeonRoom()
-        { }
+        {
+            Enemies = new List<IEnemy>();
+            Items = new List<IItem>();
+            Projectiles = new List<IProjectile>();
+        }
+
+        public void Initialize(IPlayer player, List<IEnemy> enemies, List<IItem> items)
+        {
+            Player = player;
+            Enemies.AddRange(enemies);
+            Items.AddRange(items);
+        }
+
         public void Update()
-        { }
+        {
+            foreach (IEnemy enemy in Enemies)
+            {
+                enemy.Update();
+            }
+
+            foreach (IItem item in Items)
+            {
+                item.Update();
+            }
+
+            foreach (IProjectile projectile in Projectiles)
+            {
+                projectile.Update();
+            }
+        }
+
         public void Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch spriteBatch)
-        { }
+        {
+            foreach (IEnemy enemy in Enemies)
+            {
+                enemy.Draw(spriteBatch);
+            }
+
+            foreach (IItem item in Items)
+            {
+                item.Draw(spriteBatch);
+            }
+
+            foreach (IProjectile projectile in Projectiles)
+            {
+                projectile.Draw(spriteBatch);
+            }
+        }
     }
 }
