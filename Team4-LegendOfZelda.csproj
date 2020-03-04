@@ -50,7 +50,9 @@
     <Compile Include="ICommand Classes\Commands\LinkUseMagicBoomerangCommand.cs" />
     <Compile Include="ICommand Classes\Commands\LinkUseFireballCommand.cs" />
     <Compile Include="ICommand Classes\Commands\LinkUseBoomerangCommand.cs" />
+    <Compile Include="ILevel Classes\DungeonHUD.cs" />
     <Compile Include="ILevel Classes\DungeonRoom.cs" />
+    <Compile Include="ILevel Classes\IHUD.cs" />
     <Compile Include="ILevel Classes\LevelLoader.cs" />
     <Compile Include="ILevel Classes\IFileLoader.cs" />
     <Compile Include="ILevel Classes\IRoom.cs" />
@@ -96,6 +98,9 @@
     <Compile Include="ICommand Classes\Commands\ResetGameCommand.cs" />
     <Compile Include="ICommand Classes\Commands\LinkBeDamagedCommand.cs" />
     <Compile Include="IProjectile Classes\IProjectile.cs" />
+    <Compile Include="ISprite Classes\Sprite\MapSprite.cs" />
+    <Compile Include="ISprite Classes\Sprite\TextSprite.cs" />
+    <Compile Include="ISpriteFactory Classes\SpriteFactories\MapSpriteFactory.cs" />
     <Compile Include="ISpriteFactory Classes\SpriteFactories\NPCSpriteFactory.cs" />
     <Compile Include="IEnemy Classses\Bosses\Dodongo States\DodongoWestDamagedState.cs" />
     <Compile Include="IEnemy Classses\Bosses\Dodongo States\DodongoSouthDamagedState.cs" />
@@ -216,7 +221,6 @@
     <Compile Include="ISpriteFactory Classes\SpriteFactories\ProjectileSpriteFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ICommand Classes\Commands\QuitCommand.cs" />
-    <Compile Include="ISprite Classes\Sprite\TextSprite.cs" />
     <Compile Include="ILevel Classes\Levels\Sprint2Room.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -538,10 +542,11 @@
     <Content Include="Content\Projectiles\Fireball.png" />
     <Content Include="Content\Projectiles\Flame.png" />
     <Content Include="Icon.ico" />
+    <Content Include="XML\Level1.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\DesktopGL\AnyCPU\Release\" />
-    <Folder Include="XML Classes\" />
+    <Folder Include="ICollider Classes\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
