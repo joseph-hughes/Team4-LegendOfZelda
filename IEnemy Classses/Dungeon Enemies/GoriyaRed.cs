@@ -11,18 +11,14 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
-        int count, maxCount;
-        Random rand;
+        private IController controller;
 
         public GoriyaRed(ILevel level, Vector2 position)
         {
             Level = level;
             State = new GoriyaRedWestState(this);
             Position = position;
-
-            count = 0;
-            maxCount = 240;
-            rand = new Random();
+            controller = new GoriyaController(this);
         }
 
         public void North()
@@ -49,7 +45,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         {
             State.Idle();
         }
-        
+
         public void BeDamaged()
         {
             State.BeDamaged();
@@ -67,38 +63,9 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 
         public void Update()
         {
+            controller.Update();
             State.Update();
             Sprite.Update();
-            
-            count++;
-            if (count > maxCount)
-            {
-                switch (rand.Next(0, 6))
-                {
-                    case 0:
-                        State.North();
-                        break;
-                    case 1:
-                        State.East();
-                        break;
-                    case 2:
-                        State.South();
-                        break;
-                    case 3:
-                        State.West();
-                        break;
-                    case 4:
-                        State.Attack();
-                        break;
-                    case 5:
-                        State.BeDamaged();
-                        break;
-                    default:
-                        // Do nothing, this is not supposed to happen
-                        break;
-                }
-                count = 0;
-            }
         }
 
         public void Draw(SpriteBatch spriteBatch)

@@ -1,17 +1,16 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
+namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseRed_States
 {
-    class RopeWestState : IState
+    class KeeseRedNorthState : IState
     {
-        IEnemy enemy;
+        private IEnemy enemy;
         private static int MAX_DISPLACEMENT = 48, DELTA_DISPLACEMENT = 2;
         private int displacement;
 
-        public RopeWestState(IEnemy enemy)
+        public KeeseRedNorthState(IEnemy enemy)
         {
             this.enemy = enemy;
-            this.enemy.Sprite = EnemySpriteFactory.Instance.CreateRopeWestSprite();
             displacement = MAX_DISPLACEMENT;
         }
 
@@ -34,9 +33,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
         {
             // Do nothing
         }
+
         public void Idle()
         {
-            enemy.State = new RopeIdleState(enemy);
+            enemy.State = new KeeseRedIdleState(enemy);
         }
 
         public void BeDamaged()
@@ -56,16 +56,16 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
 
         public void Update()
         {
-            //enemy.Position = new Vector2(((int)enemy.Position.X - 2) % 800, enemy.Position.Y);
+            //enemy.Position = new Vector2(enemy.Position.X, ((int)enemy.Position.Y - 2) % 600);
             if (displacement > 0)
             {
-                if (enemy.Position.X > DELTA_DISPLACEMENT)
+                if (enemy.Position.Y > DELTA_DISPLACEMENT)
                 {
-                    enemy.Position = new Vector2((int)enemy.Position.X - DELTA_DISPLACEMENT, enemy.Position.Y);
+                    enemy.Position = new Vector2(enemy.Position.X, (int)enemy.Position.Y - DELTA_DISPLACEMENT);
                 }
                 else
                 {
-                    enemy.Position = new Vector2(768 - (int)enemy.Position.X - DELTA_DISPLACEMENT, enemy.Position.Y);
+                    enemy.Position = new Vector2(enemy.Position.X, 528 - (int)enemy.Position.Y - DELTA_DISPLACEMENT);
                 }
                 displacement -= DELTA_DISPLACEMENT;
             }

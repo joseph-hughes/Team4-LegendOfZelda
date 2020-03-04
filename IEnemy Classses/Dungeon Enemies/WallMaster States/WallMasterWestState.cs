@@ -1,13 +1,18 @@
-﻿namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.WallMaster_States
+﻿using Microsoft.Xna.Framework;
+
+namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMaster_States
 {
     class WallMasterWestState : IState
     {
         IEnemy enemy;
+        private static int MAX_DISPLACEMENT = 48, DELTA_DISPLACEMENT = 2;
+        private int displacement;
 
         public WallMasterWestState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateWallMasterWestSprite();
+            displacement = MAX_DISPLACEMENT;
         }
 
         public void North()
@@ -17,7 +22,7 @@
 
         public void East()
         {
-            enemy.State = new WallMasterEastState(enemy);
+            // Do nothing
         }
 
         public void South()
@@ -31,7 +36,7 @@
         }
         public void Idle()
         {
-            // Do nothing
+            enemy.State = new WallMasterIdleState(enemy);
         }
 
         public void BeDamaged()
@@ -51,7 +56,23 @@
 
         public void Update()
         {
-            // Do nothing
+            //enemy.Position = new Vector2(((int)enemy.Position.X - 2) % 800, enemy.Position.Y);
+            if (displacement > 0)
+            {
+                if (enemy.Position.X > DELTA_DISPLACEMENT)
+                {
+                    enemy.Position = new Vector2((int)enemy.Position.X - DELTA_DISPLACEMENT, enemy.Position.Y);
+                }
+                else
+                {
+                    enemy.Position = new Vector2(768 - (int)enemy.Position.X - DELTA_DISPLACEMENT, enemy.Position.Y);
+                }
+                displacement -= DELTA_DISPLACEMENT;
+            }
+            else
+            {
+                Idle();
+            }
         }
     }
 }

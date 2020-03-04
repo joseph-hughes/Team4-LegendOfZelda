@@ -1,17 +1,16 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
+namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseBlue_States
 {
-    class RopeWestState : IState
+    class KeeseBlueEastState : IState
     {
-        IEnemy enemy;
+        private IEnemy enemy;
         private static int MAX_DISPLACEMENT = 48, DELTA_DISPLACEMENT = 2;
         private int displacement;
 
-        public RopeWestState(IEnemy enemy)
+        public KeeseBlueEastState(IEnemy enemy)
         {
             this.enemy = enemy;
-            this.enemy.Sprite = EnemySpriteFactory.Instance.CreateRopeWestSprite();
             displacement = MAX_DISPLACEMENT;
         }
 
@@ -34,9 +33,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
         {
             // Do nothing
         }
+
         public void Idle()
         {
-            enemy.State = new RopeIdleState(enemy);
+            enemy.State = new KeeseBlueIdleState(enemy);
         }
 
         public void BeDamaged()
@@ -56,17 +56,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
 
         public void Update()
         {
-            //enemy.Position = new Vector2(((int)enemy.Position.X - 2) % 800, enemy.Position.Y);
             if (displacement > 0)
             {
-                if (enemy.Position.X > DELTA_DISPLACEMENT)
-                {
-                    enemy.Position = new Vector2((int)enemy.Position.X - DELTA_DISPLACEMENT, enemy.Position.Y);
-                }
-                else
-                {
-                    enemy.Position = new Vector2(768 - (int)enemy.Position.X - DELTA_DISPLACEMENT, enemy.Position.Y);
-                }
+                //enemy.Position = new Vector2(((int)enemy.Position.X + 2) % 800, enemy.Position.Y);
+                enemy.Position = new Vector2((int)enemy.Position.X + DELTA_DISPLACEMENT, enemy.Position.Y);
                 displacement -= DELTA_DISPLACEMENT;
             }
             else

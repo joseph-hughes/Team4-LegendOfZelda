@@ -1,17 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
+namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMasterUpsideDown_States
 {
-    class RopeWestState : IState
+    class WallMasterUpsideDownEastState : IState
     {
         IEnemy enemy;
         private static int MAX_DISPLACEMENT = 48, DELTA_DISPLACEMENT = 2;
         private int displacement;
 
-        public RopeWestState(IEnemy enemy)
+        public WallMasterUpsideDownEastState(IEnemy enemy)
         {
             this.enemy = enemy;
-            this.enemy.Sprite = EnemySpriteFactory.Instance.CreateRopeWestSprite();
+            this.enemy.Sprite = EnemySpriteFactory.Instance.CreateWallMasterUpsideDownEastSprite();
             displacement = MAX_DISPLACEMENT;
         }
 
@@ -36,7 +36,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
         }
         public void Idle()
         {
-            enemy.State = new RopeIdleState(enemy);
+            enemy.State = new WallMasterUpsideDownIdleState(enemy);
         }
 
         public void BeDamaged()
@@ -56,17 +56,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
 
         public void Update()
         {
-            //enemy.Position = new Vector2(((int)enemy.Position.X - 2) % 800, enemy.Position.Y);
+            //enemy.Position = new Vector2(((int)enemy.Position.X + 2) % 800, enemy.Position.Y);
             if (displacement > 0)
             {
-                if (enemy.Position.X > DELTA_DISPLACEMENT)
-                {
-                    enemy.Position = new Vector2((int)enemy.Position.X - DELTA_DISPLACEMENT, enemy.Position.Y);
-                }
-                else
-                {
-                    enemy.Position = new Vector2(768 - (int)enemy.Position.X - DELTA_DISPLACEMENT, enemy.Position.Y);
-                }
+                enemy.Position = new Vector2((int)enemy.Position.X + DELTA_DISPLACEMENT, enemy.Position.Y);
                 displacement -= DELTA_DISPLACEMENT;
             }
             else

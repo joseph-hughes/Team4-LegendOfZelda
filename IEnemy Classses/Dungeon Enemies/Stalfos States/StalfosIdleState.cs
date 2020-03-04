@@ -1,38 +1,39 @@
-﻿namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.WallMaster_States
+﻿namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Stalfos_States
 {
-    class WallMasterUpsideDownWestState : IState
+    class StalfosIdleState : IState
     {
         IEnemy enemy;
 
-        public WallMasterUpsideDownWestState(IEnemy enemy)
+        public StalfosIdleState(IEnemy enemy)
         {
             this.enemy = enemy;
-            this.enemy.Sprite = EnemySpriteFactory.Instance.CreateWallMasterUpsideDownWestSprite();
         }
 
         public void North()
         {
-            // Do nothing
+            enemy.State = new StalfosNorthState(enemy);
         }
 
         public void East()
         {
-            enemy.State = new WallMasterUpsideDownEastState(enemy);
+            enemy.State = new StalfosEastState(enemy);
         }
 
         public void South()
         {
-            // Do nothing
+            enemy.State = new StalfosSouthState(enemy);
         }
 
         public void West()
         {
-            // Do nothing
+            enemy.State = new StalfosWestState(enemy);
         }
+
         public void Idle()
         {
             // Do nothing
         }
+
         public void BeDamaged()
         {
             // TODO

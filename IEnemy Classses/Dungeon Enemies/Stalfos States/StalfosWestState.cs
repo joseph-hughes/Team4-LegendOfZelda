@@ -1,17 +1,16 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
+namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Stalfos_States
 {
-    class RopeWestState : IState
+    class StalfosWestState : IState
     {
         IEnemy enemy;
         private static int MAX_DISPLACEMENT = 48, DELTA_DISPLACEMENT = 2;
         private int displacement;
 
-        public RopeWestState(IEnemy enemy)
+        public StalfosWestState(IEnemy enemy)
         {
             this.enemy = enemy;
-            this.enemy.Sprite = EnemySpriteFactory.Instance.CreateRopeWestSprite();
             displacement = MAX_DISPLACEMENT;
         }
 
@@ -36,7 +35,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
         }
         public void Idle()
         {
-            enemy.State = new RopeIdleState(enemy);
+            enemy.State = new StalfosIdleState(enemy);
         }
 
         public void BeDamaged()

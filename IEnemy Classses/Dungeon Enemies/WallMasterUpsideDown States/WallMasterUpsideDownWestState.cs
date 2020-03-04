@@ -1,17 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
+namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMasterUpsideDown_States
 {
-    class RopeWestState : IState
+    class WallMasterUpsideDownWestState : IState
     {
         IEnemy enemy;
         private static int MAX_DISPLACEMENT = 48, DELTA_DISPLACEMENT = 2;
         private int displacement;
 
-        public RopeWestState(IEnemy enemy)
+        public WallMasterUpsideDownWestState(IEnemy enemy)
         {
             this.enemy = enemy;
-            this.enemy.Sprite = EnemySpriteFactory.Instance.CreateRopeWestSprite();
+            this.enemy.Sprite = EnemySpriteFactory.Instance.CreateWallMasterUpsideDownWestSprite();
             displacement = MAX_DISPLACEMENT;
         }
 
@@ -36,7 +36,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
         }
         public void Idle()
         {
-            enemy.State = new RopeIdleState(enemy);
+            enemy.State = new WallMasterUpsideDownIdleState(enemy);
         }
 
         public void BeDamaged()

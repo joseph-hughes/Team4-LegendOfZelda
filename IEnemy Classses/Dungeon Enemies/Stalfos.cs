@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Stalfos_States;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
@@ -10,110 +11,62 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
-        int count, maxCount;
-        Random rand;
-        enum Direction { NORTH, EAST, SOUTH, WEST };
-        Direction direction;
+        private IController controller;
 
         public Stalfos(ILevel level, Vector2 position)
         {
             Level = level;
             Sprite = EnemySpriteFactory.Instance.CreateStalfosSprite();
-            State = new NullState();
+            State = new StalfosIdleState(this);
             Position = position;
-
-            count = 0;
-            maxCount = 240;
-            direction = Direction.NORTH;
-            rand = new Random();
+            controller = new StalfosController(this);
         }
 
         public void North()
         {
-            // Do nothing
+            State.North();
         }
 
         public void East()
         {
-            // Do nothing
+            State.East();
         }
 
         public void South()
         {
-            // Do nothing
+            State.South();
         }
 
         public void West()
         {
-            // Do nothing
+            State.West();
         }
 
         public void Idle()
         {
-            // Do nothing
+            State.Idle();
         }
-        
+
         public void BeDamaged()
         {
-            // Do nothing
+            State.BeDamaged();
         }
 
         public void Attack()
         {
-            // Do nothing
+            State.Attack();
         }
 
         public void UseItem()
         {
-            // Do nothing
+            State.UseItem();
         }
 
         public void Update()
         {
+            controller.Update();
+            State.Update();
             Sprite.Update();
-
-            switch (direction)
-            {
-                case Direction.NORTH:
-                    Position = new Vector2(Position.X, ((int)Position.Y - 1) % 600);
-                    break;
-                case Direction.EAST:
-                    Position = new Vector2(((int)Position.X + 1) % 800, Position.Y);
-                    break;
-                case Direction.SOUTH:
-                    Position = new Vector2(Position.X, ((int)Position.Y + 1) % 600);
-                    break;
-                case Direction.WEST:
-                    Position = new Vector2(((int)Position.X - 1) % 800, Position.Y);
-                    break;
-                default:
-                    // Do nothing, this is not supposed to happen
-                    break;
-            }
-
-            count++;
-            if (count > maxCount)
-            {
-                switch (rand.Next(0, 4))
-                {
-                    case 0:
-                        direction = Direction.NORTH;
-                        break;
-                    case 1:
-                        direction = Direction.EAST;
-                        break;
-                    case 2:
-                        direction = Direction.SOUTH;
-                        break;
-                    case 3:
-                        direction = Direction.WEST;
-                        break;
-                    default:
-                        // Do nothing, this is not supposed to happen
-                        break;
-                }
-                count = 0;
-            }
         }
 
         public void Draw(SpriteBatch spriteBatch)

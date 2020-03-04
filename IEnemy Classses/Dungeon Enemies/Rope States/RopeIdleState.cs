@@ -1,34 +1,34 @@
-﻿namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.WallMaster_States
+﻿namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
 {
-    class WallMasterUpsideDownEastState : IState
+    class RopeIdleState : IState
     {
         IEnemy enemy;
 
-        public WallMasterUpsideDownEastState(IEnemy enemy)
+        public RopeIdleState(IEnemy enemy)
         {
             this.enemy = enemy;
-            this.enemy.Sprite = EnemySpriteFactory.Instance.CreateWallMasterUpsideDownEastSprite();
         }
 
         public void North()
         {
-            // Do nothing
+            enemy.State = new RopeNorthState(enemy);
         }
 
         public void East()
         {
-            // Do nothing
+            enemy.State = new RopeEastState(enemy);
         }
 
         public void South()
         {
-            // Do nothing
+            enemy.State = new RopeSouthState(enemy);
         }
 
         public void West()
         {
-            enemy.State = new WallMasterUpsideDownWestState(enemy);
+            enemy.State = new RopeWestState(enemy);
         }
+
         public void Idle()
         {
             // Do nothing
