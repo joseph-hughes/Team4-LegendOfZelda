@@ -1,23 +1,23 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.IState_Classes;
 
 namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 {
     class EnemyProjectilePlayerTrigger : ITrigger
     {
-        private ILevel level;
+        private IRoom room;
         private Link player;
         private IProjectile projectile;
 
-        public EnemyProjectilePlayerTrigger(IProjectile Projectile, IPlayer Player, ILevel Level)
+        public EnemyProjectilePlayerTrigger(IProjectile projectile, IPlayer player, IRoom room)
         {
-            level = Level;
-            projectile = Projectile;
-            player = (Link)Player;
+            this.room = room;
+            this.projectile = projectile;
+            this.player = (Link)player;
         }
         public void Execute()
         {
-            level.EnemyProjectileList.Remove(projectile);
+            room.EnemyProjectiles.Remove(projectile);
 
             if (!player.isDamaged)
             {

@@ -26,8 +26,8 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
         {
             CurrentRoom = new Sprint2Room();
 
-            Vector2 itemStartLocation = new Vector2(400, 150);
-            Vector2 enemyStartLocation = new Vector2(140, 140);
+            Vector2 itemStartLocation = new Vector2(480, 360);
+            Vector2 enemyStartLocation = new Vector2(200, 360);
 
             List<IItem> items = new List<IItem>
             {
@@ -82,14 +82,14 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
                 new ZolDarkGreen(CurrentRoom, enemyStartLocation)
             };
             
-            List <IBlock> BlockList = new List<IBlock>{
-                new Block(new Rectangle(0, 0, 93, 525)),
-                new Block(new Rectangle(0, 0, 765, 93)),
-                new Block(new Rectangle(0, 432, 765, 93)),
-                new Block(new Rectangle(672, 0, 93, 525))
+            List <IBlock> blocks = new List<IBlock>{
+                new Block(new Rectangle(0, 144, 93, 525)),
+                new Block(new Rectangle(0, 144, 765, 93)),
+                new Block(new Rectangle(0, 432+144, 765, 93)),
+                new Block(new Rectangle(672, 144, 93, 525))
             };
 
-            CurrentRoom.Initialize(Player, enemies, items);
+            CurrentRoom.Initialize(Player, enemies, items, blocks);
         }
 
         public void North()

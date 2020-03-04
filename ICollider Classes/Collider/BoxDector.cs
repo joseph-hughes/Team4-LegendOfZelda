@@ -17,14 +17,14 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         public void Detact()
         {
             //direction clockwise, 0 for north
-            foreach (IItem currentItem in Level.ItemList)
+            foreach (IItem currentItem in Level.CurrentRoom.Items)
             {
                 if (player.LinkRectangle.Intersects(currentItem.Rectangle))
                 {
                     //triggerList.Add(new PlayerItemTrigger(Player, Item, level));
                 }
             }
-            foreach (IEnemy currentEnemy in Level.EnemyList)
+            foreach (IEnemy currentEnemy in Level.CurrentRoom.Enemies)
             {
                 if (currentEnemy.Rectangle.Intersects(player.LinkRectangle) || currentEnemy.Rectangle.Intersects(player.LinkSwordRectangle))
                 {
@@ -33,7 +33,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 }
 
             }
-            foreach (IBlock currentBlock in Level.BlockList)
+            foreach (IBlock currentBlock in Level.CurrentRoom.Blocks)
             {
                 if (player.LinkRectangle.Intersects(currentBlock.Rectangle))
                 {
@@ -41,34 +41,34 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 }
             }
 
-            foreach (IProjectile currentEnemyProjectile in Level.EnemyProjectileList)
+            foreach (IProjectile currentEnemyProjectile in Level.CurrentRoom.EnemyProjectiles)
             {
                 if (currentEnemyProjectile.Rectangle.Intersects(player.LinkRectangle))
                 {
-                    TriggerList.Add(new EnemyProjectilePlayerTrigger(currentEnemyProjectile, player, Level));
+                    TriggerList.Add(new EnemyProjectilePlayerTrigger(currentEnemyProjectile, player, Level.CurrentRoom));
                 }
-                foreach (IBlock currentBlock in Level.BlockList)
+                foreach (IBlock currentBlock in Level.CurrentRoom.Blocks)
                 {
                     if (currentEnemyProjectile.Rectangle.Intersects(currentBlock.Rectangle))
                     {
-                        TriggerList.Add(new ProjectileBlockTrigger(currentEnemyProjectile, Level));
+                        TriggerList.Add(new ProjectileBlockTrigger(currentEnemyProjectile, Level.CurrentRoom));
                     }
                 }
             }
-            foreach (IProjectile currentPlayerProjectile in Level.PlayerProjectileList)
+            foreach (IProjectile currentPlayerProjectile in Level.CurrentRoom.PlayerProjectiles)
             {
-                foreach (IEnemy currentEnemy in Level.EnemyList)
+                foreach (IEnemy currentEnemy in Level.CurrentRoom.Enemies)
                 {
                     if (currentPlayerProjectile.Rectangle.Intersects(currentEnemy.Rectangle))
                     {
-                        TriggerList.Add(new PlayerProjectileEnemyTrigger(currentPlayerProjectile, currentEnemy, Level));
+                        TriggerList.Add(new PlayerProjectileEnemyTrigger(currentPlayerProjectile, currentEnemy, Level.CurrentRoom));
                     }
                 }
-                foreach (IBlock currentBlock in Level.BlockList)
+                foreach (IBlock currentBlock in Level.CurrentRoom.Blocks)
                 {
                     if (currentPlayerProjectile.Rectangle.Intersects(currentBlock.Rectangle))
                     {
-                        TriggerList.Add(new ProjectileBlockTrigger(currentPlayerProjectile, Level));
+                        TriggerList.Add(new ProjectileBlockTrigger(currentPlayerProjectile, Level.CurrentRoom));
                     }
                 }
             }

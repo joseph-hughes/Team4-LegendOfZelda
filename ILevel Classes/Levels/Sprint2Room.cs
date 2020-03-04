@@ -8,7 +8,9 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         public IPlayer Player { get; set; }
         public List<IEnemy> Enemies { get; set; }
         public List<IItem> Items { get; set; }
-        public List<IProjectile> Projectiles { get; set; }
+        public List<IProjectile> PlayerProjectiles { get; set; }
+        public List<IProjectile> EnemyProjectiles { get; set; }
+        public List<IBlock> Blocks { get; set; }
         public IRoom North { get; set; }
         public IRoom East { get; set; }
         public IRoom South { get; set; }
@@ -26,14 +28,17 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 
             Enemies = new List<IEnemy>();
             Items = new List<IItem>();
-            Projectiles = new List<IProjectile>();
+            PlayerProjectiles = new List<IProjectile>();
+            EnemyProjectiles = new List<IProjectile>();
+            Blocks = new List<IBlock>();
         }
 
-        public void Initialize(IPlayer player, List<IEnemy> enemies, List<IItem> items)
+        public void Initialize(IPlayer player, List<IEnemy> enemies, List<IItem> items, List<IBlock> blocks)
         {
             Player = player;
             Enemies.AddRange(enemies);
             Items.AddRange(items);
+            Blocks.AddRange(blocks);
 
             currentItem = Items[itemIndex];
             currentEnemy = Enemies[enemyIndex];
@@ -75,7 +80,12 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         {
             currentEnemy.Update();
             currentItem.Update();
-            foreach (IProjectile projectile in Projectiles)
+            foreach (IProjectile projectile in PlayerProjectiles)
+            {
+                projectile.Update();
+            }
+
+            foreach (IProjectile projectile in EnemyProjectiles)
             {
                 projectile.Update();
             }
@@ -85,7 +95,12 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         {
             currentEnemy.Draw(spriteBatch);
             currentItem.Draw(spriteBatch);
-            foreach (IProjectile projectile in Projectiles)
+            foreach (IProjectile projectile in PlayerProjectiles)
+            {
+                projectile.Draw(spriteBatch);
+            }
+
+            foreach (IProjectile projectile in EnemyProjectiles)
             {
                 projectile.Draw(spriteBatch);
             }

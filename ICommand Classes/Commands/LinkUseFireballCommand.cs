@@ -1,19 +1,21 @@
-﻿namespace Team4_LegendOfZelda
+﻿using Team4_LegendOfZelda.ILevel_Classes;
+
+namespace Team4_LegendOfZelda
 {
     public class LinkUseFireballCommand : ICommand
     {
         private IPlayer player;
-        private ILevel level;
+        private IRoom room;
 
-        public LinkUseFireballCommand(IPlayer player, ILevel level)
+        public LinkUseFireballCommand(IPlayer player, IRoom room)
         {
             this.player = player;
-            this.level = level;
+            this.room = room;
         }
         public void Execute()
         {
             player.UseItem();
-            level.PlayerProjectileList.Add(new FireballProjectile(player.itemPosition, player.Direction * 90));
+            room.PlayerProjectiles.Add(new FireballProjectile(player.itemPosition, player.Direction * 90));
 
         }
     }

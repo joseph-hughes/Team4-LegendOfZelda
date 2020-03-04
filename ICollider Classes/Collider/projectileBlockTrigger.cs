@@ -1,23 +1,25 @@
-﻿namespace Team4_LegendOfZelda.ICollider_Classes.Collider
+﻿using Team4_LegendOfZelda.ILevel_Classes;
+
+namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 {
     class ProjectileBlockTrigger : ITrigger
     {
-        private ILevel level;
+        private IRoom room;
         private IProjectile projectile;
-        public ProjectileBlockTrigger(IProjectile Projectile, ILevel Level)
+        public ProjectileBlockTrigger(IProjectile projectile, IRoom room)
         {
-            level = Level;
-            projectile = Projectile;
+            this.room = room;
+            this.projectile = projectile;
         }
         public void Execute()
         {
-            if (level.PlayerProjectileList.Contains(projectile))
+            if (room.PlayerProjectiles.Contains(projectile))
             {
-                level.PlayerProjectileList.Remove(projectile);
+                room.PlayerProjectiles.Remove(projectile);
             }
-            if (level.EnemyProjectileList.Contains(projectile))
+            if (room.EnemyProjectiles.Contains(projectile))
             {
-                level.EnemyProjectileList.Remove(projectile);
+                room.EnemyProjectiles.Remove(projectile);
             }
 
         }

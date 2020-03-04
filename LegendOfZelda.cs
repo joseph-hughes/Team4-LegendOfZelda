@@ -83,10 +83,10 @@ namespace Team4_LegendOfZelda
                 new LinkAttackCommand(player),                  //10
                 new LinkBeDamagedCommand(player),               //11
                 new LinkIdleCommand(player),                    //12
-                new LinkUseArrowCommand(player, level),         //13
-                new LinkUseBoomerangCommand(player, level),     //14
-                new LinkUseFireballCommand(player, level),      //15
-                new LinkUseMagicBoomerangCommand(player, level) //16
+                new LinkUseArrowCommand(player, level.CurrentRoom),         //13
+                new LinkUseBoomerangCommand(player, level.CurrentRoom),     //14
+                new LinkUseFireballCommand(player, level.CurrentRoom),      //15
+                new LinkUseMagicBoomerangCommand(player, level.CurrentRoom) //16
 
             };
 
