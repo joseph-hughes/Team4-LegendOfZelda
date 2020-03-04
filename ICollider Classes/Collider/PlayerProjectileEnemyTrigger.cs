@@ -19,7 +19,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         public void Execute()
         {
             room.PlayerProjectiles.Remove(projectile);
-            enemy.BeDamaged();
+            enemy.State.BeDamaged();
         }
     }
 }

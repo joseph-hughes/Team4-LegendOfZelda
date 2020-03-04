@@ -5,93 +5,93 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 {
     public class Detection
     {
-        public static void PlayerItemDetection(IPlayer player, ILevel level, List<ITrigger> TriggerList)
+        public static void PlayerItemDetection(IPlayer player, IRoom room, List<ITrigger> triggerList)
         {
-            foreach (IItem currentItem in level.ItemList)
+            foreach (IItem currentItem in room.Items)
             {
                 if (player.LinkRectangle.Intersects(currentItem.Rectangle))
                 {
-                    //triggerList.Add(new PlayerItemTrigger(Player, Item, level));
+                    //triggerList.Add(new PlayerItemTrigger(Player, Item, room));
                 }
             }
         }
-        public static void PlayerEnemyDection(IPlayer player, ILevel level, List<ITrigger> TriggerList)
+        public static void PlayerEnemyDection(IPlayer player, IRoom room, List<ITrigger> triggerList)
         {
-            foreach (IEnemy currentEnemy in level.EnemyList)
+            foreach (IEnemy currentEnemy in room.Enemies)
             {
                 if (currentEnemy.Rectangle.Intersects(player.LinkRectangle) || currentEnemy.Rectangle.Intersects(player.LinkSwordRectangle))
                 {
-                    TriggerList.Add(new PlayerEnemyTrigger(player, currentEnemy, level));
+                    triggerList.Add(new PlayerEnemyTrigger(player, currentEnemy, room));
 
                 }
             }
         }
-        public static void PlayerBlockDection(IPlayer player, ILevel level, List<ITrigger> TriggerList)
+        public static void PlayerBlockDection(IPlayer player, IRoom room, List<ITrigger> triggerList)
         {
-            foreach (IBlock currentBlock in level.BlockList)
+            foreach (IBlock currentBlock in room.Blocks)
             {
                 if (player.LinkRectangle.Intersects(currentBlock.Rectangle))
                 {
-                    TriggerList.Add(new PlayerBlockTrigger(player, currentBlock));
+                    triggerList.Add(new PlayerBlockTrigger(player, currentBlock));
                 }
             }
         }
-        public static void EnemyProjectilePlayerDection(IPlayer player, ILevel level, List<ITrigger> TriggerList)
+        public static void EnemyProjectilePlayerDection(IPlayer player, IRoom room, List<ITrigger> triggerList)
         {
-            foreach (IProjectile currentEnemyProjectile in level.EnemyProjectileList)
+            foreach (IProjectile currentEnemyProjectile in room.EnemyProjectiles)
             {
                 if (currentEnemyProjectile.Rectangle.Intersects(player.LinkRectangle))
                 {
-                    TriggerList.Add(new EnemyProjectilePlayerTrigger(currentEnemyProjectile, player, level));
+                    triggerList.Add(new EnemyProjectilePlayerTrigger(currentEnemyProjectile, player, room));
                 }
             }
         }
-        public static void PlayerProjectileEnemyDection(ILevel level, List<ITrigger> TriggerList)
+        public static void PlayerProjectileEnemyDection(IRoom room, List<ITrigger> triggerList)
         {
-            foreach (IProjectile currentPlayerProjectile in level.PlayerProjectileList)
+            foreach (IProjectile currentPlayerProjectile in room.PlayerProjectiles)
             {
-                foreach (IEnemy currentEnemy in level.EnemyList)
+                foreach (IEnemy currentEnemy in room.Enemies)
                 {
                     if (currentPlayerProjectile.Rectangle.Intersects(currentEnemy.Rectangle))
                     {
-                        TriggerList.Add(new PlayerProjectileEnemyTrigger(currentPlayerProjectile, currentEnemy, level));
+                        triggerList.Add(new PlayerProjectileEnemyTrigger(currentPlayerProjectile, currentEnemy, room));
                     }
                 }
             }
         }
-        public static void ProjectileBlock(ILevel level, List<ITrigger> TriggerList)
+        public static void ProjectileBlock(IRoom room, List<ITrigger> triggerList)
         {
-            foreach (IProjectile currentEnemyProjectile in level.EnemyProjectileList)
+            foreach (IProjectile currentEnemyProjectile in room.EnemyProjectiles)
             {
-                foreach (IBlock currentBlock in level.BlockList)
+                foreach (IBlock currentBlock in room.Blocks)
                 {
                     if (currentEnemyProjectile.Rectangle.Intersects(currentBlock.Rectangle))
                     {
-                        TriggerList.Add(new ProjectileBlockTrigger(currentEnemyProjectile, level));
+                        triggerList.Add(new ProjectileBlockTrigger(currentEnemyProjectile, room));
                     }
                 }
             }
-            foreach (IProjectile currentPlayerProjectile in level.PlayerProjectileList)
+            foreach (IProjectile currentPlayerProjectile in room.PlayerProjectiles)
             {
-                foreach (IBlock currentBlock in level.BlockList)
+                foreach (IBlock currentBlock in room.Blocks)
                 {
                     if (currentPlayerProjectile.Rectangle.Intersects(currentBlock.Rectangle))
                     {
-                        TriggerList.Add(new ProjectileBlockTrigger(currentPlayerProjectile, level));
+                        triggerList.Add(new ProjectileBlockTrigger(currentPlayerProjectile, room));
                     }
                 }
             }
         }
 
-        public static void EnemyBlock(ILevel level, List<ITrigger> TriggerList)
+        public static void EnemyBlock(IRoom room, List<ITrigger> triggerList)
         {
-            foreach (IEnemy currentEnemy in level.EnemyList)
+            foreach (IEnemy currentEnemy in room.Enemies)
             {
-                foreach (IBlock currentBlock in level.BlockList)
+                foreach (IBlock currentBlock in room.Blocks)
                 {
                     if (currentEnemy.Rectangle.Intersects(currentBlock.Rectangle))
                     {
-                        TriggerList.Add(new EnemyBlockTrigger(currentEnemy, currentBlock));
+                        triggerList.Add(new EnemyBlockTrigger(currentEnemy, currentBlock));
                     }
                 }
             }

@@ -14,8 +14,11 @@ namespace Team4_LegendOfZelda
         }
         public void Execute()
         {
-            player.UseItem();
-            room.PlayerProjectiles.Add(new BoomerangProjectile(player.itemPosition, player.Direction * 90));
+            if (!player.isDamaged) {
+                player.UseItem();
+                room.PlayerProjectiles.Add(new BoomerangProjectile(player.itemPosition, player.Direction * 90));
+            }
+                
 
         }
     }

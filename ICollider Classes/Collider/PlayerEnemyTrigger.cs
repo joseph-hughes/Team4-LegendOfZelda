@@ -1,16 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.IState_Classes;
 
 namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 {
     class PlayerEnemyTrigger : ITrigger
     {
-        private ILevel level;
+        private IRoom room;
         private Link player;
         private IEnemy enemy;
-        public PlayerEnemyTrigger(IPlayer Player, IEnemy Enemy, ILevel Level)
+        public PlayerEnemyTrigger(IPlayer Player, IEnemy Enemy, IRoom Room)
         {
-            level = Level;
+            room = Room;
             player = (Link)Player;
             enemy = Enemy;
         }
@@ -51,7 +52,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 }
                 else
                 {
-                    enemy.BeDamaged();
+                    enemy.State.BeDamaged();
                 }
             }
 
