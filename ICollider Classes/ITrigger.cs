@@ -1,6 +1,6 @@
 ﻿namespace Team4_LegendOfZelda.ICollider_Classes
 {
-    interface ITrigger
+    public interface ITrigger
     {
         void Execute();
     }

@@ -47,6 +47,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="ICollider Classes\Collider\BoxDector.cs" />
+    <Compile Include="ICollider Classes\Collider\Detection.cs" />
+    <Compile Include="ICollider Classes\Collider\EnemyBlockTrigger.cs" />
     <Compile Include="ICollider Classes\Collider\PlayerBlockTrigger.cs" />
     <Compile Include="ICollider Classes\Collider\PlayerProjectileEnemyTrigger.cs" />
     <Compile Include="ICollider Classes\Collider\EnemyProjectilePlayerTrigger.cs" />
