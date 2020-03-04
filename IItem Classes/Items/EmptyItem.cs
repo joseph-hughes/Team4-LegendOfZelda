@@ -9,7 +9,7 @@ namespace Team4_LegendOfZelda.Item_Classes
         private const int width = 1;
         private const int height = 1;
         private ISprite itemSprite;
-        public Rectangle Rectangle;
+        public Rectangle Rectangle { get; set; }
         public float Scale { get; set; }
         public Vector2 itemLocation { get; set; }
 

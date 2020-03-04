@@ -73,29 +73,22 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         {
             State.Update();
             Sprite.Update();
-
             count++;
             if (count > maxCount)
             {
-                switch (rand.Next(0, 6))
+                switch (rand.Next(0, 4))
                 {
                     case 0:
                         State.North();
                         break;
                     case 1:
-                        State.East();
+                        State.South();
                         break;
                     case 2:
-                        State.South();
+                        State.East();
                         break;
                     case 3:
                         State.West();
-                        break;
-                    case 4:
-                        State.Attack();
-                        break;
-                    case 5:
-                        State.BeDamaged();
                         break;
                     default:
                         // Do nothing, this is not supposed to happen

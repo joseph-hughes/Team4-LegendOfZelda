@@ -64,7 +64,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
                 new Triforce(itemStartLocation),
                 new WhiteSword(itemStartLocation)
             };
-
+            
             List<IEnemy> enemies = new List<IEnemy>
             {
                 new AquamentusWest(CurrentRoom, enemyStartLocation),
@@ -80,7 +80,13 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
                 new WallMaster(CurrentRoom, enemyStartLocation),
                 new WallMasterUpsideDown(CurrentRoom, enemyStartLocation),
                 new ZolDarkGreen(CurrentRoom, enemyStartLocation)
-
+            };
+            
+            List <IBlock> BlockList = new List<IBlock>{
+                new Block(new Rectangle(0, 0, 93, 525)),
+                new Block(new Rectangle(0, 0, 765, 93)),
+                new Block(new Rectangle(0, 432, 765, 93)),
+                new Block(new Rectangle(672, 0, 93, 525))
             };
 
             CurrentRoom.Initialize(Player, enemies, items);

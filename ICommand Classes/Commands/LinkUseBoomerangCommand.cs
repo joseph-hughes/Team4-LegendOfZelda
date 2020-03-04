@@ -12,9 +12,8 @@
         }
         public void Execute()
         {
-            player.currentUseItemID = 1;
             player.UseItem();
-            level.CurrentRoom.Projectiles.Add(player.currentProjectile);
+            level.PlayerProjectileList.Add(new BoomerangProjectile(player.itemPosition, player.Direction * 90));
 
         }
     }

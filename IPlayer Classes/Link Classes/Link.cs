@@ -9,15 +9,21 @@ namespace Team4_LegendOfZelda
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
-        public Rectangle Rectangle { get; set; }
+        public Rectangle LinkRectangle { get; set; }
+        public Rectangle LinkSwordRectangle { get; set; }
         public float Scale { get; set; }
-        public int currentUseItemID { get; set; }
-        public IProjectile currentProjectile { get; set; }
+        public Vector2 itemPosition { get; set; }
+        public int Direction { get; set; } // 0 for north, clockwise
+        public int Velocity { get; set; }
+        public bool isAttacking { get; set; }
+        public bool isKnocked { get; set; }
+        public bool isDamaged { get; set; }
         public const int damage_timer = 80;
         public const int use_item_timer = 20;
         public const int sword_timer = 20;
-        public const int knockback_distance = 80;
-        public const int knockback_timer = 5;
+        public const int knockback_timer = 10;
+        public const int linkWidth = 16;
+        public const int linkHeight = 16;
 
         public IItem currentItem { get; set; }
         public Link(Vector2 position)
@@ -25,7 +31,7 @@ namespace Team4_LegendOfZelda
             Position = position;
             Scale = 3f;
             State = new LinkNonMovingSouthState(this);
-            Position = position;
+            LinkRectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(Scale * linkWidth), (int)(Scale * linkHeight));
         }
 
         public void North()
@@ -75,7 +81,15 @@ namespace Team4_LegendOfZelda
         }
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, Rectangle);
+            if (!isAttacking)
+            {
+                Sprite.Draw(spriteBatch, LinkRectangle);
+            }
+            else
+            {
+                Sprite.Draw(spriteBatch, LinkSwordRectangle);
+            }
+
         }
     }
 }

@@ -14,8 +14,12 @@ namespace Team4_LegendOfZelda.IState_Classes
         {
             this.link = link;
             this.timer = timer;
+            this.link.Direction = 0;
+            this.link.isAttacking = true;
+            this.link.isKnocked = false;
+            this.link.isDamaged = false;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkSwordNorthSprite();
-            this.link.Rectangle = new Rectangle((int)this.link.Position.X, (int)(this.link.Position.Y - this.link.Scale * (height - width)), (int)(this.link.Scale * width), (int)(this.link.Scale * height));
+            this.link.LinkSwordRectangle = new Rectangle((int)this.link.Position.X, (int)(this.link.Position.Y - this.link.Scale * (height - width)), (int)(this.link.Scale * width), (int)(this.link.Scale * height));
         }
         public void South()
         {
@@ -54,6 +58,7 @@ namespace Team4_LegendOfZelda.IState_Classes
             this.timer -= 1;
             if (this.timer == 0)
             {
+                link.LinkSwordRectangle = Rectangle.Empty;
                 link.State = new LinkNonMovingNorthState(link);
             }
         }

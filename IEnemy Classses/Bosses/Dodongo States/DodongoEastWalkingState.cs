@@ -57,7 +57,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
 
         public void Update()
         {
-            enemy.Position = new Microsoft.Xna.Framework.Vector2(((int)enemy.Position.X + 1) % 800, enemy.Position.Y);
+            //enemy.Position = new Vector2(((int)enemy.Position.X + 1) % 800, enemy.Position.Y);
             enemy.Rectangle = new Rectangle((int)enemy.Position.X, (int)enemy.Position.Y, (int)(enemy.Scale * width), (int)(enemy.Scale * height));
         }
     }

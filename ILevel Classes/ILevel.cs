@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda
 {
