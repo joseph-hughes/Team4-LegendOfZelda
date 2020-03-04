@@ -6,8 +6,13 @@ namespace Team4_LegendOfZelda
 {
     public interface ILevel
     {
+        ISprite Map { get; set; }
+        IHUD HUD { get; set; }
+        IPlayer Player { get; set; }
+        System.Collections.Generic.List<IRoom> Rooms { get; set; }
         IRoom CurrentRoom { get; set; }
-        void Initialize(ContentManager content, IPlayer player);
+
+        void Initialize();
         void North();
         void East();
         void South();
