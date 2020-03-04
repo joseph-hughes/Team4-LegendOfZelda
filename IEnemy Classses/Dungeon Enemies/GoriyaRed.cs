@@ -2,12 +2,13 @@
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaRed_States;
+using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     class GoriyaRed : IEnemy
     {
-        public ILevel Level { get; set; }
+        public IRoom Room { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
@@ -16,9 +17,9 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         int count, maxCount;
         Random rand;
 
-        public GoriyaRed(ILevel level, Vector2 position)
+        public GoriyaRed(IRoom room, Vector2 position)
         {
-            Level = level;
+            Room = room;
             Position = position;
             Scale = 3f;
             State = new GoriyaRedWestState(this);

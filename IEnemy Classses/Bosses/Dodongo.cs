@@ -2,12 +2,13 @@
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States;
+using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 {
     class Dodongo : IEnemy
     {
-        public ILevel Level { get; set; }
+        public IRoom Room { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
@@ -16,9 +17,9 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         int count, maxCount;
         Random rand;
 
-        public Dodongo(ILevel level, Vector2 position)
+        public Dodongo(IRoom room, Vector2 position)
         {
-            Level = level;
+            Room = room;
             Scale = 3f;
             Position = position;
             State = new DodongoWestWalkingState(this);

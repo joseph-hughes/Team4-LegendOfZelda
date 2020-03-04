@@ -5,6 +5,7 @@ namespace Team4_LegendOfZelda.ISprite_Classes
 {
     class TextureSprite : ISprite
     {
+        public Rectangle SourceRectangle { get; set; }
         private Texture2D texture;
         private int rows;
         private int columns;
@@ -14,7 +15,6 @@ namespace Team4_LegendOfZelda.ISprite_Classes
         private int totalFrames;
         private int width;
         private int height;
-        private Rectangle sourceRectangle;
         private bool animated;
 
         // Constructor
@@ -24,7 +24,7 @@ namespace Team4_LegendOfZelda.ISprite_Classes
             animated = false;
             width = texture.Width;
             height = texture.Height;
-            sourceRectangle = new Rectangle(0, 0, width, height);
+            SourceRectangle = new Rectangle(0, 0, width, height);
         }
 
         public TextureSprite(Texture2D texture, int sheetRows, int sheetColumns, int delayBetweenFrames)
@@ -43,7 +43,7 @@ namespace Team4_LegendOfZelda.ISprite_Classes
             width = texture.Width / columns;
             height = texture.Height / rows;
 
-            sourceRectangle = new Rectangle(0, 0, width, height);
+            SourceRectangle = new Rectangle(0, 0, width, height);
 
             animated = true;
         }
@@ -60,7 +60,7 @@ namespace Team4_LegendOfZelda.ISprite_Classes
                     int row = (int)((float)currentFrame / (float)columns);
                     int column = currentFrame % columns;
 
-                    sourceRectangle = new Rectangle(width * column, height * row, width, height);
+                    SourceRectangle = new Rectangle(width * column, height * row, width, height);
                 }
             }
         }
@@ -68,7 +68,7 @@ namespace Team4_LegendOfZelda.ISprite_Classes
         public void Draw(SpriteBatch spriteBatch, Rectangle destinationRectangle)
         {
             spriteBatch.Begin();
-            spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, Color.White);
+            spriteBatch.Draw(texture, destinationRectangle, SourceRectangle, Color.White);
             spriteBatch.End();
         }
     }

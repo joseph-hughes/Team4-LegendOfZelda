@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Team4_LegendOfZelda.ICollider_Classes;
 using Team4_LegendOfZelda.ICollider_Classes.Collider;
 using Team4_LegendOfZelda.ILevel_Classes;
+using Team4_LegendOfZelda.ILevel_Classes.Levels;
 
 namespace Team4_LegendOfZelda
 {
@@ -29,7 +30,7 @@ namespace Team4_LegendOfZelda
             graphics = new GraphicsDeviceManager(this)
             {
                 PreferredBackBufferWidth = 768,
-                PreferredBackBufferHeight = 528
+                PreferredBackBufferHeight = 528+144
             };
             Content.RootDirectory = "Content";
             IsMouseVisible = false;
@@ -39,7 +40,8 @@ namespace Team4_LegendOfZelda
                 EnemySpriteFactory.Instance,
                 NPCSpriteFactory.Instance,
                 ItemSpriteFactory.Instance,
-                ProjectileSpriteFactory.Instance
+                ProjectileSpriteFactory.Instance,
+                MapSpriteFactory.Instance
             };
         }
 
@@ -53,8 +55,8 @@ namespace Team4_LegendOfZelda
         {
             base.Initialize();
 
-            level = new Sprint2Level();
-            level.Initialize(Content);
+            level = new Sprint2Level(player);
+            level.Initialize();
 
             player = new Link(new Vector2(96, 240));
 
@@ -74,10 +76,10 @@ namespace Team4_LegendOfZelda
                 new MoveLinkEastCommand(player),                //3
                 new MoveLinkSouthCommand(player),               //4
                 new MoveLinkWestCommand(player),                //5
-                new NextItemCommand(level),                     //6
-                new PreviousItemCommand(level),                 //7
-                new NextEnemyCommand(level),                    //8
-                new PreviousEnemyCommand(level),                //9
+                new NextItemCommand((Sprint2Room)level.CurrentRoom),                     //6
+                new PreviousItemCommand((Sprint2Room)level.CurrentRoom),                 //7
+                new NextEnemyCommand((Sprint2Room)level.CurrentRoom),                    //8
+                new PreviousEnemyCommand((Sprint2Room)level.CurrentRoom),                //9
                 new LinkAttackCommand(player),                  //10
                 new LinkBeDamagedCommand(player),               //11
                 new LinkIdleCommand(player),                    //12

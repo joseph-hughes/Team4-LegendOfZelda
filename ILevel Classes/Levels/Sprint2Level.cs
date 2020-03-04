@@ -1,43 +1,35 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
-using Team4_LegendOfZelda.IEnemy_Classses.Bosses;
-using Team4_LegendOfZelda.ISprite_Classes;
 using Team4_LegendOfZelda.Item_Classes;
+using Team4_LegendOfZelda.IEnemy_Classses.Bosses;
+using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies;
 
-namespace Team4_LegendOfZelda.ILevel_Classes
+namespace Team4_LegendOfZelda.ILevel_Classes.Levels
 {
-    public class Sprint2Level : ILevel
+    class Sprint2Level : ILevel
     {
-        public List<IBlock> BlockList { get; set; }
-        public List<IEnemy> EnemyList { get; set; }
-        public List<IItem> ItemList { get; set; }
-        public List<IProjectile> PlayerProjectileList { get; set; }
-        public List<IProjectile> EnemyProjectileList { get; set; }
+        public ISprite Map { get; set; }
+        public IHUD HUD { get; set; }
+        public IPlayer Player { get; set; }
+        public List<IRoom> Rooms { get; set; }
+        public IRoom CurrentRoom { get; set; }
 
-        private ISprite background;
-        private IItem currentItem;
-        private IEnemy currentEnemy;
-        private Texture2D backgroundtexture;
-        int itemIndex;
-        int enemyIndex;
-
-        public Sprint2Level()
+        public Sprint2Level(IPlayer player)
         {
-            itemIndex = 0;
-            enemyIndex = 0;
+            Map = MapSpriteFactory.Instance.CreateSprint2MapSprite();
+            Player = player;
+            Rooms = new List<IRoom>();
         }
 
-        public void Initialize(ContentManager content)
+        public void Initialize()
         {
-            backgroundtexture = content.Load<Texture2D>("MapSprites/emptyroom");
-            background = new TextureSprite(backgroundtexture);
+            CurrentRoom = new Sprint2Room();
 
             Vector2 itemStartLocation = new Vector2(400, 150);
-            Vector2 enemyStartLocation = new Vector2(300, 240);
+            Vector2 enemyStartLocation = new Vector2(140, 140);
 
-            ItemList = new List<IItem>
+            List<IItem> items = new List<IItem>
             {
                 new BlueCandle(itemStartLocation),
                 new BlueRing(itemStartLocation),
@@ -72,94 +64,68 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                 new Triforce(itemStartLocation),
                 new WhiteSword(itemStartLocation)
             };
-
-            EnemyList = new List<IEnemy>
+            
+            List<IEnemy> enemies = new List<IEnemy>
             {
-                new Dodongo(this, enemyStartLocation),
-
+                new AquamentusWest(CurrentRoom, enemyStartLocation),
+                new Dodongo(CurrentRoom, enemyStartLocation),
+                new BladeTrap(CurrentRoom, enemyStartLocation),
+                new GelDarkBlue(CurrentRoom, enemyStartLocation),
+                new GoriyaRed(CurrentRoom, enemyStartLocation),
+                new GoriyaBlue(CurrentRoom, enemyStartLocation),
+                new KeeseBlue(CurrentRoom, enemyStartLocation),
+                new KeeseRed(CurrentRoom, enemyStartLocation),
+                new Rope(CurrentRoom, enemyStartLocation),
+                new Stalfos(CurrentRoom, enemyStartLocation),
+                new WallMaster(CurrentRoom, enemyStartLocation),
+                new WallMasterUpsideDown(CurrentRoom, enemyStartLocation),
+                new ZolDarkGreen(CurrentRoom, enemyStartLocation)
             };
-            BlockList = new List<IBlock>{
+            
+            List <IBlock> BlockList = new List<IBlock>{
                 new Block(new Rectangle(0, 0, 93, 525)),
                 new Block(new Rectangle(0, 0, 765, 93)),
                 new Block(new Rectangle(0, 432, 765, 93)),
                 new Block(new Rectangle(672, 0, 93, 525))
-
             };
 
-            currentItem = ItemList[itemIndex];
-            currentEnemy = EnemyList[enemyIndex];
-
-            PlayerProjectileList = new List<IProjectile>();
-            EnemyProjectileList = new List<IProjectile>();
-
-
+            CurrentRoom.Initialize(Player, enemies, items);
         }
 
-        public void NextItem()
+        public void North()
         {
-            itemIndex = (itemIndex + 1) % ItemList.Count;
-            currentItem = ItemList[itemIndex];
+            // Do nothing
         }
 
-        public void PreviousItem()
+        public void East()
         {
-            itemIndex = (itemIndex - 1) % ItemList.Count;
-            if (itemIndex == -1)
-            {
-                itemIndex = ItemList.Count - 1;
-            }
-            currentItem = ItemList[itemIndex];
+            // Do nothing
         }
 
-        public void NextEnemy()
+        public void South()
         {
-            enemyIndex = (enemyIndex + 1) % EnemyList.Count;
-            currentEnemy = EnemyList[enemyIndex];
+            // Do nothing
         }
 
-        public void PreviousEnemy()
+        public void West()
         {
-            enemyIndex = (enemyIndex - 1) % EnemyList.Count;
-            if (enemyIndex == -1)
-            {
-                enemyIndex = EnemyList.Count - 1;
-            }
-            currentEnemy = EnemyList[enemyIndex];
+            // Do nothing
+        }
+
+        public void Other()
+        {
+            // Do nothing
         }
 
         public void Update()
         {
-            if (EnemyProjectileList.Count == 0)
-            {
-                EnemyProjectileList.Add(new FireballProjectile(new Vector2(600, 94), 180));
-            }
-            currentEnemy.Update();
-            currentItem.Update();
-            foreach (IProjectile projectile in PlayerProjectileList)
-            {
-                projectile.Update();
-            }
-            foreach (IProjectile projectile in EnemyProjectileList)
-            {
-                projectile.Update();
-            }
-
+            CurrentRoom.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            background.Draw(spriteBatch, new Rectangle(0, 0, 768, 528));
-            currentEnemy.Draw(spriteBatch);
-            currentItem.Draw(spriteBatch);
-            foreach (IProjectile projectile in PlayerProjectileList)
-            {
-                projectile.Draw(spriteBatch);
-            }
-            foreach (IProjectile projectile in EnemyProjectileList)
-            {
-                projectile.Draw(spriteBatch);
-            }
+            Map.Draw(spriteBatch, new Rectangle(0, 144, 768, 528));
+            CurrentRoom.Draw(spriteBatch);
         }
-
     }
 }

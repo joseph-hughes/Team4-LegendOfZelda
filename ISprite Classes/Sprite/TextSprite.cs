@@ -5,14 +5,15 @@ namespace Team4_LegendOfZelda.ISprite_Classes
 {
     class TextSprite : ISprite
     {
-        private SpriteFont Font { get; set; }
-        private string Text { get; set; }
+        public Rectangle SourceRectangle { get; set; }
+        private SpriteFont font;
+        private string text;
 
         // Constructor
         public TextSprite(SpriteFont font, string text)
         {
-            Font = font;
-            Text = text;
+            this.font = font;
+            this.text = text;
         }
 
         public void Update()
@@ -23,7 +24,7 @@ namespace Team4_LegendOfZelda.ISprite_Classes
         public void Draw(SpriteBatch spriteBatch, Rectangle destinationRectangle)
         {
             spriteBatch.Begin();
-            spriteBatch.DrawString(Font, Text, new Vector2(destinationRectangle.X, destinationRectangle.Y), Color.Black);
+            spriteBatch.DrawString(font, text, new Vector2(destinationRectangle.X, destinationRectangle.Y), Color.Black);
             spriteBatch.End();
         }
     }
