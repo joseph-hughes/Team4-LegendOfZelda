@@ -1,11 +1,5 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
-using Team4_LegendOfZelda.IEnemy_Classses.Bosses;
-using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies;
-using Team4_LegendOfZelda.ISprite_Classes;
-using Team4_LegendOfZelda.Item_Classes;
 
 namespace Team4_LegendOfZelda.ILevel_Classes
 {
@@ -20,82 +14,29 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         public IRoom South { get; set; }
         public IRoom West { get; set; }
         public IRoom Other { get; set; }
-
-        private ISprite background;
         private IItem currentItem;
         private IEnemy currentEnemy;
-        private Texture2D backgroundtexture;
         int itemIndex;
         int enemyIndex;
 
-        public Sprint2Room(ContentManager content)
+        public Sprint2Room()
         {
             itemIndex = 0;
             enemyIndex = 0;
 
-            Vector2 itemStartLocation = new Vector2(400, 150);
-            backgroundtexture = content.Load<Texture2D>("MapSprites/emptyroom");
-
-            Items = new List<IItem>
-            {
-                new BlueCandle(itemStartLocation),
-                new BlueRing(itemStartLocation),
-                new Bomb(itemStartLocation),
-                new BookOfMagic(itemStartLocation),
-                new Bow(itemStartLocation),
-                new Clock(itemStartLocation),
-                new Compass(itemStartLocation),
-                new EmptyItem(itemStartLocation),
-                new Fairy(itemStartLocation),
-                new FiveRupies(itemStartLocation),
-                new Food(itemStartLocation),
-                new Heart(itemStartLocation),
-                new HeartContainer(itemStartLocation),
-                new Key(itemStartLocation),
-                new Letter(itemStartLocation),
-                new LifePotion(itemStartLocation),
-                new MagicalKey(itemStartLocation),
-                new MagicalRod(itemStartLocation),
-                new MagicalShield(itemStartLocation),
-                new Map(itemStartLocation),
-                new PowerBracelet(itemStartLocation),
-                new Raft(itemStartLocation),
-                new Recorder(itemStartLocation),
-                new RedCandle(itemStartLocation),
-                new RedRing(itemStartLocation),
-                new Rupy(itemStartLocation),
-                new SecondPotion(itemStartLocation),
-                new SilverArrow(itemStartLocation),
-                new Stepladder(itemStartLocation),
-                new Sword(itemStartLocation),
-                new Triforce(itemStartLocation),
-                new WhiteSword(itemStartLocation)
-            };
-            currentItem = Items[itemIndex];
-
-            Vector2 enemyStartLocation = new Vector2(140, 140);
-            Enemies = new List<IEnemy>
-            {
-                new AquamentusWest(this, enemyStartLocation),
-                new Dodongo(this, enemyStartLocation),
-                new BladeTrap(this, enemyStartLocation),
-                new GelDarkBlue(this, enemyStartLocation),
-                new GoriyaRed(this, enemyStartLocation),
-                new GoriyaBlue(this, enemyStartLocation),
-                new KeeseBlue(this, enemyStartLocation),
-                new KeeseRed(this, enemyStartLocation),
-                new Rope(this, enemyStartLocation),
-                new Stalfos(this, enemyStartLocation),
-                new WallMaster(this, enemyStartLocation),
-                new WallMasterUpsideDown(this, enemyStartLocation),
-                new ZolDarkGreen(this, enemyStartLocation)
-
-            };
-            currentEnemy = Enemies[enemyIndex];
-
+            Enemies = new List<IEnemy>();
+            Items = new List<IItem>();
             Projectiles = new List<IProjectile>();
+        }
 
-            background = new TextureSprite(backgroundtexture);
+        public void Initialize(IPlayer player, List<IEnemy> enemies, List<IItem> items)
+        {
+            Player = player;
+            Enemies.AddRange(enemies);
+            Items.AddRange(items);
+
+            currentItem = Items[itemIndex];
+            currentEnemy = Enemies[enemyIndex];
         }
 
         public void NextItem()
@@ -142,7 +83,6 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            background.Draw(spriteBatch, new Rectangle(0, 0, 768, 528));
             currentEnemy.Draw(spriteBatch);
             currentItem.Draw(spriteBatch);
             foreach (IProjectile projectile in Projectiles)
