@@ -14,6 +14,7 @@
         IRoom West { get; set; }
         IRoom Other { get; set; }
 
+        void Initialize(IPlayer player, System.Collections.Generic.List<IEnemy> enemies, System.Collections.Generic.List<IItem> items);
         void Update();
         void Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch spriteBatch);
     }
