@@ -9,9 +9,9 @@ namespace Team4_LegendOfZelda.ILevel_Classes
     class DungeonRoom : IRoom
     {
         public IPlayer Player { get; set; }
-        System.Collections.Generic.List<IEnemy> Enemies { get; set; }
-        System.Collections.Generic.List<IItem> Items { get; set; }
-        System.Collections.Generic.List<IProjectile> Projectiles { get; set; }
+        public List<IEnemy> Enemies { get; set; }
+        public List<IItem> Items { get; set; }
+        public List<IProjectile> Projectiles { get; set; }
         //List<IBlock> Blocks { get; set; }
         //List<IBoundary> Boundaries { get; set; }
         public IRoom North { get; set; }
