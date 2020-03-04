@@ -27,7 +27,7 @@ namespace Team4_LegendOfZelda
             graphics = new GraphicsDeviceManager(this)
             {
                 PreferredBackBufferWidth = 768,
-                PreferredBackBufferHeight = 528
+                PreferredBackBufferHeight = 528+144
             };
             Content.RootDirectory = "Content";
             IsMouseVisible = false;
@@ -37,7 +37,8 @@ namespace Team4_LegendOfZelda
                 EnemySpriteFactory.Instance,
                 NPCSpriteFactory.Instance,
                 ItemSpriteFactory.Instance,
-                ProjectileSpriteFactory.Instance
+                ProjectileSpriteFactory.Instance,
+                MapSpriteFactory.Instance
             };
         }
 
@@ -51,8 +52,8 @@ namespace Team4_LegendOfZelda
         {
             base.Initialize();
 
-            level = new Sprint2Level();
-            level.Initialize(Content, player);
+            level = new Sprint2Level(player);
+            level.Initialize();
 
             player = new Link(new Vector2(30, 100));
 
