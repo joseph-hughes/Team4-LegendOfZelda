@@ -10,6 +10,7 @@ namespace Team4_LegendOfZelda
         Vector2 Position { get; set; }
         Rectangle Rectangle { get; set; }
         float Scale { get; set; }
+
         void North();
         void East();
         void South();
