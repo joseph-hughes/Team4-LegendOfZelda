@@ -126,8 +126,9 @@ namespace Team4_LegendOfZelda
             keyboard.RegisterCommand(Keys.D2, commandList[14]);
             keyboard.RegisterCommand(Keys.D3, commandList[15]);
             keyboard.RegisterCommand(Keys.D4, commandList[16]);
-            Window.Title = "Sprint2 - Team 4";
-            backgroundColor = Color.SteelBlue;
+
+            Window.Title = "Sprint 3 - Team 4";
+            backgroundColor = Color.Black;
         }
 
         /// <summary>
