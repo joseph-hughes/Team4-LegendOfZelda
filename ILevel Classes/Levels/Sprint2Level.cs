@@ -22,7 +22,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
             Rooms = new List<IRoom>();
         }
 
-        public void Initialize()
+        public void Initialize(int windowWidth, int roomHeight, int hudHeight)
         {
             CurrentRoom = new Sprint2Room();
 

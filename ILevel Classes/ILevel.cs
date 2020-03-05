@@ -12,7 +12,7 @@ namespace Team4_LegendOfZelda
         System.Collections.Generic.List<IRoom> Rooms { get; set; }
         IRoom CurrentRoom { get; set; }
 
-        void Initialize();
+        void Initialize(int windowWidth, int roomHeight, int hudHeight);
         void North();
         void East();
         void South();

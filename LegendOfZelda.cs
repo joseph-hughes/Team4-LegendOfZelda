@@ -24,13 +24,14 @@ namespace Team4_LegendOfZelda
         private Sprint2Level level;
         private IPlayer player;
         private IDector dector;
+        private static int WINDOW_WIDTH = 768, ROOM_HEIGHT = 528, HUD_HEIGHT = 168;
 
         public LegendOfZelda()
         {
             graphics = new GraphicsDeviceManager(this)
             {
-                PreferredBackBufferWidth = 768,
-                PreferredBackBufferHeight = 528+144
+                PreferredBackBufferWidth = WINDOW_WIDTH,
+                PreferredBackBufferHeight = ROOM_HEIGHT + HUD_HEIGHT
             };
             Content.RootDirectory = "Content";
             IsMouseVisible = false;
@@ -56,7 +57,7 @@ namespace Team4_LegendOfZelda
             base.Initialize();
 
             level = new Sprint2Level(player);
-            level.Initialize();
+            level.Initialize(WINDOW_WIDTH, ROOM_HEIGHT, HUD_HEIGHT);
 
             player = new Link(new Vector2(96, 240));
 
