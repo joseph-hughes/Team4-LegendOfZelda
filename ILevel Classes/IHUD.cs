@@ -2,9 +2,10 @@
 {
     public interface IHUD
     {
+        ILevel Level { get; set; }
         Microsoft.Xna.Framework.Rectangle DestinationRectangle { get; set; }
         ISprite HUDSprite { get; set; }
-        ILevel Level { get; set; }
+        ISprite LevelNumSprite { get; set; }
 
         void Initialize(int hudXPosition, int hudYPosition, int hudWidth, int hudHeight);
         void Update();

@@ -8,10 +8,20 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         public Rectangle DestinationRectangle { get; set; }
         public ISprite MapSprite { get; set; }
 
-        public Map()
+        public Map(int levelNum)
         {
-            // FIX
-            MapSprite = MapAndHUDSpriteFactory.Instance.CreateEmptyRoomSprite();
+            switch (levelNum)
+            {
+                case 0:
+                    // Overworld
+                    break;
+                case 1:
+                    MapSprite = MapAndHUDSpriteFactory.Instance.CreateLevel1MapSprite();
+                    break;
+                default:
+                    MapSprite = MapAndHUDSpriteFactory.Instance.CreateEmptyRoomSprite();
+                    break;
+            }
         }
 
         public void Initialize(int mapXPosition, int mapYPosition, int mapWidth, int mapHeight)

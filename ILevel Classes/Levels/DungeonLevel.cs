@@ -11,10 +11,10 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
         public List<IRoom> Rooms { get; set; }
         public IRoom CurrentRoom { get; set; }
 
-        public DungeonLevel(IPlayer player)
+        public DungeonLevel(IPlayer player, int levelNum)
         {
-            Map = new Map();
-            HUD = new DungeonHUD(this);
+            Map = new Map(levelNum);
+            HUD = new DungeonHUD(this, levelNum);
             Player = player;
             Rooms = new List<IRoom>();
         }
