@@ -40,7 +40,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
                 new Block(new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 765, 93)),
                 new Block(new Microsoft.Xna.Framework.Rectangle(0, 432+hudHeight, 765, 93)),
                 new Block(new Microsoft.Xna.Framework.Rectangle(672, hudHeight, 93, 525))
-            };
+                };
             }
         }
 
