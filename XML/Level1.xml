@@ -313,7 +313,7 @@
     </Enemies>
     <Items total="1">
       <Item>
-        <ObjectType>Map</ObjectType>
+        <ObjectType>MapItem</ObjectType>
         <ColumnNum>11</ColumnNum>
         <RowNum>4</RowNum>
       </Item>

@@ -1,4 +1,9 @@
 ﻿using System.Xml;
+using System.Collections.Generic;
+using Team4_LegendOfZelda.Item_Classes;
+using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.IEnemy_Classses.Bosses;
+using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies;
 
 namespace Team4_LegendOfZelda.ILevel_Classes
 {
@@ -158,8 +163,8 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                             case "MagicalShield":
                                 room.Items.Add(new MagicalShield(position));
                                 break;
-                            case "Map":
-                                room.Items.Add(new Map(position));
+                            case "MapItem":
+                                room.Items.Add(new MapItem(position));
                                 break;
                             case "PowerBracelet":
                                 room.Items.Add(new PowerBracelet(position));

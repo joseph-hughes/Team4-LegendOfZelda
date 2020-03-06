@@ -34,8 +34,8 @@ namespace Team4_LegendOfZelda
             Scale = 3f;
             State = new LinkNonMovingSouthState(this);
             LinkRectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(Scale * linkWidth), (int)(Scale * linkHeight));
-            CurrentHitPoints = 25;
-            MaxHitPoints = 31;
+            CurrentHitPoints = 6;
+            MaxHitPoints = 6;
         }
 
         public void North()
