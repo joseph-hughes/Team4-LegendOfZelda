@@ -34,7 +34,7 @@ namespace Team4_LegendOfZelda
                 PreferredBackBufferHeight = ROOM_HEIGHT + HUD_HEIGHT
             };
             Content.RootDirectory = "Content";
-            IsMouseVisible = false;
+            IsMouseVisible = true;
             spriteFactories = new List<ISpriteFactory>
             {
                 PlayerSpriteFactory.Instance,
@@ -173,10 +173,6 @@ namespace Team4_LegendOfZelda
 
             level.Update();
             player.Update();
-
-
-
-
 
             base.Update(gameTime);
         }
