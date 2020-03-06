@@ -1,22 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Rooms>
+<Rooms total="18">
   <Room number="1">
-    <Enemies>
+    <Enemies number="0">
       <Enemy>
-        <ObjectType>Dadongo</ObjectType>
-        <LocationX>200</LocationX>
-        <LocationY>200</LocationY>
       </Enemy>
     </Enemies>
-    <Items>
+    <Items number="0">
       <Item>
-        <ObjectType>Dadongo</ObjectType>
-        <LocationX>200</LocationX>
-        <LocationY>200</LocationY>
       </Item>
     </Items>
     <North>
-      <neighborRoom></neighborRoom>
+      <neighborRoom>4</neighborRoom>
     </North>
     <East>
       <neighborRoom>2</neighborRoom>
@@ -25,25 +19,30 @@
       <neighborRoom></neighborRoom>
     </South>
     <West>
-      <neighborRoom></neighborRoom>
+      <neighborRoom>3</neighborRoom>
     </West>
     <Other>
       <neighborRoom></neighborRoom>
     </Other>
   </Room>
   <Room number="2">
-    <Enemies>
+    <Enemies number ="2">
       <Enemy>
-        <ObjectType>Dadongo</ObjectType>
-        <LocationX>200</LocationX>
-        <LocationY>200</LocationY>
+        <ObjectType>Keese</ObjectType>
+        <LocationX>1</LocationX>
+        <LocationY>4</LocationY>
+      </Enemy>
+      <Enemy>
+        <ObjectType>Keese</ObjectType>
+        <LocationX>2</LocationX>
+        <LocationY>2</LocationY>
       </Enemy>
     </Enemies>
     <Items>
-      <Item>
-        <ObjectType>Dadongo</ObjectType>
-        <LocationX>200</LocationX>
-        <LocationY>200</LocationY>
+      <Item number ="1">
+        <ObjectType>Key</ObjectType>
+        <LocationX>9</LocationX>
+        <LocationY>7</LocationY>
       </Item>
     </Items>
     <North>
@@ -53,7 +52,7 @@
       <neighborRoom></neighborRoom>
     </East>
     <South>
-      <neighborRoom>3</neighborRoom>
+      <neighborRoom></neighborRoom>
     </South>
     <West>
       <neighborRoom>1</neighborRoom>
@@ -63,28 +62,48 @@
     </Other>
   </Room>
   <Room number="3">
-    <Enemies>
+    <Enemies number="5">
       <Enemy>
-        <ObjectType>Dadongo</ObjectType>
-        <LocationX>200</LocationX>
-        <LocationY>200</LocationY>
+        <ObjectType>Stalfos</ObjectType>
+        <LocationX>4</LocationX>
+        <LocationY>1</LocationY>
+      </Enemy>
+      <Enemy>
+        <ObjectType>Stalfos</ObjectType>
+        <LocationX>4</LocationX>
+        <LocationY>7</LocationY>
+      </Enemy>
+      <Enemy>
+        <ObjectType>Stalfos</ObjectType>
+        <LocationX>7</LocationX>
+        <LocationY>3</LocationY>
+      </Enemy>
+      <Enemy>
+        <ObjectType>Stalfos</ObjectType>
+        <LocationX>7</LocationX>
+        <LocationY>5</LocationY>
+      </Enemy>
+      <Enemy>
+        <ObjectType>Stalfos</ObjectType>
+        <LocationX>11</LocationX>
+        <LocationY>2</LocationY>
       </Enemy>
     </Enemies>
     <Items>
       <Item>
-        <ObjectType>Dadongo</ObjectType>
-        <LocationX>200</LocationX>
-        <LocationY>200</LocationY>
+        <ObjectType>Key</ObjectType>
+        <LocationX>4</LocationX>
+        <LocationY>1</LocationY>
       </Item>
     </Items>
     <North>
-      <neighborRoom>2</neighborRoom>
+      <neighborRoom></neighborRoom>
     </North>
     <East>
-      <neighborRoom></neighborRoom>
+      <neighborRoom>1</neighborRoom>
     </East>
     <South>
-      <neighborRoom>9</neighborRoom>
+      <neighborRoom></neighborRoom>
     </South>
     <West>
       <neighborRoom></neighborRoom>
