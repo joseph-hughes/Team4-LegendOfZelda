@@ -5,7 +5,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
 {
     class DungeonLevel : ILevel
     {
-        public IMap Map { get; set; }
+        public ISprite Map { get; set; }
         public IHUD HUD { get; set; }
         public IPlayer Player { get; set; }
         public List<IRoom> Rooms { get; set; }

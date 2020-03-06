@@ -8,22 +8,25 @@ namespace Team4_LegendOfZelda
     {
         private Texture2D hudTexture;
         private Texture2D emptyRoomTexture;
-        //private Texture2D number0Texture;
-        //private Texture2D number1Texture;
-        //private Texture2D number2Texture;
-        //private Texture2D number3Texture;
-        //private Texture2D number4Texture;
-        //private Texture2D number5Texture;
-        //private Texture2D number6Texture;
-        //private Texture2D number7Texture;
-        //private Texture2D number8Texture;
-        //private Texture2D number9Texture;
-        //private Texture2D emptyHeartTexture;
-        //private Texture2D halfHeartTexture;
-        //private Texture2D fullHeartTexture;
+        private Texture2D number0Texture;
+        private Texture2D number1Texture;
+        private Texture2D number2Texture;
+        private Texture2D number3Texture;
+        private Texture2D number4Texture;
+        private Texture2D number5Texture;
+        private Texture2D number6Texture;
+        private Texture2D number7Texture;
+        private Texture2D number8Texture;
+        private Texture2D number9Texture;
+        private Texture2D emptyHeartTexture;
+        private Texture2D halfHeartTexture;
+        private Texture2D fullHeartTexture;
 
         private Texture2D level1MapTexture;
-        //private Texture2D level1MinimapTexture;
+        private Texture2D level1MinimapTexture;
+
+        private Texture2D miniMapRedDotTexture;
+        private Texture2D miniMapGreenDotTexture;
 
         private static MapAndHUDSpriteFactory instance = new MapAndHUDSpriteFactory();
 
@@ -43,10 +46,28 @@ namespace Team4_LegendOfZelda
         {
             emptyRoomTexture = content.Load<Texture2D>("MapSprites/emptyroom");
             hudTexture = content.Load<Texture2D>("MapSprites/");
-            //number0Texture = content.Load<Texture2D>("MapSprites/");
+
+            number0Texture = content.Load<Texture2D>("MapSprites/0");
+            number1Texture = content.Load<Texture2D>("MapSprites/1");
+            number2Texture = content.Load<Texture2D>("MapSprites/2");
+            number3Texture = content.Load<Texture2D>("MapSprites/3");
+            number4Texture = content.Load<Texture2D>("MapSprites/4");
+            number5Texture = content.Load<Texture2D>("MapSprites/5");
+            number6Texture = content.Load<Texture2D>("MapSprites/6");
+            number7Texture = content.Load<Texture2D>("MapSprites/7");
+            number8Texture = content.Load<Texture2D>("MapSprites/8");
+            number9Texture = content.Load<Texture2D>("MapSprites/9");
+
+            emptyHeartTexture = content.Load<Texture2D>("MapSprites/emptyHeart");
+            halfHeartTexture = content.Load<Texture2D>("MapSprites/halfHeart");
+            fullHeartTexture = content.Load<Texture2D>("MapSprites/fullHeart");
+
 
             level1MapTexture = content.Load<Texture2D>("MapSprites/fullmap");
-            //level1MinimapTexture = content.Load<Texture2D>("MapSprites/");
+            level1MinimapTexture = content.Load<Texture2D>("MapSprites/level1_minimap");
+            miniMapRedDotTexture = content.Load<Texture2D>("MapSprites/minimapReddot");
+            miniMapGreenDotTexture = content.Load<Texture2D>("MapSprites/minimapGreendot");
+
         }
 
         public ISprite CreateEmptyRoomSprite()
@@ -60,9 +81,9 @@ namespace Team4_LegendOfZelda
             return new TextureSprite(level1MapTexture);
         }
 
-        //public ISprite CreateLevel1MinimapSprite()
-        //{
-        //    return new TextureSprite(level1MinimapTexture);
-        //}
+        public ISprite CreateLevel1MinimapSprite()
+        {
+            return new TextureSprite(level1MinimapTexture);
+        }
     }
 }
