@@ -1,4 +1,6 @@
-﻿namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
+﻿using Microsoft.Xna.Framework;
+
+namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
 {
     class DodongoNorthWalkingState : IState
     {
@@ -54,11 +56,11 @@
         {
             if (enemy.Position.Y > 1)
             {
-                enemy.Position = new Microsoft.Xna.Framework.Vector2(enemy.Position.X, ((int)enemy.Position.Y - 1));
+                enemy.Position = new Rectangle(enemy.Position.X, ((int)enemy.Position.Y - 1), enemy.Position.Width, enemy.Position.Height);
             }
             else
             {
-                enemy.Position = new Microsoft.Xna.Framework.Vector2(enemy.Position.X, 568 - (int)enemy.Position.Y);
+                enemy.Position = new Rectangle(enemy.Position.X, 568 - (int)enemy.Position.Y, enemy.Position.Width, enemy.Position.Height);
             }
         }
     }

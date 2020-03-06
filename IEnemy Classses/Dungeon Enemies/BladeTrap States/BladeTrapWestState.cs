@@ -60,11 +60,11 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
             {
                 if (enemy.Position.X > DELTA_DISPLACEMENT)
                 {
-                    enemy.Position = new Vector2((int)enemy.Position.X - DELTA_DISPLACEMENT, enemy.Position.Y);
+                    enemy.Position = new Rectangle((int)enemy.Position.X - DELTA_DISPLACEMENT, enemy.Position.Y, enemy.Position.Width, enemy.Position.Height);
                 }
                 else
                 {
-                    enemy.Position = new Vector2(768 - (int)enemy.Position.X - DELTA_DISPLACEMENT, enemy.Position.Y);
+                    enemy.Position = new Rectangle(768 - (int)enemy.Position.X - DELTA_DISPLACEMENT, enemy.Position.Y, enemy.Position.Width, enemy.Position.Height);
                 }
                 displacement -= DELTA_DISPLACEMENT;
             }

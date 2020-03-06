@@ -10,16 +10,16 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public ILevel Level { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
-        public Vector2 Position { get; set; }
+        public Rectangle Position { get; set; }
         private IController controller;
 
-        public ZolDarkGreen(ILevel level, Vector2 position)
+        public ZolDarkGreen(ILevel level, Rectangle position)
         {
             Level = level;
             Sprite = EnemySpriteFactory.Instance.CreateZolDarkGreenSprite();
             State = new ZolDarkGreenIdleState(this);
             Position = position;
-            controller = new ZolDarkGreenController(this);
+            controller = new MovingEnemyController(this, 60);
         }
 
         public void North()
@@ -71,7 +71,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, Position);
+            Sprite.Draw(spriteBatch, new Vector2(Position.X, Position.Y));
         }
     }
 }

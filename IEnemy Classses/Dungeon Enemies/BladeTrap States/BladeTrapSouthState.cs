@@ -58,7 +58,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
         {
             if (displacement > 0)
             {
-                enemy.Position = new Vector2(enemy.Position.X, ((int)enemy.Position.Y + DELTA_DISPLACEMENT) % 528);
+                enemy.Position = new Rectangle(enemy.Position.X, ((int)enemy.Position.Y + DELTA_DISPLACEMENT) % 528, enemy.Position.Width, enemy.Position.Height);
                 displacement -= DELTA_DISPLACEMENT;
             }
             else

@@ -2,18 +2,19 @@
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
-    public class RopeController : IController
+    public class MovingEnemyController : IController
     {
         private IEnemy enemy;
-        private static int MAX_DIRECTION_COUNTS = 240;
+        private int MAX_DIRECTION_COUNTS;
         private int directionCount;
         private Random rand;
 
-        public RopeController(IEnemy enemy)
+        public MovingEnemyController(IEnemy enemy, int max_direction_counts)
         {
             this.enemy = enemy;
+            this.MAX_DIRECTION_COUNTS = max_direction_counts;
             rand = new Random();
-            directionCount = MAX_DIRECTION_COUNTS;
+            directionCount = this.MAX_DIRECTION_COUNTS;
         }
 
         public void Update()
@@ -39,7 +40,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
                         // Do nothing, this is not supposed to happen
                         break;
                 }
-                directionCount = MAX_DIRECTION_COUNTS;
+                directionCount = this.MAX_DIRECTION_COUNTS;
             }
         }
     }

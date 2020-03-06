@@ -61,11 +61,11 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseRed_States
             {
                 if (enemy.Position.Y > DELTA_DISPLACEMENT)
                 {
-                    enemy.Position = new Vector2(enemy.Position.X, (int)enemy.Position.Y - DELTA_DISPLACEMENT);
+                    enemy.Position = new Rectangle(enemy.Position.X, (int)enemy.Position.Y - DELTA_DISPLACEMENT, enemy.Position.Width, enemy.Position.Height);
                 }
                 else
                 {
-                    enemy.Position = new Vector2(enemy.Position.X, 528 - (int)enemy.Position.Y - DELTA_DISPLACEMENT);
+                    enemy.Position = new Rectangle(enemy.Position.X, 528 - (int)enemy.Position.Y - DELTA_DISPLACEMENT, enemy.Position.Width, enemy.Position.Height);
                 }
                 displacement -= DELTA_DISPLACEMENT;
             }
