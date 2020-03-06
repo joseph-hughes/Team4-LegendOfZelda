@@ -10,6 +10,8 @@ namespace Team4_LegendOfZelda
         Vector2 Position { get; set; }
         Rectangle LinkRectangle { get; set; }
         Rectangle LinkSwordRectangle { get; set; }
+        int CurrentHitPoints { get; set; }
+        int MaxHitPoints { get; set; }
         float Scale { get; set; }
         Vector2 itemPosition { get; set; }
         int Direction { get; set; }
