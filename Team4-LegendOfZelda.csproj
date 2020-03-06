@@ -63,13 +63,15 @@
     <Compile Include="ILevel Classes\DungeonHUD.cs" />
     <Compile Include="ILevel Classes\DungeonRoom.cs" />
     <Compile Include="ILevel Classes\IHUD.cs" />
+    <Compile Include="ILevel Classes\IMap.cs" />
     <Compile Include="ILevel Classes\LevelLoader.cs" />
     <Compile Include="ILevel Classes\IFileLoader.cs" />
     <Compile Include="ILevel Classes\IRoom.cs" />
-    <Compile Include="ILevel Classes\Levels\Level1.cs" />
+    <Compile Include="ILevel Classes\Levels\DungeonLevel.cs" />
     <Compile Include="ILevel Classes\Levels\Sprint2Level.cs" />
     <Compile Include="ILevel Classes\Levels\Block.cs" />
     <Compile Include="ILevel Classes\IBlock.cs" />
+    <Compile Include="ILevel Classes\Map.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackEastState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackNorthState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackSouthState.cs" />
@@ -112,7 +114,7 @@
     <Compile Include="IProjectile Classes\IProjectile.cs" />
     <Compile Include="ISprite Classes\Sprite\MapSprite.cs" />
     <Compile Include="ISprite Classes\Sprite\TextSprite.cs" />
-    <Compile Include="ISpriteFactory Classes\SpriteFactories\MapSpriteFactory.cs" />
+    <Compile Include="ISpriteFactory Classes\SpriteFactories\MapAndHUDSpriteFactory.cs" />
     <Compile Include="ISpriteFactory Classes\SpriteFactories\NPCSpriteFactory.cs" />
     <Compile Include="IEnemy Classses\Bosses\Dodongo States\DodongoWestDamagedState.cs" />
     <Compile Include="IEnemy Classses\Bosses\Dodongo States\DodongoSouthDamagedState.cs" />
@@ -558,7 +560,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\DesktopGL\AnyCPU\Release\" />
-    <Folder Include="ICollider Classes\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,12 +1,11 @@
 ﻿namespace Team4_LegendOfZelda.ILevel_Classes
 {
-    public interface IHUD
+    public interface IMap
     {
         Microsoft.Xna.Framework.Rectangle DestinationRectangle { get; set; }
-        ISprite HUDSprite { get; set; }
-        ILevel Level { get; set; }
+        ISprite MapSprite { get; set; }
 
-        void Initialize(int hudXPosition, int hudYPosition, int hudWidth, int hudHeight);
+        void Initialize(int mapXPosition, int mapYPosition, int mapWidth, int mapHeight);
         void Update();
         void Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch spriteBatch);
     }
