@@ -53,7 +53,7 @@ namespace Team4_LegendOfZelda
         {
             base.Initialize();
 
-            player = new Link(new Vector2(96, 240));
+            player = new Link(new Vector2(96, 260));
 
             level = new DungeonLevel(player, 1);
             level.Initialize(WINDOW_WIDTH, ROOM_HEIGHT, HUD_HEIGHT);
