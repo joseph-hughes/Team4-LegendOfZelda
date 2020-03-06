@@ -27,9 +27,20 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
             Map.Initialize(0, hudHeight, windowWidth, roomHeight);
             HUD.Initialize(0, 0, windowWidth, hudHeight);
             Rooms = FileLoader.LoadRooms();
+
             if (Rooms.Count > 0)
             {
                 CurrentRoom = Rooms[0];
+            }
+
+            foreach (IRoom room in Rooms)
+            {
+                room.Blocks = new List<IBlock>{
+                new Block(new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 93, 525)),
+                new Block(new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 765, 93)),
+                new Block(new Microsoft.Xna.Framework.Rectangle(0, 432+hudHeight, 765, 93)),
+                new Block(new Microsoft.Xna.Framework.Rectangle(672, hudHeight, 93, 525))
+            };
             }
         }
 
