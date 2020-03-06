@@ -1124,18 +1124,6 @@
 /processorParam:TextureFormat=Color
 /build:MapSprites/0.png
 
-#begin MapSprites/0.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/0.png
-
 #begin MapSprites/1.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1147,30 +1135,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:MapSprites/1.png
-
-#begin MapSprites/1.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/1.png
-
-#begin MapSprites/2.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/2.png
 
 #begin MapSprites/2.png
 /importer:TextureImporter
@@ -1196,18 +1160,6 @@
 /processorParam:TextureFormat=Color
 /build:MapSprites/3.png
 
-#begin MapSprites/3.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/3.png
-
 #begin MapSprites/4.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1219,30 +1171,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:MapSprites/4.png
-
-#begin MapSprites/4.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/4.png
-
-#begin MapSprites/5.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/5.png
 
 #begin MapSprites/5.png
 /importer:TextureImporter
@@ -1268,30 +1196,6 @@
 /processorParam:TextureFormat=Color
 /build:MapSprites/6.png
 
-#begin MapSprites/6.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/6.png
-
-#begin MapSprites/7.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/7.png
-
 #begin MapSprites/7.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1315,30 +1219,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:MapSprites/8.png
-
-#begin MapSprites/8.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/8.png
-
-#begin MapSprites/9.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/9.png
 
 #begin MapSprites/9.png
 /importer:TextureImporter
@@ -1376,30 +1256,6 @@
 /processorParam:TextureFormat=Color
 /build:MapSprites/emptyroom.png
 
-#begin MapSprites/emptyroom.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/emptyroom.png
-
-#begin MapSprites/emptyroom_black_blackground.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/emptyroom_black_blackground.png
-
 #begin MapSprites/emptyroom_black_blackground.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1423,18 +1279,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:MapSprites/fullHeart.png
-
-#begin MapSprites/fullmap.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/fullmap.png
 
 #begin MapSprites/fullmap.png
 /importer:TextureImporter
@@ -1472,30 +1316,6 @@
 /processorParam:TextureFormat=Color
 /build:MapSprites/HUD prototype.png
 
-#begin MapSprites/HUD prototype.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/HUD prototype.png
-
-#begin MapSprites/HUD.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/HUD.png
-
 #begin MapSprites/HUD.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1519,30 +1339,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:MapSprites/level1_minimap.png
-
-#begin MapSprites/level1_minimap.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/level1_minimap.png
-
-#begin MapSprites/minimap_template.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/minimap_template.png
 
 #begin MapSprites/minimap_template.png
 /importer:TextureImporter
@@ -1592,30 +1388,6 @@
 /processorParam:TextureFormat=Color
 /build:MapSprites/river block.png
 
-#begin MapSprites/river block.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/river block.png
-
-#begin MapSprites/single block.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/single block.png
-
 #begin MapSprites/single block.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1639,30 +1411,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:MapSprites/stair block.png
-
-#begin MapSprites/stair block.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/stair block.png
-
-#begin MapSprites/X.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:MapSprites/X.png
 
 #begin MapSprites/X.png
 /importer:TextureImporter
