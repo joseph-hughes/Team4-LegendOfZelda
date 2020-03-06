@@ -56,10 +56,10 @@ namespace Team4_LegendOfZelda
         {
             base.Initialize();
 
+            player = new Link(new Vector2(96, 240));
+
             level = new Sprint2Level(player);
             level.Initialize(WINDOW_WIDTH, ROOM_HEIGHT, HUD_HEIGHT);
-
-            player = new Link(new Vector2(96, 240));
 
             dector = new BoxDector(player);
             dector.Update(level);
