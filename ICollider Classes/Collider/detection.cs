@@ -9,7 +9,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         {
             foreach (IItem currentItem in room.Items)
             {
-                if (player.LinkRectangle.Intersects(currentItem.Rectangle))
+                if (player.DestinationRectangle.Intersects(currentItem.DestinationRectangle))
                 {
                     //triggerList.Add(new PlayerItemTrigger(Player, Item, room));
                 }
@@ -19,7 +19,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         {
             foreach (IEnemy currentEnemy in room.Enemies)
             {
-                if (currentEnemy.Rectangle.Intersects(player.LinkRectangle) || currentEnemy.Rectangle.Intersects(player.LinkSwordRectangle))
+                if (currentEnemy.DestinationRectangle.Intersects(player.DestinationRectangle) || currentEnemy.DestinationRectangle.Intersects(player.LinkSwordRectangle))
                 {
                     triggerList.Add(new PlayerEnemyTrigger(player, currentEnemy, room));
 
@@ -30,7 +30,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         {
             foreach (IBlock currentBlock in room.Blocks)
             {
-                if (player.LinkRectangle.Intersects(currentBlock.Rectangle))
+                if (player.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
                 {
                     triggerList.Add(new PlayerBlockTrigger(player, currentBlock));
                 }
@@ -40,7 +40,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         {
             foreach (IProjectile currentEnemyProjectile in room.EnemyProjectiles)
             {
-                if (currentEnemyProjectile.Rectangle.Intersects(player.LinkRectangle))
+                if (currentEnemyProjectile.DestinationRectangle.Intersects(player.DestinationRectangle))
                 {
                     triggerList.Add(new EnemyProjectilePlayerTrigger(currentEnemyProjectile, player, room));
                 }
@@ -52,7 +52,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 foreach (IEnemy currentEnemy in room.Enemies)
                 {
-                    if (currentPlayerProjectile.Rectangle.Intersects(currentEnemy.Rectangle))
+                    if (currentPlayerProjectile.DestinationRectangle.Intersects(currentEnemy.DestinationRectangle))
                     {
                         triggerList.Add(new PlayerProjectileEnemyTrigger(currentPlayerProjectile, currentEnemy, room));
                     }
@@ -65,7 +65,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 foreach (IBlock currentBlock in room.Blocks)
                 {
-                    if (currentEnemyProjectile.Rectangle.Intersects(currentBlock.Rectangle))
+                    if (currentEnemyProjectile.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
                     {
                         triggerList.Add(new ProjectileBlockTrigger(currentEnemyProjectile, room));
                     }
@@ -75,7 +75,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 foreach (IBlock currentBlock in room.Blocks)
                 {
-                    if (currentPlayerProjectile.Rectangle.Intersects(currentBlock.Rectangle))
+                    if (currentPlayerProjectile.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
                     {
                         triggerList.Add(new ProjectileBlockTrigger(currentPlayerProjectile, room));
                     }
@@ -89,7 +89,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 foreach (IBlock currentBlock in room.Blocks)
                 {
-                    if (currentEnemy.Rectangle.Intersects(currentBlock.Rectangle))
+                    if (currentEnemy.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
                     {
                         triggerList.Add(new EnemyBlockTrigger(currentEnemy, currentBlock));
                     }

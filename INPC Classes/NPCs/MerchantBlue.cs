@@ -10,7 +10,7 @@ namespace Team4_LegendOfZelda.NPC_Classes
         public Vector2 Position { get; set; }
         public float Scale { get; set; }
 
-        public Rectangle Rectangle;
+        public Rectangle DestinationRectangle;
 
         private const int width = 14;
         private const int height = 16;
@@ -21,7 +21,7 @@ namespace Team4_LegendOfZelda.NPC_Classes
             State = new NullState();
             Position = position;
             Scale = 3f;
-            Rectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(width * Scale), (int)(height * Scale));
+            DestinationRectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(width * Scale), (int)(height * Scale));
         }
 
         public void Update()
@@ -31,7 +31,7 @@ namespace Team4_LegendOfZelda.NPC_Classes
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, Rectangle);
+            Sprite.Draw(spriteBatch, DestinationRectangle);
         }
     }
 }

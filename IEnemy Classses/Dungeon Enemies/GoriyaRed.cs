@@ -11,22 +11,23 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public IRoom Room { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
-        public Vector2 Position { get; set; }
-        public Rectangle Rectangle { get; set; }
+        
+        public Rectangle DestinationRectangle { get; set; }
         public float Scale { get; set; }
-        int count, maxCount;
-        Random rand;
+        private IController controller;
+
+
 
         public GoriyaRed(IRoom room, Vector2 position)
         {
             Room = room;
-            Position = position;
+            controller = new GoriyaController(this);
+            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, DestinationRectangle.Width, DestinationRectangle.Height);
+
             Scale = 3f;
             State = new GoriyaRedWestState(this);
 
-            count = 0;
-            maxCount = 10;
-            rand = new Random();
+           
         }
 
         public void North()
@@ -71,43 +72,14 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 
         public void Update()
         {
+            controller.Update();
             State.Update();
             Sprite.Update();
-
-            count++;
-            if (count > maxCount)
-            {
-                switch (rand.Next(0, 6))
-                {
-                    case 0:
-                        State.North();
-                        break;
-                    case 1:
-                        State.East();
-                        break;
-                    case 2:
-                        State.South();
-                        break;
-                    case 3:
-                        State.West();
-                        break;
-                    case 4:
-                        State.Attack();
-                        break;
-                    case 5:
-                        State.BeDamaged();
-                        break;
-                    default:
-                        // Do nothing, this is not supposed to happen
-                        break;
-                }
-                count = 0;
-            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, Rectangle);
+            Sprite.Draw(spriteBatch, DestinationRectangle);
         }
     }
 }

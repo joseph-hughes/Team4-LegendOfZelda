@@ -4,6 +4,6 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 {
     public interface IBlock
     {
-        Rectangle Rectangle { get; set; }
+        Rectangle DestinationRectangle { get; set; }
     }
 }

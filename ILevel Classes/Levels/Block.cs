@@ -4,10 +4,10 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 {
     class Block : IBlock
     {
-        public Rectangle Rectangle { get; set; }
-        public Block(Rectangle Rectangle)
+        public Rectangle DestinationRectangle { get; set; }
+        public Block(Rectangle DestinationRectangle)
         {
-            this.Rectangle = Rectangle;
+            this.DestinationRectangle = DestinationRectangle;
         }
     }
 }

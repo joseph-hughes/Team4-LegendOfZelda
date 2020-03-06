@@ -16,8 +16,8 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         {
             int direction;
 
-            float dx = enemy.Rectangle.X - block.Rectangle.X;
-            float dy = enemy.Rectangle.Y - block.Rectangle.Y;
+            float dx = enemy.DestinationRectangle.X - block.DestinationRectangle.X;
+            float dy = enemy.DestinationRectangle.Y - block.DestinationRectangle.Y;
 
             if (System.Math.Abs(dx) < System.Math.Abs(dy))
             {
