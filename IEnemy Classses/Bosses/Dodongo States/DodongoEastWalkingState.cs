@@ -1,6 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-
-namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
+﻿namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
 {
     class DodongoEastWalkingState : IState
     {
@@ -54,7 +52,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
 
         public void Update()
         {
-            enemy.Position = new Rectangle(((int)enemy.Position.X + 1) % 768, enemy.Position.Y, enemy.Position.Width, enemy.Position.Height);
+            enemy.Position = new Microsoft.Xna.Framework.Vector2(((int)enemy.Position.X + 1) % 768, enemy.Position.Y);
         }
     }
 }

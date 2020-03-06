@@ -59,7 +59,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.ZolDarkGreen_State
             //enemy.Position = new Vector2(enemy.Position.X, ((int)enemy.Position.Y + 10) % 600);
             if (displacement > 0)
             {
-                enemy.Position = new Rectangle(enemy.Position.X, (int)enemy.Position.Y + DELTA_DISPLACEMENT, enemy.Position.Width, enemy.Position.Height);
+                enemy.Position = new Vector2(enemy.Position.X, (int)enemy.Position.Y + DELTA_DISPLACEMENT);
                 displacement -= DELTA_DISPLACEMENT;
             }
             else

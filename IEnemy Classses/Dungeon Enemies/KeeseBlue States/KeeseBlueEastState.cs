@@ -59,7 +59,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseBlue_States
             if (displacement > 0)
             {
                 //enemy.Position = new Vector2(((int)enemy.Position.X + 2) % 800, enemy.Position.Y);
-                enemy.Position = new Rectangle((int)enemy.Position.X + DELTA_DISPLACEMENT, enemy.Position.Y, enemy.Position.Width, enemy.Position.Height);
+                enemy.Position = new Vector2((int)enemy.Position.X + DELTA_DISPLACEMENT, enemy.Position.Y);
                 displacement -= DELTA_DISPLACEMENT;
             }
             else

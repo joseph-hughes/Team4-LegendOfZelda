@@ -8,7 +8,7 @@ namespace Team4_LegendOfZelda
         ILevel Level { get; set; }
         ISprite Sprite { get; set; }
         IState State { get; set; }
-        Rectangle Position { get; set; }
+        Vector2 Position { get; set; }
         void North();
         void East();
         void South();

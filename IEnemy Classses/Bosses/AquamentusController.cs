@@ -25,16 +25,16 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
             switch (direction)
             {
                 case Direction.EAST:
-                    enemy.Position = new Rectangle (((int)enemy.Position.X + 2) % 768, enemy.Position.Y, enemy.Position.Width, enemy.Position.Height);
+                    enemy.Position = new Vector2(((int)enemy.Position.X + 2) % 768, enemy.Position.Y);
                     break;
                 case Direction.WEST:
                     if (enemy.Position.X >= 2)
                     {
-                        enemy.Position = new Rectangle(((int)enemy.Position.X - 2) % 768, enemy.Position.Y, enemy.Position.Width, enemy.Position.Height);
+                        enemy.Position = new Vector2(((int)enemy.Position.X - 2) % 768, enemy.Position.Y);
                     }
                     else
                     {
-                        enemy.Position = new Rectangle(768 - (int)enemy.Position.X, enemy.Position.Y, enemy.Position.Width, enemy.Position.Height);
+                        enemy.Position = new Vector2(768 - (int)enemy.Position.X, enemy.Position.Y);
                     }
                     
                     

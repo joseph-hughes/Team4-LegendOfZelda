@@ -9,10 +9,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public ILevel Level { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
-        public Rectangle Position { get; set; }
+        public Vector2 Position { get; set; }
         private IController controller;
 
-        public BladeTrap(ILevel level, Rectangle position)
+        public BladeTrap(ILevel level, Vector2 position)
         {
             Level = level;
             Sprite = EnemySpriteFactory.Instance.CreateBladeTrapSprite();
@@ -70,7 +70,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, new Vector2(Position.X, Position.Y));
+            Sprite.Draw(spriteBatch, Position);
         }
     }
 }

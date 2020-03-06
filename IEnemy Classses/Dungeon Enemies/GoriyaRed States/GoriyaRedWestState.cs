@@ -1,6 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-
-namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaRed_States
+﻿namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaRed_States
 {
     class GoriyaRedWestState : IState
     {
@@ -54,7 +52,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaRed_States
 
         public void Update()
         {
-            enemy.Position = new Rectangle(((int)enemy.Position.X - 1) % 800, enemy.Position.Y, enemy.Position.Width, enemy.Position.Height);
+            enemy.Position = new Microsoft.Xna.Framework.Vector2(((int)enemy.Position.X - 1) % 800, enemy.Position.Y);
         }
     }
 }

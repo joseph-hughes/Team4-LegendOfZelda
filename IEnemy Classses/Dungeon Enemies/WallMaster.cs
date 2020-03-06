@@ -10,15 +10,15 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public ILevel Level { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
-        public Rectangle Position { get; set; }
+        public Vector2 Position { get; set; }
         private IController controller;
 
-        public WallMaster(ILevel level, Rectangle position)
+        public WallMaster(ILevel level, Vector2 position)
         {
             Level = level;
             State = new WallMasterWestState(this);
             Position = position;
-            controller = new MovingEnemyController(this, 240);
+            controller = new WallMasterController(this);
         }
 
         public void North()
@@ -70,7 +70,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, new Vector2(Position.X, Position.Y));
+            Sprite.Draw(spriteBatch, Position);
         }
     }
 }
