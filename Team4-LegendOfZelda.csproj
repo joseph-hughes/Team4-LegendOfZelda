@@ -497,14 +497,14 @@
     <Content Include="bin\DesktopGL\AnyCPU\Debug\x64\soft_oal.dll" />
     <Content Include="bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll" />
     <Content Include="bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll" />
-    <Content Include="Code Reviews\Joseph Hughes Maintainability Review.txt" />
-    <Content Include="Code Reviews\Kyle Ziman Maintainability Review.txt" />
-    <Content Include="Code Reviews\Joseph Hughes Readability Review.txt" />
-    <Content Include="Code Reviews\Kyle Ziman Readability Review.txt" />
-    <Content Include="Code Reviews\Minkun Tian Maintainability Review.txt" />
-    <Content Include="Code Reviews\Minkun Tian Readability Review.txt" />
-    <Content Include="Code Reviews\Steven Lister Maintainability Review.txt" />
-    <Content Include="Code Reviews\Steven Lister Readability Review.txt" />
+    <Content Include="Code Reviews\Sprint 2\Joseph Hughes Maintainability Review.txt" />
+    <Content Include="Code Reviews\Sprint 2\Kyle Ziman Maintainability Review.txt" />
+    <Content Include="Code Reviews\Sprint 2\Joseph Hughes Readability Review.txt" />
+    <Content Include="Code Reviews\Sprint 2\Kyle Ziman Readability Review.txt" />
+    <Content Include="Code Reviews\Sprint 2\Minkun Tian Maintainability Review.txt" />
+    <Content Include="Code Reviews\Sprint 2\Minkun Tian Readability Review.txt" />
+    <Content Include="Code Reviews\Sprint 2\Steven Lister Maintainability Review.txt" />
+    <Content Include="Code Reviews\Sprint 2\Steven Lister Readability Review.txt" />
     <Content Include="Content\Bosses\Aquamentus\AquamentusEastAttack.png" />
     <Content Include="Content\Bosses\Aquamentus\AquamentusEastIdle.png" />
     <Content Include="Content\Bosses\Aquamentus\AquamentusWestAttack.png" />
@@ -649,6 +649,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\DesktopGL\AnyCPU\Release\" />
+    <Folder Include="Code Reviews\Sprint 3\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
