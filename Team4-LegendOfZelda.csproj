@@ -555,10 +555,10 @@
     <Content Include="Content\Projectiles\Flame.png" />
     <Content Include="Icon.ico" />
     <Content Include="XML\Level1.xml" />
+    <Content Include="XML\BlankLevel.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\DesktopGL\AnyCPU\Release\" />
-    <Folder Include="ICollider Classes\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
