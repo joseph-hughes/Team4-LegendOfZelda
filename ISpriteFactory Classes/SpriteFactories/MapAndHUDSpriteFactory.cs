@@ -6,7 +6,7 @@ namespace Team4_LegendOfZelda
 {
     public class MapAndHUDSpriteFactory : ISpriteFactory
     {
-        private Texture2D hudTexture;
+        //private Texture2D hudTexture;
         private Texture2D emptyRoomTexture;
         private Texture2D number0Texture;
         private Texture2D number1Texture;
@@ -45,7 +45,7 @@ namespace Team4_LegendOfZelda
         public void LoadAllTextures(ContentManager content)
         {
             emptyRoomTexture = content.Load<Texture2D>("MapSprites/emptyroom");
-            hudTexture = content.Load<Texture2D>("MapSprites/");
+            //hudTexture = content.Load<Texture2D>("MapSprites/");
 
             number0Texture = content.Load<Texture2D>("MapSprites/0");
             number1Texture = content.Load<Texture2D>("MapSprites/1");

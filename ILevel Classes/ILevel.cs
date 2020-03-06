@@ -6,7 +6,7 @@ namespace Team4_LegendOfZelda
 {
     public interface ILevel
     {
-        ISprite Map { get; set; }
+        IMap Map { get; set; }
         IHUD HUD { get; set; }
         IPlayer Player { get; set; }
         System.Collections.Generic.List<IRoom> Rooms { get; set; }

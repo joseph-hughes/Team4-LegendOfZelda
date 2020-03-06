@@ -10,10 +10,15 @@
         System.Collections.Generic.List<IBlock> Blocks { get; set; }
         //List<IBoundary> Boundaries { get; set; }
         IRoom North { get; set; }
+        bool HasNorth { get; set; }
         IRoom East { get; set; }
+        bool HasEast { get; set; }
         IRoom South { get; set; }
+        bool HasSouth { get; set; }
         IRoom West { get; set; }
+        bool HasWest { get; set; }
         IRoom Other { get; set; }
+        bool HasOther { get; set; }
 
         void Initialize(IPlayer player, System.Collections.Generic.List<IEnemy> enemies, System.Collections.Generic.List<IItem> items, System.Collections.Generic.List<IBlock> blocks);
         void Update();

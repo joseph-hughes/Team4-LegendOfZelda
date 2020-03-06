@@ -5,7 +5,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
 {
     class DungeonLevel : ILevel
     {
-        public ISprite Map { get; set; }
+        public IMap Map { get; set; }
         public IHUD HUD { get; set; }
         public IPlayer Player { get; set; }
         public List<IRoom> Rooms { get; set; }
@@ -28,31 +28,32 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
 
         public void North()
         {
-            // Transition to room north of current room
+            Map.North();
         }
 
         public void East()
         {
-            // Transition to room north of current room
+            Map.East();
         }
 
         public void South()
         {
-            // Transition to room north of current room
+            Map.South();
         }
 
         public void West()
         {
-            // Transition to room north of current room
+            Map.West();
         }
 
         public void Other()
         {
-            // Transition to current room's other room, if it exists
+            Map.Other();
         }
 
         public void Update()
         {
+            Map.Update();
             HUD.Update();
             CurrentRoom.Update();
         }

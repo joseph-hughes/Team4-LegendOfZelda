@@ -216,7 +216,7 @@
     <Compile Include="IItem Classes\Items\MagicalKey.cs" />
     <Compile Include="IItem Classes\Items\MagicalRod.cs" />
     <Compile Include="IItem Classes\Items\MagicalShield.cs" />
-    <Compile Include="IItem Classes\Items\Map.cs" />
+    <Compile Include="IItem Classes\Items\MapItem.cs" />
     <Compile Include="IItem Classes\Items\PowerBracelet.cs" />
     <Compile Include="IItem Classes\Items\Raft.cs" />
     <Compile Include="IItem Classes\Items\Recorder.cs" />

@@ -42,7 +42,7 @@ namespace Team4_LegendOfZelda
                 NPCSpriteFactory.Instance,
                 ItemSpriteFactory.Instance,
                 ProjectileSpriteFactory.Instance,
-                MapSpriteFactory.Instance
+                MapAndHUDSpriteFactory.Instance
             };
         }
 

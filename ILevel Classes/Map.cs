@@ -10,12 +10,38 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 
         public Map()
         {
-
+            // FIX
+            MapSprite = MapAndHUDSpriteFactory.Instance.CreateEmptyRoomSprite();
         }
 
         public void Initialize(int mapXPosition, int mapYPosition, int mapWidth, int mapHeight)
         {
+            DestinationRectangle = new Rectangle(mapXPosition, mapYPosition, mapWidth, mapHeight);
+        }
 
+        public void North()
+        {
+            // Transition to room north of current room
+        }
+
+        public void East()
+        {
+            // Transition to room north of current room
+        }
+
+        public void South()
+        {
+            // Transition to room north of current room
+        }
+
+        public void West()
+        {
+            // Transition to room north of current room
+        }
+
+        public void Other()
+        {
+            // Transition to current room's other room, if it exists
         }
 
         public void Update()
