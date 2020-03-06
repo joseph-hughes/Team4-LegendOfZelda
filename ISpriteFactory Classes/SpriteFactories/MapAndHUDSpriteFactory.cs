@@ -6,7 +6,7 @@ namespace Team4_LegendOfZelda
 {
     public class MapAndHUDSpriteFactory : ISpriteFactory
     {
-        //private Texture2D hudTexture;
+        private Texture2D hudTexture;
         private Texture2D emptyRoomTexture;
         private Texture2D number0Texture;
         private Texture2D number1Texture;
@@ -45,7 +45,7 @@ namespace Team4_LegendOfZelda
         public void LoadAllTextures(ContentManager content)
         {
             emptyRoomTexture = content.Load<Texture2D>("MapSprites/emptyroom");
-            //hudTexture = content.Load<Texture2D>("MapSprites/");
+            hudTexture = content.Load<Texture2D>("MapSprites/HUD");
 
             number0Texture = content.Load<Texture2D>("MapSprites/0");
             number1Texture = content.Load<Texture2D>("MapSprites/1");
@@ -75,6 +75,10 @@ namespace Team4_LegendOfZelda
             return new TextureSprite(emptyRoomTexture);
         }
 
+        public ISprite CreateHudSprite()
+        {
+            return new TextureSprite(hudTexture);
+        }
         // Level 1 Sprites
         public ISprite CreateLevel1MapSprite()
         {
@@ -85,5 +89,88 @@ namespace Team4_LegendOfZelda
         {
             return new TextureSprite(level1MinimapTexture);
         }
+
+        public ISprite CreateNumber0Sprite()
+        {
+            return new TextureSprite(number0Texture);
+        }
+
+        public ISprite CreateNumber1Sprite()
+        {
+            return new TextureSprite(number1Texture);
+        }
+
+        public ISprite CreateNumber2Sprite()
+        {
+            return new TextureSprite(number2Texture);
+        }
+
+        public ISprite CreateNumber3Sprite()
+        {
+            return new TextureSprite(number3Texture);
+        }
+
+        public ISprite CreateNumber4Sprite()
+        {
+            return new TextureSprite(number4Texture);
+        }
+
+        public ISprite CreateNumber5Sprite()
+        {
+            return new TextureSprite(number5Texture);
+        }
+
+        public ISprite CreateNumber6Sprite()
+        {
+            return new TextureSprite(number6Texture);
+        }
+
+
+        public ISprite CreateNumber7Sprite()
+        {
+            return new TextureSprite(number7Texture);
+        }
+
+        public ISprite CreateNumber8Sprite()
+        {
+            return new TextureSprite(number8Texture);
+        }
+
+        public ISprite CreateNumber9Sprite()
+        {
+            return new TextureSprite(number9Texture);
+        }
+
+        
+
+        public ISprite CreateEmptyHeartSprite()
+        {
+            return new TextureSprite(emptyHeartTexture);
+        }
+
+        public ISprite CreateHalfHeartSprite()
+        {
+            return new TextureSprite(halfHeartTexture);
+        }
+
+        public ISprite CreateFullHeartSprite()
+        {
+            return new TextureSprite(fullHeartTexture);
+        }
+
+        public ISprite CreateMiniMapGreenDotSprite()
+        {
+            return new TextureSprite(miniMapGreenDotTexture);
+        }
+
+        public ISprite CreateMiniMapRedDotSprite()
+        {
+            return new TextureSprite(miniMapRedDotTexture);
+        }
+
+
+
+
+
     }
 }
