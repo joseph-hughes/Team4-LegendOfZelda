@@ -4,7 +4,6 @@ using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 using Team4_LegendOfZelda.ICollider_Classes;
 using Team4_LegendOfZelda.ICollider_Classes.Collider;
-using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.ILevel_Classes.Levels;
 
 namespace Team4_LegendOfZelda
@@ -17,14 +16,12 @@ namespace Team4_LegendOfZelda
         private SpriteBatch spriteBatch;
         private static GraphicsDeviceManager graphics;
         private List<IController> controllerList;
-        private List<ICommand> commandList;
-        private List<Keys> keyList;
         private List<ISpriteFactory> spriteFactories;
         private Color backgroundColor;
-        private ILevel level;
-        private IPlayer player;
+        public ILevel level;
+        public IPlayer player;
         private IDector dector;
-        private static int WINDOW_WIDTH = 768, ROOM_HEIGHT = 528, HUD_HEIGHT = 168;
+        public static int WINDOW_WIDTH = 768, ROOM_HEIGHT = 528, HUD_HEIGHT = 168;
 
         public LegendOfZelda()
         {
@@ -66,10 +63,11 @@ namespace Team4_LegendOfZelda
 
             controllerList = new List<IController>
             {
-                new KeyboardController()
+                new KeyboardController(),
+                new MouseController()
             };
 
-            commandList = new List<ICommand>
+            List<ICommand> keyboardCommandList = new List<ICommand>
             {
                 new QuitCommand(this),                          //0
                 new ResetGameCommand(this),                     //1
@@ -84,11 +82,10 @@ namespace Team4_LegendOfZelda
                 new LinkUseBoomerangCommand(player, level.CurrentRoom),     //10
                 new LinkUseFireballCommand(player, level.CurrentRoom),      //11
                 new LinkUseMagicBoomerangCommand(player, level.CurrentRoom) //12
-
             };
 
             KeyboardController keyboard = (KeyboardController)controllerList[0];
-            keyList = new List<Keys>
+            List<Keys> keyList = new List<Keys>
             {
                 Keys.W,
                 Keys.A,
@@ -100,25 +97,79 @@ namespace Team4_LegendOfZelda
                 Keys.Right,
             };
 
-            keyboard.RegisterUnpressedKeysCommand(keyList, commandList[8]);
+            keyboard.RegisterUnpressedKeysCommand(keyList, keyboardCommandList[8]);
 
-            keyboard.RegisterCommand(Keys.W, commandList[2]);
-            keyboard.RegisterCommand(Keys.D, commandList[3]);
-            keyboard.RegisterCommand(Keys.S, commandList[4]);
-            keyboard.RegisterCommand(Keys.A, commandList[5]);
-            keyboard.RegisterCommand(Keys.Up, commandList[2]);
-            keyboard.RegisterCommand(Keys.Right, commandList[3]);
-            keyboard.RegisterCommand(Keys.Down, commandList[4]);
-            keyboard.RegisterCommand(Keys.Left, commandList[5]);
-            keyboard.RegisterCommand(Keys.Z, commandList[6]);
-            keyboard.RegisterCommand(Keys.N, commandList[6]);
-            keyboard.RegisterCommand(Keys.E, commandList[7]);
-            keyboard.RegisterCommand(Keys.Q, commandList[0]);
-            keyboard.RegisterCommand(Keys.R, commandList[1]);
-            keyboard.RegisterCommand(Keys.D1, commandList[9]);
-            keyboard.RegisterCommand(Keys.D2, commandList[10]);
-            keyboard.RegisterCommand(Keys.D3, commandList[11]);
-            keyboard.RegisterCommand(Keys.D4, commandList[12]);
+            keyboard.RegisterCommand(Keys.W, keyboardCommandList[2]);
+            keyboard.RegisterCommand(Keys.D, keyboardCommandList[3]);
+            keyboard.RegisterCommand(Keys.S, keyboardCommandList[4]);
+            keyboard.RegisterCommand(Keys.A, keyboardCommandList[5]);
+            keyboard.RegisterCommand(Keys.Up, keyboardCommandList[2]);
+            keyboard.RegisterCommand(Keys.Right, keyboardCommandList[3]);
+            keyboard.RegisterCommand(Keys.Down, keyboardCommandList[4]);
+            keyboard.RegisterCommand(Keys.Left, keyboardCommandList[5]);
+            keyboard.RegisterCommand(Keys.Z, keyboardCommandList[6]);
+            keyboard.RegisterCommand(Keys.N, keyboardCommandList[6]);
+            keyboard.RegisterCommand(Keys.E, keyboardCommandList[7]);
+            keyboard.RegisterCommand(Keys.Q, keyboardCommandList[0]);
+            keyboard.RegisterCommand(Keys.R, keyboardCommandList[1]);
+            keyboard.RegisterCommand(Keys.D1, keyboardCommandList[9]);
+            keyboard.RegisterCommand(Keys.D2, keyboardCommandList[10]);
+            keyboard.RegisterCommand(Keys.D3, keyboardCommandList[11]);
+            keyboard.RegisterCommand(Keys.D4, keyboardCommandList[12]);
+
+            List<ICommand> mouseCommandList = new List<ICommand>
+            {
+                new GotoRoom1Command(this),     // 0
+                new GotoRoom2Command(this),     // 1
+                new GotoRoom3Command(this),     // 2
+                new GotoRoom4Command(this),     // 3
+                new GotoRoom5Command(this),     // 4
+                new GotoRoom6Command(this),     // 5
+                new GotoRoom7Command(this),     // 6
+                new GotoRoom8Command(this),     // 7
+                new GotoRoom9Command(this),     // 8
+                new GotoRoom10Command(this),    // 9
+                new GotoRoom11Command(this),    // 10
+                new GotoRoom12Command(this),    // 11
+                new GotoRoom13Command(this),    // 12
+                new GotoRoom14Command(this),    // 13
+                new GotoRoom15Command(this),    // 14
+                new GotoRoom16Command(this),    // 15
+                new GotoRoom17Command(this),    // 16
+                new GotoRoom18Command(this),    // 17
+            };
+
+            int rectangleWidth = 7*3;
+            int rectangleHeight = 3 * 3;
+            List<Rectangle> mouseActivationAreas = new List<Rectangle>
+            {
+                new Rectangle(40*3, 44*3, rectangleWidth, rectangleHeight),
+                new Rectangle(32*3, 44*3, rectangleWidth, rectangleHeight),
+                new Rectangle(48*3, 44*3, rectangleWidth, rectangleHeight),
+                new Rectangle(40*3, 40*3, rectangleWidth, rectangleHeight),
+                new Rectangle(32*3, 36*3, rectangleWidth, rectangleHeight),
+                new Rectangle(40*3, 36*3, rectangleWidth, rectangleHeight),
+                new Rectangle(48*3, 36*3, rectangleWidth, rectangleHeight),
+                new Rectangle(24*3, 32*3, rectangleWidth, rectangleHeight),
+                new Rectangle(32*3, 32*3, rectangleWidth, rectangleHeight),
+                new Rectangle(40*3, 32*3, rectangleWidth, rectangleHeight),
+                new Rectangle(48*3, 32*3, rectangleWidth, rectangleHeight),
+                new Rectangle(56*3, 32*3, rectangleWidth, rectangleHeight),
+                new Rectangle(40*3, 28*3, rectangleWidth, rectangleHeight),
+                new Rectangle(56*3, 28*3, rectangleWidth, rectangleHeight),
+                new Rectangle(64*3, 28*3, rectangleWidth, rectangleHeight),
+                new Rectangle(24*3, 24*3, rectangleWidth, rectangleHeight),
+                new Rectangle(32*3, 24*3, rectangleWidth, rectangleHeight),
+                new Rectangle(40*3, 24*3, rectangleWidth, rectangleHeight),
+            };
+
+            MouseController mouse = (MouseController)controllerList[1];
+            MouseState leftButtonPressed = new MouseState(0, 0, 0, ButtonState.Pressed, 0, 0, 0, 0);
+
+            for (int index = 0; index < mouseCommandList.Count; index++)
+            {
+                mouse.RegisterCommand(leftButtonPressed, mouseActivationAreas[index], mouseCommandList[index]);
+            }
 
             Window.Title = "Sprint 3 - Team 4";
             backgroundColor = Color.Black;
