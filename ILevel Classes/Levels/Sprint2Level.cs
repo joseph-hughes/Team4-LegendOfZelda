@@ -17,8 +17,8 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
 
         public Sprint2Level(IPlayer player)
         {
-            Map = new Map();
-            HUD = new DungeonHUD(this);
+            Map = new Map(-1);
+            HUD = new DungeonHUD(this, -1);
             Player = player;
             Rooms = new List<IRoom>();
         }
@@ -26,6 +26,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
         public void Initialize(int windowWidth, int roomHeight, int hudHeight)
         {
             Map.Initialize(0, hudHeight, windowWidth, roomHeight);
+            HUD.Initialize(0, 0, windowWidth, hudHeight);
 
             CurrentRoom = new Sprint2Room();
 
@@ -122,12 +123,14 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
 
         public void Update()
         {
+            HUD.Update();
             CurrentRoom.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
             Map.Draw(spriteBatch);
+            HUD.Draw(spriteBatch);
             CurrentRoom.Draw(spriteBatch);
         }
     }
