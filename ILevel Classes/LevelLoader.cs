@@ -21,10 +21,10 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                     // Overworld
                     break;
                 case 1:
-                    LevelXml.Load("XML/Level1.xml"); // Fix the file name so that it's correct
+                    LevelXml.Load("../../../../XML/Level1.xml"); // Fix the file name so that it's correct
                     break;
                 default:
-                    LevelXml.Load("XML/BlankLevel.xml"); // Fix the file name so that it's correct
+                    LevelXml.Load("../../../../XML/BlankLevel.xml"); // Fix the file name so that it's correct
                     break;
             }
 
