@@ -9,8 +9,7 @@ namespace Team4_LegendOfZelda
         IRoom Room { get; set; }
         ISprite Sprite { get; set; }
         IState State { get; set; }
-        Vector2 Position { get; set; }
-        Rectangle Rectangle { get; set; }
+        Rectangle DestinationRectangle { get; set; }
         float Scale { get; set; }
 
         void North();

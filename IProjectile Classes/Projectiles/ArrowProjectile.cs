@@ -7,7 +7,7 @@ namespace Team4_LegendOfZelda
     {
         public ISprite Sprite { get; set; }
         public Vector2 Position { get; set; }
-        public Rectangle Rectangle { get; set; }
+        public Rectangle DestinationRectangle { get; set; }
         public float Scale { get; set; }
         public int Angle { get; set; }
         private int width;
@@ -44,7 +44,7 @@ namespace Team4_LegendOfZelda
                 height = 5;
             }
 
-            Rectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(width * Scale), (int)(height * Scale));
+            DestinationRectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(width * Scale), (int)(height * Scale));
 
 
         }
@@ -91,12 +91,12 @@ namespace Team4_LegendOfZelda
             }
 
             Position = new Vector2(X, Y);
-            Rectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(width * Scale), (int)(height * Scale));
+            DestinationRectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(width * Scale), (int)(height * Scale));
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, Rectangle);
+            Sprite.Draw(spriteBatch, DestinationRectangle);
         }
 
         public bool Equals(IProjectile projectile)

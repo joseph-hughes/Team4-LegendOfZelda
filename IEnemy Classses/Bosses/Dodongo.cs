@@ -11,22 +11,20 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         public IRoom Room { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
-        public Vector2 Position { get; set; }
-        public Rectangle Rectangle { get; set; }
+        private IController controller;
+        public Rectangle DestinationRectangle { get; set; }
         public float Scale { get; set; }
-        int count, maxCount;
-        Random rand;
+       
+        
 
         public Dodongo(IRoom room, Vector2 position)
         {
             Room = room;
             Scale = 3f;
-            Position = position;
             State = new DodongoWestWalkingState(this);
+            controller = new DodongoController(this);
+            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, DestinationRectangle.Width, DestinationRectangle.Height);
 
-            count = 0;
-            maxCount = 60;
-            rand = new Random();
         }
 
         public void North()
@@ -71,36 +69,14 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 
         public void Update()
         {
+            controller.Update();
             State.Update();
             Sprite.Update();
-            count++;
-            if (count > maxCount)
-            {
-                switch (rand.Next(0, 4))
-                {
-                    case 0:
-                        State.North();
-                        break;
-                    case 1:
-                        State.South();
-                        break;
-                    case 2:
-                        State.East();
-                        break;
-                    case 3:
-                        State.West();
-                        break;
-                    default:
-                        // Do nothing, this is not supposed to happen
-                        break;
-                }
-                count = 0;
-            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, Rectangle);
+            Sprite.Draw(spriteBatch, DestinationRectangle);
         }
     }
 }

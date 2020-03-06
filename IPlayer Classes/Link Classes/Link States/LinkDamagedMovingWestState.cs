@@ -55,7 +55,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         public void Update()
         {
             link.Position = new Vector2(link.Position.X - link.Velocity, link.Position.Y);
-            link.LinkRectangle = new Rectangle((int)this.link.Position.X, (int)this.link.Position.Y, (int)(this.link.Scale * Link.linkWidth), (int)(link.Scale * Link.linkHeight));
+            link.DestinationRectangle = new Rectangle((int)this.link.Position.X, (int)this.link.Position.Y, (int)(this.link.Scale * Link.linkWidth), (int)(link.Scale * Link.linkHeight));
 
             this.timer -= 1;
             if (this.timer == 0)

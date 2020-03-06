@@ -10,8 +10,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         public IRoom Room { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
-        public Vector2 Position { get; set; }
-        public Rectangle Rectangle { get; set; }
+        public Rectangle DestinationRectangle { get; set; }
         public float Scale { get; set; }
         private IController controller;
 
@@ -19,8 +18,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         {
             Room = room;
             Scale = 3f;
-            Position = position;
-
+            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, DestinationRectangle.Width, DestinationRectangle.Height);
             State = new AquamentusWestIdleState(this);
             controller = new AquamentusController(this);
 
@@ -75,7 +73,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, Rectangle);
+            Sprite.Draw(spriteBatch, DestinationRectangle);
         }
     }
 }

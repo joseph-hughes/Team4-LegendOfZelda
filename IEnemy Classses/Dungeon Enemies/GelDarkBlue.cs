@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using Team4_LegendOfZelda.ILevel_Classes;
+using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GelDarkBlue_States;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
@@ -10,102 +11,75 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public IRoom Room { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
-        public Vector2 Position { get; set; }
-        public Rectangle Rectangle { get; set; }
+        public Rectangle DestinationRectangle { get; set; }
         public float Scale { get; set; }
+        private IController controller;
         private const int width = 8;
         private const int height = 9;
-        int count, maxCount;
-        Random rand;
+        
 
         public GelDarkBlue(IRoom room, Vector2 position)
         {
             Room = room;
-            Position = position;
             Scale = 3f;
             Sprite = EnemySpriteFactory.Instance.CreateGelDarkBlueSprite();
-            Rectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(Scale * width), (int)(Scale * height));
-            State = new NullState();
+            State = new GelDarkBlueIdleState(this);
+            controller = new GelDarkBlueController(this);
+            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, DestinationRectangle.Width, DestinationRectangle.Height);
 
 
-            count = 0;
-            maxCount = 10;
-            rand = new Random();
         }
 
         public void North()
         {
-            // Do nothing
+            State.North();
         }
 
         public void East()
         {
-            // Do nothing
+            State.East();
         }
 
         public void South()
         {
-            // Do nothing
+            State.South();
         }
 
         public void West()
         {
-            // Do nothing
+            State.West();
         }
 
         public void Idle()
         {
-            // Do nothing
+            State.Idle();
         }
 
         public void BeDamaged()
         {
-            // Do nothing
+            State.BeDamaged();
         }
 
         public void Attack()
         {
-            // Do nothing
+            State.Attack();
         }
 
         public void UseItem()
         {
-            // Do nothing
+            State.UseItem();
         }
 
         public void Update()
         {
+            controller.Update();
+            State.Update();
             Sprite.Update();
-
-            count++;
-            if (count > maxCount)
-            {
-                switch (rand.Next(0, 4))
-                {
-                    case 0:
-                        Position = new Vector2(Position.X, ((int)Position.Y - 10) % 600);
-                        break;
-                    case 1:
-                        Position = new Vector2(((int)Position.X + 10) % 800, Position.Y);
-                        break;
-                    case 2:
-                        Position = new Vector2(Position.X, ((int)Position.Y + 10) % 600);
-                        break;
-                    case 3:
-                        Position = new Vector2(((int)Position.X - 10) % 800, Position.Y);
-                        break;
-                    default:
-                        // Do nothing, this is not supposed to happen
-                        break;
-                }
-                count = 0;
-            }
-            Rectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(Scale * width), (int)(Scale * height));
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, Rectangle);
+            Sprite.Draw(spriteBatch, DestinationRectangle);
         }
     }
 }

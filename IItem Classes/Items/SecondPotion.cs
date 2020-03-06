@@ -9,7 +9,7 @@ namespace Team4_LegendOfZelda.Item_Classes
         private const int width = 8;
         private const int height = 16;
         private ISprite itemSprite;
-        public Rectangle Rectangle { get; set; }
+        public Rectangle DestinationRectangle { get; set; }
         public float Scale { get; set; }
         public Vector2 itemLocation { get; set; }
 
@@ -18,17 +18,17 @@ namespace Team4_LegendOfZelda.Item_Classes
             itemSprite = ItemSpriteFactory.Instance.CreateSecondPotion();
             itemLocation = location;
             Scale = 3f;
-            Rectangle = new Rectangle((int)location.X, (int)location.Y, (int)(width * Scale), (int)(height * Scale));
+            DestinationRectangle = new Rectangle((int)location.X, (int)location.Y, (int)(width * Scale), (int)(height * Scale));
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            itemSprite.Draw(spriteBatch, Rectangle);
+            itemSprite.Draw(spriteBatch, DestinationRectangle);
         }
 
         public void Update()
         {
-            Rectangle = new Rectangle((int)itemLocation.X, (int)itemLocation.Y, (int)(width * Scale), (int)(height * Scale));
+            DestinationRectangle = new Rectangle((int)itemLocation.X, (int)itemLocation.Y, (int)(width * Scale), (int)(height * Scale));
         }
 
         public void UseItem()

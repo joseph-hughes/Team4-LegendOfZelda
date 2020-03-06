@@ -22,8 +22,8 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             if (!player.isDamaged)
             {
 
-                float dx = projectile.Rectangle.X - player.LinkRectangle.X;
-                float dy = projectile.Rectangle.Y - player.LinkRectangle.Y;
+                float dx = projectile.DestinationRectangle.X - player.DestinationRectangle.X;
+                float dy = projectile.DestinationRectangle.Y - player.DestinationRectangle.Y;
 
                 //top bottom collision
                 if (System.Math.Abs(dx) < System.Math.Abs(dy))

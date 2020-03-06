@@ -60,6 +60,57 @@
     <Compile Include="ICommand Classes\Commands\LinkUseMagicBoomerangCommand.cs" />
     <Compile Include="ICommand Classes\Commands\LinkUseFireballCommand.cs" />
     <Compile Include="ICommand Classes\Commands\LinkUseBoomerangCommand.cs" />
+    <Compile Include="IEnemy Classses\Bosses\DodongoController.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrap States\BladeTrapEastState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrap States\BladeTrapIdleState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrap States\BladeTrapNorthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrap States\BladeTrapSouthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrap States\BladeTrapWestState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrapController.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\GelDarkBlue States\GelDarkBlueEastState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\GelDarkBlue States\GelDarkBlueIdleState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\GelDarkBlue States\GelDarkBlueNorthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\GelDarkBlue States\GelDarkBlueSouthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\GelDarkBlue States\GelDarkBlueWestState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\GelDarkBlueController.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaController.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseBlue States\KeeseBlueEastState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseBlue States\KeeseBlueIdleState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseBlue States\KeeseBlueNorthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseBlue States\KeeseBlueSouthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseBlue States\KeeseBlueWestState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseController.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseRed States\KeeseRedEastState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseRed States\KeeseRedIdleState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseRed States\KeeseRedNorthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseRed States\KeeseRedSouthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseRed States\KeeseRedWestState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\Rope States\RopeIdleState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\Rope States\RopeNorthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\Rope States\RopeSouthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\RopeController.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\Stalfos States\StalfosEastState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\Stalfos States\StalfosIdleState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\Stalfos States\StalfosNorthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\Stalfos States\StalfosSouthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\Stalfos States\StalfosWestState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\StalfosController.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\WallMaster States\WallMasterIdleState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\WallMaster States\WallMasterNorthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\WallMaster States\WallMasterSouthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\WallMasterController.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\WallMasterUpsideDown States\WallMasterUpsideDownEastState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\WallMasterUpsideDown States\WallMasterUpsideDownIdleState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\WallMasterUpsideDown States\WallMasterUpsideDownNorthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\WallMasterUpsideDown States\WallMasterUpsideDownSouthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\WallMasterUpsideDown States\WallMasterUpsideDownWestState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\WallMasterUpsideDownController.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenEastState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenIdleState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenNorthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenSouthState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenWestState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreenController.cs" />
     <Compile Include="ILevel Classes\DungeonHUD.cs" />
     <Compile Include="ILevel Classes\DungeonRoom.cs" />
     <Compile Include="ILevel Classes\IHUD.cs" />
@@ -558,7 +609,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\DesktopGL\AnyCPU\Release\" />
-    <Folder Include="ICollider Classes\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

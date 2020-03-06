@@ -25,19 +25,19 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
             switch (direction)
             {
                 case Direction.EAST:
-                    enemy.Position = new Vector2(((int)enemy.Position.X + 2) % 768, enemy.Position.Y);
+                    enemy.DestinationRectangle = new Rectangle(((int)enemy.DestinationRectangle.X + 2) % 768, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
                     break;
                 case Direction.WEST:
-                    if (enemy.Position.X >= 2)
+                    if (enemy.DestinationRectangle.X >= 2)
                     {
-                        enemy.Position = new Vector2(((int)enemy.Position.X - 2) % 768, enemy.Position.Y);
+                        enemy.DestinationRectangle = new Rectangle((enemy.DestinationRectangle.X - 2) % 768, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
                     }
                     else
                     {
-                        enemy.Position = new Vector2(768, enemy.Position.Y);
+                        enemy.DestinationRectangle = new Rectangle(768 - (int)enemy.DestinationRectangle.X, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
                     }
-
-
+                    
+                    
                     break;
                 default:
                     // Do nothing, this is not supposed to happen
@@ -54,7 +54,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
             attackCount--;
             if (attackCount <= 0)
             {
-                enemy.State.Attack();
+                enemy.Attack();
                 attackCount = rand.Next(MIN_ATTACK_COUNTS, MAX_ATTACK_COUNTS + 1);
             }
         }
