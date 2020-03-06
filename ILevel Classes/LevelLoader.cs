@@ -51,8 +51,8 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                         Vector2 position = new Vector2(columnNum * 48 + 33, rowNum * 48 + 33 + 168);
                         switch (enemyName)
                         {
-                            case "AquamentusWest":
-                                room.Enemies.Add(new AquamentusWest(room, position));
+                            case "Aquamentus":
+                                room.Enemies.Add(new Aquamentus(room, position));
                                 break;
                             case "Dodongo":
                                 room.Enemies.Add(new Dodongo(room, position));

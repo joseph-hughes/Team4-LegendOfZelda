@@ -5,7 +5,7 @@ using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 {
-    class AquamentusWest : IEnemy
+    class Aquamentus : IEnemy
     {
         public IRoom Room { get; set; }
         public ISprite Sprite { get; set; }
@@ -14,7 +14,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         public float Scale { get; set; }
         private IController controller;
 
-        public AquamentusWest(IRoom room, Vector2 position)
+        public Aquamentus(IRoom room, Vector2 position)
         {
             Room = room;
             Scale = 3f;
