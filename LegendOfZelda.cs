@@ -21,7 +21,7 @@ namespace Team4_LegendOfZelda
         private List<Keys> keyList;
         private List<ISpriteFactory> spriteFactories;
         private Color backgroundColor;
-        private Sprint2Level level;
+        private ILevel level;
         private IPlayer player;
         private IDector dector;
         private static int WINDOW_WIDTH = 768, ROOM_HEIGHT = 528, HUD_HEIGHT = 168;
@@ -58,7 +58,7 @@ namespace Team4_LegendOfZelda
 
             player = new Link(new Vector2(96, 240));
 
-            level = new Sprint2Level(player);
+            level = new DungeonLevel(player, 1);
             level.Initialize(WINDOW_WIDTH, ROOM_HEIGHT, HUD_HEIGHT);
 
             dector = new BoxDector(player);
@@ -77,17 +77,13 @@ namespace Team4_LegendOfZelda
                 new MoveLinkEastCommand(player),                //3
                 new MoveLinkSouthCommand(player),               //4
                 new MoveLinkWestCommand(player),                //5
-                new NextItemCommand((Sprint2Room)level.CurrentRoom),                     //6
-                new PreviousItemCommand((Sprint2Room)level.CurrentRoom),                 //7
-                new NextEnemyCommand((Sprint2Room)level.CurrentRoom),                    //8
-                new PreviousEnemyCommand((Sprint2Room)level.CurrentRoom),                //9
-                new LinkAttackCommand(player),                  //10
-                new LinkBeDamagedCommand(player),               //11
-                new LinkIdleCommand(player),                    //12
-                new LinkUseArrowCommand(player, level.CurrentRoom),         //13
-                new LinkUseBoomerangCommand(player, level.CurrentRoom),     //14
-                new LinkUseFireballCommand(player, level.CurrentRoom),      //15
-                new LinkUseMagicBoomerangCommand(player, level.CurrentRoom) //16
+                new LinkAttackCommand(player),                  //6
+                new LinkBeDamagedCommand(player),               //7
+                new LinkIdleCommand(player),                    //8
+                new LinkUseArrowCommand(player, level.CurrentRoom),         //9
+                new LinkUseBoomerangCommand(player, level.CurrentRoom),     //10
+                new LinkUseFireballCommand(player, level.CurrentRoom),      //11
+                new LinkUseMagicBoomerangCommand(player, level.CurrentRoom) //12
 
             };
 
@@ -104,7 +100,7 @@ namespace Team4_LegendOfZelda
                 Keys.Right,
             };
 
-            keyboard.RegisterUnpressedKeysCommand(keyList, commandList[12]);
+            keyboard.RegisterUnpressedKeysCommand(keyList, commandList[8]);
 
             keyboard.RegisterCommand(Keys.W, commandList[2]);
             keyboard.RegisterCommand(Keys.D, commandList[3]);
@@ -114,19 +110,15 @@ namespace Team4_LegendOfZelda
             keyboard.RegisterCommand(Keys.Right, commandList[3]);
             keyboard.RegisterCommand(Keys.Down, commandList[4]);
             keyboard.RegisterCommand(Keys.Left, commandList[5]);
-            keyboard.RegisterCommand(Keys.Z, commandList[10]);
-            keyboard.RegisterCommand(Keys.N, commandList[10]);
-            keyboard.RegisterCommand(Keys.E, commandList[11]);
+            keyboard.RegisterCommand(Keys.Z, commandList[6]);
+            keyboard.RegisterCommand(Keys.N, commandList[6]);
+            keyboard.RegisterCommand(Keys.E, commandList[7]);
             keyboard.RegisterCommand(Keys.Q, commandList[0]);
             keyboard.RegisterCommand(Keys.R, commandList[1]);
-            keyboard.RegisterCommand(Keys.U, commandList[6]);
-            keyboard.RegisterCommand(Keys.I, commandList[7]);
-            keyboard.RegisterCommand(Keys.O, commandList[8]);
-            keyboard.RegisterCommand(Keys.P, commandList[9]);
-            keyboard.RegisterCommand(Keys.D1, commandList[13]);
-            keyboard.RegisterCommand(Keys.D2, commandList[14]);
-            keyboard.RegisterCommand(Keys.D3, commandList[15]);
-            keyboard.RegisterCommand(Keys.D4, commandList[16]);
+            keyboard.RegisterCommand(Keys.D1, commandList[9]);
+            keyboard.RegisterCommand(Keys.D2, commandList[10]);
+            keyboard.RegisterCommand(Keys.D3, commandList[11]);
+            keyboard.RegisterCommand(Keys.D4, commandList[12]);
 
             Window.Title = "Sprint 3 - Team 4";
             backgroundColor = Color.Black;

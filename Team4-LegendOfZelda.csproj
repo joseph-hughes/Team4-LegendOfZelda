@@ -68,7 +68,6 @@
     <Compile Include="ILevel Classes\IFileLoader.cs" />
     <Compile Include="ILevel Classes\IRoom.cs" />
     <Compile Include="ILevel Classes\Levels\DungeonLevel.cs" />
-    <Compile Include="ILevel Classes\Levels\Sprint2Level.cs" />
     <Compile Include="ILevel Classes\Levels\Block.cs" />
     <Compile Include="ILevel Classes\IBlock.cs" />
     <Compile Include="ILevel Classes\Map.cs" />
@@ -105,10 +104,6 @@
     <Compile Include="ICommand Classes\Commands\MoveLinkWestCommand.cs" />
     <Compile Include="ICommand Classes\Commands\MoveLinkEastCommand.cs" />
     <Compile Include="ICommand Classes\Commands\MoveLinkNorthCommand.cs" />
-    <Compile Include="ICommand Classes\Commands\NextEnemyCommand.cs" />
-    <Compile Include="ICommand Classes\Commands\NextItemCommand.cs" />
-    <Compile Include="ICommand Classes\Commands\PreviousEnemyCommand.cs" />
-    <Compile Include="ICommand Classes\Commands\PreviousItemCommand.cs" />
     <Compile Include="ICommand Classes\Commands\ResetGameCommand.cs" />
     <Compile Include="ICommand Classes\Commands\LinkBeDamagedCommand.cs" />
     <Compile Include="IProjectile Classes\IProjectile.cs" />
@@ -235,7 +230,6 @@
     <Compile Include="ISpriteFactory Classes\SpriteFactories\ProjectileSpriteFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ICommand Classes\Commands\QuitCommand.cs" />
-    <Compile Include="ILevel Classes\Levels\Sprint2Room.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
