@@ -21,10 +21,10 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                     // Overworld
                     break;
                 case 1:
-                    LevelXml.Load("XML/Level1.xml"); // Fix the file name so that it's correct
+                    LevelXml.Load("../../../../XML/Level1.xml"); // Fix the file name so that it's correct
                     break;
                 default:
-                    LevelXml.Load("XML/BlankLevel.xml"); // Fix the file name so that it's correct
+                    LevelXml.Load("../../../../XML/BlankLevel.xml"); // Fix the file name so that it's correct
                     break;
             }
 
@@ -34,7 +34,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         public List<IRoom> LoadRooms()
         {
             List<IRoom> rooms = new List<IRoom>();
-            XmlNode root = LevelXml.FirstChild;
+            XmlNode root = LevelXml.FirstChild.NextSibling;
 
             foreach(XmlNode roomNode in root)
             {
@@ -48,7 +48,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                         string enemyName = enemyNode["ObjectType"].InnerText;
                         float columnNum = float.Parse(enemyNode["ColumnNum"].InnerText);
                         float rowNum = float.Parse(enemyNode["RowNum"].InnerText);
-                        Vector2 position = new Vector2(columnNum, rowNum);
+                        Vector2 position = new Vector2(columnNum * 48 + 33, rowNum * 48 + 33 + 168);
                         switch (enemyName)
                         {
                             case "AquamentusWest":
@@ -103,7 +103,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                         string itemName = itemNode["ObjectType"].InnerText;
                         float columnNum = float.Parse(itemNode["ColumnNum"].InnerText);
                         float rowNum = float.Parse(itemNode["RowNum"].InnerText);
-                        Vector2 position = new Vector2(columnNum, rowNum);
+                        Vector2 position = new Vector2(columnNum * 48 + 33, rowNum * 48 + 33 + 168);
                         switch (itemName)
                         {
                             case "BlueCandle":

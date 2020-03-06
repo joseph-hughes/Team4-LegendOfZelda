@@ -26,7 +26,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 
         public void Initialize(int mapXPosition, int mapYPosition, int mapWidth, int mapHeight)
         {
-            DestinationRectangle = new Rectangle(mapXPosition, mapYPosition, mapWidth, mapHeight);
+            DestinationRectangle = new Rectangle(mapXPosition, mapYPosition, mapWidth, mapHeight);            
         }
 
         public void North()
@@ -56,7 +56,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 
         public void Update()
         {
-
+            // TODO?
         }
 
         public void Draw(SpriteBatch spriteBatch)

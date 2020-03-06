@@ -56,10 +56,30 @@
     <Compile Include="ICollider Classes\Collider\ProjectileBlockTrigger.cs" />
     <Compile Include="ICollider Classes\ITrigger.cs" />
     <Compile Include="ICollider Classes\IDector.cs" />
+    <Compile Include="ICommand Classes\Commands\GotoRoom18Command.cs" />
+    <Compile Include="ICommand Classes\Commands\GotoRoom17Command.cs" />
+    <Compile Include="ICommand Classes\Commands\GotoRoom16Command.cs" />
+    <Compile Include="ICommand Classes\Commands\GotoRoom15Command.cs" />
+    <Compile Include="ICommand Classes\Commands\GotoRoom14Command.cs" />
+    <Compile Include="ICommand Classes\Commands\GotoRoom13Command.cs" />
+    <Compile Include="ICommand Classes\Commands\GotoRoom12Command.cs" />
+    <Compile Include="ICommand Classes\Commands\GotoRoom11Command.cs" />
+    <Compile Include="ICommand Classes\Commands\GotoRoom10Command.cs" />
+    <Compile Include="ICommand Classes\Commands\GotoRoom9Command.cs" />
+    <Compile Include="ICommand Classes\Commands\GotoRoom8Command.cs" />
+    <Compile Include="ICommand Classes\Commands\GotoRoom7Command.cs" />
+    <Compile Include="ICommand Classes\Commands\GotoRoom6Command.cs" />
+    <Compile Include="ICommand Classes\Commands\GotoRoom4Command.cs" />
+    <Compile Include="ICommand Classes\Commands\GotoRoom3Command.cs" />
+    <Compile Include="ICommand Classes\Commands\GotoRoom2Command.cs" />
+    <Compile Include="ICommand Classes\Commands\GotoRoom1Command.cs" />
+    <Compile Include="ICommand Classes\Commands\GotoRoom5Command.cs" />
     <Compile Include="ICommand Classes\Commands\LinkIdleCommand.cs" />
     <Compile Include="ICommand Classes\Commands\LinkUseMagicBoomerangCommand.cs" />
     <Compile Include="ICommand Classes\Commands\LinkUseFireballCommand.cs" />
     <Compile Include="ICommand Classes\Commands\LinkUseBoomerangCommand.cs" />
+    <Compile Include="IController Classes\Controllers\MouseClickArea.cs" />
+    <Compile Include="IController Classes\Controllers\MouseController.cs" />
     <Compile Include="IEnemy Classses\Bosses\DodongoController.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrap States\BladeTrapEastState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrap States\BladeTrapIdleState.cs" />
@@ -119,7 +139,6 @@
     <Compile Include="ILevel Classes\IFileLoader.cs" />
     <Compile Include="ILevel Classes\IRoom.cs" />
     <Compile Include="ILevel Classes\Levels\DungeonLevel.cs" />
-    <Compile Include="ILevel Classes\Levels\Sprint2Level.cs" />
     <Compile Include="ILevel Classes\Levels\Block.cs" />
     <Compile Include="ILevel Classes\IBlock.cs" />
     <Compile Include="ILevel Classes\Map.cs" />
@@ -156,10 +175,6 @@
     <Compile Include="ICommand Classes\Commands\MoveLinkWestCommand.cs" />
     <Compile Include="ICommand Classes\Commands\MoveLinkEastCommand.cs" />
     <Compile Include="ICommand Classes\Commands\MoveLinkNorthCommand.cs" />
-    <Compile Include="ICommand Classes\Commands\NextEnemyCommand.cs" />
-    <Compile Include="ICommand Classes\Commands\NextItemCommand.cs" />
-    <Compile Include="ICommand Classes\Commands\PreviousEnemyCommand.cs" />
-    <Compile Include="ICommand Classes\Commands\PreviousItemCommand.cs" />
     <Compile Include="ICommand Classes\Commands\ResetGameCommand.cs" />
     <Compile Include="ICommand Classes\Commands\LinkBeDamagedCommand.cs" />
     <Compile Include="IProjectile Classes\IProjectile.cs" />
@@ -286,7 +301,6 @@
     <Compile Include="ISpriteFactory Classes\SpriteFactories\ProjectileSpriteFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ICommand Classes\Commands\QuitCommand.cs" />
-    <Compile Include="ILevel Classes\Levels\Sprint2Room.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

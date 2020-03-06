@@ -172,8 +172,8 @@
     <Items total="2">
       <Item>
         <ObjectType>Clock</ObjectType>
-        <ColumnNum>rand</ColumnNum>
-        <RowNum>rand</RowNum>
+        <ColumnNum>3</ColumnNum>
+        <RowNum>3</RowNum>
       </Item>
       <Item>
         <ObjectType>Key</ObjectType>
@@ -247,9 +247,9 @@
     <Enemies total="0"></Enemies>
     <Items total="2">
       <Item>
-        <ObjectType>Flames</ObjectType>
-        <ColumnNum></ColumnNum>
-        <RowNum></RowNum>
+        <ObjectType>Flame</ObjectType>
+        <ColumnNum>2</ColumnNum>
+        <RowNum>4</RowNum>
       </Item>
     </Items>
     <North></North>
@@ -345,8 +345,8 @@
     <Items total="1">
       <Item>
         <ObjectType>Rupy</ObjectType>
-        <ColumnNum>kill</ColumnNum>
-        <RowNum>kill</RowNum>
+        <ColumnNum>3</ColumnNum>
+        <RowNum>3</RowNum>
       </Item>
     </Items>
     <North></North>

@@ -6,6 +6,7 @@ namespace Team4_LegendOfZelda
 {
     public interface ILevel
     {
+        IFileLoader FileLoader { get; set; }
         IMap Map { get; set; }
         IHUD HUD { get; set; }
         IPlayer Player { get; set; }
