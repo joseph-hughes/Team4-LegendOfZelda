@@ -28,32 +28,31 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
 
         public void North()
         {
-            Map.North();
+            // Transition to room north of current room
         }
 
         public void East()
         {
-            Map.East();
+            // Transition to room north of current room
         }
 
         public void South()
         {
-            Map.South();
+            // Transition to room north of current room
         }
 
         public void West()
         {
-            Map.West();
+            // Transition to room north of current room
         }
 
         public void Other()
         {
-            Map.Other();
+            // Transition to current room's other room, if it exists
         }
 
         public void Update()
         {
-            Map.Update();
             HUD.Update();
             CurrentRoom.Update();
         }
