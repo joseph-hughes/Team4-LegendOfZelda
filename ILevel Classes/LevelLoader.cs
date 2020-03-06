@@ -1,13 +1,7 @@
-﻿using Microsoft.Xna.Framework;
-using System.Collections.Generic;
-using System.Xml;
-using Team4_LegendOfZelda.IEnemy_Classses.Bosses;
-using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies;
-using Team4_LegendOfZelda.Item_Classes;
+﻿using System.Xml;
 
 namespace Team4_LegendOfZelda.ILevel_Classes
 {
-
     class LevelLoader : IFileLoader
     {
         private XmlDocument LevelXml;

@@ -8,6 +8,6 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 {
     public interface IFileLoader
     {
-       
+        IRoom LoadRoom();
     }
 }

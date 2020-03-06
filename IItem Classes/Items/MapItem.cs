@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.Item_Classes
 {
-    class Map : IItem
+    class MapItem : IItem
     {
         private const int width = 8;
         private const int height = 16;
@@ -13,7 +13,7 @@ namespace Team4_LegendOfZelda.Item_Classes
         public float Scale { get; set; }
         public Vector2 itemLocation { get; set; }
 
-        public Map(Vector2 location)
+        public MapItem(Vector2 location)
         {
             itemSprite = ItemSpriteFactory.Instance.CreateMap();
             itemLocation = location;
