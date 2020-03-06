@@ -359,23 +359,23 @@
     <Enemies total="4">
       <Enemy>
         <ObjectType>WallMaster</ObjectType>
-        <ColumnNum>-1</ColumnNum>//not sure about this
-        <RowNum>7</RowNum>//not sure about this
+        <ColumnNum>-1</ColumnNum>
+        <RowNum>7</RowNum>
       </Enemy>
       <Enemy>
         <ObjectType>WallMaster</ObjectType>
-        <ColumnNum>8</ColumnNum>//not sure about this
-        <RowNum>8</RowNum>//not sure about this
+        <ColumnNum>8</ColumnNum>
+        <RowNum>8</RowNum>
       </Enemy>
       <Enemy>
         <ObjectType>WallMasterUpsideDown</ObjectType>
-        <ColumnNum>6.5</ColumnNum>//not sure about this
-        <RowNum>-1</RowNum>//not sure about this
+        <ColumnNum>6.5</ColumnNum>
+        <RowNum>-1</RowNum>
       </Enemy>
       <Enemy>
         <ObjectType>WallMasterUpsideDown</ObjectType>
-        <ColumnNum>13</ColumnNum>//not sure about this
-        <RowNum>3.5</RowNum>//not sure about this
+        <ColumnNum>13</ColumnNum>
+        <RowNum>3.5</RowNum>
       </Enemy>
     </Enemies>
     <Items total="1">
@@ -417,8 +417,8 @@
       </Item>
       <Item>
         <ObjectType>Rupy</ObjectType>
-        <ColumnNum>9</ColumnNum>//hand pick instead of random with stalfos
-        <RowNum>5</RowNum>//hand pick instead of random with stalfos
+        <ColumnNum>9</ColumnNum>
+        <RowNum>5</RowNum>
       </Item>
     </Items>
     <North>18</North>
@@ -453,8 +453,8 @@
     <Items total="1">
       <Item>
         <ObjectType>Triforce</ObjectType>
-        <ColumnNum>6.5</ColumnNum>//not sure
-        <RowNum>4.5</RowNum>//not sure
+        <ColumnNum>6.5</ColumnNum>
+        <RowNum>4.5</RowNum>
       </Item>
     </Items>
     <North></North>
@@ -463,7 +463,7 @@
     <West>14</West>
     <Other></Other>
   </Room>
-  <Room number="16">//secret room
+  <Room number="16">
     <Enemies total="4">
       <Enemy>
         <ObjectType>KeeseBlue</ObjectType>
@@ -499,7 +499,7 @@
     <West></West>
     <Other>17</Other>
   </Room>
-  <Room number="17">//movable block
+  <Room number="17">
     <Enemies total="4">
       <Enemy>
         <ObjectType>BladeTrap</ObjectType>
