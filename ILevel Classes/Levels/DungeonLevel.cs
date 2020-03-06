@@ -5,6 +5,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
 {
     class DungeonLevel : ILevel
     {
+        public IFileLoader FileLoader { get; set; }
         public IMap Map { get; set; }
         public IHUD HUD { get; set; }
         public IPlayer Player { get; set; }
@@ -13,17 +14,23 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
 
         public DungeonLevel(IPlayer player, int levelNum)
         {
+            FileLoader = new LevelLoader(1);
             Map = new Map(levelNum);
             HUD = new DungeonHUD(this, levelNum);
             Player = player;
             Rooms = new List<IRoom>();
+            CurrentRoom = new DungeonRoom();
         }
 
         public void Initialize(int windowWidth, int roomHeight, int hudHeight)
         {
             Map.Initialize(0, hudHeight, windowWidth, roomHeight);
             HUD.Initialize(0, 0, windowWidth, hudHeight);
-            // Load file for level to create each room
+            Rooms = FileLoader.LoadRooms();
+            if (Rooms.Count > 0)
+            {
+                CurrentRoom = Rooms[0];
+            }
         }
 
         public void North()
