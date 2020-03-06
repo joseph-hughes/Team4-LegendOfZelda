@@ -1,0 +1,17 @@
+Author of Code Review:	Mingkun Tian
+
+Date of Code Review:	03/06/2020
+
+Sprint number:			Sprint 3
+
+Name of .cs file:		LevelLoader.cs
+
+Author of .cs file:		Joseph Hughes
+
+Number of minutes:		15 minutes
+
+Comments:				Overall, the readablity for this class is good. It has methods for different nodes in the XML 
+						file, which is used for generating the game objects such like dungeon Enemies, dungeon items, 
+						and NPCs. around and being damaged. In each method, the loader indentifies the attribute of 
+						each node and generate the object that has the same name in the attribute. Then, it returns
+						the specific room with the game object set in. 
