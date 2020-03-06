@@ -1,27 +1,28 @@
-﻿using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 
 namespace Team4_LegendOfZelda.ILevel_Classes.Levels
 {
-    class Level1 : ILevel
+    class DungeonLevel : ILevel
     {
-        public ISprite Map { get; set; }
+        public IMap Map { get; set; }
         public IHUD HUD { get; set; }
         public IPlayer Player { get; set; }
         public List<IRoom> Rooms { get; set; }
         public IRoom CurrentRoom { get; set; }
 
-        public Level1(IPlayer player)
+        public DungeonLevel(IPlayer player, int levelNum)
         {
-            //Map = MapSpriteFactory.Instance.CreateLevel1MapSprite();
-            HUD = new DungeonHUD();
+            Map = new Map(levelNum);
+            HUD = new DungeonHUD(this, levelNum);
             Player = player;
             Rooms = new List<IRoom>();
         }
 
-        public void Initialize()
+        public void Initialize(int windowWidth, int roomHeight, int hudHeight)
         {
+            Map.Initialize(0, hudHeight, windowWidth, roomHeight);
+            HUD.Initialize(0, 0, windowWidth, hudHeight);
             // Load file for level to create each room
         }
 
@@ -58,6 +59,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
 
         public void Draw(SpriteBatch spriteBatch)
         {
+            Map.Draw(spriteBatch);
             HUD.Draw(spriteBatch);
             CurrentRoom.Draw(spriteBatch);
         }

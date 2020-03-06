@@ -24,16 +24,17 @@ namespace Team4_LegendOfZelda
         private Sprint2Level level;
         private IPlayer player;
         private IDector dector;
+        private static int WINDOW_WIDTH = 768, ROOM_HEIGHT = 528, HUD_HEIGHT = 168;
 
         public LegendOfZelda()
         {
             graphics = new GraphicsDeviceManager(this)
             {
-                PreferredBackBufferWidth = 768,
-                PreferredBackBufferHeight = 528+144
+                PreferredBackBufferWidth = WINDOW_WIDTH,
+                PreferredBackBufferHeight = ROOM_HEIGHT + HUD_HEIGHT
             };
             Content.RootDirectory = "Content";
-            IsMouseVisible = false;
+            IsMouseVisible = true;
             spriteFactories = new List<ISpriteFactory>
             {
                 PlayerSpriteFactory.Instance,
@@ -41,7 +42,7 @@ namespace Team4_LegendOfZelda
                 NPCSpriteFactory.Instance,
                 ItemSpriteFactory.Instance,
                 ProjectileSpriteFactory.Instance,
-                MapSpriteFactory.Instance
+                MapAndHUDSpriteFactory.Instance
             };
         }
 
@@ -55,10 +56,10 @@ namespace Team4_LegendOfZelda
         {
             base.Initialize();
 
-            level = new Sprint2Level(player);
-            level.Initialize();
-
             player = new Link(new Vector2(96, 240));
+
+            level = new Sprint2Level(player);
+            level.Initialize(WINDOW_WIDTH, ROOM_HEIGHT, HUD_HEIGHT);
 
             dector = new BoxDector(player);
             dector.Update(level);
@@ -172,10 +173,6 @@ namespace Team4_LegendOfZelda
 
             level.Update();
             player.Update();
-
-
-
-
 
             base.Update(gameTime);
         }

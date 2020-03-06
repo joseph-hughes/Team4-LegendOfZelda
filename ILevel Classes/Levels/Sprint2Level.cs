@@ -9,7 +9,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
 {
     class Sprint2Level : ILevel
     {
-        public ISprite Map { get; set; }
+        public IMap Map { get; set; }
         public IHUD HUD { get; set; }
         public IPlayer Player { get; set; }
         public List<IRoom> Rooms { get; set; }
@@ -17,13 +17,17 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
 
         public Sprint2Level(IPlayer player)
         {
-            Map = MapSpriteFactory.Instance.CreateSprint2MapSprite();
+            Map = new Map(-1);
+            HUD = new DungeonHUD(this, -1);
             Player = player;
             Rooms = new List<IRoom>();
         }
 
-        public void Initialize()
+        public void Initialize(int windowWidth, int roomHeight, int hudHeight)
         {
+            Map.Initialize(0, hudHeight, windowWidth, roomHeight);
+            HUD.Initialize(0, 0, windowWidth, hudHeight);
+
             CurrentRoom = new Sprint2Room();
 
             Vector2 itemStartLocation = new Vector2(480, 360);
@@ -50,7 +54,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
                 new MagicalKey(itemStartLocation),
                 new MagicalRod(itemStartLocation),
                 new MagicalShield(itemStartLocation),
-                new Map(itemStartLocation),
+                new MapItem(itemStartLocation),
                 new PowerBracelet(itemStartLocation),
                 new Raft(itemStartLocation),
                 new Recorder(itemStartLocation),
@@ -119,12 +123,14 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
 
         public void Update()
         {
+            HUD.Update();
             CurrentRoom.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Map.Draw(spriteBatch, new Rectangle(0, 144, 768, 528));
+            Map.Draw(spriteBatch);
+            HUD.Draw(spriteBatch);
             CurrentRoom.Draw(spriteBatch);
         }
     }

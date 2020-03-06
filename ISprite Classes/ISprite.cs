@@ -8,6 +8,8 @@ namespace Team4_LegendOfZelda
         Rectangle SourceRectangle { get; set; }
 
         void Update();
-        void Draw(SpriteBatch spriteBatch, Rectangle DestinationRectangle);
+
+        void Draw(SpriteBatch spriteBatch, Rectangle destinationRectangle);
+
     }
 }

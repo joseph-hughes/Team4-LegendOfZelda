@@ -11,6 +11,8 @@ namespace Team4_LegendOfZelda
         public Vector2 Position { get; set; }
         public Rectangle DestinationRectangle { get; set; }
         public Rectangle LinkSwordRectangle { get; set; }
+        public int CurrentHitPoints { get; set; }
+        public int MaxHitPoints { get; set; }
         public float Scale { get; set; }
         public Vector2 itemPosition { get; set; }
         public int Direction { get; set; } // 0 for north, clockwise
@@ -31,7 +33,12 @@ namespace Team4_LegendOfZelda
             Position = position;
             Scale = 3f;
             State = new LinkNonMovingSouthState(this);
+
             DestinationRectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(Scale * linkWidth), (int)(Scale * linkHeight));
+
+            CurrentHitPoints = 6;
+            MaxHitPoints = 6;
+
         }
 
         public void North()
