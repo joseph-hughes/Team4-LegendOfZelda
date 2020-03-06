@@ -14,14 +14,14 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         public DungeonHUD(ILevel level, int levelNum)
         {
             Level = level;
-            //HUDSprite = MapAndHUDSpriteFactory.Instance.CreateHUDSprite();
+            HUDSprite = MapAndHUDSpriteFactory.Instance.CreateHudSprite();
             switch (levelNum)
             {
                 case 1:
-                    //LevelNumSprite = MapAndHUDSpriteFactory.Instance.
+                    LevelNumSprite = MapAndHUDSpriteFactory.Instance.CreateNumber1Sprite();
                     break;
                 default:
-                    //LevelNumSprite = MapAndHUDSpriteFactory.Instance.
+                    LevelNumSprite = MapAndHUDSpriteFactory.Instance.CreateNumber0Sprite();
                     break;
             }
         }

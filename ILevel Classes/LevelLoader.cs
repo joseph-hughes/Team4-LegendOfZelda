@@ -1,26 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
+﻿using System.Xml;
 
 namespace Team4_LegendOfZelda.ILevel_Classes
 {
     
     class LevelLoader : IFileLoader
-
     {
         private XmlReader xmlReader;
 
-        public LevelLoader(string fileName)
+        public LevelLoader(int levelNum)
         {
-            xmlReader = XmlReader.Create(fileName);
+            switch (levelNum)
+            {
+                case 0:
+                    // Overworld
+                    break;
+                case 1:
+                    xmlReader = XmlReader.Create("XML/Level1.xml"); // Fix the file name so that it's correct
+                    break;
+                default:
+                    xmlReader = XmlReader.Create("blanklevel.xml"); // Fix the file name so that it's correct
+                    break;
+            }
+            
         }
 
-        public void LoadRoom()
+        public IRoom LoadRoom()
         {
             IRoom room = new DungeonRoom();
+            return room;
         }
 
 
