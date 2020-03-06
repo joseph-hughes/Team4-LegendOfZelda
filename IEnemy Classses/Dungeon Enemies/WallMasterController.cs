@@ -22,15 +22,19 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
                 switch (RandomIntGenerator.Instance.Next(0, 3))
                 {
                     case 0:
+                        enemy.Idle();
                         enemy.North();
                         break;
                     case 1:
+                        enemy.Idle();
                         enemy.East();
                         break;
                     case 2:
+                        enemy.Idle();
                         enemy.South();
                         break;
                     case 3:
+                        enemy.Idle();
                         enemy.West();
                         break;
                     default:

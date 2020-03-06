@@ -13,8 +13,6 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public IState State { get; set; }
         public Rectangle DestinationRectangle { get; set; }
         public float Scale { get; set; }
-        enum Direction { NORTH, EAST, SOUTH, WEST };
-        Direction direction;
         private IController controller;
 
 
@@ -25,8 +23,6 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
             State = new WallMasterWestState(this);
             controller = new WallMasterController(this);
             DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, DestinationRectangle.Width, DestinationRectangle.Height);
-
-            direction = Direction.NORTH;
          
         }
 

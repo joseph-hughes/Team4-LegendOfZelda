@@ -151,7 +151,6 @@
     <Compile Include="IProjectile Classes\Projectiles\FireballProjectile.cs" />
     <Compile Include="IProjectile Classes\Projectiles\ArrowProjectile.cs" />
     <Compile Include="IEnemy Classses\Bosses\AquamentusController.cs" />
-    <Compile Include="IEnemy Classses\Bosses\AquamentusEast.cs" />
     <Compile Include="IEnemy Classses\Bosses\AquamentusWest.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaRed States\GoriyaRedEastAttackState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaRed States\GoriyaRedEastState.cs" />

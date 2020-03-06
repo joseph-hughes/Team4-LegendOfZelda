@@ -14,8 +14,6 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public Rectangle DestinationRectangle { get; set; }
         public float Scale { get; set; }
         private IController controller;
-        private const int width = 8;
-        private const int height = 9;
         
 
         public GelDarkBlue(IRoom room, Vector2 position)
@@ -25,7 +23,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
             Sprite = EnemySpriteFactory.Instance.CreateGelDarkBlueSprite();
             State = new GelDarkBlueIdleState(this);
             controller = new GelDarkBlueController(this);
-            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, DestinationRectangle.Width, DestinationRectangle.Height);
+            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * Sprite.SourceRectangle.Width), (int)(Scale * Sprite.SourceRectangle.Height));
 
 
         }
