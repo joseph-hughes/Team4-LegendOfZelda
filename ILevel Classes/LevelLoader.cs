@@ -207,33 +207,41 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 
                      }
                 }
-
-
-                XmlNode northNode = itemsNode.NextSibling;
-                if (int.Parse(northNode.InnerText)>0){
-                    room.North = rooms[int.Parse(northNode.InnerText)];
-                }
-                XmlNode eastNode = northNode.NextSibling;
-                if (int.Parse(eastNode.InnerText) > 0)
-                {
-                    room.East = rooms[int.Parse(eastNode.InnerText)];
-                }
-                XmlNode southNode = eastNode.NextSibling;
-                if (int.Parse(southNode.InnerText) > 0)
-                {
-                    room.South = rooms[int.Parse(southNode.InnerText)];
-                }
-                XmlNode westNode = southNode.NextSibling;
-                if (int.Parse(westNode.InnerText) > 0)
-                {
-                    room.West = rooms[int.Parse(westNode.InnerText)];
-                }
-
-
                 rooms.Add(room);
             }
-            
-            return rooms;
+
+            int index = 0;
+            foreach (XmlNode roomNode in root)
+            {
+                XmlNode northNode = roomNode.FirstChild.NextSibling.NextSibling;
+                if (northNode.InnerText != "")
+                {
+                    rooms[index].North = rooms[int.Parse(northNode.InnerText) - 1];
+                }
+                XmlNode eastNode = northNode.NextSibling;
+                if (eastNode.InnerText != "")
+                {
+                    rooms[index].East = rooms[int.Parse(eastNode.InnerText) - 1];
+                }
+                XmlNode southNode = eastNode.NextSibling;
+                if (southNode.InnerText != "")
+                {
+                    rooms[index].South = rooms[int.Parse(southNode.InnerText) - 1];
+                }
+                XmlNode westNode = southNode.NextSibling;
+                if (westNode.InnerText!="")
+                {
+                    rooms[index].West = rooms[int.Parse(westNode.InnerText) - 1];
+                }
+                XmlNode otherNode = westNode.NextSibling;
+                if (otherNode.InnerText != "")
+                {
+                    rooms[index].West = rooms[int.Parse(otherNode.InnerText) - 1];
+                }
+                index += 1;
+            }
+
+                return rooms;
         }
 
 
