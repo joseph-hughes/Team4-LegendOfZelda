@@ -17,24 +17,14 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         private const int height = 16;
         private IController controller;
 
-
-        enum Direction { NORTH, EAST, SOUTH, WEST };
-        Direction direction;
-
         public Stalfos(IRoom room, Vector2 position)
         {
             Room = room;
             Scale = 3f;
-
             Sprite = EnemySpriteFactory.Instance.CreateStalfosSprite();
             DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * width), (int)(Scale * height));
             State = new StalfosIdleState(this);
-            controller = new StalfosController(this);
-
-
-      
-            direction = Direction.NORTH;
-        
+            controller = new StalfosController(this);        
         }
 
         public void North()

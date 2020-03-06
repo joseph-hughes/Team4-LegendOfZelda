@@ -1,18 +1,16 @@
-﻿using System;
+﻿using Team4_LegendOfZelda.Random_Number_Generator;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     public class KeeseController : IController
     {
         private IEnemy enemy;
-        private static int MAX_DIRECTION_COUNTS = 240;
+        private static int MAX_DIRECTION_COUNTS = 30;
         private int directionCount;
-        private Random rand;
 
         public KeeseController(IEnemy enemy)
         {
             this.enemy = enemy;
-            rand = new Random();
             directionCount = MAX_DIRECTION_COUNTS;
         }
 
@@ -21,18 +19,22 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
             directionCount--;
             if (directionCount <= 0)
             {
-                switch (rand.Next(0, 4))
+                switch (RandomIntGenerator.Instance.Next(0, 3))
                 {
                     case 0:
+                        enemy.Idle();
                         enemy.North();
                         break;
                     case 1:
+                        enemy.Idle();
                         enemy.East();
                         break;
                     case 2:
+                        enemy.Idle();
                         enemy.South();
                         break;
                     case 3:
+                        enemy.Idle();
                         enemy.West();
                         break;
                     default:
