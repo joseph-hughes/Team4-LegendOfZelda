@@ -10,7 +10,8 @@
         {
             this.link = link;
             this.timer = timer;
-            this.link.Direction = 0;
+            this.link.Velocity.Magnitude = 0;
+            this.link.Velocity.Directon = Vector.Orientation.North;
             this.link.isAttacking = false;
             this.link.isKnocked = false;
             this.link.isDamaged = true;

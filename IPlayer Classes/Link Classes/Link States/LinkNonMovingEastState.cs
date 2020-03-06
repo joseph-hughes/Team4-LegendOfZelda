@@ -6,7 +6,8 @@
         public LinkNonMovingEastState(Link link)
         {
             this.link = link;
-            this.link.Direction = 1;
+            this.link.Velocity.Magnitude = 0;
+            this.link.Velocity.Directon = Vector.Orientation.East;
             this.link.isAttacking = false;
             this.link.isKnocked = false;
             this.link.isDamaged = false;

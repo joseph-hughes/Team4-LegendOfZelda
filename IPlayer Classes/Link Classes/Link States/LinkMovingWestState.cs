@@ -9,8 +9,8 @@ namespace Team4_LegendOfZelda.IState_Classes
         public LinkMovingWestState(Link link)
         {
             this.link = link;
-            this.link.Direction = 3;
-            this.link.Velocity = 2;
+            this.link.Velocity.Magnitude = 2;
+            this.link.Velocity.Directon = Vector.Orientation.West;
             this.link.isAttacking = false;
             this.link.isKnocked = false;
             this.link.isDamaged = false;
@@ -59,7 +59,7 @@ namespace Team4_LegendOfZelda.IState_Classes
 
         public void Update()
         {
-            link.Position = new Vector2(link.Position.X - link.Velocity, link.Position.Y);
+            link.Position = new Vector2(link.Position.X - link.Velocity.Magnitude, link.Position.Y);
             link.DestinationRectangle = new Rectangle((int)link.Position.X, (int)link.Position.Y, (int)(link.Scale * Link.linkWidth), (int)(link.Scale * Link.linkHeight));
         }
     }

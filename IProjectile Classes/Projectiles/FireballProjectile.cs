@@ -32,36 +32,18 @@ namespace Team4_LegendOfZelda
             if (Angle == 0)
             {
                 Y -= speed;
-                if (Y < 0)
-                {
-                    Y = 480;
-                }
-
-
             }
             else if (Angle == 90)
             {
                 X += speed;
-                if (X > 800)
-                {
-                    X = 0;
-                }
             }
             else if (Angle == 180)
             {
                 Y += speed;
-                if (Y > 480)
-                {
-                    Y = 0;
-                }
             }
             else if (Angle == 270)
             {
                 X -= speed;
-                if (X < 0)
-                {
-                    X = 800;
-                }
             }
 
             Position = new Vector2(X, Y);

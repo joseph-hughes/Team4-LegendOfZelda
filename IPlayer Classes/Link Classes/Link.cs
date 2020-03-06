@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Team4_LegendOfZelda.IState_Classes;
+using Team4_LegendOfZelda.Vector;
 
 namespace Team4_LegendOfZelda
 {
@@ -15,8 +16,7 @@ namespace Team4_LegendOfZelda
         public int MaxHitPoints { get; set; }
         public float Scale { get; set; }
         public Vector2 itemPosition { get; set; }
-        public int Direction { get; set; } // 0 for north, clockwise
-        public int Velocity { get; set; }
+        public IVector Velocity { get; set; }
         public bool isAttacking { get; set; }
         public bool isKnocked { get; set; }
         public bool isDamaged { get; set; }
@@ -32,7 +32,9 @@ namespace Team4_LegendOfZelda
         {
             Position = position;
             Scale = 3f;
+            Velocity = new VelocityVector(0, Orientation.South);
             State = new LinkNonMovingSouthState(this);
+
 
             DestinationRectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(Scale * linkWidth), (int)(Scale * linkHeight));
 

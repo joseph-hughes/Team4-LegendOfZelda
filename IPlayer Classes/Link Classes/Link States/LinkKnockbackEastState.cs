@@ -11,8 +11,8 @@ namespace Team4_LegendOfZelda.IState_Classes
         {
             this.link = link;
             this.timer = timer;
-            this.link.Direction = 1;
-            this.link.Velocity = 10;
+            this.link.Velocity.Magnitude = 10;
+            this.link.Velocity.Directon = Vector.Orientation.East;
             this.link.isAttacking = false;
             this.link.isKnocked = true;
             this.link.isDamaged = true;
@@ -69,7 +69,7 @@ namespace Team4_LegendOfZelda.IState_Classes
             }
             else
             {
-                link.Position = new Vector2(link.Position.X - link.Velocity, link.Position.Y);
+                link.Position = new Vector2(link.Position.X - link.Velocity.Magnitude, link.Position.Y);
                 link.DestinationRectangle = new Rectangle((int)link.Position.X, (int)link.Position.Y, (int)(link.Scale * Link.linkWidth), (int)(link.Scale * Link.linkHeight));
 
             }
