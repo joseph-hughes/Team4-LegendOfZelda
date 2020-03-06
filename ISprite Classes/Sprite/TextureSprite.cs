@@ -17,7 +17,7 @@ namespace Team4_LegendOfZelda.ISprite_Classes
         private int height;
         private bool animated;
 
-        // Constructor
+        // Overloaded Constructors
         public TextureSprite(Texture2D texture)
         {
             this.texture = texture;
@@ -46,6 +46,24 @@ namespace Team4_LegendOfZelda.ISprite_Classes
             SourceRectangle = new Rectangle(0, 0, width, height);
 
             animated = true;
+        }
+
+        public TextureSprite(Texture2D texture, int sheetRows, int sheetColumns, int numColumnsOverFromLeft, int numRowsDownFromTop)
+        {
+            this.texture = texture;
+
+            rows = sheetRows;
+            columns = sheetColumns;
+
+            currentFrame = 0;
+            totalFrames = rows * columns;
+
+            width = texture.Width / columns;
+            height = texture.Height / rows;
+
+            SourceRectangle = new Rectangle(numColumnsOverFromLeft * width, numRowsDownFromTop * height, width, height);
+
+            animated = false;
         }
 
         public void Update()

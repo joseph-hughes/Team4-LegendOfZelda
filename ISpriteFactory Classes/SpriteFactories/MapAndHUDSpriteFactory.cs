@@ -82,7 +82,7 @@ namespace Team4_LegendOfZelda
         // Level 1 Sprites
         public ISprite CreateLevel1MapSprite()
         {
-            return new TextureSprite(level1MapTexture);
+            return new TextureSprite(level1MapTexture, 6, 6, 2, 5);
         }
 
         public ISprite CreateLevel1MinimapSprite()
