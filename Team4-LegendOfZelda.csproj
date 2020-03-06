@@ -301,6 +301,8 @@
     <Compile Include="ISpriteFactory Classes\SpriteFactories\ProjectileSpriteFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ICommand Classes\Commands\QuitCommand.cs" />
+    <Compile Include="Random Number Generator\IRandomInt.cs" />
+    <Compile Include="Random Number Generator\RandomIntGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
