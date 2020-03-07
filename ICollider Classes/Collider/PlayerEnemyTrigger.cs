@@ -6,12 +6,12 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 {
     class PlayerEnemyTrigger : ITrigger
     {
-        private IRoom room;
+        private IRoom currentRoom;
         private Link player;
         private IEnemy enemy;
         public PlayerEnemyTrigger(IPlayer Player, IEnemy Enemy, IRoom Room)
         {
-            room = Room;
+            currentRoom = Room;
             player = (Link)Player;
             enemy = Enemy;
         }

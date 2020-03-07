@@ -4,13 +4,13 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 {
     class PlayerProjectileEnemyTrigger : ITrigger
     {
-        private IRoom room;
+        private IRoom currentRoom;
         private IEnemy enemy;
         private IProjectile projectile;
 
         public PlayerProjectileEnemyTrigger(IProjectile projectile, IEnemy enemy, IRoom room)
         {
-            this.room = room;
+            this.currentRoom = room;
             this.projectile = projectile;
             this.enemy = enemy;
 
@@ -18,7 +18,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         }
         public void Execute()
         {
-            room.PlayerProjectiles.Remove(projectile);
+            currentRoom.PlayerProjectiles.Remove(projectile);
             enemy.State.BeDamaged();
         }
     }

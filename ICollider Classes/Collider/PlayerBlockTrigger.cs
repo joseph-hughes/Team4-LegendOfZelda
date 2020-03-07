@@ -25,21 +25,21 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 {
                     if (player.isKnocked)
                     {
-                        direction = 1;
+                        direction = 1;  //East
                     }
                     else
                     {
-                        direction = 3;
+                        direction = 3;  //West
                     }
                 }
                 else
                     if (player.isKnocked)
                 {
-                    direction = 3;
+                    direction = 3;  //West
                 }
                 else
                 {
-                    direction = 1;
+                    direction = 1;  //East
                 }
 
             }
@@ -49,22 +49,22 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 {
                     if (player.isKnocked)
                     {
-                        direction = 2;
+                        direction = 2;  //South
                     }
                     else
                     {
-                        direction = 0;
+                        direction = 0;  //North
                     }
                 }
                 else
                 {
                     if (player.isKnocked)
                     {
-                        direction = 0;
+                        direction = 0;  //North
                     }
                     else
                     {
-                        direction = 2;
+                        direction = 2;  //South
                     }
                 }
             }

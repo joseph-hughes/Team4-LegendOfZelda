@@ -5,19 +5,19 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 {
     class EnemyProjectilePlayerTrigger : ITrigger
     {
-        private IRoom room;
+        private IRoom currentRoom;
         private Link player;
         private IProjectile projectile;
 
         public EnemyProjectilePlayerTrigger(IProjectile projectile, IPlayer player, IRoom room)
         {
-            this.room = room;
+            this.currentRoom = room;
             this.projectile = projectile;
             this.player = (Link)player;
         }
         public void Execute()
         {
-            room.EnemyProjectiles.Remove(projectile);
+            currentRoom.EnemyProjectiles.Remove(projectile);
 
             if (!player.isDamaged)
             {

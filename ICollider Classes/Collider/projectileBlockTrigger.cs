@@ -4,22 +4,22 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 {
     class ProjectileBlockTrigger : ITrigger
     {
-        private IRoom room;
+        private IRoom currentRoom;
         private IProjectile projectile;
         public ProjectileBlockTrigger(IProjectile projectile, IRoom room)
         {
-            this.room = room;
+            this.currentRoom = room;
             this.projectile = projectile;
         }
         public void Execute()
         {
-            if (room.PlayerProjectiles.Contains(projectile))
+            if (currentRoom.PlayerProjectiles.Contains(projectile))
             {
-                room.PlayerProjectiles.Remove(projectile);
+                currentRoom.PlayerProjectiles.Remove(projectile);
             }
-            if (room.EnemyProjectiles.Contains(projectile))
+            if (currentRoom.EnemyProjectiles.Contains(projectile))
             {
-                room.EnemyProjectiles.Remove(projectile);
+                currentRoom.EnemyProjectiles.Remove(projectile);
             }
 
         }
