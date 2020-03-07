@@ -1,0 +1,18 @@
+Author of Code Review:	Joseph Hughes
+
+Date of Code Review:	03/06/2020
+
+Sprint number:			Sprint 3
+
+Name of .cs file:		BoxDector.cs
+
+Author of .cs file:		Mingkun Tian
+
+Number of minutes:		5 minutes
+
+Comments:				To keep this class from having too many dependencies, you should 
+                  remove the fields for player and room and replace them with a 
+                  single field for level. Level contains both of those, so you can 
+                  just access them through the level. Further, you should then no 
+                  longer pass level into update but instead pass it into the constructor 
+                  and reference it with a level field.
