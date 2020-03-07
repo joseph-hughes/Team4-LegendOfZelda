@@ -60,6 +60,7 @@ namespace Team4_LegendOfZelda.IState_Classes
             this.timer -= 1;
             if (this.timer == 0)
             {
+                link.CurrentHitPoints--;
                 link.State = new LinkMovingNorthState(link);
                 link.isDamaged = false;
             }
