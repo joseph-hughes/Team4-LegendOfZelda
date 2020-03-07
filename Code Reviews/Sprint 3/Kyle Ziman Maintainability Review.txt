@@ -1,0 +1,16 @@
+﻿Author of Code Review:	Kyle Ziman
+
+Date of Code Review:	03/06/2020
+
+Sprint number:			Sprint 3
+
+Name of .cs file:		EnemyProjectilePlayerTrigger.cs
+
+Author of .cs file:		Mingkun Tian
+
+Number of minutes:		10 minutes
+
+Comments:				This class should be easy to maintain in future visits as it has pretty high cohesion. All methods in this class are directly related to the function
+						of the class with a constructor and an execution function the only two methoods contained in it. These two methods are used to one create an instance
+						of the class and the other is instructions for the class on what to do when called. While this class has relatively low coupling, it uses it when 
+						necessarry in order for the code to be more readable.
