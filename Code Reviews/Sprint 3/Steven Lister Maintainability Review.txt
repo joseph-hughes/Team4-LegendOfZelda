@@ -1,0 +1,15 @@
+﻿Author of Code Review:	Steven Lister
+
+Date of Code Review:	03/06/2020
+
+Sprint number:			Sprint 3
+
+Name of .cs file:		SilverArrow.cs
+
+Author of .cs file:		Minkun Tian
+
+Number of minutes:		10 minutes
+
+Comments:				The maintainability of this code is good due to its simplicity. It's easy to follow the function of the class and thus would be easy to modify in the future. The
+						one drawback I see is the use of hard-coded scale value. Since it remains the same in many item classes, we should setup some global variable for item scale. This
+						way changing scale in the future would be very easy. 
