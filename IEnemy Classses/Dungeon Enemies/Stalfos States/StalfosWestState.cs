@@ -5,13 +5,11 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Stalfos_States
     class StalfosWestState : IState
     {
         IEnemy enemy;
-        private static int MAX_DISPLACEMENT = 48, DELTA_DISPLACEMENT = 2;
-        private int displacement;
+        int speed = 2;
 
         public StalfosWestState(IEnemy enemy)
         {
             this.enemy = enemy;
-            displacement = MAX_DISPLACEMENT;
         }
 
         public void North()
@@ -55,23 +53,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Stalfos_States
 
         public void Update()
         {
-            //enemy.DestinationRectangle = new Vector2(((int)enemy.DestinationRectangle.X - 2) % 800, enemy.DestinationRectangle.Y);
-            if (displacement > 0)
-            {
-                if (enemy.DestinationRectangle.X > DELTA_DISPLACEMENT)
-                {
-                    enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X - DELTA_DISPLACEMENT, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
-                }
-                else
-                {
-                    enemy.DestinationRectangle = new Rectangle(768 - enemy.DestinationRectangle.X - DELTA_DISPLACEMENT, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
-                }
-                displacement -= DELTA_DISPLACEMENT;
-            }
-            else
-            {
-                Idle();
-            }
+            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X - speed, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
         }
     }
 }

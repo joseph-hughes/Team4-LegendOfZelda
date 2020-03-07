@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Team4_LegendOfZelda.Vector;
 
 namespace Team4_LegendOfZelda
 {
@@ -14,8 +15,7 @@ namespace Team4_LegendOfZelda
         int MaxHitPoints { get; set; }
         float Scale { get; set; }
         Vector2 itemPosition { get; set; }
-        int Direction { get; set; }
-        int Velocity { get; set; }
+        IVector Velocity { get; set; }
         bool isAttacking { get; set; }
         bool isKnocked { get; set; }
         bool isDamaged { get; set; }

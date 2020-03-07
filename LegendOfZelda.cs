@@ -53,7 +53,7 @@ namespace Team4_LegendOfZelda
         {
             base.Initialize();
 
-            player = new Link(new Vector2(96, 240));
+            player = new Link(new Vector2(96, 260));
 
             level = new DungeonLevel(player, 1);
             level.Initialize(WINDOW_WIDTH, ROOM_HEIGHT, HUD_HEIGHT);
@@ -78,10 +78,10 @@ namespace Team4_LegendOfZelda
                 new LinkAttackCommand(player),                  //6
                 new LinkBeDamagedCommand(player),               //7
                 new LinkIdleCommand(player),                    //8
-                new LinkUseArrowCommand(player, level.CurrentRoom),         //9
-                new LinkUseBoomerangCommand(player, level.CurrentRoom),     //10
-                new LinkUseFireballCommand(player, level.CurrentRoom),      //11
-                new LinkUseMagicBoomerangCommand(player, level.CurrentRoom) //12
+                new LinkUseArrowCommand(player, level),         //9
+                new LinkUseBoomerangCommand(player, level),     //10
+                new LinkUseFireballCommand(player, level),      //11
+                new LinkUseMagicBoomerangCommand(player, level) //12
             };
 
             KeyboardController keyboard = (KeyboardController)controllerList[0];

@@ -112,22 +112,22 @@ namespace Team4_LegendOfZelda
         // Aquamentus Sprites
         public ISprite CreateAquamentusEastIdleSprite()
         {
-            return new TextureSprite(aquamentusEastIdleTexture, 1, 2, 5);
+            return new TextureSprite(aquamentusEastIdleTexture, 1, 2, 10);
         }
 
         public ISprite CreateAquamentusEastAttackSprite()
         {
-            return new TextureSprite(aquamentusEastAttackTexture, 1, 2, 5);
+            return new TextureSprite(aquamentusEastAttackTexture, 1, 2, 10);
         }
 
         public ISprite CreateAquamentusWestIdleSprite()
         {
-            return new TextureSprite(aquamentusWestIdleTexture, 1, 2, 5);
+            return new TextureSprite(aquamentusWestIdleTexture, 1, 2, 10);
         }
 
         public ISprite CreateAquamentusWestAttackSprite()
         {
-            return new TextureSprite(aquamentusWestAttackTexture, 1, 2, 5);
+            return new TextureSprite(aquamentusWestAttackTexture, 1, 2, 10);
         }
 
         // Dondongo Sprites

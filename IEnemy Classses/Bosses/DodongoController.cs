@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Team4_LegendOfZelda.Random_Number_Generator;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 {
@@ -7,12 +7,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         private IEnemy enemy;
         private static int MIN_DIRECTION_COUNTS = 100, MAX_DIRECTION_COUNTS = 300;
         private int directionCount;
-        private Random rand;
 
         public DodongoController(IEnemy enemy)
         {
             this.enemy = enemy;
-            rand = new Random();
             directionCount = MAX_DIRECTION_COUNTS;
         }
         public void Update()
@@ -20,18 +18,22 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
             directionCount--;
             if (directionCount <= 0)
             {
-                switch (rand.Next(0, 5))
+                switch (RandomIntGenerator.Instance.Next(0, 5))
                 {
                     case 0:
+                        enemy.Idle();
                         enemy.North();
                         break;
                     case 1:
+                        enemy.Idle();
                         enemy.East();
                         break;
                     case 2:
+                        enemy.Idle();
                         enemy.South();
                         break;
                     case 3:
+                        enemy.Idle();
                         enemy.West();
                         break;
                     case 4:
@@ -41,7 +43,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
                         // Do nothing, this is not supposed to happen
                         break;
                 }
-                directionCount = rand.Next(MIN_DIRECTION_COUNTS, MAX_DIRECTION_COUNTS + 1);
+                directionCount = RandomIntGenerator.Instance.Next(MIN_DIRECTION_COUNTS, MAX_DIRECTION_COUNTS);
             }
         }
     }

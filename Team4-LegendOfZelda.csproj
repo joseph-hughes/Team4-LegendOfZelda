@@ -151,8 +151,7 @@
     <Compile Include="IProjectile Classes\Projectiles\FireballProjectile.cs" />
     <Compile Include="IProjectile Classes\Projectiles\ArrowProjectile.cs" />
     <Compile Include="IEnemy Classses\Bosses\AquamentusController.cs" />
-    <Compile Include="IEnemy Classses\Bosses\AquamentusEast.cs" />
-    <Compile Include="IEnemy Classses\Bosses\AquamentusWest.cs" />
+    <Compile Include="IEnemy Classses\Bosses\Aquamentus.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaRed States\GoriyaRedEastAttackState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaRed States\GoriyaRedEastState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaRed States\GoriyaRedNorthAttackState.cs" />
@@ -254,6 +253,9 @@
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkUseItemNorthState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkUseItemSouthState.cs" />
     <Compile Include="IState Classes\IState.cs" />
+    <Compile Include="IVector Classes\VelocityVector.cs" />
+    <Compile Include="IVector Classes\Orientation.cs" />
+    <Compile Include="IVector Classes\IVector.cs" />
     <Compile Include="LegendOfZelda.cs" />
     <Compile Include="ICommand Classes\ICommand.cs" />
     <Compile Include="IController Classes\IController.cs" />
@@ -301,6 +303,8 @@
     <Compile Include="ISpriteFactory Classes\SpriteFactories\ProjectileSpriteFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ICommand Classes\Commands\QuitCommand.cs" />
+    <Compile Include="Random Number Generator\IRandomInt.cs" />
+    <Compile Include="Random Number Generator\RandomIntGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -494,14 +498,16 @@
     <Content Include="bin\DesktopGL\AnyCPU\Debug\x64\soft_oal.dll" />
     <Content Include="bin\DesktopGL\AnyCPU\Debug\x86\SDL2.dll" />
     <Content Include="bin\DesktopGL\AnyCPU\Debug\x86\soft_oal.dll" />
-    <Content Include="Code Reviews\Joseph Hughes Maintainability Review.txt" />
-    <Content Include="Code Reviews\Kyle Ziman Maintainability Review.txt" />
-    <Content Include="Code Reviews\Joseph Hughes Readability Review.txt" />
-    <Content Include="Code Reviews\Kyle Ziman Readability Review.txt" />
-    <Content Include="Code Reviews\Minkun Tian Maintainability Review.txt" />
-    <Content Include="Code Reviews\Minkun Tian Readability Review.txt" />
-    <Content Include="Code Reviews\Steven Lister Maintainability Review.txt" />
-    <Content Include="Code Reviews\Steven Lister Readability Review.txt" />
+    <Content Include="Code Reviews\Sprint 2\Joseph Hughes Maintainability Review.txt" />
+    <Content Include="Code Reviews\Sprint 2\Kyle Ziman Maintainability Review.txt" />
+    <Content Include="Code Reviews\Sprint 2\Joseph Hughes Readability Review.txt" />
+    <Content Include="Code Reviews\Sprint 2\Kyle Ziman Readability Review.txt" />
+    <Content Include="Code Reviews\Sprint 3\Minkun Tian Readability Review.txt" />
+    <Content Include="Code Reviews\Sprint 3\Minkun Tian Maintainability Review.txt" />
+    <Content Include="Code Reviews\Sprint 2\Minkun Tian Maintainability Review.txt" />
+    <Content Include="Code Reviews\Sprint 2\Minkun Tian Readability Review.txt" />
+    <Content Include="Code Reviews\Sprint 2\Steven Lister Maintainability Review.txt" />
+    <Content Include="Code Reviews\Sprint 2\Steven Lister Readability Review.txt" />
     <Content Include="Content\Bosses\Aquamentus\AquamentusEastAttack.png" />
     <Content Include="Content\Bosses\Aquamentus\AquamentusEastIdle.png" />
     <Content Include="Content\Bosses\Aquamentus\AquamentusWestAttack.png" />
