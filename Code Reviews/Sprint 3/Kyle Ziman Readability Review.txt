@@ -1,0 +1,14 @@
+﻿Author of Code Review:	Kyle Ziman
+
+Date of Code Review:	03/06/2020
+
+Sprint number:			Sprint 3
+
+Name of .cs file:		Box Detector.cs
+
+Author of .cs file:		Mingkun Tian
+
+Number of minutes:		8 minutes
+
+Comments:				This class has high readablity as all variables have descriptive names and there are no magic numbers involved at all. With the exception of a speeling error the
+						syntax is all of good quality as well.
