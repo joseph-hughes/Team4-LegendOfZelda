@@ -128,12 +128,16 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             {
                 int tempHitPoints = Level.Player.CurrentHitPoints;
                 int index = 0;
-                while (tempHitPoints > 0)
+                while (index < newHeartValues.Count)
                 {
                     if (tempHitPoints == 1)
                     {
                         newHeartValues[index] = 1;
                         tempHitPoints--;
+                    }
+                    else if (tempHitPoints == 0)
+                    {
+                        newHeartValues[index] = 0;
                     }
                     else
                     {
