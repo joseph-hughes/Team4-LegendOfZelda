@@ -1,0 +1,25 @@
+Author of Code Review:	Joseph Hughes
+
+Date of Code Review:	03/06/2020
+
+Sprint number:			Sprint 3
+
+Name of .cs file:		Link.cs
+
+Author of .cs file:		Steven Lister, Mingkun Tian
+
+Number of minutes:		5 minutes
+
+Comments:         There are quite a few inconsistencies in spacing within 
+                    this file. I know this came from people going through 
+                    adding and remove parts of the class, but we should 
+                    always try to leave the class readable after every edit. 
+                    All of the variable names are descriptive, which helps 
+                    me know what is going on without any need for comments. 
+                    There are some inconsistencies with naming, however, 
+                    since some public fields aren't in Pascal case and the 
+                    constants are not all caps. Further, a couple of the 
+                    variables use underscores, which is inconsistent with 
+                    our naming conventions throughout the rest of the project. 
+                    Overall, this class needs to just fix several inconsistencies 
+                    in both spacing and naming.
