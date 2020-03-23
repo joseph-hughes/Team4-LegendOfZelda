@@ -54,7 +54,6 @@
             this.timer -= 1;
             if (this.timer == 0)
             {
-                link.CurrentHitPoints--;
                 link.State = new LinkNonMovingNorthState(link);
                 link.isDamaged = false;
             }

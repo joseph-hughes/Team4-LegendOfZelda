@@ -70,7 +70,16 @@ namespace Team4_LegendOfZelda
 
         public void BeDamaged()
         {
-            State.BeDamaged();
+            if (CurrentHitPoints > 0)
+            {
+                CurrentHitPoints--;
+                State.BeDamaged();
+            }
+            else
+            {
+                // Link dies
+                State.BeDamaged(); //temp
+            }
         }
 
         public void UseItem()
