@@ -1,0 +1,14 @@
+﻿Author of Code Review:	Steven Lister
+
+Date of Code Review:	03/06/2020
+
+Sprint number:			Sprint 3
+
+Name of .cs file:		Aquamentus.cs
+
+Author of .cs file:		Joey Hughes
+
+Number of minutes:		5 minutes
+
+Comments:				The readability of this class is great. Each method is very simple and its clear what each variable represents. It's also not a very long or complicated class so it does not take
+						to read and fully understand.

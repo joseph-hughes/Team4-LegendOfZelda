@@ -6,12 +6,12 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 {
     class PlayerEnemyTrigger : ITrigger
     {
-        private IRoom room;
+        private IRoom currentRoom;
         private Link player;
         private IEnemy enemy;
         public PlayerEnemyTrigger(IPlayer Player, IEnemy Enemy, IRoom Room)
         {
-            room = Room;
+            currentRoom = Room;
             player = (Link)Player;
             enemy = Enemy;
         }
@@ -30,11 +30,13 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                     {
                         if (dy > 0)
                         {
-                            player.State = new LinkKnockbackNorthState(player, Link.knockback_timer);
+                            player.North();
+                            player.BeDamaged();
                         }
                         else
                         {
-                            player.State = new LinkKnockbackSouthState(player, Link.knockback_timer);
+                            player.South();
+                            player.BeDamaged();
                         }
                     }
                     //left right collision
@@ -42,17 +44,19 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                     {
                         if (dx > 0)
                         {
-                            player.State = new LinkKnockbackWestState(player, Link.knockback_timer);
+                            player.West();
+                            player.BeDamaged();
                         }
                         else
                         {
-                            player.State = new LinkKnockbackEastState(player, Link.knockback_timer);
+                            player.East();
+                            player.BeDamaged();
                         }
                     }
                 }
                 else
                 {
-                    enemy.State.BeDamaged();
+                    enemy.BeDamaged();
                 }
             }
 

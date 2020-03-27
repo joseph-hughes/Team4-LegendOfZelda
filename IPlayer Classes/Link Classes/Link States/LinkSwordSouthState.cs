@@ -12,6 +12,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         public LinkSwordSouthState(Link link, int timer)
         {
             this.link = link;
+            this.timer = timer;
             this.link.Velocity.Magnitude = 0;
             this.link.Velocity.Directon = Vector.Orientation.South;
             this.link.isAttacking = true;
