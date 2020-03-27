@@ -1,0 +1,16 @@
+﻿Author of Code Review:	Neil Dey
+
+Date of Code Review:	03/06/20
+
+Sprint number:			Sprint 3
+
+Name of .cs file:		Level1.xml
+
+Author of .cs file:		Peter Su / Neil Dey
+
+Number of minutes:		7 minutes
+
+Comments:				Overall, this xml file is highly readable. All the elements' names and attributes are descriptive. That being said, I think the numbering of the
+						rooms could be formatted in a way that's more intuitive to make reformatting the room numbers simpler. I don't think that someone outside the team
+						would understand our numbering system well enough to update the numbering if additional rooms were added. A simpler format would be left to right	
+						and top to bottom.

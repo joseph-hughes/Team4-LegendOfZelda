@@ -506,6 +506,8 @@
     <Content Include="Code Reviews\Sprint 2\Minkun Tian Readability Review.txt" />
     <Content Include="Code Reviews\Sprint 2\Steven Lister Maintainability Review.txt" />
     <Content Include="Code Reviews\Sprint 2\Steven Lister Readability Review.txt" />
+    <Content Include="Code Reviews\Sprint 3\Neil Dey Maintainability.txt" />
+    <Content Include="Code Reviews\Sprint 3\Neil Dey Readability.txt" />
     <Content Include="Content\Bosses\Aquamentus\AquamentusEastAttack.png" />
     <Content Include="Content\Bosses\Aquamentus\AquamentusEastIdle.png" />
     <Content Include="Content\Bosses\Aquamentus\AquamentusWestAttack.png" />
@@ -650,7 +652,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\DesktopGL\AnyCPU\Release\" />
-    <Folder Include="Code Reviews\Sprint 3\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

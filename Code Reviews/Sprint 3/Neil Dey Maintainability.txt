@@ -1,0 +1,15 @@
+﻿Author of Code Review:	Neil Dey
+
+Date of Code Review:	03/06/20
+
+Sprint number:			Sprint 3
+
+Name of .cs file:		LegendOfZelda.Cs
+
+Author of .cs file:		Joey Hughes, Peter Su, Steven Lister, Minkun Tian, Neil Dey
+
+Number of minutes:		10 minutes
+
+Comments:				This code has good maintainability. The main drawback of this class is that the initialization of the keyboard controller, command list, as well as some other	
+                        member variables could be moved to a separate class so that the beginning of this one isn't so long. Most of the initialization code isn't relevant to the main purpose of this class
+						so it's not necessary to have here. That being said, it's organized in a way that is clearly understandable. 
