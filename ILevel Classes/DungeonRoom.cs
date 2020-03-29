@@ -9,8 +9,9 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         public List<IItem> Items { get; set; }
         public List<IProjectile> PlayerProjectiles { get; set; }
         public List<IProjectile> EnemyProjectiles { get; set; }
-        public List<IBlock> Blocks { get; set; }
-        //List<IBoundary> Boundaries { get; set; }
+        public List<IBlock> NonmoveableBlock { get; set; }
+        public List<IBlock> MoveableBlock { get; set; }
+        public List<IBlock> Boundary { get; set; }
         public IRoom North { get; set; }
         public bool HasNorth { get; set; }
         public IRoom East { get; set; }
@@ -22,13 +23,16 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         public IRoom Other { get; set; }
         public bool HasOther { get; set; }
 
+
         public DungeonRoom()
         {
             Enemies = new List<IEnemy>();
             Items = new List<IItem>();
             PlayerProjectiles = new List<IProjectile>();
             EnemyProjectiles = new List<IProjectile>();
-            Blocks = new List<IBlock>();
+            NonmoveableBlock = new List<IBlock>();
+            MoveableBlock = new List<IBlock>();
+            Boundary = new List<IBlock>();
 
             HasNorth = false;
             HasEast = false;
@@ -42,7 +46,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             Player = player;
             Enemies.AddRange(enemies);
             Items.AddRange(items);
-            Blocks.AddRange(blocks);
+            NonmoveableBlock.AddRange(blocks);
         }
 
         public void Update()

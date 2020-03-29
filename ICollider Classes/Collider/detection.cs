@@ -26,9 +26,19 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 }
             }
         }
-        public static void PlayerBlockDection(IPlayer player, IRoom room, List<ITrigger> triggerList)
+        public static void PlayerNonmoveableBlockDection(IPlayer player, IRoom room, List<ITrigger> triggerList)
         {
-            foreach (IBlock currentBlock in room.Blocks)
+            foreach (IBlock currentBlock in room.NonmoveableBlock)
+            {
+                if (player.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
+                {
+                    triggerList.Add(new PlayerBlockTrigger(player, currentBlock));
+                }
+            }
+        }
+        public static void PlayerNonemoveableBlockDection(IPlayer player, IRoom room, List<ITrigger> triggerList)
+        {
+            foreach (IBlock currentBlock in room.NonmoveableBlock)
             {
                 if (player.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
                 {
@@ -63,7 +73,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         {
             foreach (IProjectile currentEnemyProjectile in room.EnemyProjectiles)
             {
-                foreach (IBlock currentBlock in room.Blocks)
+                foreach (IBlock currentBlock in room.NonmoveableBlock)
                 {
                     if (currentEnemyProjectile.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
                     {
@@ -73,7 +83,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             }
             foreach (IProjectile currentPlayerProjectile in room.PlayerProjectiles)
             {
-                foreach (IBlock currentBlock in room.Blocks)
+                foreach (IBlock currentBlock in room.NonmoveableBlock)
                 {
                     if (currentPlayerProjectile.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
                     {
@@ -87,7 +97,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         {
             foreach (IEnemy currentEnemy in room.Enemies)
             {
-                foreach (IBlock currentBlock in room.Blocks)
+                foreach (IBlock currentBlock in room.NonmoveableBlock)
                 {
                     if (currentEnemy.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
                     {

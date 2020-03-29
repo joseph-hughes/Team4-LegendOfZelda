@@ -46,6 +46,8 @@
     <StartupObject>Team4_LegendOfZelda.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="IBlock Classes\Boundary.cs" />
+    <Compile Include="IBlock Classes\MoveableBlock.cs" />
     <Compile Include="ICollider Classes\Collider\BoxDector.cs" />
     <Compile Include="ICollider Classes\Collider\Detection.cs" />
     <Compile Include="ICollider Classes\Collider\EnemyBlockTrigger.cs" />
@@ -139,8 +141,8 @@
     <Compile Include="ILevel Classes\IFileLoader.cs" />
     <Compile Include="ILevel Classes\IRoom.cs" />
     <Compile Include="ILevel Classes\Levels\DungeonLevel.cs" />
-    <Compile Include="ILevel Classes\Levels\Block.cs" />
-    <Compile Include="ILevel Classes\IBlock.cs" />
+    <Compile Include="IBlock Classes\NonmoveableBlock.cs" />
+    <Compile Include="IBlock Classes\IBlock.cs" />
     <Compile Include="ILevel Classes\Map.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackEastState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackNorthState.cs" />
@@ -253,9 +255,9 @@
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkUseItemNorthState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkUseItemSouthState.cs" />
     <Compile Include="IState Classes\IState.cs" />
-    <Compile Include="Vector\VelocityVector.cs" />
-    <Compile Include="Vector\Orientation.cs" />
-    <Compile Include="Vector\IVector.cs" />
+    <Compile Include="IVector Classes\IVector.cs" />
+    <Compile Include="IVector Classes\Orientation.cs" />
+    <Compile Include="IVector Classes\VelocityVector.cs" />
     <Compile Include="LegendOfZelda.cs" />
     <Compile Include="ICommand Classes\ICommand.cs" />
     <Compile Include="IController Classes\IController.cs" />

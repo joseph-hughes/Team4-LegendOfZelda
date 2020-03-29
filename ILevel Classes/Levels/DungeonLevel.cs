@@ -35,11 +35,18 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
 
             foreach (IRoom room in Rooms)
             {
-                room.Blocks = new List<IBlock>{
-                new Block(new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 93, 525)),
-                new Block(new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 765, 93)),
-                new Block(new Microsoft.Xna.Framework.Rectangle(0, 432 + hudHeight, 765, 93)),
-                new Block(new Microsoft.Xna.Framework.Rectangle(672, hudHeight, 93, 525))
+                room.NonmoveableBlock = new List<IBlock>{
+                new NonmoveableBlock(new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 93, 525)),
+                new NonmoveableBlock(new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 765, 93)),
+                new NonmoveableBlock(new Microsoft.Xna.Framework.Rectangle(0, 432 + hudHeight, 765, 93)),
+                new NonmoveableBlock(new Microsoft.Xna.Framework.Rectangle(672, hudHeight, 93, 525))
+                };
+
+                room.Boundary = new List<IBlock>{
+                new NonmoveableBlock(new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 1, 525)),
+                new NonmoveableBlock(new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 765, 1)),
+                new NonmoveableBlock(new Microsoft.Xna.Framework.Rectangle(0, 525 + hudHeight, 765, 1)),
+                new NonmoveableBlock(new Microsoft.Xna.Framework.Rectangle(765, hudHeight, 1, 525))
                 };
             }
         }
