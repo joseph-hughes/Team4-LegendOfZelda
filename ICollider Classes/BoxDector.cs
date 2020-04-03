@@ -21,8 +21,12 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             Detection.EnemyProjectilePlayerDection(player, room, triggerList);
             Detection.PlayerProjectileEnemyDection(room, triggerList);
             Detection.ProjectileBlock(room, triggerList);
-            Detection.PlayerBlockDection(player, room, triggerList);
+            Detection.BlockWallDection(room, triggerList);
+            Detection.BlockBlockDection(room, triggerList);
             Detection.EnemyBlock(room, triggerList);
+            Detection.PlayerBlockDection(player, room, triggerList);
+            Detection.PlayerWallDection(player, room, triggerList);
+
         }
 
         public void Update(ILevel level)
