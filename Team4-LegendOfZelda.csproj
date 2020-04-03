@@ -489,6 +489,7 @@
     <None Include="Content\Content.mgcb" />
     <None Include="Content\Font.spritefont" />
     <None Include="README.md" />
+    <None Include="Sprint 3 Reflection.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll" />
@@ -502,6 +503,8 @@
     <Content Include="Code Reviews\Sprint 2\Kyle Ziman Maintainability Review.txt" />
     <Content Include="Code Reviews\Sprint 2\Joseph Hughes Readability Review.txt" />
     <Content Include="Code Reviews\Sprint 2\Kyle Ziman Readability Review.txt" />
+    <Content Include="Code Reviews\Sprint 3\Joseph Hughes Maintainability Review.txt" />
+    <Content Include="Code Reviews\Sprint 3\Joseph Hughes Readability Review.txt" />
     <Content Include="Code Reviews\Sprint 3\Kyle Ziman Maintainability Review.txt" />
     <Content Include="Code Reviews\Sprint 3\Kyle Ziman Readability Review.txt" />
     <Content Include="Code Reviews\Sprint 3\Minkun Tian Readability Review.txt" />
@@ -510,13 +513,10 @@
     <Content Include="Code Reviews\Sprint 2\Minkun Tian Readability Review.txt" />
     <Content Include="Code Reviews\Sprint 2\Steven Lister Maintainability Review.txt" />
     <Content Include="Code Reviews\Sprint 2\Steven Lister Readability Review.txt" />
-<<<<<<< HEAD
     <Content Include="Code Reviews\Sprint 3\Neil Dey Maintainability.txt" />
     <Content Include="Code Reviews\Sprint 3\Neil Dey Readability.txt" />
-=======
     <Content Include="Code Reviews\Sprint 3\Steven Lister Maintainability Review.txt" />
     <Content Include="Code Reviews\Sprint 3\Steven Lister Readability Review.txt" />
->>>>>>> ee2896a171225805bc3aa852d9eec35c6f94e8d2
     <Content Include="Content\Bosses\Aquamentus\AquamentusEastAttack.png" />
     <Content Include="Content\Bosses\Aquamentus\AquamentusEastIdle.png" />
     <Content Include="Content\Bosses\Aquamentus\AquamentusWestAttack.png" />
