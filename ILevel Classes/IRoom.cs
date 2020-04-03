@@ -7,8 +7,8 @@
         System.Collections.Generic.List<IItem> Items { get; set; }
         System.Collections.Generic.List<IProjectile> PlayerProjectiles { get; set; }
         System.Collections.Generic.List<IProjectile> EnemyProjectiles { get; set; }
-        System.Collections.Generic.List<IBlock> NonmoveableBlock { get; set; }
-        System.Collections.Generic.List<IBlock> MoveableBlock { get; set; }
+        System.Collections.Generic.List<IBlock> Block { get; set; }
+        System.Collections.Generic.List<IBlock> Wall { get; set; }
         System.Collections.Generic.List<IBlock> Boundary { get; set; }
         //List<IBoundary> Boundaries { get; set; }
         IRoom North { get; set; }

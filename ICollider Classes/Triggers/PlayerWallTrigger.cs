@@ -1,13 +1,14 @@
-﻿using Team4_LegendOfZelda.ILevel_Classes;
+﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 {
-    class PlayerBlockTrigger : ITrigger
+    class PlayerWallTrigger : ITrigger
     {
         private IPlayer player;
         private IBlock block;
 
-        public PlayerBlockTrigger(IPlayer Player, IBlock Block)
+        public PlayerWallTrigger(IPlayer Player, IBlock Block)
         {
             player = Player;
             block = Block;
@@ -69,9 +70,10 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 }
             }
 
-            if (player.Velocity.Directon == direction)
+
+            if(player.Velocity.Directon == direction)
             {
-                player.Velocity.Magnitude = 0;
+                    player.Velocity.Magnitude = 0;
             }
 
         }

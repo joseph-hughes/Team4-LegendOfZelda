@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
+using Team4_LegendOfZelda.IBlock_Classes;
 
 namespace Team4_LegendOfZelda.ILevel_Classes.Levels
 {
@@ -35,18 +36,17 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
 
             foreach (IRoom room in Rooms)
             {
-                room.NonmoveableBlock = new List<IBlock>{
-                new NonmoveableBlock(new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 93, 525)),
-                new NonmoveableBlock(new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 765, 93)),
-                new NonmoveableBlock(new Microsoft.Xna.Framework.Rectangle(0, 432 + hudHeight, 765, 93)),
-                new NonmoveableBlock(new Microsoft.Xna.Framework.Rectangle(672, hudHeight, 93, 525))
+                room.Wall = new List<IBlock>{
+                new Block(false, new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 93, 525), null),
+                new Block(false, new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 765, 93), null),
+                new Block(false, new Microsoft.Xna.Framework.Rectangle(0, 432 + hudHeight, 765, 93), null),
+                new Block(false, new Microsoft.Xna.Framework.Rectangle(672, hudHeight, 93, 525), null),
                 };
-
                 room.Boundary = new List<IBlock>{
-                new NonmoveableBlock(new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 1, 525)),
-                new NonmoveableBlock(new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 765, 1)),
-                new NonmoveableBlock(new Microsoft.Xna.Framework.Rectangle(0, 525 + hudHeight, 765, 1)),
-                new NonmoveableBlock(new Microsoft.Xna.Framework.Rectangle(765, hudHeight, 1, 525))
+                new Boundary(new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 1, 525)),
+                new Boundary(new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 765, 1)),
+                new Boundary(new Microsoft.Xna.Framework.Rectangle(0, 525 + hudHeight, 765, 1)),
+                new Boundary(new Microsoft.Xna.Framework.Rectangle(765, hudHeight, 1, 525))
                 };
             }
         }
