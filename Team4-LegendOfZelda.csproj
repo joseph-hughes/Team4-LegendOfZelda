@@ -46,16 +46,22 @@
     <StartupObject>Team4_LegendOfZelda.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ICollider Classes\Collider\BoxDector.cs" />
-    <Compile Include="ICollider Classes\Collider\Detection.cs" />
-    <Compile Include="ICollider Classes\Collider\EnemyBlockTrigger.cs" />
-    <Compile Include="ICollider Classes\Collider\PlayerBlockTrigger.cs" />
-    <Compile Include="ICollider Classes\Collider\PlayerProjectileEnemyTrigger.cs" />
-    <Compile Include="ICollider Classes\Collider\EnemyProjectilePlayerTrigger.cs" />
-    <Compile Include="ICollider Classes\Collider\PlayerEnemyTrigger.cs" />
-    <Compile Include="ICollider Classes\Collider\ProjectileBlockTrigger.cs" />
+    <Compile Include="IBlock Classes\Block.cs" />
+    <Compile Include="IBlock Classes\Boundary.cs" />
+    <Compile Include="IBlock Classes\IBlock.cs" />
+    <Compile Include="ICollider Classes\BoxDector.cs" />
+    <Compile Include="ICollider Classes\detection.cs" />
     <Compile Include="ICollider Classes\ITrigger.cs" />
     <Compile Include="ICollider Classes\IDector.cs" />
+    <Compile Include="ICollider Classes\Triggers\BlockBlockTrigger.cs" />
+    <Compile Include="ICollider Classes\Triggers\BlockWallTrigger.cs" />
+    <Compile Include="ICollider Classes\Triggers\EnemyBlockTrigger.cs" />
+    <Compile Include="ICollider Classes\Triggers\EnemyProjectilePlayerTrigger.cs" />
+    <Compile Include="ICollider Classes\Triggers\PlayerBlockTrigger.cs" />
+    <Compile Include="ICollider Classes\Triggers\PlayerEnemyTrigger.cs" />
+    <Compile Include="ICollider Classes\Triggers\PlayerProjectileEnemyTrigger.cs" />
+    <Compile Include="ICollider Classes\Triggers\PlayerWallTrigger.cs" />
+    <Compile Include="ICollider Classes\Triggers\projectileBlockTrigger.cs" />
     <Compile Include="ICommand Classes\Commands\GotoRoom18Command.cs" />
     <Compile Include="ICommand Classes\Commands\GotoRoom17Command.cs" />
     <Compile Include="ICommand Classes\Commands\GotoRoom16Command.cs" />
@@ -139,8 +145,6 @@
     <Compile Include="ILevel Classes\IFileLoader.cs" />
     <Compile Include="ILevel Classes\IRoom.cs" />
     <Compile Include="ILevel Classes\Levels\DungeonLevel.cs" />
-    <Compile Include="ILevel Classes\Levels\Block.cs" />
-    <Compile Include="ILevel Classes\IBlock.cs" />
     <Compile Include="ILevel Classes\Map.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackEastState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackNorthState.cs" />
