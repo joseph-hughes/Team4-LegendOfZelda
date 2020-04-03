@@ -255,9 +255,6 @@
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkUseItemSouthState.cs" />
     <Compile Include="IState Classes\IState.cs" />
     <Compile Include="ISFXFactory Classes\SFXFactory.cs" />
-    <Compile Include="Vector\VelocityVector.cs" />
-    <Compile Include="Vector\Orientation.cs" />
-    <Compile Include="Vector\IVector.cs" />
     <Compile Include="LegendOfZelda.cs" />
     <Compile Include="ICommand Classes\ICommand.cs" />
     <Compile Include="IController Classes\IController.cs" />
