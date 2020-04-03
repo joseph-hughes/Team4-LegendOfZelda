@@ -77,6 +77,10 @@ namespace Team4_LegendOfZelda
             WalkingStairs = content.Load<SoundEffect>("Sounds/Walking_Stairs");
         }
 
-
+        // Not sure if something like this is necessary.
+        public void PlayLinkDamaged()
+        {
+            LinkDamaged.Play();
+        }
     }
 }

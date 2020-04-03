@@ -18,6 +18,7 @@ namespace Team4_LegendOfZelda.IState_Classes
             this.link.isDamaged = true;
             this.link.LinkSwordRectangle = Rectangle.Empty;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkDamagedMovingEastSprite();
+            SFXFactory.Instance.PlayLinkDamaged();
         }
 
         public void North()
