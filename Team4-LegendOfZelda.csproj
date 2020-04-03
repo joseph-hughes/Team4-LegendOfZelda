@@ -142,6 +142,7 @@
     <Compile Include="ILevel Classes\Levels\Block.cs" />
     <Compile Include="ILevel Classes\IBlock.cs" />
     <Compile Include="ILevel Classes\Map.cs" />
+    <Compile Include="ISFXFactory Classes\ISFXFactory.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackEastState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackNorthState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackSouthState.cs" />
@@ -253,6 +254,7 @@
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkUseItemNorthState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkUseItemSouthState.cs" />
     <Compile Include="IState Classes\IState.cs" />
+    <Compile Include="ISFXFactory Classes\SFXFactory.cs" />
     <Compile Include="Vector\VelocityVector.cs" />
     <Compile Include="Vector\Orientation.cs" />
     <Compile Include="Vector\IVector.cs" />
