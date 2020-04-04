@@ -8,7 +8,6 @@ namespace Team4_LegendOfZelda
     {
         ISprite Sprite { get; set; }
         IState State { get; set; }
-        Vector2 Position { get; set; }
         Rectangle DestinationRectangle { get; set; }
         Rectangle LinkSwordRectangle { get; set; }
         int CurrentHitPoints { get; set; }
