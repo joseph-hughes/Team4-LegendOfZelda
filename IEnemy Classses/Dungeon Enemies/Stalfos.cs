@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using System;
 using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Stalfos_States;
+using Team4_LegendOfZelda.Vector;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
@@ -11,6 +12,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public IRoom Room { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
+        public IVector Velocity { get; set; }
         public Rectangle DestinationRectangle { get; set; }
         public float Scale { get; set; }
         private const int width = 15;
@@ -23,8 +25,9 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
             Scale = 3f;
             Sprite = EnemySpriteFactory.Instance.CreateStalfosSprite();
             DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * width), (int)(Scale * height));
+            Velocity = new VelocityVector(0, Orientation.South);
             State = new StalfosIdleState(this);
-            controller = new StalfosController(this);        
+            controller = new StalfosController(this);
         }
 
         public void North()

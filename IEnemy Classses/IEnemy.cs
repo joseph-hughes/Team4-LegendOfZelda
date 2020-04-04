@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Team4_LegendOfZelda.ILevel_Classes;
+using Team4_LegendOfZelda.Vector;
 
 namespace Team4_LegendOfZelda
 {
@@ -9,6 +10,7 @@ namespace Team4_LegendOfZelda
         IRoom Room { get; set; }
         ISprite Sprite { get; set; }
         IState State { get; set; }
+        IVector Velocity { get; set; }
         Rectangle DestinationRectangle { get; set; }
         float Scale { get; set; }
 

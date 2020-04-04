@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.ZolDarkGreen_States;
+using Team4_LegendOfZelda.Vector;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
@@ -11,25 +11,20 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public IRoom Room { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
+        public IVector Velocity { get; set; }
         private IController controller;
-
-
         public Rectangle DestinationRectangle { get; set; }
         public float Scale { get; set; }
-      
-     
 
         public ZolDarkGreen(IRoom room, Vector2 position)
         {
             Room = room;
-           
             Scale = 3f;
-
             Sprite = EnemySpriteFactory.Instance.CreateZolDarkGreenSprite();
+            Velocity = new VelocityVector(0, Orientation.South);
             State = new ZolDarkGreenIdleState(this);
             controller = new ZolDarkGreenController(this);
             DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * Sprite.SourceRectangle.Width), (int)(Scale * Sprite.SourceRectangle.Height));
-
         }
 
         public void North()
