@@ -17,16 +17,15 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public float Scale { get; set; }
         private IController controller;
 
-
-
         public GoriyaRed(IRoom room, Vector2 position)
         {
             Room = room;
+            Scale = 3f;
             controller = new GoriyaController(this);
-            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * Sprite.SourceRectangle.Width), (int)(Scale * Sprite.SourceRectangle.Height));
             Scale = 3f;
             Velocity = new VelocityVector(0, Orientation.South);
             State = new GoriyaRedWestState(this);
+            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * Sprite.SourceRectangle.Width), (int)(Scale * Sprite.SourceRectangle.Height));
         }
 
         public void North()

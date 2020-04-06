@@ -1,23 +1,26 @@
-﻿using Microsoft.Xna.Framework;
-
-namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
+﻿namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
 {
     class AquamentusWestAttackState : IState
     {
-        IEnemy enemy;
-        public const int width = 24;
-        public const int height = 32;
+        private IEnemy enemy;
+        private int attackCounter;
+        public const int MAX_ATTACK_COUNTER = 60;
 
-        int count, maxCount;
-
-        public AquamentusWestAttackState(IEnemy enemy)
+        public AquamentusWestAttackState(IEnemy enemy, int attackCounter)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateAquamentusWestAttackSprite();
-            this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * width), (int)(this.enemy.Scale * height));
+            this.enemy.Velocity.Magnitude = 2;
+            this.enemy.Velocity.Direction = Vector.Orientation.West;
 
-            count = 0;
-            maxCount = 60;
+            if (attackCounter > 0)
+            {
+                this.attackCounter = attackCounter;
+            }
+            else
+            {
+                this.attackCounter = MAX_ATTACK_COUNTER;
+            }
         }
 
         public void North()
@@ -27,7 +30,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
 
         public void East()
         {
-            // Do nothing
+            enemy.State = new AquamentusEastAttackState(enemy, attackCounter);
         }
 
         public void South()
@@ -42,7 +45,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
 
         public void Idle()
         {
-            // TODO
+            // Do nothing
         }
 
         public void BeDamaged()
@@ -62,8 +65,8 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
 
         public void Update()
         {
-            count++;
-            if (count > maxCount)
+            attackCounter--;
+            if (attackCounter <= 0)
             {
                 // Create fireballs
                 enemy.State = new AquamentusWestIdleState(enemy);
