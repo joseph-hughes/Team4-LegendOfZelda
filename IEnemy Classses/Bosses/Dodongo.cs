@@ -48,7 +48,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 
         public void Idle()
         {
-            State.Idle();
+            Velocity.Magnitude = 0;
         }
 
         public void BeDamaged()

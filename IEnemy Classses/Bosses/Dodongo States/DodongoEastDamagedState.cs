@@ -5,19 +5,16 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
     class DodongoEastDamagedState : IState
     {
         IEnemy enemy;
-        private const int width = 32;
-        private const int height = 16;
-        int count, maxCount;
+        int damageCounter;
 
         public DodongoEastDamagedState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateDodongoEastDamagedSprite();
-            this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * width), (int)(this.enemy.Scale * height));
+            this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * this.enemy.Sprite.SourceRectangle.Width), (int)(this.enemy.Scale * this.enemy.Sprite.SourceRectangle.Height));
             this.enemy.Velocity.Magnitude = 0;
             this.enemy.Velocity.Direction = Vector.Orientation.East;
-            count = 0;
-            maxCount = 120;
+            damageCounter = 120;
         }
 
         public void North()
@@ -42,7 +39,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
 
         public void Idle()
         {
-            // TODO
+            // Do nothing
         }
 
         public void BeDamaged()
@@ -62,8 +59,8 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
 
         public void Update()
         {
-            count++;
-            if (count > maxCount)
+            damageCounter--;
+            if (damageCounter <= 0)
             {
                 enemy.State = new DodongoEastWalkingState(enemy);
             }
