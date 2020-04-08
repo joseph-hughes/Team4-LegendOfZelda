@@ -1,38 +1,38 @@
 ﻿namespace Team4_LegendOfZelda.IState_Classes
 {
-    class LinkNonMovingNorthState : IState
+    class LinkDeathState : IState
     {
         private Link link;
-        public LinkNonMovingNorthState(Link link)
+        public LinkDeathState(Link link)
         {
             this.link = link;
             this.link.Velocity.Magnitude = 0;
-            this.link.Velocity.Directon = Vector.Orientation.North;
+            this.link.Velocity.Directon = Vector.Orientation.East;
             this.link.isAttacking = false;
             this.link.isKnocked = false;
             this.link.isDamaged = false;
-            this.link.isDeath = false;
-            this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkNonMovingNorthSprite();
+            this.link.isDeath = true;
+            //this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkDeathSprite();
         }
 
         public void North()
         {
-            link.State = new LinkMovingNorthState(link);
+            // Do nothing
         }
 
         public void East()
         {
-            link.State = new LinkMovingEastState(link);
+            // Do nothing
         }
 
         public void South()
         {
-            link.State = new LinkMovingSouthState(link);
+            // Do nothing
         }
 
         public void West()
         {
-            link.State = new LinkMovingWestState(link);
+            // Do nothing
         }
 
         public void Idle()
@@ -42,22 +42,22 @@
 
         public void BeDamaged()
         {
-            link.State = new LinkKnockbackNorthState(link, Link.knockback_timer);
+            // Do nothing
         }
 
         public void UseItem()
         {
-            link.State = new LinkUseItemNorthState(link, Link.use_item_timer);
+            // Do nothing
         }
 
         public void Attack()
         {
-            link.State = new LinkSwordNorthState(link, Link.sword_timer);
+            // Do nothing
         }
 
         public void Update()
         {
-            // no action
+            // Do nothing
         }
     }
 }

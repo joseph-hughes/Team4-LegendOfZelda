@@ -150,6 +150,7 @@
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackNorthState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackSouthState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackWestState.cs" />
+    <Compile Include="IPlayer Classes\Link Classes\Link States\LinkDeathState.cs" />
     <Compile Include="IProjectile Classes\Projectiles\BoomerangProjectile.cs" />
     <Compile Include="IProjectile Classes\Projectiles\MagicBoomerangProjectile.cs" />
     <Compile Include="IProjectile Classes\Projectiles\FireballProjectile.cs" />

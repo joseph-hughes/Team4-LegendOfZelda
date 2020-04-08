@@ -19,6 +19,7 @@ namespace Team4_LegendOfZelda.IState_Classes
             this.link.isAttacking = true;
             this.link.isKnocked = false;
             this.link.isDamaged = false;
+            this.link.isDeath = false;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkSwordWestSprite();
             this.link.LinkSwordRectangle = new Rectangle((int)(this.link.Position.X - this.link.Scale * (width - height)), (int)this.link.Position.Y, (int)(this.link.Scale * width), (int)(this.link.Scale * height));
         }
