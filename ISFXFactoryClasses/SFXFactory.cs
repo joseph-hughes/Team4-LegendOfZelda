@@ -63,7 +63,7 @@ namespace Team4_LegendOfZelda
             FlamesShot = content.Load<SoundEffect>("Sounds/Flames_Shot");
             HealthPickup = content.Load<SoundEffect>("Sounds/Health_Heart");
             ItemObtained = content.Load<SoundEffect>("Sounds/Item_Obtained");
-            ItemReceived = content.Load<SoundEffect>("Sounds/Item_Revieved");
+            ItemReceived = content.Load<SoundEffect>("Sounds/Item_Recieved");
             KeyAppears = content.Load<SoundEffect>("Sounds/Key_Appears");
             LinkDamaged = content.Load<SoundEffect>("Sounds/Link_Damage");
             MagicWhistle = content.Load<SoundEffect>("Sounds/Magic_Whistle");
@@ -77,10 +77,130 @@ namespace Team4_LegendOfZelda
             WalkingStairs = content.Load<SoundEffect>("Sounds/Walking_Stairs");
         }
 
-        // Not sure if something like this is necessary.
+        public void PlayAquamentusDefeated()
+        {
+            AquamentusDefeated.Play();
+        }
+
+        public void PlayAquamentusRoaring()
+        {
+            AquamentusRoaring.Play();
+        }
+
+        public void PlayArrowHit()
+        {
+            ArrowHit.Play();
+        }
+
+        public void PlayBombExplosion()
+        {
+            BombExplosion.Play();
+        }
+
+        public void PlayBombPlacement()
+        {
+            BombPlacement.Play();
+        }
+
+        public void PlayBossZapped()
+        {
+            BossZapped.Play();
+        }
+
+        public void PlayDodongoDefeated()
+        {
+            DodongoDefeated.Play();
+        }
+
+        public void PlayDodongoRoaring()
+        {
+            DodongoRoaring.Play();
+        }
+
+        public void PlayDoorOpened()
+        {
+            DoorOpened.Play();
+        }
+
+        public void PlayEnemyShrinking()
+        {
+            EnemyShrinking.Play();
+        }
+        public void PlayEnemyHit()
+        {
+            EnemyHit.Play();
+        }
+        public void PlayFlamesShot()
+        {
+            FlamesShot.Play();
+        }
+
+        public void PlayHealthPickup()
+        {
+            HealthPickup.Play();
+        }
+        public void PlayItemObtained()
+        {
+            ItemObtained.Play();
+        }
+
+        public void PlayItemRecieved()
+        {
+            ItemReceived.Play();
+        }
+
+        public void PlayKeyAppears()
+        {
+            KeyAppears.Play();
+        }
+
         public void PlayLinkDamaged()
         {
             LinkDamaged.Play();
+        }
+
+        public void PlayMagicWhistle()
+        {
+            MagicWhistle.Play();
+        }
+
+        public void PlayMagical()
+        {
+            Magical.Play();
+        }
+
+        public void PlayPowerZap()
+        {
+            PowerZap.Play();
+        }
+
+        public void PlayRupeePickup()
+        {
+            RupeePickup.Play();
+        }
+        public void PlaySheildDeflecting()
+        {
+            SheildDeflecting.Play();
+        }
+
+        public void PlaySwordSound()
+        {
+            SwordSound.Play();
+        }
+
+        public void PlaySwordZap()
+        {
+            SwordZap.Play();
+        }
+
+        public void PlayTriforcePickup()
+        {
+            TriforcePickup.Play();
+        }
+
+        public void PlayWalkingStairs()
+        {
+            WalkingStairs.Play();
         }
     }
 }

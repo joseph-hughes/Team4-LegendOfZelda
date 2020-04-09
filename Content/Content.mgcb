@@ -1652,159 +1652,159 @@
 /processorParam:TextureFormat=Color
 /build:Projectiles/Flame.png
 
-#begin SoundEffects/Aquamentus_Defeated.wav
+#begin Sounds/Aquamentus_Defeated.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Aquamentus_Defeated.wav
+/build:Sounds/Aquamentus_Defeated.wav
 
-#begin SoundEffects/Aquamentus_Roaring.wav
+#begin Sounds/Aquamentus_Roaring.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Aquamentus_Roaring.wav
+/build:Sounds/Aquamentus_Roaring.wav
 
-#begin SoundEffects/Arrow_Hit.wav
+#begin Sounds/Arrow_Hit.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Arrow_Hit.wav
+/build:Sounds/Arrow_Hit.wav
 
-#begin SoundEffects/Bomb_Explosion.wav
+#begin Sounds/Bomb_Explosion.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Bomb_Explosion.wav
+/build:Sounds/Bomb_Explosion.wav
 
-#begin SoundEffects/Bomb_Placement.wav
+#begin Sounds/Bomb_Placement.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Bomb_Placement.wav
+/build:Sounds/Bomb_Placement.wav
 
-#begin SoundEffects/Boss_Zapped.wav
+#begin Sounds/Boss_Zapped.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Boss_Zapped.wav
+/build:Sounds/Boss_Zapped.wav
 
-#begin SoundEffects/Dodongo_Defeated.wav
+#begin Sounds/Dodongo_Defeated.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Dodongo_Defeated.wav
+/build:Sounds/Dodongo_Defeated.wav
 
-#begin SoundEffects/Dodongo_Roaring.wav
+#begin Sounds/Dodongo_Roaring.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Dodongo_Roaring.wav
+/build:Sounds/Dodongo_Roaring.wav
 
-#begin SoundEffects/Door_Opened.wav
+#begin Sounds/Door_Opened.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Door_Opened.wav
+/build:Sounds/Door_Opened.wav
 
-#begin SoundEffects/Enemy_Shrinking.wav
+#begin Sounds/Enemy_Shrinking.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Enemy_Shrinking.wav
+/build:Sounds/Enemy_Shrinking.wav
 
-#begin SoundEffects/Enemy_Zapped.wav
+#begin Sounds/Enemy_Zapped.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Enemy_Zapped.wav
+/build:Sounds/Enemy_Zapped.wav
 
-#begin SoundEffects/Flames_Shot.wav
+#begin Sounds/Flames_Shot.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Flames_Shot.wav
+/build:Sounds/Flames_Shot.wav
 
-#begin SoundEffects/Health_Heart.wav
+#begin Sounds/Health_Heart.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Health_Heart.wav
+/build:Sounds/Health_Heart.wav
 
-#begin SoundEffects/Item_Obtained.wav
+#begin Sounds/Item_Obtained.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Item_Obtained.wav
+/build:Sounds/Item_Obtained.wav
 
-#begin SoundEffects/Item_Recieved.wav
+#begin Sounds/Item_Recieved.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Item_Recieved.wav
+/build:Sounds/Item_Recieved.wav
 
-#begin SoundEffects/Key_Appears.wav
+#begin Sounds/Key_Appears.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Key_Appears.wav
+/build:Sounds/Key_Appears.wav
 
-#begin SoundEffects/Link_Damage.wav
+#begin Sounds/Link_Damage.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Link_Damage.wav
+/build:Sounds/Link_Damage.wav
 
-#begin SoundEffects/Magic_Whistle.wav
+#begin Sounds/Magic_Whistle.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Magic_Whistle.wav
+/build:Sounds/Magic_Whistle.wav
 
-#begin SoundEffects/Magical.wav
+#begin Sounds/Magical.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Magical.wav
+/build:Sounds/Magical.wav
 
-#begin SoundEffects/Power_Zap.wav
+#begin Sounds/Power_Zap.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Power_Zap.wav
+/build:Sounds/Power_Zap.wav
 
-#begin SoundEffects/Rupee_Pickup.wav
+#begin Sounds/Rupee_Pickup.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Rupee_Pickup.wav
+/build:Sounds/Rupee_Pickup.wav
 
-#begin SoundEffects/Sheild_Deflecting.wav
+#begin Sounds/Sheild_Deflecting.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Sheild_Deflecting.wav
+/build:Sounds/Sheild_Deflecting.wav
 
-#begin SoundEffects/Sword_Sound.wav
+#begin Sounds/Sword_Sound.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Sword_Sound.wav
+/build:Sounds/Sword_Sound.wav
 
-#begin SoundEffects/Sword_Zap.wav
+#begin Sounds/Sword_Zap.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Sword_Zap.wav
+/build:Sounds/Sword_Zap.wav
 
-#begin SoundEffects/Triforce_Reveals_Ganon.wav
+#begin Sounds/Triforce_Reveals_Ganon.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Triforce_Reveals_Ganon.wav
+/build:Sounds/Triforce_Reveals_Ganon.wav
 
-#begin SoundEffects/Walking_Stairs.wav
+#begin Sounds/Walking_Stairs.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:SoundEffects/Walking_Stairs.wav
+/build:Sounds/Walking_Stairs.wav
 
