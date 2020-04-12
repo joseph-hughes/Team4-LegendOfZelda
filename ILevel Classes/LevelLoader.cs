@@ -31,7 +31,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             
         }
 
-        public List<IRoom> LoadRooms()
+        public List<IRoom> LoadRooms(IPlayer player)
         {
             List<IRoom> rooms = new List<IRoom>();
             XmlNode root = LevelXml.FirstChild.NextSibling;
@@ -39,6 +39,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             foreach(XmlNode roomNode in root)
             {
                 IRoom room = new DungeonRoom();
+                room.Player = player;
 
                 XmlNode enemiesNode = roomNode.FirstChild;
                 if (enemiesNode.Attributes["total"].Value != "0")

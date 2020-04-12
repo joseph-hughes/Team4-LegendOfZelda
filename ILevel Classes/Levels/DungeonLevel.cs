@@ -26,7 +26,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
         {
             Map.Initialize(0, hudHeight, windowWidth, roomHeight);
             HUD.Initialize(0, 0, windowWidth, hudHeight);
-            Rooms = FileLoader.LoadRooms();
+            Rooms = FileLoader.LoadRooms(Player);
 
             if (Rooms.Count > 0)
             {
