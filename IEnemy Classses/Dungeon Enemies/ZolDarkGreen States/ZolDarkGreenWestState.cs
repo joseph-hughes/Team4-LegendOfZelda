@@ -5,7 +5,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.ZolDarkGreen_State
     class ZolDarkGreenWestState : IState
     {
         IEnemy enemy;
-        private static int MAX_DISPLACEMENT = 48, DELTA_DISPLACEMENT = 10;
+        private const int MAX_DISPLACEMENT = 48, DELTA_DISPLACEMENT = 10;
         private int displacement;
 
         public ZolDarkGreenWestState(IEnemy enemy)

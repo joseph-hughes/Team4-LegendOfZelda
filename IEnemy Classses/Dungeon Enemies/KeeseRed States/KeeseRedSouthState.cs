@@ -5,7 +5,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseRed_States
     class KeeseRedSouthState : IState
     {
         private IEnemy enemy;
-        private static int MAX_DISPLACEMENT = 48, DELTA_DISPLACEMENT = 2;
+        private const int MAX_DISPLACEMENT = 48, DELTA_DISPLACEMENT = 2;
         private int displacement;
 
         public KeeseRedSouthState(IEnemy enemy)

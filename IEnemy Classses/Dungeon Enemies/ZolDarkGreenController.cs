@@ -5,7 +5,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
     public class ZolDarkGreenController : IController
     {
         private IEnemy enemy;
-        private static int MAX_DIRECTION_COUNTS = 60;
+        private const int MAX_DIRECTION_COUNTS = 60;
         private int directionCount;
 
         public ZolDarkGreenController(IEnemy enemy)

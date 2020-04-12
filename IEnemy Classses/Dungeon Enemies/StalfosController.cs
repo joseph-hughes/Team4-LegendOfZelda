@@ -5,7 +5,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
     public class StalfosController : IController
     {
         private IEnemy enemy;
-        private static int MAX_DIRECTION_COUNTS = 30;
+        private const int MAX_DIRECTION_COUNTS = 30;
         private int directionCount;
 
         public StalfosController(IEnemy enemy)

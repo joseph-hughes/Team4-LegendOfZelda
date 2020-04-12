@@ -5,7 +5,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
     public class DodongoController : IController
     {
         private IEnemy enemy;
-        private static int MIN_DIRECTION_COUNTS = 30, MAX_DIRECTION_COUNTS = 60;
+        private const int MIN_DIRECTION_COUNTS = 30, MAX_DIRECTION_COUNTS = 60;
         private int directionCount;
 
         public DodongoController(IEnemy enemy)

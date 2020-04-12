@@ -5,7 +5,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
     public class WallMasterUpsideDownController : IController
     {
         private IEnemy enemy;
-        private static int MAX_DIRECTION_COUNTS = 240;
+        private const int MAX_DIRECTION_COUNTS = 240;
         private int directionCount;
 
         public WallMasterUpsideDownController(IEnemy enemy)

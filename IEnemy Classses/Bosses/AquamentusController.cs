@@ -5,7 +5,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
     class AquamentusController : IController
     {
         private IEnemy enemy;
-        private static int MAX_DIRECTION_COUNTS = 60, MIN_ATTACK_COUNTS = 100, MAX_ATTACK_COUNTS = 180;
+        private const int MAX_DIRECTION_COUNTS = 60, MIN_ATTACK_COUNTS = 100, MAX_ATTACK_COUNTS = 180;
         private int directionCount, attackCount;
 
         public AquamentusController(IEnemy enemy)
