@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States;
 using Team4_LegendOfZelda.Vector;
@@ -19,8 +18,6 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         private const int height = 16;
         public float Scale { get; set; }
 
-
-
         public BladeTrap(IRoom room, Vector2 position)
         {
             Room = room;
@@ -31,7 +28,6 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 
             State = new BladeTrapIdleState(this);
             controller = new BladeTrapController(this);
-            
         }
 
         public void North()
