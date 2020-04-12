@@ -67,9 +67,6 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                             case "GoriyaRed":
                                 room.Enemies.Add(new GoriyaRed(room, position));
                                 break;
-                            case "GoriyaBlue":
-                                room.Enemies.Add(new GoriyaBlue(room, position));
-                                break;
                             case "KeeseBlue":
                                 room.Enemies.Add(new KeeseBlue(room, position));
                                 break;

@@ -213,15 +213,6 @@
     <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseRed.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseBlue.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaRed.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaBlue States\GoriyaBlueWestAttackState.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaBlue States\GoriyaBlueSouthAttackState.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaBlue States\GoriyaBlueNorthAttackState.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaBlue States\GoriyaBlueEastAttackState.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaBlue States\GoriyaBlueEastState.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaBlue States\GoriyaBlueNorthState.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaBlue States\GoriyaBlueSouthState.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaBlue States\GoriyaBlueWestState.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaBlue.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GelDarkBlue.cs" />
     <Compile Include="INPC Classes\INPC.cs" />
     <Compile Include="INPC Classes\NPCs\OldMan.cs" />
