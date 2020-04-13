@@ -7,23 +7,23 @@ using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.IGameState_Classes
 {
-    class ItemSelectGameState : IGameState
+    class RoomGameState : IGameState
     {
         private IGameState gameState { get; set; }
         private ILevel level { get; set; }
 
-        public ItemSelectGameState(IGameState gameState, ILevel level)
+        public RoomGameState(IGameState gameState, ILevel level)
         {
             this.gameState = gameState;
             this.level = level;
         }
         public void ItemSelect()
         {
-            this.gameState = new RoomGameState(gameState, level);
+            this.gameState = new ItemSelectGameState(gameState, level);
         }
         public void Over()
         {
-            // no action
+            this.gameState = new OverGameState(gameState, level);
         }
         public void Pause()
         {
@@ -31,15 +31,16 @@ namespace Team4_LegendOfZelda.IGameState_Classes
         }
         public void RoomChange(IRoom nextRoom)
         {
-            // no action
+            this.gameState = new RoomChangeGameState(gameState, level, nextRoom);
         }
         public void Win()
         {
-            // no action
+            this.gameState = new WinGameState(gameState, level);
         }
         public void Update()
         {
-            // TODO: trigger item select screen
+            // no action
         }
+        
     }
 }

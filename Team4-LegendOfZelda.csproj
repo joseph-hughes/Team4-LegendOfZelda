@@ -138,6 +138,11 @@
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenWestState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreenController.cs" />
     <Compile Include="IGameState Classes\Game States\ItemSelectGameState.cs" />
+    <Compile Include="IGameState Classes\Game States\OverGameState.cs" />
+    <Compile Include="IGameState Classes\Game States\PauseGameState.cs" />
+    <Compile Include="IGameState Classes\Game States\RoomChangeGameState.cs" />
+    <Compile Include="IGameState Classes\Game States\RoomGameState.cs" />
+    <Compile Include="IGameState Classes\Game States\WinGameState.cs" />
     <Compile Include="IGameState Classes\IGameState.cs" />
     <Compile Include="ILevel Classes\DungeonHUD.cs" />
     <Compile Include="ILevel Classes\DungeonRoom.cs" />

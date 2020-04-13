@@ -1,4 +1,6 @@
-﻿namespace Team4_LegendOfZelda
+﻿using Team4_LegendOfZelda.ILevel_Classes;
+
+namespace Team4_LegendOfZelda
 {
     public interface IGameState
     {
@@ -6,7 +8,7 @@
         void Over();
         void Pause();
         void Win();
-        void RoomChange();
+        void RoomChange(IRoom nextRoom);
         void Update();
     }
 }
