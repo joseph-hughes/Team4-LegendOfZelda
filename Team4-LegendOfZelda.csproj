@@ -96,7 +96,7 @@
     <Compile Include="IEnemy Classses\Dungeon Enemies\GelDarkBlue States\GelDarkBlueNorthState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GelDarkBlue States\GelDarkBlueSouthState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GelDarkBlue States\GelDarkBlueWestState.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\GelDarkBlueController.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\GelAndZolController.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaController.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaRed States\GoriyaRedEastIdleState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaRed States\GoriyaRedNorthIdleState.cs" />
@@ -133,7 +133,6 @@
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenNorthState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenSouthState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenWestState.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreenController.cs" />
     <Compile Include="ILevel Classes\DungeonHUD.cs" />
     <Compile Include="ILevel Classes\DungeonRoom.cs" />
     <Compile Include="ILevel Classes\IHUD.cs" />

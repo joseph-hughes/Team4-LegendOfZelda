@@ -23,7 +23,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
             Sprite = EnemySpriteFactory.Instance.CreateZolDarkGreenSprite();
             Velocity = new VelocityVector(0, Orientation.South);
             State = new ZolDarkGreenIdleState(this);
-            controller = new ZolDarkGreenController(this);
+            controller = new GelAndZolController(this);
             DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * Sprite.SourceRectangle.Width), (int)(Scale * Sprite.SourceRectangle.Height));
         }
 

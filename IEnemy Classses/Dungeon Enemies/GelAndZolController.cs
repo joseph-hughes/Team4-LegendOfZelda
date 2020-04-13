@@ -2,13 +2,13 @@
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
-    public class GelDarkBlueController : IController
+    public class GelAndZolController : IController
     {
         private IEnemy enemy;
         private const int MIN_WAIT_COUNTS = 5, MAX_WAIT_COUNTS = 20, MAX_DISPLACEMENT_STD = 16;
         private int waitCount, displacement, maxDisplacement;
 
-        public GelDarkBlueController(IEnemy enemy)
+        public GelAndZolController(IEnemy enemy)
         {
             this.enemy = enemy;
             waitCount = RandomIntGenerator.Instance.Next(MIN_WAIT_COUNTS, MAX_WAIT_COUNTS);

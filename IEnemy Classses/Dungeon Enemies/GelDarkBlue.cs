@@ -25,7 +25,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
             Sprite = EnemySpriteFactory.Instance.CreateGelDarkBlueSprite();
             Velocity = new VelocityVector(0, Orientation.South);
             State = new GelDarkBlueIdleState(this);
-            controller = new GelDarkBlueController(this);
+            controller = new GelAndZolController(this);
             DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * Sprite.SourceRectangle.Width), (int)(Scale * Sprite.SourceRectangle.Height));
         }
 
