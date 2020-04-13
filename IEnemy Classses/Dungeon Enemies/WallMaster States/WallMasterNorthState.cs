@@ -1,17 +1,18 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMaster_States
 {
     class WallMasterNorthState : IState
     {
         IEnemy enemy;
-        private static int MAX_DISPLACEMENT = 48, DELTA_DISPLACEMENT = 2;
+        private UtilityClass utilities = new UtilityClass();
         private int displacement;
 
         public WallMasterNorthState(IEnemy enemy)
         {
             this.enemy = enemy;
-            displacement = MAX_DISPLACEMENT;
+            displacement = utilities.MAX_DISPLACEMENT2;
         }
 
         public void North()
@@ -58,15 +59,15 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMaster_States
             //enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X, ((int)enemy.DestinationRectangle.Y - 2) % 600);
             if (displacement > 0)
             {
-                if (this.enemy.DestinationRectangle.Y > DELTA_DISPLACEMENT)
+                if (this.enemy.DestinationRectangle.Y > utilities.DELTA_DISPLACEMENT2)
                 {
-                    enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y - DELTA_DISPLACEMENT, this.enemy.DestinationRectangle.Width, this.enemy.DestinationRectangle.Height); ;
+                    enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y - utilities.DELTA_DISPLACEMENT2, this.enemy.DestinationRectangle.Width, this.enemy.DestinationRectangle.Height); ;
                 }
                 else
                 {
                     enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, 528 - this.enemy.DestinationRectangle.Y, this.enemy.DestinationRectangle.Width, this.enemy.DestinationRectangle.Height);
                 }
-                displacement -= DELTA_DISPLACEMENT;
+                displacement -= utilities.DELTA_DISPLACEMENT2;
             }
             else
             {

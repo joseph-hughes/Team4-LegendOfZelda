@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
 {
@@ -7,6 +8,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
         IEnemy enemy;
         public const int width = 24;
         public const int height = 32;
+        private UtilityClass utilities = new UtilityClass();
 
         int count, maxCount;
 
@@ -16,8 +18,8 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateAquamentusWestAttackSprite();
             this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * width), (int)(this.enemy.Scale * height));
 
-            count = 0;
-            maxCount = 60;
+            count = utilities.count;
+            maxCount = utilities.maxcount;
         }
 
         public void North()

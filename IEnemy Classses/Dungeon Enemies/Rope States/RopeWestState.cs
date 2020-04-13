@@ -1,18 +1,19 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.Rope_States
 {
     class RopeWestState : IState
     {
         IEnemy enemy;
-        private const int width = 16;
-        private const int height = 15;
+        UtilityClass utilities = new UtilityClass();
+
 
         public RopeWestState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateRopeWestSprite();
-            this.enemy.DestinationRectangle = new Rectangle((int)this.enemy.DestinationRectangle.X, (int)this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * width), (int)(this.enemy.Scale * height));
+            this.enemy.DestinationRectangle = new Rectangle((int)this.enemy.DestinationRectangle.X, (int)this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * utilities.width3), (int)(this.enemy.Scale * utilities.height2));
         }
 
         public void North()
@@ -56,7 +57,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.Rope_States
 
         public void Update()
         {
-            enemy.DestinationRectangle = new Rectangle((int)enemy.DestinationRectangle.X, (int)enemy.DestinationRectangle.Y, (int)(enemy.Scale * width), (int)(enemy.Scale * height));
+            enemy.DestinationRectangle = new Rectangle((int)enemy.DestinationRectangle.X, (int)enemy.DestinationRectangle.Y, (int)(enemy.Scale * utilities.width3), (int)(enemy.Scale * utilities.height2));
         }
     }
 }

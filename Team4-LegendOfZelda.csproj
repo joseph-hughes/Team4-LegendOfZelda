@@ -146,6 +146,7 @@
     <Compile Include="ILevel Classes\IRoom.cs" />
     <Compile Include="ILevel Classes\Levels\DungeonLevel.cs" />
     <Compile Include="ILevel Classes\Map.cs" />
+    <Compile Include="ISFXFactory Classes\ISFXFactory.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackEastState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackNorthState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackSouthState.cs" />
@@ -310,6 +311,7 @@
     <Compile Include="ICommand Classes\Commands\QuitCommand.cs" />
     <Compile Include="Random Number Generator\IRandomInt.cs" />
     <Compile Include="Random Number Generator\RandomIntGenerator.cs" />
+    <Compile Include="Utility Classes\UtilityClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

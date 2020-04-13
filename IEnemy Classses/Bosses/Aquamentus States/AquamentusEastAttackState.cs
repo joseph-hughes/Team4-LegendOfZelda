@@ -1,10 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
 {
     class AquamentusEastAttackState : IState
     {
         IEnemy enemy;
+        private UtilityClass utilities = new UtilityClass();
         private const int width = 24;
         private const int height = 32;
         int count, maxCount;
@@ -15,8 +17,8 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateAquamentusEastAttackSprite();
             this.enemy.DestinationRectangle = new Rectangle((int)this.enemy.DestinationRectangle.X, (int)this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * width), (int)(this.enemy.Scale * height));
 
-            count = 0;
-            maxCount = 60;
+            count = utilities.count;
+            maxCount = utilities.maxcount;
         }
 
         public void North()

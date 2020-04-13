@@ -1,17 +1,19 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
 {
     class BladeTrapEastState : IState
     {
         private IEnemy enemy;
-        private static int MAX_DISPLACEMENT = 240, DELTA_DISPLACEMENT = 16;
+        private UtilityClass utilities = new UtilityClass();
+
         private int displacement;
 
         public BladeTrapEastState(IEnemy enemy)
         {
             this.enemy = enemy;
-            displacement = MAX_DISPLACEMENT;
+            displacement = utilities.MAX_DISPLACEMENT;
         }
 
         public void North()
@@ -58,8 +60,8 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
         {
             if (displacement > 0)
             {
-                enemy.DestinationRectangle = new Rectangle((enemy.DestinationRectangle.X + DELTA_DISPLACEMENT) % 768, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height); ;
-                displacement -= DELTA_DISPLACEMENT;
+                enemy.DestinationRectangle = new Rectangle((enemy.DestinationRectangle.X + utilities.DELTA_DISPLACEMENT) % 768, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height); ;
+                displacement -= utilities.DELTA_DISPLACEMENT;
             }
             else
             {
