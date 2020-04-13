@@ -327,17 +327,17 @@
   <Room number="11">
     <Enemies total="3">
       <Enemy>
-        <ObjectType>GoriyaRed</ObjectType>
+        <ObjectType>Rope</ObjectType>
         <ColumnNum>4</ColumnNum>
         <RowNum>1</RowNum>
       </Enemy>
       <Enemy>
-        <ObjectType>GoriyaRed</ObjectType>
+        <ObjectType>Rope</ObjectType>
         <ColumnNum>7</ColumnNum>
         <RowNum>3</RowNum>
       </Enemy>
       <Enemy>
-        <ObjectType>GoriyaRed</ObjectType>
+        <ObjectType>Rope</ObjectType>
         <ColumnNum>4</ColumnNum>
         <RowNum>7</RowNum>
       </Enemy>
