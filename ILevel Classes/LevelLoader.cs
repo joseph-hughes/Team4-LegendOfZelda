@@ -211,26 +211,31 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                 if (northNode.InnerText != "")
                 {
                     rooms[index].North = rooms[int.Parse(northNode.InnerText) - 1];
+                    rooms[index].HasNorth = true;
                 }
                 XmlNode eastNode = northNode.NextSibling;
                 if (eastNode.InnerText != "")
                 {
                     rooms[index].East = rooms[int.Parse(eastNode.InnerText) - 1];
+                    rooms[index].HasEast = true;
                 }
                 XmlNode southNode = eastNode.NextSibling;
                 if (southNode.InnerText != "")
                 {
                     rooms[index].South = rooms[int.Parse(southNode.InnerText) - 1];
+                    rooms[index].HasSouth = true;
                 }
                 XmlNode westNode = southNode.NextSibling;
                 if (westNode.InnerText!="")
                 {
                     rooms[index].West = rooms[int.Parse(westNode.InnerText) - 1];
+                    rooms[index].HasWest = true;
                 }
                 XmlNode otherNode = westNode.NextSibling;
                 if (otherNode.InnerText != "")
                 {
                     rooms[index].Other = rooms[int.Parse(otherNode.InnerText) - 1];
+                    rooms[index].HasOther = true;
                 }
                 index += 1;
             }
