@@ -230,7 +230,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                 XmlNode otherNode = westNode.NextSibling;
                 if (otherNode.InnerText != "")
                 {
-                    rooms[index].West = rooms[int.Parse(otherNode.InnerText) - 1];
+                    rooms[index].Other = rooms[int.Parse(otherNode.InnerText) - 1];
                 }
                 index += 1;
             }
