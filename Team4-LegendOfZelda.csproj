@@ -304,6 +304,7 @@
     <Compile Include="ICommand Classes\Commands\QuitCommand.cs" />
     <Compile Include="Random Number Generator\IRandomInt.cs" />
     <Compile Include="Random Number Generator\RandomIntGenerator.cs" />
+    <Compile Include="Utility Classes\UtilityClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

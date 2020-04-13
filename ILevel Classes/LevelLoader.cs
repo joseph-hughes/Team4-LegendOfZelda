@@ -4,12 +4,15 @@ using Team4_LegendOfZelda.Item_Classes;
 using Microsoft.Xna.Framework;
 using Team4_LegendOfZelda.IEnemy_Classses.Bosses;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies;
+using Team4_LegendOfZelda.Utility_Classes;
+
 
 namespace Team4_LegendOfZelda.ILevel_Classes
 {
     class LevelLoader : IFileLoader
     {
         private XmlDocument LevelXml;
+        private UtilityClass utilities;
         
 
         public LevelLoader(int levelNum)
@@ -48,7 +51,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                         string enemyName = enemyNode["ObjectType"].InnerText;
                         float columnNum = float.Parse(enemyNode["ColumnNum"].InnerText);
                         float rowNum = float.Parse(enemyNode["RowNum"].InnerText);
-                        Vector2 position = new Vector2(columnNum * 48 + 33, rowNum * 48 + 33 + 168);
+                        Vector2 position = new Vector2(columnNum *  + 33, rowNum * 48 + 33 + 168);
                         switch (enemyName)
                         {
                             case "Aquamentus":
@@ -103,7 +106,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                         string itemName = itemNode["ObjectType"].InnerText;
                         float columnNum = float.Parse(itemNode["ColumnNum"].InnerText);
                         float rowNum = float.Parse(itemNode["RowNum"].InnerText);
-                        Vector2 position = new Vector2(columnNum * 48 + 33, rowNum * 48 + 33 + 168);
+                        Vector2 position = new Vector2(columnNum * utilities.RowColumnMultiplier + utilities.ColumnAddVal, rowNum * utilities.RowColumnMultiplier + utilities.RowAddVal);
                         switch (itemName)
                         {
                             case "BlueCandle":

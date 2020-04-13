@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
 {
@@ -6,17 +7,19 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
     {
         IEnemy enemy;
         private const int width = 32;
+        private UtilityClass utilities = new UtilityClass();
         private const int height = 16;
         int count, maxCount;
 
         public DodongoEastDamagedState(IEnemy enemy)
         {
             this.enemy = enemy;
+
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateDodongoEastDamagedSprite();
             this.enemy.DestinationRectangle = new Rectangle((int)this.enemy.DestinationRectangle.X, (int)this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * width), (int)(this.enemy.Scale * height));
 
-            count = 0;
-            maxCount = 120;
+            count = utilities.count;
+            maxCount = utilities.maxcount2;
         }
 
         public void North()

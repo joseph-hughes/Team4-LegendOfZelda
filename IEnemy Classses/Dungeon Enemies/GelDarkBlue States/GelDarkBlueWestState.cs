@@ -1,11 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GelDarkBlue_States
 {
     class GelDarkBlueWestState : IState
     {
         private IEnemy enemy;
-        private static int MAX_DISPLACEMENT = 48, DELTA_DISPLACEMENT = 2;
+        private UtilityClass utilities = new UtilityClass();
         private int displacement;
 
         public GelDarkBlueWestState(IEnemy enemy)
@@ -58,15 +59,15 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GelDarkBlue_States
         {
             if (displacement > 0)
             {
-                if (enemy.DestinationRectangle.X > DELTA_DISPLACEMENT)
+                if (enemy.DestinationRectangle.X > utilities.DELTA_DISPLACEMENT2)
                 {
-                    enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X - DELTA_DISPLACEMENT, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
+                    enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X - utilities.DELTA_DISPLACEMENT2, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
                 }
                 else
                 {
-                    enemy.DestinationRectangle = new Rectangle(768 - enemy.DestinationRectangle.X - DELTA_DISPLACEMENT, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
+                    enemy.DestinationRectangle = new Rectangle(768 - enemy.DestinationRectangle.X - utilities.DELTA_DISPLACEMENT2, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
                 }
-                displacement -= DELTA_DISPLACEMENT;
+                displacement -= utilities.DELTA_DISPLACEMENT2;
             }
             else
             {

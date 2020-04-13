@@ -1,24 +1,23 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaBlue_States
 {
     class GoriyaBlueEastAttackState : IState
     {
         IEnemy enemy;
-        private const int width = 14;
-        private const int height = 16;
+        private UtilityClass utilities = new UtilityClass();
+    
         // Projectile item
-        int count, maxCount;
 
         public GoriyaBlueEastAttackState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateGoriyaBlueEastSprite();
-            this.enemy.DestinationRectangle = new Rectangle((int)this.enemy.DestinationRectangle.X, (int)this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * width), (int)(this.enemy.Scale * height));
+            this.enemy.DestinationRectangle = new Rectangle((int)this.enemy.DestinationRectangle.X, (int)this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * utilities.width), (int)(this.enemy.Scale * utilities.height));
             // Create boomerang
 
-            count = 0;
-            maxCount = 60;
+           
         }
 
         public void North()
@@ -63,8 +62,8 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaBlue_States
 
         public void Update()
         {
-            count++;
-            if (count > maxCount)
+            utilities.count++;
+            if (utilities.count > utilities.maxcount)
             {
                 enemy.State = new GoriyaBlueEastState(enemy);
             }
