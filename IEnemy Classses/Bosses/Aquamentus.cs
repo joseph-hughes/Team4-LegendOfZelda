@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States;
+using Team4_LegendOfZelda.IEnemy_Classses.Bosses.Aquamentus_States;
 using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.Vector;
 

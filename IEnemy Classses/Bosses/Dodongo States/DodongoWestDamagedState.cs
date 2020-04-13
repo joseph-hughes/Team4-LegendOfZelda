@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
+namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses.Dodongo_States
 {
     class DodongoWestDamagedState : IState
     {

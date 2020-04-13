@@ -1,4 +1,4 @@
-﻿namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
+﻿namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses.Aquamentus_States
 {
     class AquamentusEastAttackState : IState
     {

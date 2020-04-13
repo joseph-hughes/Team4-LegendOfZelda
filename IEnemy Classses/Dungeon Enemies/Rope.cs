@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
-using Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.Rope_States;
+using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States;
 using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.Vector;
 
