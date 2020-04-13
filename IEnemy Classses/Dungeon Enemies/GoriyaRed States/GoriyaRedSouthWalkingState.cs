@@ -2,32 +2,28 @@
 
 namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaRed_States
 {
-    class GoriyaRedWestAttackState : IState
+    class GoriyaRedSouthWalkingState : IState
     {
         IEnemy enemy;
-        // Projectile item
-        private const int WIDTH = 14, HEIGHT = 16, MAX_COUNTS = 60;
-        int count;
+        private const int WIDTH = 13, HEIGHT = 16;
 
-        public GoriyaRedWestAttackState(IEnemy enemy)
+        public GoriyaRedSouthWalkingState(IEnemy enemy)
         {
             this.enemy = enemy;
-            this.enemy.Sprite = EnemySpriteFactory.Instance.CreateGoriyaRedWestSprite();
+            this.enemy.Sprite = EnemySpriteFactory.Instance.CreateGoriyaRedSouthSprite();
             this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * WIDTH), (int)(this.enemy.Scale * HEIGHT));
-            this.enemy.Velocity.Magnitude = 0;
-            this.enemy.Velocity.Direction = Vector.Orientation.West;
-            // Create boomerang
-            count = MAX_COUNTS;
+            this.enemy.Velocity.Magnitude = 1;
+            this.enemy.Velocity.Direction = Vector.Orientation.South;
         }
 
         public void North()
         {
-            // Do nothing
+            enemy.State = new GoriyaRedNorthWalkingState(enemy);
         }
 
         public void East()
         {
-            // Do nothing
+            enemy.State = new GoriyaRedEastWalkingState(enemy);
         }
 
         public void South()
@@ -37,12 +33,11 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaRed_States
 
         public void West()
         {
-            // Do nothing
+            enemy.State = new GoriyaRedWestWalkingState(enemy);
         }
-
         public void Idle()
         {
-            // Do nothing
+            enemy.State = new GoriyaRedSouthIdleState(enemy);
         }
 
         public void BeDamaged()
@@ -52,7 +47,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaRed_States
 
         public void Attack()
         {
-            // Do nothing
+            enemy.State = new GoriyaRedSouthAttackState(enemy);
         }
 
         public void UseItem()
@@ -62,11 +57,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaRed_States
 
         public void Update()
         {
-            count--;
-            if (count <= 0)
-            {
-                enemy.State = new GoriyaRedWestWalkingState(enemy);
-            }
+            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X, enemy.DestinationRectangle.Y + enemy.Velocity.Magnitude, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
         }
     }
 }

@@ -22,9 +22,8 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
             Room = room;
             Scale = 3f;
             controller = new GoriyaController(this);
-            Scale = 3f;
             Velocity = new VelocityVector(0, Orientation.South);
-            State = new GoriyaRedWestState(this);
+            State = new GoriyaRedWestWalkingState(this);
             DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * Sprite.SourceRectangle.Width), (int)(Scale * Sprite.SourceRectangle.Height));
         }
 
@@ -50,7 +49,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 
         public void Idle()
         {
-            State.Idle();
+            Velocity.Magnitude = 0;
         }
 
         public void BeDamaged()
