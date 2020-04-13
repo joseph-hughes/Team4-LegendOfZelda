@@ -21,6 +21,7 @@ namespace Team4_LegendOfZelda
         public ILevel level;
         public IPlayer player;
         private IDector dector;
+        private IGameState gameState;
         public static int WINDOW_WIDTH = 768, ROOM_HEIGHT = 528, HUD_HEIGHT = 168;
 
         public LegendOfZelda()

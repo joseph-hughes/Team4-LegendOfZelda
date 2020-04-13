@@ -137,6 +137,8 @@
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenSouthState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenWestState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreenController.cs" />
+    <Compile Include="IGameState Classes\Game States\ItemSelectGameState.cs" />
+    <Compile Include="IGameState Classes\IGameState.cs" />
     <Compile Include="ILevel Classes\DungeonHUD.cs" />
     <Compile Include="ILevel Classes\DungeonRoom.cs" />
     <Compile Include="ILevel Classes\IHUD.cs" />
