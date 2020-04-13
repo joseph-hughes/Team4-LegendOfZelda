@@ -5,14 +5,14 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaRed_States
     class GoriyaRedSouthWalkingState : IState
     {
         IEnemy enemy;
-        private const int WIDTH = 13, HEIGHT = 16;
+        private const int WIDTH = 13, HEIGHT = 16, SPEED = 1;
 
         public GoriyaRedSouthWalkingState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateGoriyaRedSouthSprite();
             this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * WIDTH), (int)(this.enemy.Scale * HEIGHT));
-            this.enemy.Velocity.Magnitude = 1;
+            this.enemy.Velocity.Magnitude = SPEED;
             this.enemy.Velocity.Direction = Vector.Orientation.South;
         }
 
