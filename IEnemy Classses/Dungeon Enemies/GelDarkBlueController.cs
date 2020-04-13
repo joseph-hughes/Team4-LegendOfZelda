@@ -22,7 +22,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
             {
                 if (waitCount > 0)
                 {
-                    enemy.Idle();
+                    if (enemy.Velocity.Magnitude > 0)
+                    {
+                        enemy.Idle();
+                    }
                     waitCount--;
                 }
                 else
