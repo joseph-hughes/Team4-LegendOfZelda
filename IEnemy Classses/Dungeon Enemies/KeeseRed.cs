@@ -3,19 +3,21 @@ using Microsoft.Xna.Framework.Graphics;
 using System;
 using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseRed_States;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     class KeeseRed : IEnemy
     {
         public IRoom Room { get; set; }
+        private UtilityClass utilities = new UtilityClass();
+
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Rectangle DestinationRectangle { get; set; }
         private IController controller;
         public float Scale { get; set; }
-        private const int width = 16;
-        private const int height = 10;
+       
         
        
 
@@ -23,10 +25,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         {
             Room = room;
             
-            Scale = 3f;
+            Scale = utilities.Scale;
 
             Sprite = EnemySpriteFactory.Instance.CreateKeeseRedSprite();
-            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * width), (int)(Scale * height));
+            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * utilities.width3), (int)(Scale * utilities.height3));
             State = new KeeseRedIdleState(this);
             controller = new KeeseController(this);
 

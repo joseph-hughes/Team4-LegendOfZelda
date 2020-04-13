@@ -1,11 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Stalfos_States
 {
     class StalfosNorthState : IState
     {
         IEnemy enemy;
-        int speed = 2;
+        private UtilityClass utilities = new UtilityClass();
 
         public StalfosNorthState(IEnemy enemy)
         {
@@ -53,7 +54,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Stalfos_States
 
         public void Update()
         {
-            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X, enemy.DestinationRectangle.Y - speed, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
+            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X, enemy.DestinationRectangle.Y - utilities.speed, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
         }
     }
 }

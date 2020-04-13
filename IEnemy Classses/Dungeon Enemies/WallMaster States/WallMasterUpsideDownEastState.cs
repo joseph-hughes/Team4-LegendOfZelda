@@ -1,18 +1,20 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.WallMaster_States
 {
     class WallMasterUpsideDownEastState : IState
     {
         IEnemy enemy;
-        private const int width = 16;
-        private const int height = 16;
+        private UtilityClass utilities = new UtilityClass();
+
+    
 
         public WallMasterUpsideDownEastState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateWallMasterUpsideDownEastSprite();
-            this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * width), (int)(this.enemy.Scale * height));
+            this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * utilities.width3), (int)(this.enemy.Scale * utilities.height));
         }
 
         public void North()
@@ -56,7 +58,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.WallMaster_States
 
         public void Update()
         {
-            enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(enemy.Scale * width), (int)(enemy.Scale * height));
+            enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(enemy.Scale * utilities.width3), (int)(enemy.Scale * utilities.height));
         }
     }
 }

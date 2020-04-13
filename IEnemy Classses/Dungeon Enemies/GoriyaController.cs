@@ -1,17 +1,18 @@
 ﻿using Team4_LegendOfZelda.Random_Number_Generator;
-
+using Team4_LegendOfZelda.Utility_Classes;
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     public class GoriyaController : IController
     {
         private IEnemy enemy;
-        private static int MAX_DIRECTION_COUNTS = 240;
+        private UtilityClass utilities = new UtilityClass();
+
         private int directionCount;
 
         public GoriyaController(IEnemy enemy)
         {
             this.enemy = enemy;
-            directionCount = MAX_DIRECTION_COUNTS;
+            directionCount = utilities.MAX_DIRECTION_COUNTS5;
         }
 
         public void Update()
@@ -47,7 +48,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
                         // Do nothing, this is not supposed to happen
                         break;
                 }
-                directionCount = MAX_DIRECTION_COUNTS;
+                directionCount = utilities.MAX_DIRECTION_COUNTS5;
             }
         }
     }

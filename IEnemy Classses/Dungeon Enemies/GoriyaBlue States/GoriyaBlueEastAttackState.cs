@@ -7,6 +7,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaBlue_States
     {
         IEnemy enemy;
         private UtilityClass utilities = new UtilityClass();
+        private int count, maxcount;
     
         // Projectile item
 
@@ -16,7 +17,8 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaBlue_States
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateGoriyaBlueEastSprite();
             this.enemy.DestinationRectangle = new Rectangle((int)this.enemy.DestinationRectangle.X, (int)this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * utilities.width), (int)(this.enemy.Scale * utilities.height));
             // Create boomerang
-
+            count = utilities.count;
+            maxcount = utilities.maxcount;
            
         }
 
@@ -62,8 +64,8 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaBlue_States
 
         public void Update()
         {
-            utilities.count++;
-            if (utilities.count > utilities.maxcount)
+            count++;
+            if (count > maxcount)
             {
                 enemy.State = new GoriyaBlueEastState(enemy);
             }

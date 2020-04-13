@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using System;
 using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
@@ -13,8 +14,9 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public IState State { get; set; }
         private IController controller;
         public Rectangle DestinationRectangle { get; set; }
-        private const int width = 16;
-        private const int height = 16;
+        private UtilityClass utilities = new UtilityClass();
+
+   
         public float Scale { get; set; }
 
 
@@ -25,7 +27,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
             Scale = 3f;
 
             Sprite = EnemySpriteFactory.Instance.CreateBladeTrapSprite();
-            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * width), (int)(Scale * height));
+            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * utilities.width3), (int)(Scale * utilities.height));
             State = new BladeTrapIdleState(this);
             controller = new BladeTrapController(this);
             

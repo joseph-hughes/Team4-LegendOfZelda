@@ -1,17 +1,19 @@
 ﻿using Team4_LegendOfZelda.Random_Number_Generator;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     public class ZolDarkGreenController : IController
     {
+        private UtilityClass utilities = new UtilityClass();
+
         private IEnemy enemy;
-        private static int MAX_DIRECTION_COUNTS = 60;
         private int directionCount;
 
         public ZolDarkGreenController(IEnemy enemy)
         {
             this.enemy = enemy;
-            directionCount = MAX_DIRECTION_COUNTS;
+            directionCount = utilities.MAX_DIRECTION_COUNTS4;
         }
 
         public void Update()
@@ -37,7 +39,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
                         // Do nothing, this is not supposed to happen
                         break;
                 }
-                directionCount = MAX_DIRECTION_COUNTS;
+                directionCount = utilities.MAX_DIRECTION_COUNTS4;
             }
         }
     }

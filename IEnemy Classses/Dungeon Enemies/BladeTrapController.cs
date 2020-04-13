@@ -1,17 +1,19 @@
 ﻿using Team4_LegendOfZelda.Random_Number_Generator;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     public class BladeTrapController : IController
     {
         private IEnemy enemy;
-        private static int MIN_DIRECTION_COUNTS = 60, MAX_DIRECTION_COUNTS = 180;
+        private UtilityClass utilities = new UtilityClass();
+
         private int directionCount;
 
         public BladeTrapController(IEnemy enemy)
         {
             this.enemy = enemy;
-            directionCount = MAX_DIRECTION_COUNTS;
+            directionCount = utilities.MAX_DIRECTION_COUNTS3;
         }
 
         public void Update()
@@ -37,7 +39,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
                         // Do nothing, this is not supposed to happen
                         break;
                 }
-                directionCount = RandomIntGenerator.Instance.Next(MIN_DIRECTION_COUNTS, MAX_DIRECTION_COUNTS);
+                directionCount = RandomIntGenerator.Instance.Next(utilities.MIN_DIRECTION_COUNTS2, utilities.MAX_DIRECTION_COUNTS3);
             }
         }
     }

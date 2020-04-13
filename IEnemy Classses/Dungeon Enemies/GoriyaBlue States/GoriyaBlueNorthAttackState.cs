@@ -7,7 +7,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaBlue_States
     {
         IEnemy enemy;
         private UtilityClass utilities = new UtilityClass();
-       
+        private int count, maxcount;
         // Projectile item
         
 
@@ -18,8 +18,8 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaBlue_States
             this.enemy.DestinationRectangle = new Rectangle((int)this.enemy.DestinationRectangle.X, (int)this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * utilities.width), (int)(this.enemy.Scale * utilities.height));
             // Create boomerang
 
-            utilities.count = 0;
-            utilities.maxcount = 60;
+            count = utilities.count;
+            maxcount = utilities.maxcount;
         }
 
         public void North()

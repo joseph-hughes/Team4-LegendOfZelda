@@ -12,7 +12,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GelDarkBlue_States
         public GelDarkBlueWestState(IEnemy enemy)
         {
             this.enemy = enemy;
-            displacement = MAX_DISPLACEMENT;
+            displacement = utilities.MAX_DISPLACEMENT;
         }
 
         public void North()

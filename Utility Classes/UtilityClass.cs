@@ -106,7 +106,48 @@ namespace Team4_LegendOfZelda.Utility_Classes
 
         // GoriyaBlueNorthAttackState
         public int width2 = 13;
-    
+
+        //ropeeaststate.cs
+
+        public int height2 = 15;
+        public int width3 = 16;
+
+        // StalfosEastState.cs
+
+        public int speed = 2;
+
+        // ZolDarkGreenState.cs
+
+        public int DELTA_DISPLACEMENT3 = 10;
+
+        // BladeTrapController
+
+        public int MIN_DIRECTION_COUNTS2 = 60;
+        public int MAX_DIRECTION_COUNTS3 = 180;
+
+        // GelDarkBlueController.cs
+
+        public int MAX_DIRECTION_COUNTS4 = 60;
+
+        // GoriyaController.cs
+
+        public int MAX_DIRECTION_COUNTS5 = 240;
+
+        // KeeseBlue.cs
+
+        public int height3 = 10;
+
+        //KeeseController
+
+        public int MAX_DIRECTION_COUNTS6 = 30;
+
+        // Stalfos.cs
+
+        public int width4 = 15;
+
+        // wallmastercontroller.cs
+
+        public int MAX_DIRECTION_COUNTS7 = 240;
 
 
 
