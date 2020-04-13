@@ -108,11 +108,6 @@
     <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseBlue States\KeeseBlueSouthState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseBlue States\KeeseBlueWestState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseController.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseRed States\KeeseRedEastState.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseRed States\KeeseRedIdleState.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseRed States\KeeseRedNorthState.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseRed States\KeeseRedSouthState.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseRed States\KeeseRedWestState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\Rope States\RopeIdleState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\Rope States\RopeNorthState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\Rope States\RopeSouthState.cs" />
@@ -214,7 +209,6 @@
     <Compile Include="IEnemy Classses\Dungeon Enemies\Rope States\RopeWestState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\Rope States\RopeEastState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\Rope.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseRed.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\KeeseBlue.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GoriyaRed.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\GelDarkBlue.cs" />

@@ -70,9 +70,6 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                             case "KeeseBlue":
                                 room.Enemies.Add(new KeeseBlue(room, position));
                                 break;
-                            case "KeeseRed":
-                                room.Enemies.Add(new KeeseRed(room, position));
-                                break;
                             case "Rope":
                                 room.Enemies.Add(new Rope(room, position));
                                 break;
