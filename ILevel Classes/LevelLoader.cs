@@ -38,6 +38,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         {
             List<IRoom> rooms = new List<IRoom>();
             XmlNode root = LevelXml.FirstChild.NextSibling;
+            utilities = new UtilityClass();
 
             foreach(XmlNode roomNode in root)
             {
