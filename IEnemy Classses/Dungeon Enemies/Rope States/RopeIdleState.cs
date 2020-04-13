@@ -4,11 +4,12 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
 {
     class RopeIdleState : IState
     {
-        IEnemy enemy;
+        private IEnemy enemy;
 
         public RopeIdleState(IEnemy enemy)
         {
             this.enemy = enemy;
+            this.enemy.Velocity.Magnitude = 0;
         }
 
         public void North()
@@ -33,12 +34,12 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
 
         public void Idle()
         {
-            // Do nothing
+            enemy.Velocity.Magnitude = 0;
         }
 
         public void BeDamaged()
         {
-            // TODO
+            // Do nothing
         }
 
         public void Attack()
