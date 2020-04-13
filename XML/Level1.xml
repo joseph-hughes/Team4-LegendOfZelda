@@ -120,7 +120,7 @@
       </Enemy>
       <Enemy>
         <ObjectType>KeeseBlue</ObjectType>
-        <ColumnNum>91</ColumnNum>
+        <ColumnNum>9</ColumnNum>
         <RowNum>4</RowNum>
       </Enemy>
       <Enemy>
@@ -438,8 +438,8 @@
     <Items total="1">
       <Item>
         <ObjectType>HeartContainer</ObjectType>
-        <ColumnNum>11</ColumnNum>
-        <RowNum>4</RowNum>
+        <ColumnNum>11.5</ColumnNum>
+        <RowNum>4.5</RowNum>
       </Item>
     </Items>
     <North></North>
@@ -453,8 +453,8 @@
     <Items total="1">
       <Item>
         <ObjectType>Triforce</ObjectType>
-        <ColumnNum>6.5</ColumnNum>
-        <RowNum>4.5</RowNum>
+        <ColumnNum>7</ColumnNum>
+        <RowNum>5</RowNum>
       </Item>
     </Items>
     <North></North>
@@ -560,7 +560,6 @@
     <West>17</West>
     <Other></Other>
   </Room>
-  
 </Rooms>
 
 
