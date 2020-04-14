@@ -8,7 +8,8 @@
         public VelocityVector(int magnitude, Orientation direction)
         {
             Magnitude = magnitude;
-            Direction = direction;
+            Direction = Direction;
+
         }
     }
 }

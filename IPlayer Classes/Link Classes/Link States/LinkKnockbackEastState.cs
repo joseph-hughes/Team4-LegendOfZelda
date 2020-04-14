@@ -16,6 +16,7 @@ namespace Team4_LegendOfZelda.IState_Classes
             this.link.IsAttacking = false;
             this.link.IsKnocked = true;
             this.link.IsDamaged = true;
+            this.link.IsDeath = false;
             this.link.LinkSwordRectangle = Rectangle.Empty;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkDamagedMovingEastSprite();
         }
@@ -70,7 +71,6 @@ namespace Team4_LegendOfZelda.IState_Classes
             else
             {
                 link.DestinationRectangle = new Rectangle(link.DestinationRectangle.X - link.Velocity.Magnitude, link.DestinationRectangle.Y, link.DestinationRectangle.Width, link.DestinationRectangle.Height);
-
             }
         }
     }

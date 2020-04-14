@@ -15,6 +15,7 @@
             this.link.IsAttacking = false;
             this.link.IsKnocked = false;
             this.link.IsDamaged = true;
+            this.link.IsDeath = false;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkDamagedNonMovingNorthSprite();
         }
         public void South()
