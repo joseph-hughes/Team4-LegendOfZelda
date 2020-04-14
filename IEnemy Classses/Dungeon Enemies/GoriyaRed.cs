@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaRed_States;
+using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GoriyaRed_States;
 using Team4_LegendOfZelda.ILevel_Classes;
+using Team4_LegendOfZelda.Vector;
 using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
@@ -12,25 +12,20 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public IRoom Room { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
+        public IVector Velocity { get; set; }
         private UtilityClass utilities = new UtilityClass();
-
-
         public Rectangle DestinationRectangle { get; set; }
         public float Scale { get; set; }
         private IController controller;
 
-
-
         public GoriyaRed(IRoom room, Vector2 position)
         {
             Room = room;
-            controller = new GoriyaController(this);
-            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, DestinationRectangle.Width, DestinationRectangle.Height);
-
             Scale = utilities.Scale;
-            State = new GoriyaRedWestState(this);
-
-           
+            controller = new GoriyaController(this);
+            Velocity = new VelocityVector(0, Orientation.South);
+            State = new GoriyaRedWestWalkingState(this);
+            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * Sprite.SourceRectangle.Width), (int)(Scale * Sprite.SourceRectangle.Height));            
         }
 
         public void North()
@@ -55,7 +50,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 
         public void Idle()
         {
-            State.Idle();
+            Velocity.Magnitude = 0;
         }
 
         public void BeDamaged()

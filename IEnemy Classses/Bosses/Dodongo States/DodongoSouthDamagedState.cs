@@ -2,25 +2,22 @@
 using Team4_LegendOfZelda.Utility_Classes;
 
 
-namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
+namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses.Dodongo_States
 {
     class DodongoSouthDamagedState : IState
     {
         IEnemy enemy;
-        private const int width = 16;
-        private const int height = 16;
-        private UtilityClass utilities = new UtilityClass();
-
-        int count, maxCount;
+        private const int MAX_DAMAGE_TIMER = 120;
+        int damageCounter;
 
         public DodongoSouthDamagedState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateDodongoSouthDamagedSprite();
-            this.enemy.DestinationRectangle = new Rectangle((int)this.enemy.DestinationRectangle.X, (int)this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * width), (int)(this.enemy.Scale * height));
-
-            count = utilities.count;
-            maxCount = utilities.maxcount2;
+            this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * this.enemy.Sprite.SourceRectangle.Width), (int)(this.enemy.Scale * this.enemy.Sprite.SourceRectangle.Height));
+            this.enemy.Velocity.Magnitude = 0;
+            this.enemy.Velocity.Directon = Vector.Orientation.South;
+            damageCounter = MAX_DAMAGE_TIMER;
         }
 
         public void North()
@@ -45,7 +42,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
 
         public void Idle()
         {
-            // TODO
+            // Do nothing
         }
 
         public void BeDamaged()
@@ -65,8 +62,8 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
 
         public void Update()
         {
-            count++;
-            if (count > maxCount)
+            damageCounter--;
+            if (damageCounter <= 0)
             {
                 enemy.State = new DodongoSouthWalkingState(enemy);
             }

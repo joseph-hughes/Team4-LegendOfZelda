@@ -5,50 +5,43 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
     public class GoriyaController : IController
     {
         private IEnemy enemy;
+        private const int MIN_Directon_COUNTS = 30, MAX_Directon_COUNTS = 120;
         private UtilityClass utilities = new UtilityClass();
-
-        private int directionCount;
+        private int DirectonCount;
 
         public GoriyaController(IEnemy enemy)
         {
             this.enemy = enemy;
-            directionCount = utilities.MAX_DIRECTION_COUNTS5;
+            DirectonCount = RandomIntGenerator.Instance.Next(MIN_Directon_COUNTS, MAX_Directon_COUNTS);
         }
 
         public void Update()
         {
-            directionCount--;
-            if (directionCount <= 0)
+            DirectonCount--;
+            if (DirectonCount <= 0)
             {
-                switch (RandomIntGenerator.Instance.Next(0, 5))
+                switch (RandomIntGenerator.Instance.Next(0, 4))
                 {
                     case 0:
-                        enemy.Idle();
                         enemy.North();
                         break;
                     case 1:
-                        enemy.Idle();
                         enemy.East();
                         break;
                     case 2:
-                        enemy.Idle();
                         enemy.South();
                         break;
                     case 3:
-                        enemy.Idle();
                         enemy.West();
                         break;
                     case 4:
                         enemy.Attack();
                         break;
-                    case 5:
-                        enemy.BeDamaged();
-                        break;
                     default:
                         // Do nothing, this is not supposed to happen
                         break;
                 }
-                directionCount = utilities.MAX_DIRECTION_COUNTS5;
+                DirectonCount = RandomIntGenerator.Instance.Next(MIN_Directon_COUNTS, MAX_Directon_COUNTS);
             }
         }
     }

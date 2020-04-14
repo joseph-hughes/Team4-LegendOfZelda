@@ -15,7 +15,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         }
         public void Execute()
         {
-            Vector.Orientation direction;
+            Vector.Orientation Directon;
 
             float dx = player.DestinationRectangle.X - block.DestinationRectangle.X;
             float dy = player.DestinationRectangle.Y - block.DestinationRectangle.Y;
@@ -26,21 +26,21 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 {
                     if (player.isKnocked)
                     {
-                        direction = Vector.Orientation.East;
+                        Directon = Vector.Orientation.East;
                     }
                     else
                     {
-                        direction = Vector.Orientation.West;
+                        Directon = Vector.Orientation.West;
                     }
                 }
                 else
                     if (player.isKnocked)
                 {
-                    direction = Vector.Orientation.West;
+                    Directon = Vector.Orientation.West;
                 }
                 else
                 {
-                    direction = Vector.Orientation.East;
+                    Directon = Vector.Orientation.East;
                 }
 
             }
@@ -50,28 +50,28 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 {
                     if (player.isKnocked)
                     {
-                        direction = Vector.Orientation.South;
+                        Directon = Vector.Orientation.South;
                     }
                     else
                     {
-                        direction = Vector.Orientation.North;
+                        Directon = Vector.Orientation.North;
                     }
                 }
                 else
                 {
                     if (player.isKnocked)
                     {
-                        direction = Vector.Orientation.North;
+                        Directon = Vector.Orientation.North;
                     }
                     else
                     {
-                        direction = Vector.Orientation.South;
+                        Directon = Vector.Orientation.South;
                     }
                 }
             }
 
 
-            if(player.Velocity.Directon == direction)
+            if(player.Velocity.Directon == Directon)
             {
                     player.Velocity.Magnitude = 0;
             }

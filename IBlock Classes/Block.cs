@@ -9,14 +9,14 @@ namespace Team4_LegendOfZelda.ILevel_Classes
     {
         public Rectangle DestinationRectangle { get; set; }
         public bool CanBeMoved { get; set; }
-        public List<Vector.Orientation> OptionalDirection { get; set; }
+        public List<Vector.Orientation> OptionalDirecton { get; set; }
         public ISprite BlockSprite { get; set; }
         public Block(bool CanBeMoved, Rectangle DestinationRectangle, ISprite Sprite)
         {
             this.CanBeMoved = CanBeMoved;
             if (CanBeMoved)
             {
-                OptionalDirection = new List<Vector.Orientation> { Vector.Orientation.North, Vector.Orientation.East, Vector.Orientation.South, Vector.Orientation.West };
+                OptionalDirecton = new List<Vector.Orientation> { Vector.Orientation.North, Vector.Orientation.East, Vector.Orientation.South, Vector.Orientation.West };
             }
             this.DestinationRectangle = DestinationRectangle;
             BlockSprite = Sprite;
