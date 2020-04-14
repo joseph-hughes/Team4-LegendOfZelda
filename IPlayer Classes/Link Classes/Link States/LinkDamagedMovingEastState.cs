@@ -12,11 +12,11 @@ namespace Team4_LegendOfZelda.IState_Classes
             this.link = link;
             this.timer = timer;
             this.link.Velocity.Magnitude = 2;
-            this.link.Velocity.Directon = Vector.Orientation.East;
-            this.link.isAttacking = false;
-            this.link.isKnocked = false;
-            this.link.isDamaged = true;
-            this.link.isDeath = false;
+            this.link.Velocity.Direction = Vector.Orientation.East;
+            this.link.IsAttacking = false;
+            this.link.IsKnocked = false;
+            this.link.IsDamaged = true;
+            this.link.IsDeath = false;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkDamagedMovingEastSprite();
         }
 
@@ -56,13 +56,13 @@ namespace Team4_LegendOfZelda.IState_Classes
         {
             link.Position = new Vector2(link.Position.X + link.Velocity.Magnitude, link.Position.Y);
 
-            link.DestinationRectangle = new Rectangle((int)link.Position.X, (int)link.Position.Y, (int)(link.Scale * Link.linkWidth), (int)(link.Scale * Link.linkHeight));
+            link.DestinationRectangle = new Rectangle((int)link.Position.X, (int)link.Position.Y, (int)(link.Scale * Link.LINK_WIDTH), (int)(link.Scale * Link.LINK_HEIGHT));
 
             this.timer -= 1;
             if (this.timer == 0)
             {
                 link.State = new LinkMovingEastState(link);
-                link.isDamaged = false;
+                link.IsDamaged = false;
             }
         }
     }

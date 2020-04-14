@@ -14,16 +14,16 @@ namespace Team4_LegendOfZelda
         }
         public void Execute()
         {
-            if (!player.isDamaged)
+            if (!player.IsDamaged)
             {
                 player.UseItem();
-                if(player.Velocity.Directon== Vector.Orientation.North) 
+                if(player.Velocity.Direction== Vector.Orientation.North) 
                 {
                     level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.itemPosition,0)); 
-                }else if (player.Velocity.Directon == Vector.Orientation.East)
+                }else if (player.Velocity.Direction == Vector.Orientation.East)
                 {
                     level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.itemPosition, 90));
-                }else if (player.Velocity.Directon == Vector.Orientation.South)
+                }else if (player.Velocity.Direction == Vector.Orientation.South)
                 {
                     level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.itemPosition, 180));
                 }else

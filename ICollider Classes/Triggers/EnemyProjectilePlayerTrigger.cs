@@ -19,7 +19,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         {
             currentRoom.EnemyProjectiles.Remove(projectile);
 
-            if (!player.isDamaged)
+            if (!player.IsDamaged)
             {
 
                 float dx = projectile.DestinationRectangle.X - player.DestinationRectangle.X;

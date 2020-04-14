@@ -17,18 +17,18 @@ namespace Team4_LegendOfZelda
         public float Scale { get; set; }
         public Vector2 itemPosition { get; set; }
         public IVector Velocity { get; set; }
-        public bool isAttacking { get; set; }
-        public bool isKnocked { get; set; }
-        public bool isDamaged { get; set; }
-        public bool isDeath { get; set; }
-        public const int damage_timer = 80;
-        public const int use_item_timer = 20;
-        public const int sword_timer = 20;
-        public const int knockback_timer = 10;
-        public const int linkWidth = 16;
-        public const int linkHeight = 16;
+        public bool IsAttacking { get; set; }
+        public bool IsKnocked { get; set; }
+        public bool IsDamaged { get; set; }
+        public bool IsDeath { get; set; }
+        public const int DAMAGE_TIMER = 80;
+        public const int USE_ITEM_TIMER = 20;
+        public const int SWORD_TIMER = 20;
+        public const int KNOCKBACK_TIMER = 10;
+        public const int LINK_WIDTH = 16;
+        public const int LINK_HEIGHT = 16;
 
-        public IItem currentItem { get; set; }
+        public IItem CurrentItem { get; set; }
         public Link(Vector2 position)
         {
             Position = position;
@@ -37,7 +37,7 @@ namespace Team4_LegendOfZelda
             State = new LinkNonMovingSouthState(this);
 
 
-            DestinationRectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(Scale * linkWidth), (int)(Scale * linkHeight));
+            DestinationRectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(Scale * LINK_WIDTH), (int)(Scale * LINK_HEIGHT));
 
             CurrentHitPoints = 6;
             MaxHitPoints = 6;
@@ -100,7 +100,7 @@ namespace Team4_LegendOfZelda
         }
         public void Draw(SpriteBatch spriteBatch)
         {
-            if (!isAttacking)
+            if (!IsAttacking)
             {
                 Sprite.Draw(spriteBatch, DestinationRectangle);
             }
