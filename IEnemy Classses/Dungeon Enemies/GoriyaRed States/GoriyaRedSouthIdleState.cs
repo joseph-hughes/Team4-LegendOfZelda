@@ -1,17 +1,18 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
+
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GoriyaRed_States
 {
     class GoriyaRedSouthIdleState : IState
     {
         IEnemy enemy;
-        private const int WIDTH = 13, HEIGHT = 16;
 
         public GoriyaRedSouthIdleState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateGoriyaRedSouthSprite();
-            this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * WIDTH), (int)(this.enemy.Scale * HEIGHT));
+            this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * UtilityClass.Instance.GoriyaRed_WIDTH2()), (int)(this.enemy.Scale * UtilityClass.Instance.GoriyaRed_HEIGHT()));
             this.enemy.Velocity.Magnitude = 0;
             this.enemy.Velocity.Direction = Vector.Orientation.South;
         }

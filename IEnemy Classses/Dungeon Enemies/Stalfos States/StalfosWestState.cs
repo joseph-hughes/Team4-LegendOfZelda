@@ -1,16 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
+
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Stalfos_States
 {
     class StalfosWestState : IState
     {
         private IEnemy enemy;
-        const int SPEED = 2;
 
         public StalfosWestState(IEnemy enemy)
         {
             this.enemy = enemy;
-            this.enemy.Velocity.Magnitude = SPEED;
+            this.enemy.Velocity.Magnitude = UtilityClass.Instance.Stalfos_SPEED();
             this.enemy.Velocity.Direction = Vector.Orientation.West;
         }
 

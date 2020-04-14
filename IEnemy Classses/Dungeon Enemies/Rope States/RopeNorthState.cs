@@ -1,17 +1,18 @@
 ﻿using Microsoft.Xna.Framework;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States;
+using Team4_LegendOfZelda.Utility_Classes;
+
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
 {
     class RopeNorthState : IState
     {
         private IEnemy enemy;
-        private const int SPEED = 1;
 
         public RopeNorthState(IEnemy enemy)
         {
             this.enemy = enemy;
-            this.enemy.Velocity.Magnitude = SPEED;
+            this.enemy.Velocity.Magnitude = UtilityClass.Instance.Rope_SPEED();
             this.enemy.Velocity.Direction = Vector.Orientation.North;
         }
 

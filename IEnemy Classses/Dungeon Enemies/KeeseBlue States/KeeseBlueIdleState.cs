@@ -1,4 +1,6 @@
-﻿namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseBlue_States
+﻿using Team4_LegendOfZelda.Utility_Classes;
+
+namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseBlue_States
 {
     class KeeseBlueIdleState : IState
     {

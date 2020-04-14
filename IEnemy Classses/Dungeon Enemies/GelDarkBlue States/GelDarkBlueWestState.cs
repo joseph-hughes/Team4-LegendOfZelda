@@ -1,16 +1,16 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GelDarkBlue_States
 {
     class GelDarkBlueWestState : IState
     {
         private IEnemy enemy;
-        private const int SPEED = 2;
 
         public GelDarkBlueWestState(IEnemy enemy)
         {
             this.enemy = enemy;
-            this.enemy.Velocity.Magnitude = SPEED;
+            this.enemy.Velocity.Magnitude = UtilityClass.Instance.GelDarkBlue_Speed();
             this.enemy.Velocity.Direction = Vector.Orientation.West;
         }
 
@@ -56,7 +56,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GelDarkBlue_States
 
         public void Update()
         {
-            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X - SPEED, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
+            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X - UtilityClass.Instance.GelDarkBlue_Speed(), enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
         }
     }
 }

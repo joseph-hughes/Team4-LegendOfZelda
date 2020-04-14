@@ -121,6 +121,95 @@ namespace Team4_LegendOfZelda.Utility_Classes
             return 180;
         }
 
+        public float Scale()
+        {
+            return 3f;
+        }
+
+        public int DodongoController_MIN_DIRECTION_COUNTS()
+        {
+            return 30;
+        }
+
+        public int DodongoController_MAX_DIRECTION_COUNTS()
+        {
+            return 60;
+        }
+
+        public int BladeTrapAttack_Speed()
+        {
+            return 10;
+        }
+
+        public int BladeTrapRecharge_Speed()
+        {
+            return 4;
+        }
+
+        public int GelDarkBlue_Speed()
+        {
+            return 2;
+        }
+
+        public int GoriyaRed_MAX_COUNTS()
+        {
+            return 60;
+        }
+
+        public int GoriyaRed_HEIGHT()
+        {
+            return 16;
+        }
+        public int GoriyaRed_WIDTH2()
+        {
+            return 13;
+        }
+
+        public int GoriyaRed_WIDTH()
+        {
+            return 14;
+        }
+
+        public int GoriyaRed_SPEED()
+        {
+            return 1;
+        }
+
+        public int KeeseBlue_SPEED()
+        {
+            return 3;
+        }
+
+        public int Rope_WIDTH()
+        {
+            return 16;
+        }
+        public int Rope_HEIGHT()
+        {
+            return 15;
+        }
+        public int Rope_SPEED()
+        {
+            return 1;
+        }
+
+        public int Stalfos_SPEED()
+        {
+            return 2;
+        }
+
+        public int WallMaster_SPEED()
+        {
+            return 1;
+        }
+        public int WallMaster_WIDTH()
+        {
+            return 16;
+        }
+        public int WallMaster_HEIGHT()
+        {
+            return 16;
+        }
         public List<Keys> keyList = new List<Keys>
             {
                 Keys.W,

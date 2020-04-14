@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Team4_LegendOfZelda.IEnemy_Classses.Bosses.Dodongo_States;
 using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.Vector;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 {
@@ -19,7 +20,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         public Dodongo(IRoom room, Vector2 position)
         {
             Room = room;
-            Scale = 3f;
+            Scale = UtilityClass.Instance.Scale();
             controller = new DodongoController(this);
             Velocity = new VelocityVector(0, Orientation.West);
             State = new DodongoWestWalkingState(this);

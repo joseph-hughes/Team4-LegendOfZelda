@@ -1,4 +1,6 @@
 ﻿using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMaster_States;
+using Team4_LegendOfZelda.Utility_Classes;
+
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMaster_States
 {

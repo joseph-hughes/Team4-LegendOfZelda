@@ -22,7 +22,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         public Aquamentus(IRoom room, Vector2 position)
         {
             Room = room;
-            Scale = 3f;
+            Scale = UtilityClass.Instance.Scale();
             DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * UtilityClass.Instance.Aquamentus_WIDTH()), (int)(Scale * UtilityClass.Instance.Aquamentus_Height()));
             Velocity = new VelocityVector(0, Orientation.West);
             State = new AquamentusWestIdleState(this);

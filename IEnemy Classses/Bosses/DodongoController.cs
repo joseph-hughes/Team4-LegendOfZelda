@@ -1,17 +1,20 @@
 ﻿using Team4_LegendOfZelda.Random_Number_Generator;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 {
     public class DodongoController : IController
     {
         private IEnemy enemy;
-        private const int MIN_DIRECTION_COUNTS = 30, MAX_DIRECTION_COUNTS = 60;
+        private int MIN_DIRECTION_COUNTS, MAX_DIRECTION_COUNTS;
         private int directionCount;
 
         public DodongoController(IEnemy enemy)
         {
             this.enemy = enemy;
             directionCount = MAX_DIRECTION_COUNTS;
+            MIN_DIRECTION_COUNTS = UtilityClass.Instance.DodongoController_MIN_DIRECTION_COUNTS();
+            MAX_DIRECTION_COUNTS = UtilityClass.Instance.DodongoController_MAX_DIRECTION_COUNTS();
         }
         public void Update()
         {

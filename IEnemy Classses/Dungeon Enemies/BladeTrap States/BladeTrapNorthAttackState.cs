@@ -1,16 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
+
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
 {
     class BladeTrapNorthAttackState : IState
     {
         private IEnemy enemy;
-        private const int SPEED = 10;
 
         public BladeTrapNorthAttackState(IEnemy enemy)
         {
             this.enemy = enemy;
-            this.enemy.Velocity.Magnitude = SPEED;
+            this.enemy.Velocity.Magnitude = UtilityClass.Instance.BladeTrapAttack_Speed();
         }
 
         public void North()

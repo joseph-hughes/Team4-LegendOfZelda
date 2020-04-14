@@ -1,16 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
+
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
 {
     class BladeTrapNorthRechargeState : IState
     {
         private IEnemy enemy;
-        private const int SPEED = 4;
 
         public BladeTrapNorthRechargeState(IEnemy enemy)
         {
             this.enemy = enemy;
-            this.enemy.Velocity.Magnitude = SPEED;
+            this.enemy.Velocity.Magnitude = UtilityClass.Instance.BladeTrapRecharge_Speed();
         }
 
         public void North()

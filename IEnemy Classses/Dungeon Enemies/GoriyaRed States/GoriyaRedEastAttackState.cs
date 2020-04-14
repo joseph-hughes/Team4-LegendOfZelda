@@ -1,4 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
+
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GoriyaRed_States
 {
@@ -6,7 +8,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GoriyaRed_States
     {
         private IEnemy enemy;
         // Projectile item
-        private const int WIDTH = 14, HEIGHT = 16, MAX_COUNTS = 60;
+        private const int WIDTH = 14, HEIGHT = 16;
         private int count;
 
         public GoriyaRedEastAttackState(IEnemy enemy)
@@ -17,7 +19,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GoriyaRed_States
             this.enemy.Velocity.Magnitude = 0;
             this.enemy.Velocity.Direction = Vector.Orientation.East;
             // Create boomerang
-            count = MAX_COUNTS;
+            count = UtilityClass.Instance.GoriyaRed_MAX_COUNTS();
         }
 
         public void North()
