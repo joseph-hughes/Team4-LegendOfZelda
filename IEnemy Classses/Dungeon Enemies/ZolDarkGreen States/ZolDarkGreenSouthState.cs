@@ -1,17 +1,18 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.ZolDarkGreen_States
 {
     class ZolDarkGreenSouthState : IState
     {
         private IEnemy enemy;
-        private static int MAX_DISPLACEMENT = 48, DELTA_DISPLACEMENT = 10;
-        private int displacement;
+        private const int SPEED = 2;
 
         public ZolDarkGreenSouthState(IEnemy enemy)
         {
             this.enemy = enemy;
-            displacement = MAX_DISPLACEMENT;
+            this.enemy.Velocity.Magnitude = SPEED;
+            this.enemy.Velocity.Directon = Vector.Orientation.South;
         }
 
         public void North()
@@ -41,7 +42,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.ZolDarkGreen_State
 
         public void BeDamaged()
         {
-            // TODO
+            // Nothing
         }
 
         public void Attack()
@@ -56,16 +57,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.ZolDarkGreen_State
 
         public void Update()
         {
-            //enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X, ((int)enemy.DestinationRectangle.Y + 10) % 600);
-            if (displacement > 0)
-            {
-                enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X, enemy.DestinationRectangle.Y + DELTA_DISPLACEMENT, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
-                displacement -= DELTA_DISPLACEMENT;
-            }
-            else
-            {
-                Idle();
-            }
+            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X, enemy.DestinationRectangle.Y + SPEED, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
         }
     }
 }

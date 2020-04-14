@@ -20,7 +20,7 @@ namespace Team4_LegendOfZelda.IState_Classes
             this.link.isDamaged = false;
             this.link.isDeath = false;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkSwordSouthSprite();
-            this.link.LinkSwordRectangle = new Rectangle((int)this.link.Position.X, (int)this.link.Position.Y, (int)(this.link.Scale * width), (int)(this.link.Scale * height));
+            this.link.LinkSwordRectangle = new Rectangle((int)this.link.DestinationRectangle.X, (int)this.link.DestinationRectangle.Y, (int)(this.link.Scale * width), (int)(this.link.Scale * height));
         }
         public void South()
         {

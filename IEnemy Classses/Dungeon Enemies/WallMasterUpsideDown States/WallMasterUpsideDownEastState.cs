@@ -1,23 +1,26 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMasterUpsideDown_States
 {
     class WallMasterUpsideDownEastState : IState
     {
-        IEnemy enemy;
-        private static int MAX_DISPLACEMENT = 48, DELTA_DISPLACEMENT = 2;
-        private int displacement;
+        private IEnemy enemy;
+        private const int WIDTH = 16, HEIGHT = 16, SPEED = 1;
+        private UtilityClass utilities = new UtilityClass();
 
         public WallMasterUpsideDownEastState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateWallMasterUpsideDownEastSprite();
-            displacement = MAX_DISPLACEMENT;
+            this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * WIDTH), (int)(this.enemy.Scale * HEIGHT));
+            this.enemy.Velocity.Magnitude = SPEED;
+            this.enemy.Velocity.Directon = Vector.Orientation.East;
         }
 
         public void North()
         {
-            // Do nothing
+            enemy.State = new WallMasterUpsideDownNorthState(enemy);
         }
 
         public void East()
@@ -27,12 +30,12 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMasterUpsideDo
 
         public void South()
         {
-            // Do nothing
+            enemy.State = new WallMasterUpsideDownSouthState(enemy);
         }
 
         public void West()
         {
-            // Do nothing
+            enemy.State = new WallMasterUpsideDownWestState(enemy);
         }
         public void Idle()
         {
@@ -41,7 +44,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMasterUpsideDo
 
         public void BeDamaged()
         {
-            // TODO
+            // Do nothing
         }
 
         public void Attack()
@@ -56,16 +59,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMasterUpsideDo
 
         public void Update()
         {
-            //enemy.DestinationRectangle = new Rectangle((enemy.DestinationRectangle.X + 2) % 800, enemy.DestinationRectangle.Y);
-            if (displacement > 0)
-            {
-                enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X + DELTA_DISPLACEMENT, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
-                displacement -= DELTA_DISPLACEMENT;
-            }
-            else
-            {
-                Idle();
-            }
+            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X + enemy.Velocity.Magnitude, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
         }
     }
 }

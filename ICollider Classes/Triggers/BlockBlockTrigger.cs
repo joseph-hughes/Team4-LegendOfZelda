@@ -23,11 +23,11 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 if (dy > 0)
                 {
-                    currentBlock.OptionalDirection.Remove(Vector.Orientation.North);
+                    currentBlock.OptionalDirecton.Remove(Vector.Orientation.North);
                 }
                 else
                 {
-                    currentBlock.OptionalDirection.Remove(Vector.Orientation.South);
+                    currentBlock.OptionalDirecton.Remove(Vector.Orientation.South);
                 }
 
             }
@@ -35,11 +35,11 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 if (dx > 0)
                 {
-                    currentBlock.OptionalDirection.Remove(Vector.Orientation.West);
+                    currentBlock.OptionalDirecton.Remove(Vector.Orientation.West);
                 }
                 else
                 {
-                    currentBlock.OptionalDirection.Remove(Vector.Orientation.East);
+                    currentBlock.OptionalDirecton.Remove(Vector.Orientation.East);
                 }
             }
         }

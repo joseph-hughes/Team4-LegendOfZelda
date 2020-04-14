@@ -1,29 +1,34 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.WallMaster_States;
+using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMasterUpsideDown_States;
 using Team4_LegendOfZelda.ILevel_Classes;
+using Team4_LegendOfZelda.Utility_Classes;
+using Team4_LegendOfZelda.Vector;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     class WallMasterUpsideDown : IEnemy
     {
+        private UtilityClass utilities = new UtilityClass();
+
         public IRoom Room { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
+        public IVector Velocity { get; set; }
         public Rectangle DestinationRectangle { get; set; }
         public float Scale { get; set; }
         private IController controller;
-
+        private const int WIDTH = 16, HEIGHT = 16;
 
         public WallMasterUpsideDown(IRoom room, Vector2 position)
         {
             Room = room;
-            Scale = 3f;
-            State = new WallMasterUpsideDownWestState(this);
-            controller = new WallMasterUpsideDownController(this);
-            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, DestinationRectangle.Width, DestinationRectangle.Height);
-
+            Scale = utilities.Scale;
+            Velocity = new VelocityVector(0, Orientation.South);
+            State = new WallMasterUpsideDownIdleState(this);
+            controller = new WallMasterController(this);
+            Sprite = ItemSpriteFactory.Instance.CreateEmptyItem();
+            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, WIDTH, HEIGHT);
         }
 
         public void North()
@@ -65,7 +70,6 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         {
             State.UseItem();
         }
-
 
         public void Update()
         {

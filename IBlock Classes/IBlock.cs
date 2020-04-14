@@ -8,7 +8,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
     {
         Rectangle DestinationRectangle { get; set; }
         bool CanBeMoved { get; set; }
-        List<Vector.Orientation> OptionalDirection { get; set; }
+        List<Vector.Orientation> OptionalDirecton { get; set; }
         ISprite BlockSprite { get; set; }
         void Draw(SpriteBatch spriteBatch);
     }

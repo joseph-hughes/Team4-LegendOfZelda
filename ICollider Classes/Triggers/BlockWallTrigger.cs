@@ -16,7 +16,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         }
         public void Execute()
         {
-            currentBlock.OptionalDirection = new List<Vector.Orientation> { Vector.Orientation.North, Vector.Orientation.East, Vector.Orientation.South, Vector.Orientation.West };
+            currentBlock.OptionalDirecton = new List<Vector.Orientation> { Vector.Orientation.North, Vector.Orientation.East, Vector.Orientation.South, Vector.Orientation.West };
             float dx = currentBlock.DestinationRectangle.X - targetBlock.DestinationRectangle.X;
             float dy = currentBlock.DestinationRectangle.Y - targetBlock.DestinationRectangle.Y;
 
@@ -24,11 +24,11 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 if (dx > 0)
                 {
-                    currentBlock.OptionalDirection.Remove(Vector.Orientation.West);
+                    currentBlock.OptionalDirecton.Remove(Vector.Orientation.West);
                 }
                 else
                 {
-                    currentBlock.OptionalDirection.Remove(Vector.Orientation.East);
+                    currentBlock.OptionalDirecton.Remove(Vector.Orientation.East);
                 }
 
             }
@@ -36,11 +36,11 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 if (dy > 0)
                 {
-                    currentBlock.OptionalDirection.Remove(Vector.Orientation.North);
+                    currentBlock.OptionalDirecton.Remove(Vector.Orientation.North);
                 }
                 else
                 {
-                    currentBlock.OptionalDirection.Remove(Vector.Orientation.South);
+                    currentBlock.OptionalDirecton.Remove(Vector.Orientation.South);
                 }
             }
         }

@@ -71,8 +71,7 @@ namespace Team4_LegendOfZelda.IState_Classes
             }
             else
             {
-                link.Position = new Vector2(link.Position.X, link.Position.Y + link.Velocity.Magnitude);
-                link.DestinationRectangle = new Rectangle((int)link.Position.X, (int)link.Position.Y, (int)(link.Scale * Link.linkWidth), (int)(link.Scale * Link.linkHeight));
+                link.DestinationRectangle = new Rectangle(link.DestinationRectangle.X, link.DestinationRectangle.Y + link.Velocity.Magnitude, link.DestinationRectangle.Width, link.DestinationRectangle.Height);
 
             }
         }

@@ -1,10 +1,13 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.NPC_Classes
 {
     class OldMan : INPC
     {
+        private UtilityClass utilities = new UtilityClass();
+
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Vector2 Position { get; set; }
@@ -12,16 +15,15 @@ namespace Team4_LegendOfZelda.NPC_Classes
 
         public Rectangle DestinationRectangle;
 
-        private const int width = 16;
-        private const int height = 16;
+       
 
         public OldMan(Vector2 position)
         {
             Sprite = NPCSpriteFactory.Instance.CreateOldManSprite();
             State = new NullState();
             Position = position;
-            Scale = 3f;
-            DestinationRectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(width * Scale), (int)(height * Scale));
+            Scale = utilities.Scale;
+            DestinationRectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(utilities.width3 * Scale), (int)(utilities.height * Scale));
         }
 
         public void Update()

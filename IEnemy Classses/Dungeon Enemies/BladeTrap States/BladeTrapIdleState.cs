@@ -7,26 +7,27 @@
         public BladeTrapIdleState(IEnemy enemy)
         {
             this.enemy = enemy;
+            this.enemy.Velocity.Magnitude = 0;
         }
 
         public void North()
         {
-            enemy.State = new BladeTrapNorthState(enemy);
+            enemy.State = new BladeTrapNorthAttackState(enemy);
         }
 
         public void East()
         {
-            enemy.State = new BladeTrapEastState(enemy);
+            enemy.State = new BladeTrapEastAttackState(enemy);
         }
 
         public void South()
         {
-            enemy.State = new BladeTrapSouthState(enemy);
+            enemy.State = new BladeTrapSouthAttackState(enemy);
         }
 
         public void West()
         {
-            enemy.State = new BladeTrapWestState(enemy);
+            enemy.State = new BladeTrapWestAttackState(enemy);
         }
 
         public void Idle()
@@ -36,7 +37,7 @@
 
         public void BeDamaged()
         {
-            // TODO
+            // Do nothing
         }
 
         public void Attack()

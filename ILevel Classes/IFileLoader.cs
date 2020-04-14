@@ -2,6 +2,6 @@
 {
     public interface IFileLoader
     {
-        System.Collections.Generic.List<IRoom> LoadRooms();
+        System.Collections.Generic.List<IRoom> LoadRooms(IPlayer player);
     }
 }
