@@ -127,7 +127,6 @@
     <Compile Include="IEnemy Classses\Dungeon Enemies\WallMasterUpsideDown States\WallMasterUpsideDownNorthState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\WallMasterUpsideDown States\WallMasterUpsideDownSouthState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\WallMasterUpsideDown States\WallMasterUpsideDownWestState.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\WallMasterUpsideDownController.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenEastState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenIdleState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenNorthState.cs" />
@@ -198,8 +197,6 @@
     <Compile Include="IEnemy Classses\Bosses\Aquamentus States\AquamentusEastIdleState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\BladeTrap.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\WallMaster States\WallMasterUpsideDownEastState.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\WallMaster States\WallMasterUpsideDownWestState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\WallMasterUpsideDown.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\WallMaster States\WallMasterWestState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\WallMaster States\WallMasterEastState.cs" />

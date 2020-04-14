@@ -15,16 +15,17 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public Rectangle DestinationRectangle { get; set; }
         public float Scale { get; set; }
         private IController controller;
-
+        private const int WIDTH = 16, HEIGHT = 16;
 
         public WallMasterUpsideDown(IRoom room, Vector2 position)
         {
             Room = room;
             Scale = 3f;
             Velocity = new VelocityVector(0, Orientation.South);
-            State = new WallMasterUpsideDownWestState(this);
-            controller = new WallMasterUpsideDownController(this);
-            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * Sprite.SourceRectangle.Width), (int)(Scale * Sprite.SourceRectangle.Height));
+            State = new WallMasterUpsideDownIdleState(this);
+            controller = new WallMasterController(this);
+            Sprite = ItemSpriteFactory.Instance.CreateEmptyItem();
+            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, WIDTH, HEIGHT);
         }
 
         public void North()
@@ -66,7 +67,6 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         {
             State.UseItem();
         }
-
 
         public void Update()
         {

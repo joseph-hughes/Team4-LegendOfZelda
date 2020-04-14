@@ -4,11 +4,12 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMaster_States
 {
     class WallMasterIdleState : IState
     {
-        IEnemy enemy;
+        private IEnemy enemy;
 
         public WallMasterIdleState(IEnemy enemy)
         {
             this.enemy = enemy;
+            this.enemy.Velocity.Magnitude = 0;
         }
 
         public void North()
@@ -38,7 +39,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMaster_States
 
         public void BeDamaged()
         {
-            // TODO
+            // Do nothing
         }
 
         public void Attack()
