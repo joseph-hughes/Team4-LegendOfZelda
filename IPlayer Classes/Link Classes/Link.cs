@@ -9,18 +9,19 @@ namespace Team4_LegendOfZelda
     {
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
-        public Vector2 Position { get; set; }
         public Rectangle DestinationRectangle { get; set; }
         public Rectangle LinkSwordRectangle { get; set; }
         public int CurrentHitPoints { get; set; }
         public int MaxHitPoints { get; set; }
         public float Scale { get; set; }
-        public Vector2 itemPosition { get; set; }
+        public Vector2 ItemPosition { get; set; }
         public IVector Velocity { get; set; }
+        public IItem CurrentItem { get; set; }
         public bool IsAttacking { get; set; }
         public bool IsKnocked { get; set; }
         public bool IsDamaged { get; set; }
         public bool IsDeath { get; set; }
+
         public const int DAMAGE_TIMER = 80;
         public const int USE_ITEM_TIMER = 20;
         public const int SWORD_TIMER = 20;
@@ -28,16 +29,12 @@ namespace Team4_LegendOfZelda
         public const int LINK_WIDTH = 16;
         public const int LINK_HEIGHT = 16;
 
-        public IItem CurrentItem { get; set; }
         public Link(Vector2 position)
         {
-            Position = position;
             Scale = 3f;
             Velocity = new VelocityVector(0, Orientation.South);
             State = new LinkNonMovingSouthState(this);
-
-
-            DestinationRectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(Scale * LINK_WIDTH), (int)(Scale * LINK_HEIGHT));
+            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * LINK_WIDTH), (int)(Scale * LINK_HEIGHT));
 
             CurrentHitPoints = 6;
             MaxHitPoints = 6;

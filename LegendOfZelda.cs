@@ -17,11 +17,12 @@ namespace Team4_LegendOfZelda
         private static GraphicsDeviceManager graphics;
         private List<IController> controllerList;
         private List<ISpriteFactory> spriteFactories;
+        private ISFXFactory sfxfactory;
         private Color backgroundColor;
         public ILevel level;
         public IPlayer player;
         private IDector dector;
-        public static int WINDOW_WIDTH = 768, ROOM_HEIGHT = 528, HUD_HEIGHT = 168;
+        public const int WINDOW_WIDTH = 768, ROOM_HEIGHT = 528, HUD_HEIGHT = 168;
 
         public LegendOfZelda()
         {
@@ -41,6 +42,7 @@ namespace Team4_LegendOfZelda
                 ProjectileSpriteFactory.Instance,
                 MapAndHUDSpriteFactory.Instance
             };
+            sfxfactory = SFXFactory.Instance;
         }
 
         /// <summary>
@@ -187,7 +189,7 @@ namespace Team4_LegendOfZelda
             {
                 spriteFactory.LoadAllTextures(Content);
             }
-
+            sfxfactory.LoadAllSFX(Content);
         }
 
         /// <summary>

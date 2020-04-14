@@ -9,6 +9,7 @@
         {
             Magnitude = magnitude;
             Direction = Direction;
+
         }
     }
 }

@@ -1,0 +1,16 @@
+Author of Code Review:	Mingkun Tian
+
+Date of Code Review:	04/13/2020
+
+Sprint number:			Sprint 4
+
+Name of .cs file:		ItemSelectGameState.cs
+
+Author of .cs file:		Steven Lister
+
+Number of minutes:		15 minutes
+
+Comments:				Generally, the readablity for this class is good. It has methods that impliments the item
+						select state including select item and pause. In each method, there would be either no 
+						action or change the game state into a new state. Overall the class is neat with less 
+						special parameters. 

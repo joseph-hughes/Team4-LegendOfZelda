@@ -1,0 +1,16 @@
+﻿Author of Code Review:	Steven Lister
+
+Date of Code Review:	04/13/2020
+
+Sprint number:			Sprint 3
+
+Name of .cs file:		LevelLoader.cs
+
+Author of .cs file:		Mingkun Tian
+
+Number of minutes:		10 minutes
+
+Comments:				The maintainability of this code is pretty solid due to its ubiquity. It's somewhat difficult to follow the function of the class, but due to the way it was designed, it is not
+						difficult to update the parts that would change over time. However, given its density, if ever it needed to be seriously overhauled, it may end up being easier to start the new
+						level loading system from scratch. That being said, since it pretty much just reads in XML files and populates the level, it's hard to image a situation where we would need to
+						change its core functions.

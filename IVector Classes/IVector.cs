@@ -4,6 +4,5 @@
     {
         int Magnitude { get; set; }
         Orientation Direction { get; set; }
-
     }
 }

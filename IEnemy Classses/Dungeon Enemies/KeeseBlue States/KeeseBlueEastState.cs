@@ -5,18 +5,18 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseBlue_States
     class KeeseBlueEastState : IState
     {
         private IEnemy enemy;
-        private static int MAX_DISPLACEMENT = 48, DELTA_DISPLACEMENT = 2;
-        private int displacement;
+        private const int SPEED = 3;
 
         public KeeseBlueEastState(IEnemy enemy)
         {
             this.enemy = enemy;
-            displacement = MAX_DISPLACEMENT;
+            this.enemy.Velocity.Magnitude = SPEED;
+            this.enemy.Velocity.Direction = Vector.Orientation.East;
         }
 
         public void North()
         {
-            // Do nothing
+            enemy.State = new KeeseBlueNorthState(enemy);
         }
 
         public void East()
@@ -26,12 +26,12 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseBlue_States
 
         public void South()
         {
-            // Do nothing
+            enemy.State = new KeeseBlueSouthState(enemy);
         }
 
         public void West()
         {
-            // Do nothing
+            enemy.State = new KeeseBlueWestState(enemy);
         }
 
         public void Idle()
@@ -41,7 +41,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseBlue_States
 
         public void BeDamaged()
         {
-            // TODO
+            // Do nothing
         }
 
         public void Attack()
@@ -56,16 +56,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseBlue_States
 
         public void Update()
         {
-            if (displacement > 0)
-            {
-                //enemy.DestinationRectangle = new Rectangle((enemy.DestinationRectangle.X + 2) % 800, enemy.DestinationRectangle.Y);
-                enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X + DELTA_DISPLACEMENT, this.enemy.DestinationRectangle.Y, this.enemy.DestinationRectangle.Width, this.enemy.DestinationRectangle.Height); 
-                displacement -= DELTA_DISPLACEMENT;
-            }
-            else
-            {
-                Idle();
-            }
+            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X + enemy.Velocity.Magnitude, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
         }
     }
 }

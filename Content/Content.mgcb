@@ -1652,3 +1652,159 @@
 /processorParam:TextureFormat=Color
 /build:Projectiles/Flame.png
 
+#begin Sounds/Aquamentus_Defeated.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Aquamentus_Defeated.wav
+
+#begin Sounds/Aquamentus_Roaring.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Aquamentus_Roaring.wav
+
+#begin Sounds/Arrow_Hit.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Arrow_Hit.wav
+
+#begin Sounds/Bomb_Explosion.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Bomb_Explosion.wav
+
+#begin Sounds/Bomb_Placement.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Bomb_Placement.wav
+
+#begin Sounds/Boss_Zapped.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Boss_Zapped.wav
+
+#begin Sounds/Dodongo_Defeated.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Dodongo_Defeated.wav
+
+#begin Sounds/Dodongo_Roaring.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Dodongo_Roaring.wav
+
+#begin Sounds/Door_Opened.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Door_Opened.wav
+
+#begin Sounds/Enemy_Shrinking.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Enemy_Shrinking.wav
+
+#begin Sounds/Enemy_Zapped.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Enemy_Zapped.wav
+
+#begin Sounds/Flames_Shot.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Flames_Shot.wav
+
+#begin Sounds/Health_Heart.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Health_Heart.wav
+
+#begin Sounds/Item_Obtained.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Item_Obtained.wav
+
+#begin Sounds/Item_Recieved.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Item_Recieved.wav
+
+#begin Sounds/Key_Appears.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Key_Appears.wav
+
+#begin Sounds/Link_Damage.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Link_Damage.wav
+
+#begin Sounds/Magic_Whistle.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Magic_Whistle.wav
+
+#begin Sounds/Magical.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Magical.wav
+
+#begin Sounds/Power_Zap.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Power_Zap.wav
+
+#begin Sounds/Rupee_Pickup.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Rupee_Pickup.wav
+
+#begin Sounds/Sheild_Deflecting.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Sheild_Deflecting.wav
+
+#begin Sounds/Sword_Sound.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Sword_Sound.wav
+
+#begin Sounds/Sword_Zap.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Sword_Zap.wav
+
+#begin Sounds/Triforce_Reveals_Ganon.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Triforce_Reveals_Ganon.wav
+
+#begin Sounds/Walking_Stairs.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Walking_Stairs.wav
+

@@ -2,11 +2,12 @@
 {
     class StalfosIdleState : IState
     {
-        IEnemy enemy;
+        private IEnemy enemy;
 
         public StalfosIdleState(IEnemy enemy)
         {
             this.enemy = enemy;
+            this.enemy.Velocity.Magnitude = 0;
         }
 
         public void North()
@@ -36,7 +37,7 @@
 
         public void BeDamaged()
         {
-            // TODO
+            // Do nothing
         }
 
         public void Attack()

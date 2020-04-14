@@ -136,11 +136,11 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             }
         }
 
-        public static void EnemyBlock(IRoom room, List<ITrigger> triggerList)
+        public static void EnemyWall(IRoom room, List<ITrigger> triggerList)
         {
             foreach (IEnemy currentEnemy in room.Enemies)
             {
-                foreach (IBlock currentBlock in room.Block)
+                foreach (IBlock currentBlock in room.Wall)
                 {
                     if (currentEnemy.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
                     {

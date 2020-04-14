@@ -1,0 +1,15 @@
+﻿Author of Code Review:	Steven Lister
+
+Date of Code Review:	04/13/2020
+
+Sprint number:			Sprint 3
+
+Name of .cs file:		DungeonLevel.cs
+
+Author of .cs file:		Joey Hughes & Mingkun Tian
+
+Number of minutes:		5 minutes
+
+Comments:				The readability of this class is fairly good. The only complicated aspect is the initialization method where walls are being defined, since this portion is quite dense. But, that
+						section is also quite repetitive, and given its naming, its easy to understand what is being defined in this chunk. Else, the rest of the class is pretty sparse, but could
+						potentially become more difficult to understand with later iterations to some of the other methods.

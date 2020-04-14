@@ -19,16 +19,16 @@ namespace Team4_LegendOfZelda
                 player.UseItem();
                 if(player.Velocity.Direction== Vector.Orientation.North) 
                 {
-                    level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.itemPosition,0)); 
+                    level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.ItemPosition,0)); 
                 }else if (player.Velocity.Direction == Vector.Orientation.East)
                 {
-                    level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.itemPosition, 90));
+                    level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.ItemPosition, 90));
                 }else if (player.Velocity.Direction == Vector.Orientation.South)
                 {
-                    level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.itemPosition, 180));
+                    level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.ItemPosition, 180));
                 }else
                 {
-                    level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.itemPosition, 270));
+                    level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.ItemPosition, 270));
                 }
 
             }

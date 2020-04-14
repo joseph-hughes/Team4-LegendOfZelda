@@ -1,0 +1,17 @@
+Author of Code Review:	Joseph Hughes
+
+Date of Code Review:	04/13/2020
+
+Sprint number:			Sprint 4
+
+Name of .cs file:		SFXFactory.cs
+
+Author of .cs file:		Kyle Ziman
+
+Number of minutes:		5 minutes
+
+Comments:				This class looks great. I do believe that you need to make a method for each sound, 
+							because the only one I can hear in game is the link damaged one when he's facing 
+							to the east. Other than that, this class seems like it is easy to maintain and use. 
+							The fact that it is a singleton keeps it secure and makes it able to be used throughout 
+							the game, which is very useful.

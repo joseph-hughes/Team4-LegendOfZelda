@@ -70,7 +70,6 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 }
             }
 
-
             if(player.Velocity.Direction == direction)
             {
                     player.Velocity.Magnitude = 0;
