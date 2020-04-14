@@ -86,11 +86,11 @@ namespace Team4_LegendOfZelda.Utility_Classes
 
         // AquamentusController
 
-        public int MAX_Directon_COUNTS = 40, MIN_ATTACK_COUNTS = 100, MAX_ATTACK_COUNTS = 180;
+        public int MAX_DIRECTION_COUNTS = 40, MIN_ATTACK_COUNTS = 100, MAX_ATTACK_COUNTS = 180;
 
         // DodongoController
 
-        public int MIN_Directon_COUNTS = 100, MAX_Directon_COUNTS2 = 300;
+        public int MIN_DIRECTION_COUNTS = 100, MAX_DIRECTION_COUNTS2 = 300;
 
         // BladeTrapEastState.cs
 
@@ -122,16 +122,16 @@ namespace Team4_LegendOfZelda.Utility_Classes
 
         // BladeTrapController
 
-        public int MIN_Directon_COUNTS2 = 60;
-        public int MAX_Directon_COUNTS3 = 180;
+        public int MIN_DIRECTION_COUNTS2 = 60;
+        public int MAX_DIRECTION_COUNTS3 = 180;
 
         // GelDarkBlueController.cs
 
-        public int MAX_Directon_COUNTS4 = 60;
+        public int MAX_DIRECTION_COUNTS4 = 60;
 
         // GoriyaController.cs
 
-        public int MAX_Directon_COUNTS5 = 240;
+        public int MAX_DIRECTION_COUNTS5 = 240;
 
         // KeeseBlue.cs
 
@@ -139,7 +139,7 @@ namespace Team4_LegendOfZelda.Utility_Classes
 
         //KeeseController
 
-        public int MAX_Directon_COUNTS6 = 30;
+        public int MAX_DIRECTION_COUNTS6 = 30;
 
         // Stalfos.cs
 
@@ -147,7 +147,7 @@ namespace Team4_LegendOfZelda.Utility_Classes
 
         // wallmastercontroller.cs
 
-        public int MAX_Directon_COUNTS7 = 240;
+        public int MAX_DIRECTION_COUNTS7 = 240;
 
 
 

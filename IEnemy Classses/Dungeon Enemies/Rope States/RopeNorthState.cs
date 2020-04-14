@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States;
-using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
 {
@@ -8,13 +7,12 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
     {
         private IEnemy enemy;
         private const int SPEED = 1;
-        private UtilityClass utilities = new UtilityClass();
 
         public RopeNorthState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Velocity.Magnitude = SPEED;
-            this.enemy.Velocity.Directon = Vector.Orientation.North;
+            this.enemy.Velocity.Direction = Vector.Orientation.North;
         }
 
         public void North()

@@ -1,17 +1,15 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States;
 using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.Vector;
-using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     class Rope : IEnemy
     {
         public IRoom Room { get; set; }
-        private UtilityClass utilities = new UtilityClass();
-
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public IVector Velocity { get; set; }
@@ -22,8 +20,8 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public Rope(IRoom room, Vector2 position)
         {
             Room = room;
+            Scale = 3f;
             Velocity = new VelocityVector(0, Orientation.South);
-            Scale = utilities.Scale;
             State = new RopeWestState(this);
             controller = new RopeController(this);
             DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * Sprite.SourceRectangle.Width), (int)(Scale * Sprite.SourceRectangle.Height));

@@ -9,11 +9,10 @@
             this.link = link;
             this.timer = timer;
             this.link.Velocity.Magnitude = 0;
-            this.link.Velocity.Directon = Vector.Orientation.West;
-            this.link.isAttacking = false;
-            this.link.isKnocked = false;
-            this.link.isDamaged = true;
-            this.link.isDeath = false;
+            this.link.Velocity.Direction = Vector.Orientation.West;
+            this.link.IsAttacking = false;
+            this.link.IsKnocked = false;
+            this.link.IsDamaged = true;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkDamagedNonMovingWestSprite();
         }
         public void South()
@@ -54,7 +53,7 @@
             if (this.timer == 0)
             {
                 link.State = new LinkNonMovingWestState(link);
-                link.isDamaged = false;
+                link.IsDamaged = false;
             }
         }
     }

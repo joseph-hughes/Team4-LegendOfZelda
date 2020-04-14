@@ -7,11 +7,10 @@
         {
             this.link = link;
             this.link.Velocity.Magnitude = 0;
-            this.link.Velocity.Directon = Vector.Orientation.West;
-            this.link.isAttacking = false;
-            this.link.isKnocked = false;
-            this.link.isDamaged = false;
-            this.link.isDeath = false;
+            this.link.Velocity.Direction = Vector.Orientation.West;
+            this.link.IsAttacking = false;
+            this.link.IsKnocked = false;
+            this.link.IsDamaged = false;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkNonMovingWestSprite();
         }
 
@@ -42,17 +41,17 @@
 
         public void BeDamaged()
         {
-            link.State = new LinkKnockbackWestState(link, Link.knockback_timer);
+            link.State = new LinkKnockbackWestState(link, Link.KNOCKBACK_TIMER);
         }
 
         public void UseItem()
         {
-            link.State = new LinkUseItemWestState(link, Link.use_item_timer);
+            link.State = new LinkUseItemWestState(link, Link.USE_ITEM_TIMER);
         }
 
         public void Attack()
         {
-            link.State = new LinkSwordWestState(link, Link.sword_timer);
+            link.State = new LinkSwordWestState(link, Link.SWORD_TIMER);
         }
 
         public void Update()

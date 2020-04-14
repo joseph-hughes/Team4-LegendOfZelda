@@ -13,7 +13,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses.Dodongo_States
 
             this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * this.enemy.Sprite.SourceRectangle.Width), (int)(this.enemy.Scale * this.enemy.Sprite.SourceRectangle.Height));
             this.enemy.Velocity.Magnitude = 2;
-            this.enemy.Velocity.Directon = Vector.Orientation.West;
+            this.enemy.Velocity.Direction = Vector.Orientation.West;
         }
 
         public void North()

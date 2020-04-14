@@ -1,25 +1,23 @@
 ﻿using Team4_LegendOfZelda.Random_Number_Generator;
-using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     public class StalfosController : IController
     {
         private IEnemy enemy;
-        private const int MIN_Directon_COUNTS = 5, MAX_Directon_COUNTS = 30;
-        private UtilityClass utilities = new UtilityClass();
-        private int DirectonCount;
+        private const int MIN_DIRECTION_COUNTS = 5, MAX_DIRECTION_COUNTS = 30;
+        private int directionCount;
 
         public StalfosController(IEnemy enemy)
         {
             this.enemy = enemy;
-            DirectonCount = RandomIntGenerator.Instance.Next(MIN_Directon_COUNTS, MAX_Directon_COUNTS);
+            directionCount = RandomIntGenerator.Instance.Next(MIN_DIRECTION_COUNTS, MAX_DIRECTION_COUNTS);
         }
 
         public void Update()
         {
-            DirectonCount--;
-            if (DirectonCount <= 0)
+            directionCount--;
+            if (directionCount <= 0)
             {
                 switch (RandomIntGenerator.Instance.Next(0, 3))
                 {
@@ -39,7 +37,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
                         // Do nothing
                         break;
                 }
-                DirectonCount = RandomIntGenerator.Instance.Next(MIN_Directon_COUNTS, MAX_Directon_COUNTS);
+                directionCount = RandomIntGenerator.Instance.Next(MIN_DIRECTION_COUNTS, MAX_DIRECTION_COUNTS);
             }
         }
     }

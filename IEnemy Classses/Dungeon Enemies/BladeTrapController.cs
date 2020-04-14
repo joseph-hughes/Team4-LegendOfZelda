@@ -1,5 +1,4 @@
-using Microsoft.Xna.Framework;
-using Team4_LegendOfZelda.Utility_Classes;
+﻿using Microsoft.Xna.Framework;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
@@ -8,7 +7,6 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         private IEnemy enemy;
         private const int ACTIVATION_DISTANCE_STD = 300;
         private int activationDistance;
-        private UtilityClass utilities = new UtilityClass();
 
         public BladeTrapController(IEnemy enemy)
         {

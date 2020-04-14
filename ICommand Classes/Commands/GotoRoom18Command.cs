@@ -19,7 +19,7 @@
         {
             game.level.Map.MapSprite.SourceRectangle = new Microsoft.Xna.Framework.Rectangle(
                 COLUMN_NUM * width, ROW_NUM * height, width, height);
-            game.level.CurrentRoom = game.level.Rooms[9];
+            game.level.CurrentRoom = game.level.Rooms[17];
         }
     }
 }

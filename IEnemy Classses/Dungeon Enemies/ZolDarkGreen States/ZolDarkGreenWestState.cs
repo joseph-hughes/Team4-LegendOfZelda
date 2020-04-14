@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.ZolDarkGreen_States
 {
@@ -12,7 +11,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.ZolDarkGreen_State
         {
             this.enemy = enemy;
             this.enemy.Velocity.Magnitude = SPEED;
-            this.enemy.Velocity.Directon = Vector.Orientation.West;
+            this.enemy.Velocity.Direction = Vector.Orientation.West;
         }
 
         public void North()
