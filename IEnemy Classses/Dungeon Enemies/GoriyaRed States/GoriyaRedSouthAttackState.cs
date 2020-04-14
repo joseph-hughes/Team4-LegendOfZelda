@@ -1,25 +1,25 @@
 ﻿using Microsoft.Xna.Framework;
 using Team4_LegendOfZelda.Utility_Classes;
 
-namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaRed_States
+namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GoriyaRed_States
 {
     class GoriyaRedSouthAttackState : IState
     {
         IEnemy enemy;
         private UtilityClass utilities = new UtilityClass();
-       
         // Projectile item
-        int count, maxCount;
+        private const int WIDTH = 13, HEIGHT = 16, MAX_COUNTS = 60;
+        int count;
 
         public GoriyaRedSouthAttackState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateGoriyaRedSouthSprite();
-            this.enemy.DestinationRectangle = new Rectangle((int)this.enemy.DestinationRectangle.X, (int)this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * utilities.width2), (int)(this.enemy.Scale * utilities.height));
+            this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * WIDTH), (int)(this.enemy.Scale * HEIGHT));
+            this.enemy.Velocity.Magnitude = 0;
+            this.enemy.Velocity.Directon = Vector.Orientation.South;
             // Create boomerang
-
-            count = utilities.count;
-            maxCount = utilities.maxcount;
+            count = MAX_COUNTS;
         }
 
         public void North()
@@ -64,10 +64,10 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.GoriyaRed_States
 
         public void Update()
         {
-            count++;
-            if (count > maxCount)
+            count--;
+            if (count <= 0)
             {
-                enemy.State = new GoriyaRedSouthState(enemy);
+                enemy.State = new GoriyaRedSouthWalkingState(enemy);
             }
         }
     }

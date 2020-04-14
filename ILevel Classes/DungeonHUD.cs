@@ -21,8 +21,6 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         private ISprite levelNumSprite;
         private Rectangle levelNumDestinationRectangle;
 
-   
-
         public DungeonHUD(ILevel level, int levelNum)
         {
             Level = level;

@@ -5,31 +5,32 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMasterUpsideDo
 {
     class WallMasterUpsideDownWestState : IState
     {
-        IEnemy enemy;
+        private IEnemy enemy;
+        private const int WIDTH = 16, HEIGHT = 16, SPEED = 1;
         private UtilityClass utilities = new UtilityClass();
-
-        private int displacement;
 
         public WallMasterUpsideDownWestState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateWallMasterUpsideDownWestSprite();
-            displacement = utilities.MAX_DISPLACEMENT2;
+            this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * WIDTH), (int)(this.enemy.Scale * HEIGHT));
+            this.enemy.Velocity.Magnitude = SPEED;
+            this.enemy.Velocity.Directon = Vector.Orientation.West;
         }
 
         public void North()
         {
-            // Do nothing
+            enemy.State = new WallMasterUpsideDownNorthState(enemy);
         }
 
         public void East()
         {
-            // Do nothing
+            enemy.State = new WallMasterUpsideDownEastState(enemy);
         }
 
         public void South()
         {
-            // Do nothing
+            enemy.State = new WallMasterUpsideDownSouthState(enemy);
         }
 
         public void West()
@@ -43,7 +44,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMasterUpsideDo
 
         public void BeDamaged()
         {
-            // TODO
+            // Do nothing
         }
 
         public void Attack()
@@ -58,23 +59,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMasterUpsideDo
 
         public void Update()
         {
-            //enemy.DestinationRectangle = new Rectangle((enemy.DestinationRectangle.X - 2) % 800, enemy.DestinationRectangle.Y);
-            if (displacement > 0)
-            {
-                if (enemy.DestinationRectangle.X > utilities.DELTA_DISPLACEMENT2)
-                {
-                    enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X - utilities.DELTA_DISPLACEMENT2, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
-                }
-                else
-                {
-                    enemy.DestinationRectangle = new Rectangle(768 - (int)enemy.DestinationRectangle.X - utilities.DELTA_DISPLACEMENT2, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
-                }
-                displacement -= utilities.DELTA_DISPLACEMENT2;
-            }
-            else
-            {
-                Idle();
-            }
+            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X - enemy.Velocity.Magnitude, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
         }
     }
 }

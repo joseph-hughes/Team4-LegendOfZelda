@@ -1,18 +1,18 @@
 ﻿using Microsoft.Xna.Framework;
 using Team4_LegendOfZelda.Utility_Classes;
 
-namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseRed_States
+namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
 {
-    class KeeseRedEastState : IState
+    class BladeTrapNorthRechargeState : IState
     {
         private IEnemy enemy;
+        private const int SPEED = 4;
         private UtilityClass utilities = new UtilityClass();
-        private int displacement;
 
-        public KeeseRedEastState(IEnemy enemy)
+        public BladeTrapNorthRechargeState(IEnemy enemy)
         {
             this.enemy = enemy;
-            displacement = utilities.MAX_DISPLACEMENT2;
+            this.enemy.Velocity.Magnitude = SPEED;
         }
 
         public void North()
@@ -37,12 +37,12 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseRed_States
 
         public void Idle()
         {
-            enemy.State = new KeeseRedIdleState(enemy);
+            enemy.State = new BladeTrapIdleState(enemy);
         }
 
         public void BeDamaged()
         {
-            // TODO
+            // Do nothing
         }
 
         public void Attack()
@@ -57,16 +57,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseRed_States
 
         public void Update()
         {
-            //enemy.DestinationRectangle = new Rectangle((enemy.DestinationRectangle.X + 2) % 800, enemy.DestinationRectangle.Y);
-            if (displacement > 0)
-            {
-                enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
-                
-            }
-            else
-            {
-                Idle();
-            }
+            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X, enemy.DestinationRectangle.Y - enemy.Velocity.Magnitude, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
         }
     }
 }

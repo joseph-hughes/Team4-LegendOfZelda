@@ -35,9 +35,7 @@ namespace Team4_LegendOfZelda
             Scale = 3f;
             Velocity = new VelocityVector(0, Orientation.South);
             State = new LinkNonMovingSouthState(this);
-
-
-            DestinationRectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(Scale * linkWidth), (int)(Scale * linkHeight));
+            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * linkWidth), (int)(Scale * linkHeight));
 
             CurrentHitPoints = 6;
             MaxHitPoints = 6;

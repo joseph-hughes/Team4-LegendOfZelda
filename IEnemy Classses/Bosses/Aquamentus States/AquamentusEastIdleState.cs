@@ -1,18 +1,16 @@
-﻿using Microsoft.Xna.Framework;
-
-namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
+﻿namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses.Aquamentus_States
 {
     class AquamentusEastIdleState : IState
     {
-        IEnemy enemy;
-        private const int width = 24;
-        private const int height = 32;
+        private IEnemy enemy;
+        public const int MAX_ATTACK_COUNTER = 60;
 
         public AquamentusEastIdleState(IEnemy enemy)
         {
             this.enemy = enemy;
-            this.enemy.Sprite = EnemySpriteFactory.Instance.CreateAquamentusEastIdleSprite();
-            this.enemy.DestinationRectangle = new Rectangle((int)this.enemy.DestinationRectangle.X, (int)this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * width), (int)(this.enemy.Scale * height));
+            this.enemy.Sprite = EnemySpriteFactory.Instance.CreateAquamentusWestIdleSprite();
+            this.enemy.Velocity.Magnitude = 2;
+            this.enemy.Velocity.Directon = Vector.Orientation.East;
         }
 
         public void North()
@@ -32,12 +30,12 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
 
         public void West()
         {
-            // Do nothing
+            enemy.State = new AquamentusWestIdleState(enemy);
         }
 
         public void Idle()
         {
-            // TODO
+            // Do nothing
         }
 
         public void BeDamaged()
@@ -47,7 +45,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Aquamentus_States
 
         public void Attack()
         {
-            enemy.State = new AquamentusEastAttackState(enemy);
+            enemy.State = new AquamentusEastAttackState(enemy, MAX_ATTACK_COUNTER);
         }
 
         public void UseItem()

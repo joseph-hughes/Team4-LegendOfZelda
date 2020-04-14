@@ -25,8 +25,8 @@ namespace Team4_LegendOfZelda
         public IPlayer player;
         public IGameState gameState;
         private IDector dector;
+        public const int WINDOW_WIDTH = 768, ROOM_HEIGHT = 528, HUD_HEIGHT = 168;
         private UtilityClass utilities = new UtilityClass();
-        
 
         public LegendOfZelda()
         {

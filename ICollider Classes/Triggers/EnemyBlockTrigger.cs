@@ -14,7 +14,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         }
         public void Execute()
         {
-            Vector.Orientation direction; 
+            Vector.Orientation Directon; 
 
             float dx = enemy.DestinationRectangle.X - block.DestinationRectangle.X;
             float dy = enemy.DestinationRectangle.Y - block.DestinationRectangle.Y;
@@ -23,11 +23,11 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 if (dy > 0)
                 {
-                    direction = Vector.Orientation.North;
+                    Directon = Vector.Orientation.North;
                 }
                 else
                 {
-                    direction = Vector.Orientation.South;
+                    Directon = Vector.Orientation.South;
                 }
             }
             //left right collision
@@ -35,15 +35,15 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 if (dx > 0)
                 {
-                    direction = Vector.Orientation.East;
+                    Directon = Vector.Orientation.East;
                 }
                 else
                 {
-                    direction = Vector.Orientation.West;
+                    Directon = Vector.Orientation.West;
                 }
             }
 
-           if (enemy.velocity.Orientation == direction)
+           if (enemy.Velocity.Directon == Directon)
             {
                 enemy.Idle() ;
             }

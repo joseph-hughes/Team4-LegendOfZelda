@@ -1,18 +1,19 @@
 ﻿using Microsoft.Xna.Framework;
 
-namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
+namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses.Dodongo_States
 {
     class DodongoWestWalkingState : IState
     {
         IEnemy enemy;
-        private const int width = 28;
-        private const int height = 16;
 
         public DodongoWestWalkingState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateDodongoWestWalkingSprite();
-            this.enemy.DestinationRectangle = new Rectangle((int)this.enemy.DestinationRectangle.X, (int)this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * width), (int)(this.enemy.Scale * height));
+
+            this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * this.enemy.Sprite.SourceRectangle.Width), (int)(this.enemy.Scale * this.enemy.Sprite.SourceRectangle.Height));
+            this.enemy.Velocity.Magnitude = 2;
+            this.enemy.Velocity.Directon = Vector.Orientation.West;
         }
 
         public void North()
@@ -37,7 +38,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
 
         public void Idle()
         {
-            // TODO
+            // Do nothing
         }
 
         public void BeDamaged()
@@ -57,8 +58,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States
 
         public void Update()
         {
-            //enemy.DestinationRectangle = new Microsoft.Xna.Framework.Vector2(((int)enemy.DestinationRectangle.X - 1) % 800, enemy.DestinationRectangle.Y);
-            enemy.DestinationRectangle = new Rectangle((int)enemy.DestinationRectangle.X, (int)enemy.DestinationRectangle.Y, (int)(enemy.Scale * width), (int)(enemy.Scale * height));
+            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X - enemy.Velocity.Magnitude, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
         }
     }
 }

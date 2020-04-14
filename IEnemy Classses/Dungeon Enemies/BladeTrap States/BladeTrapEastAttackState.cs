@@ -1,19 +1,16 @@
 ﻿using Microsoft.Xna.Framework;
-using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
 {
-    class BladeTrapEastState : IState
+    class BladeTrapEastAttackState : IState
     {
         private IEnemy enemy;
-        private UtilityClass utilities = new UtilityClass();
+        private const int SPEED = 10;
 
-        private int displacement;
-
-        public BladeTrapEastState(IEnemy enemy)
+        public BladeTrapEastAttackState(IEnemy enemy)
         {
             this.enemy = enemy;
-            displacement = utilities.MAX_DISPLACEMENT;
+            this.enemy.Velocity.Magnitude = SPEED;
         }
 
         public void North()
@@ -38,12 +35,12 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
 
         public void Idle()
         {
-            enemy.State = new BladeTrapIdleState(enemy);
+            enemy.State = new BladeTrapWestRechargeState(enemy);
         }
 
         public void BeDamaged()
         {
-            // TODO
+            // Do nothing
         }
 
         public void Attack()
@@ -58,15 +55,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
 
         public void Update()
         {
-            if (displacement > 0)
-            {
-                enemy.DestinationRectangle = new Rectangle((enemy.DestinationRectangle.X + utilities.DELTA_DISPLACEMENT) % 768, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height); ;
-                displacement -= utilities.DELTA_DISPLACEMENT;
-            }
-            else
-            {
-                Idle();
-            }
+            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X + enemy.Velocity.Magnitude, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
         }
     }
 }

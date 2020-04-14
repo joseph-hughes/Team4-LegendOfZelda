@@ -4,7 +4,6 @@
     {
         public int Magnitude { get; set; }
         public Orientation Directon { get; set ; }
-
         public VelocityVector(int magnitude, Orientation directon)
         {
             Magnitude = magnitude;

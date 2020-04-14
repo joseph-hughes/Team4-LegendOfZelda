@@ -34,7 +34,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             
         }
 
-        public List<IRoom> LoadRooms()
+        public List<IRoom> LoadRooms(IPlayer player)
         {
             List<IRoom> rooms = new List<IRoom>();
             XmlNode root = LevelXml.FirstChild.NextSibling;
@@ -43,6 +43,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             foreach(XmlNode roomNode in root)
             {
                 IRoom room = new DungeonRoom();
+                room.Player = player;
 
                 XmlNode enemiesNode = roomNode.FirstChild;
                 if (enemiesNode.Attributes["total"].Value != "0")
@@ -70,14 +71,8 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                             case "GoriyaRed":
                                 room.Enemies.Add(new GoriyaRed(room, position));
                                 break;
-                            case "GoriyaBlue":
-                                room.Enemies.Add(new GoriyaBlue(room, position));
-                                break;
                             case "KeeseBlue":
                                 room.Enemies.Add(new KeeseBlue(room, position));
-                                break;
-                            case "KeeseRed":
-                                room.Enemies.Add(new KeeseRed(room, position));
                                 break;
                             case "Rope":
                                 room.Enemies.Add(new Rope(room, position));
@@ -220,26 +215,31 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                 if (northNode.InnerText != "")
                 {
                     rooms[index].North = rooms[int.Parse(northNode.InnerText) - 1];
+                    rooms[index].HasNorth = true;
                 }
                 XmlNode eastNode = northNode.NextSibling;
                 if (eastNode.InnerText != "")
                 {
                     rooms[index].East = rooms[int.Parse(eastNode.InnerText) - 1];
+                    rooms[index].HasEast = true;
                 }
                 XmlNode southNode = eastNode.NextSibling;
                 if (southNode.InnerText != "")
                 {
                     rooms[index].South = rooms[int.Parse(southNode.InnerText) - 1];
+                    rooms[index].HasSouth = true;
                 }
                 XmlNode westNode = southNode.NextSibling;
                 if (westNode.InnerText!="")
                 {
                     rooms[index].West = rooms[int.Parse(westNode.InnerText) - 1];
+                    rooms[index].HasWest = true;
                 }
                 XmlNode otherNode = westNode.NextSibling;
                 if (otherNode.InnerText != "")
                 {
-                    rooms[index].West = rooms[int.Parse(otherNode.InnerText) - 1];
+                    rooms[index].Other = rooms[int.Parse(otherNode.InnerText) - 1];
+                    rooms[index].HasOther = true;
                 }
                 index += 1;
             }
