@@ -44,10 +44,9 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 }
             }
 
-
-            if(player.Velocity.Directon == direction)
+            if(player.Velocity.Direction == direction)
             {
-                if (block.CanBeMoved&&block.OptionalDirection.Contains(direction)&&!player.isKnocked)
+                if (block.CanBeMoved&&block.OptionalDirection.Contains(direction)&&!player.IsKnocked)
                 {
                     switch (direction)
                     {

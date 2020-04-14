@@ -1,0 +1,17 @@
+Author of Code Review:	Mingkun Tian
+
+Date of Code Review:	04/13/2020
+
+Sprint number:			Sprint 4
+
+Name of .cs file:		DungeonRoom.cs
+
+Author of .cs file:		Joseph Hughes
+
+Number of minutes:		15 minutes
+
+Comments:				The maintainability of this code is good. Though the update and draw method inside 
+						the class has many different foreach loop, overall the class is clear and neat. 
+						Generally, the class is for room initialization so it would be many different cases
+						for special event, enemy or item. But it is also a point to improve the 
+						initialization to have the method that dealing with the special case.  

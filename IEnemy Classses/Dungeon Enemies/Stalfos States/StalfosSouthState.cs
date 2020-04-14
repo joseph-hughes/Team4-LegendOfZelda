@@ -1,26 +1,27 @@
 ﻿using Microsoft.Xna.Framework;
-using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Stalfos_States
 {
     class StalfosSouthState : IState
     {
         private IEnemy enemy;
-        private UtilityClass utilities = new UtilityClass();
+        const int SPEED = 2;
 
         public StalfosSouthState(IEnemy enemy)
         {
             this.enemy = enemy;
+            this.enemy.Velocity.Magnitude = SPEED;
+            this.enemy.Velocity.Direction = Vector.Orientation.South;
         }
 
         public void North()
         {
-            // Do nothing
+            enemy.State = new StalfosNorthState(enemy);
         }
 
         public void East()
         {
-            // Do nothing
+            enemy.State = new StalfosEastState(enemy);
         }
 
         public void South()
@@ -30,7 +31,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Stalfos_States
 
         public void West()
         {
-            // Do nothing
+            enemy.State = new StalfosWestState(enemy);
         }
 
         public void Idle()
@@ -40,7 +41,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Stalfos_States
 
         public void BeDamaged()
         {
-            // TODO
+            // Do nothing
         }
 
         public void Attack()
@@ -55,7 +56,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Stalfos_States
 
         public void Update()
         {
-            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X, enemy.DestinationRectangle.Y + utilities.speed, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
+            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X, enemy.DestinationRectangle.Y + enemy.Velocity.Magnitude, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using Team4_LegendOfZelda.Enemy_Classses.Bosses.Dodongo_States;
+using Team4_LegendOfZelda.IEnemy_Classses.Bosses.Dodongo_States;
 using Team4_LegendOfZelda.ILevel_Classes;
+using Team4_LegendOfZelda.Vector;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 {
@@ -11,20 +11,19 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         public IRoom Room { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
+        public IVector Velocity { get; set; }
         private IController controller;
         public Rectangle DestinationRectangle { get; set; }
         public float Scale { get; set; }
-       
-        
 
         public Dodongo(IRoom room, Vector2 position)
         {
             Room = room;
             Scale = 3f;
-            State = new DodongoWestWalkingState(this);
             controller = new DodongoController(this);
-            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, DestinationRectangle.Width, DestinationRectangle.Height);
-
+            Velocity = new VelocityVector(0, Orientation.West);
+            State = new DodongoWestWalkingState(this);
+            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * Sprite.SourceRectangle.Width), (int)(Scale * Sprite.SourceRectangle.Height));
         }
 
         public void North()
@@ -49,7 +48,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 
         public void Idle()
         {
-            State.Idle();
+            Velocity.Magnitude = 0;
         }
 
         public void BeDamaged()

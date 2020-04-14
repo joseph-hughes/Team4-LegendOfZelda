@@ -18,8 +18,8 @@ namespace Team4_LegendOfZelda.Utility_Classes
 
         public int linkInitialX = 96;
         public int linkInitialY = 260;
-        private int rectangleWidth = 7 * 3;
-        private int rectangleHeight = 3 * 3;
+        //private int rectangleWidth = 7 * 3;
+        //private int rectangleHeight = 3 * 3;
 
         public List<Rectangle> mouseActivationAreas = new List<Rectangle>
             {
@@ -78,7 +78,7 @@ namespace Team4_LegendOfZelda.Utility_Classes
 
         //DodongoEastDamagedState.. plus other dodongo states
 
-        public int maxcount2;
+        //public int maxcount2;
 
         // Aquamentus.cs
 

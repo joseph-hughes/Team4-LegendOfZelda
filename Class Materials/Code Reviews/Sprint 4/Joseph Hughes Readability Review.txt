@@ -1,0 +1,18 @@
+Author of Code Review:	Joseph Hughes
+
+Date of Code Review:	04/13/2020
+
+Sprint number:			Sprint 4
+
+Name of .cs file:		RoomChangeGameState.cs
+
+Author of .cs file:		Steven Lister
+
+Number of minutes:		5 minutes
+
+Comments:         Overall, this class is easy to read an comprehend. I do believe 
+					you should make the timer in all caps as well as of type const 
+					int, since it is a constant. Further, I think there should be 
+					a new line between each method, because right now it is a little 
+					hard to follow with no spaces at all. Lastly, there are a bunch 
+					of unnecessary use statements at the top.

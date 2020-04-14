@@ -1,19 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
-using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.ZolDarkGreen_States
 {
     class ZolDarkGreenWestState : IState
     {
-        IEnemy enemy;
-        private UtilityClass utilities = new UtilityClass();
-
-        private int displacement;
+        private IEnemy enemy;
+        private const int SPEED = 2;
 
         public ZolDarkGreenWestState(IEnemy enemy)
         {
             this.enemy = enemy;
-            displacement = utilities.MAX_DISPLACEMENT2;
+            this.enemy.Velocity.Magnitude = SPEED;
+            this.enemy.Velocity.Direction = Vector.Orientation.West;
         }
 
         public void North()
@@ -35,6 +33,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.ZolDarkGreen_State
         {
             // Do nothing
         }
+
         public void Idle()
         {
             enemy.State = new ZolDarkGreenIdleState(enemy);
@@ -42,7 +41,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.ZolDarkGreen_State
 
         public void BeDamaged()
         {
-            // TODO
+            // Do nothing
         }
 
         public void Attack()
@@ -57,23 +56,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.ZolDarkGreen_State
 
         public void Update()
         {
-            //enemy.DestinationRectangle = new Rectangle((enemy.DestinationRectangle.X - 10) % 800, enemy.DestinationRectangle.Y);
-            if (displacement > 0)
-            {
-                if (enemy.DestinationRectangle.X > utilities.DELTA_DISPLACEMENT3)
-                {
-                    enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X - utilities.DELTA_DISPLACEMENT3, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
-                }
-                else
-                {
-                    enemy.DestinationRectangle = new Rectangle(768 - (int)enemy.DestinationRectangle.X - utilities.DELTA_DISPLACEMENT3, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
-                }
-                displacement -= utilities.DELTA_DISPLACEMENT3;
-            }
-            else
-            {
-                Idle();
-            }
+            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X - SPEED, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
         }
     }
 }

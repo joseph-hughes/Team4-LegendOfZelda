@@ -7,11 +7,11 @@
         {
             this.link = link;
             this.link.Velocity.Magnitude = 0;
-            this.link.Velocity.Directon = Vector.Orientation.East;
-            this.link.isAttacking = false;
-            this.link.isKnocked = false;
-            this.link.isDamaged = false;
-            this.link.isDeath = true;
+            this.link.Velocity.Direction = Vector.Orientation.East;
+            this.link.IsAttacking = false;
+            this.link.IsKnocked = false;
+            this.link.IsDamaged = false;
+            this.link.IsDeath = true;
             //this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkDeathSprite();
         }
 

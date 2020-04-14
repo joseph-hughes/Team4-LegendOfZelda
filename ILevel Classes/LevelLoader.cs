@@ -4,15 +4,12 @@ using Team4_LegendOfZelda.Item_Classes;
 using Microsoft.Xna.Framework;
 using Team4_LegendOfZelda.IEnemy_Classses.Bosses;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies;
-using Team4_LegendOfZelda.Utility_Classes;
-
 
 namespace Team4_LegendOfZelda.ILevel_Classes
 {
     class LevelLoader : IFileLoader
     {
         private XmlDocument LevelXml;
-        private UtilityClass utilities;
         
 
         public LevelLoader(int levelNum)
@@ -34,7 +31,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             
         }
 
-        public List<IRoom> LoadRooms()
+        public List<IRoom> LoadRooms(IPlayer player)
         {
             List<IRoom> rooms = new List<IRoom>();
             XmlNode root = LevelXml.FirstChild.NextSibling;
@@ -42,6 +39,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             foreach(XmlNode roomNode in root)
             {
                 IRoom room = new DungeonRoom();
+                room.Player = player;
 
                 XmlNode enemiesNode = roomNode.FirstChild;
                 if (enemiesNode.Attributes["total"].Value != "0")
@@ -51,7 +49,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                         string enemyName = enemyNode["ObjectType"].InnerText;
                         float columnNum = float.Parse(enemyNode["ColumnNum"].InnerText);
                         float rowNum = float.Parse(enemyNode["RowNum"].InnerText);
-                        Vector2 position = new Vector2(columnNum *  + 33, rowNum * 48 + 33 + 168);
+                        Vector2 position = new Vector2(columnNum * 48 + 33, rowNum * 48 + 33 + 168);
                         switch (enemyName)
                         {
                             case "Aquamentus":
@@ -69,14 +67,8 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                             case "GoriyaRed":
                                 room.Enemies.Add(new GoriyaRed(room, position));
                                 break;
-                            case "GoriyaBlue":
-                                room.Enemies.Add(new GoriyaBlue(room, position));
-                                break;
                             case "KeeseBlue":
                                 room.Enemies.Add(new KeeseBlue(room, position));
-                                break;
-                            case "KeeseRed":
-                                room.Enemies.Add(new KeeseRed(room, position));
                                 break;
                             case "Rope":
                                 room.Enemies.Add(new Rope(room, position));
@@ -106,7 +98,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                         string itemName = itemNode["ObjectType"].InnerText;
                         float columnNum = float.Parse(itemNode["ColumnNum"].InnerText);
                         float rowNum = float.Parse(itemNode["RowNum"].InnerText);
-                        Vector2 position = new Vector2(columnNum * utilities.RowColumnMultiplier + utilities.ColumnAddVal, rowNum * utilities.RowColumnMultiplier + utilities.RowAddVal);
+                        Vector2 position = new Vector2(columnNum * 48 + 33, rowNum * 48 + 33 + 168);
                         switch (itemName)
                         {
                             case "BlueCandle":
@@ -219,26 +211,31 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                 if (northNode.InnerText != "")
                 {
                     rooms[index].North = rooms[int.Parse(northNode.InnerText) - 1];
+                    rooms[index].HasNorth = true;
                 }
                 XmlNode eastNode = northNode.NextSibling;
                 if (eastNode.InnerText != "")
                 {
                     rooms[index].East = rooms[int.Parse(eastNode.InnerText) - 1];
+                    rooms[index].HasEast = true;
                 }
                 XmlNode southNode = eastNode.NextSibling;
                 if (southNode.InnerText != "")
                 {
                     rooms[index].South = rooms[int.Parse(southNode.InnerText) - 1];
+                    rooms[index].HasSouth = true;
                 }
                 XmlNode westNode = southNode.NextSibling;
                 if (westNode.InnerText!="")
                 {
                     rooms[index].West = rooms[int.Parse(westNode.InnerText) - 1];
+                    rooms[index].HasWest = true;
                 }
                 XmlNode otherNode = westNode.NextSibling;
                 if (otherNode.InnerText != "")
                 {
-                    rooms[index].West = rooms[int.Parse(otherNode.InnerText) - 1];
+                    rooms[index].Other = rooms[int.Parse(otherNode.InnerText) - 1];
+                    rooms[index].HasOther = true;
                 }
                 index += 1;
             }

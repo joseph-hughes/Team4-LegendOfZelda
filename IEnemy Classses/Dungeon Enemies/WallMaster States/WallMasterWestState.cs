@@ -1,24 +1,24 @@
 ﻿using Microsoft.Xna.Framework;
-using Team4_LegendOfZelda.Utility_Classes;
 
-namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.WallMaster_States
+namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMaster_States
 {
     class WallMasterWestState : IState
     {
-        IEnemy enemy;
-        private UtilityClass utilities = new UtilityClass();
+        private IEnemy enemy;
+        private const int WIDTH = 16, HEIGHT = 16, SPEED = 1;
 
-       
         public WallMasterWestState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateWallMasterWestSprite();
-            this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, (int)this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * utilities.width3), (int)(this.enemy.Scale * utilities.height));
+            this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * WIDTH), (int)(this.enemy.Scale * HEIGHT));
+            this.enemy.Velocity.Magnitude = SPEED;
+            this.enemy.Velocity.Direction = Vector.Orientation.West;
         }
 
         public void North()
         {
-            // Do nothing
+            enemy.State = new WallMasterNorthState(enemy);
         }
 
         public void East()
@@ -28,7 +28,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.WallMaster_States
 
         public void South()
         {
-            // Do nothing
+            enemy.State = new WallMasterSouthState(enemy);
         }
 
         public void West()
@@ -37,12 +37,12 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.WallMaster_States
         }
         public void Idle()
         {
-            // Do nothing
+            enemy.State = new WallMasterIdleState(enemy);
         }
 
         public void BeDamaged()
         {
-            // TODO
+            // Do nothing
         }
 
         public void Attack()
@@ -57,7 +57,7 @@ namespace Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.WallMaster_States
 
         public void Update()
         {
-            enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(enemy.Scale * utilities.width3), (int)(enemy.Scale * utilities.height));
+            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X - enemy.Velocity.Magnitude, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
         }
     }
 }

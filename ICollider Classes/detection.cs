@@ -7,9 +7,9 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
     {
         public static void PlayerItemDetection(IPlayer player, IRoom room, List<ITrigger> triggerList)
         {
-            foreach (IItem currentItem in room.Items)
+            foreach (IItem CurrentItem in room.Items)
             {
-                if (player.DestinationRectangle.Intersects(currentItem.DestinationRectangle))
+                if (player.DestinationRectangle.Intersects(CurrentItem.DestinationRectangle))
                 {
                     //triggerList.Add(new PlayerItemTrigger(Player, Item, room));
                 }
@@ -136,11 +136,11 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             }
         }
 
-        public static void EnemyBlock(IRoom room, List<ITrigger> triggerList)
+        public static void EnemyWall(IRoom room, List<ITrigger> triggerList)
         {
             foreach (IEnemy currentEnemy in room.Enemies)
             {
-                foreach (IBlock currentBlock in room.Block)
+                foreach (IBlock currentBlock in room.Wall)
                 {
                     if (currentEnemy.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
                     {
