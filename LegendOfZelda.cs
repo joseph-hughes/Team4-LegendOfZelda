@@ -15,7 +15,6 @@ namespace Team4_LegendOfZelda
     public class LegendOfZelda : Game
     {
         private SpriteBatch spriteBatch;
-        private UtilityClass utilities = new UtilityClass();
         private static GraphicsDeviceManager graphics;
         private List<IController> controllerList;
         private List<ISpriteFactory> spriteFactories;
@@ -29,8 +28,8 @@ namespace Team4_LegendOfZelda
         {
             graphics = new GraphicsDeviceManager(this)
             {
-                PreferredBackBufferWidth = utilities.WINDOW_WIDTH(),
-                PreferredBackBufferHeight = utilities.ROOM_HEIGHT() + utilities.HUD_HEIGHT()
+                PreferredBackBufferWidth = UtilityClass.Instance.WINDOW_WIDTH(),
+                PreferredBackBufferHeight = UtilityClass.Instance.WINDOW_WIDTH() + UtilityClass.Instance.WINDOW_WIDTH()
             };
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
@@ -59,7 +58,8 @@ namespace Team4_LegendOfZelda
             player = new Link(new Vector2(96, 260));
 
             level = new DungeonLevel(player, 1);
-            level.Initialize(utilities.WINDOW_WIDTH(), utilities.ROOM_HEIGHT(), utilities.HUD_HEIGHT());
+            level.Initialize(UtilityClass.Instance.WINDOW_WIDTH(), UtilityClass.Instance.WINDOW_WIDTH(), UtilityClass.Instance.WINDOW_WIDTH());
+            
 
             dector = new BoxDector(player);
             dector.Update(level);
@@ -143,7 +143,7 @@ namespace Team4_LegendOfZelda
             };
 
 
-            List<Rectangle> mouseActivationAreas = utilities.getMouseActivationAreas();
+            List<Rectangle> mouseActivationAreas = UtilityClass.Instance.getMouseActivationAreas();
             MouseController mouse = (MouseController)controllerList[1];
             MouseState leftButtonPressed = new MouseState(0, 0, 0, ButtonState.Pressed, 0, 0, 0, 0);
 

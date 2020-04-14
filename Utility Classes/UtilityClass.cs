@@ -25,7 +25,17 @@ namespace Team4_LegendOfZelda.Utility_Classes
             return 158;
         }
 
-        
+        private static UtilityClass instance = new UtilityClass();
+
+        public static UtilityClass Instance
+        {
+            get
+            {
+                return instance;
+            }
+        }
+
+
 
         public int linkInitialX = 96;
         public int linkInitialY = 260;
@@ -58,6 +68,59 @@ namespace Team4_LegendOfZelda.Utility_Classes
         {
             return this.mouseActivationAreas;
         }
+
+        public int Aquamentus_MAX_ATTACK_COUNTER()
+        {
+            return 60;
+        }
+
+        public int Aquamentus_Velocity()
+        {
+            return 2;
+        }
+
+        public int Dodongo_Velocity()
+        {
+            return 0;
+        }
+
+        public int Dodongo_Walking_Velocity()
+        {
+            return 2;
+        }
+
+        public int Dodongo_DamageCounter()
+        {
+            return 120;
+        }
+
+        public int Aquamentus_WIDTH()
+        {
+            return 24;
+        }
+
+        public int Aquamentus_Height()
+        {
+            return 32;
+        }
+
+        private const int MAX_DIRECTION_COUNTS = 60, MIN_ATTACK_COUNTS = 100, MAX_ATTACK_COUNTS = 180;
+
+        public int AquamentusController_MAX_DIRECTION_COUNTS()
+        {
+            return 60;
+        }
+
+        public int AquamentusController_MIN_ATTACK_COUNTS()
+        {
+            return 100;
+        }
+
+        public int AquamentusController_MAX_ATTACK_COUNTS()
+        {
+            return 180;
+        }
+
         public List<Keys> keyList = new List<Keys>
             {
                 Keys.W,
