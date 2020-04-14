@@ -23,11 +23,11 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 if (dy > 0)
                 {
-                    Directon = Vector.Orientation.North;
+                    Directon = Vector.Orientation.West;
                 }
                 else
                 {
-                    Directon = Vector.Orientation.South;
+                    Directon = Vector.Orientation.East;
                 }
             }
             //left right collision
@@ -35,11 +35,11 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 if (dx > 0)
                 {
-                    Directon = Vector.Orientation.East;
+                    Directon = Vector.Orientation.North;
                 }
                 else
                 {
-                    Directon = Vector.Orientation.West;
+                    Directon = Vector.Orientation.South;
                 }
             }
 

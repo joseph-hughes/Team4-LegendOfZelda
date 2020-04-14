@@ -10,7 +10,6 @@
         System.Collections.Generic.List<IBlock> Block { get; set; }
         System.Collections.Generic.List<IBlock> Wall { get; set; }
         System.Collections.Generic.List<IBlock> Boundary { get; set; }
-        //List<IBoundary> Boundaries { get; set; }
         IRoom North { get; set; }
         bool HasNorth { get; set; }
         IRoom East { get; set; }
