@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Team4_LegendOfZelda.ICollider_Classes;
 using Team4_LegendOfZelda.ICollider_Classes.Collider;
 using Team4_LegendOfZelda.ILevel_Classes.Levels;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda
 {
@@ -14,6 +15,7 @@ namespace Team4_LegendOfZelda
     public class LegendOfZelda : Game
     {
         private SpriteBatch spriteBatch;
+        private UtilityClass utilities = new UtilityClass();
         private static GraphicsDeviceManager graphics;
         private List<IController> controllerList;
         private List<ISpriteFactory> spriteFactories;
@@ -22,14 +24,13 @@ namespace Team4_LegendOfZelda
         public ILevel level;
         public IPlayer player;
         private IDector dector;
-        public const int WINDOW_WIDTH = 768, ROOM_HEIGHT = 528, HUD_HEIGHT = 168;
 
         public LegendOfZelda()
         {
             graphics = new GraphicsDeviceManager(this)
             {
-                PreferredBackBufferWidth = WINDOW_WIDTH,
-                PreferredBackBufferHeight = ROOM_HEIGHT + HUD_HEIGHT
+                PreferredBackBufferWidth = utilities.WINDOW_WIDTH(),
+                PreferredBackBufferHeight = utilities.ROOM_HEIGHT() + utilities.HUD_HEIGHT()
             };
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
@@ -58,7 +59,7 @@ namespace Team4_LegendOfZelda
             player = new Link(new Vector2(96, 260));
 
             level = new DungeonLevel(player, 1);
-            level.Initialize(WINDOW_WIDTH, ROOM_HEIGHT, HUD_HEIGHT);
+            level.Initialize(utilities.WINDOW_WIDTH(), utilities.ROOM_HEIGHT(), utilities.HUD_HEIGHT());
 
             dector = new BoxDector(player);
             dector.Update(level);
@@ -141,30 +142,8 @@ namespace Team4_LegendOfZelda
                 new GotoRoom18Command(this),    // 17
             };
 
-            int rectangleWidth = 7*3;
-            int rectangleHeight = 3 * 3;
-            List<Rectangle> mouseActivationAreas = new List<Rectangle>
-            {
-                new Rectangle(40*3, 44*3, rectangleWidth, rectangleHeight),
-                new Rectangle(32*3, 44*3, rectangleWidth, rectangleHeight),
-                new Rectangle(48*3, 44*3, rectangleWidth, rectangleHeight),
-                new Rectangle(40*3, 40*3, rectangleWidth, rectangleHeight),
-                new Rectangle(32*3, 36*3, rectangleWidth, rectangleHeight),
-                new Rectangle(40*3, 36*3, rectangleWidth, rectangleHeight),
-                new Rectangle(48*3, 36*3, rectangleWidth, rectangleHeight),
-                new Rectangle(24*3, 32*3, rectangleWidth, rectangleHeight),
-                new Rectangle(32*3, 32*3, rectangleWidth, rectangleHeight),
-                new Rectangle(40*3, 32*3, rectangleWidth, rectangleHeight),
-                new Rectangle(48*3, 32*3, rectangleWidth, rectangleHeight),
-                new Rectangle(56*3, 32*3, rectangleWidth, rectangleHeight),
-                new Rectangle(40*3, 28*3, rectangleWidth, rectangleHeight),
-                new Rectangle(56*3, 28*3, rectangleWidth, rectangleHeight),
-                new Rectangle(64*3, 28*3, rectangleWidth, rectangleHeight),
-                new Rectangle(24*3, 24*3, rectangleWidth, rectangleHeight),
-                new Rectangle(32*3, 24*3, rectangleWidth, rectangleHeight),
-                new Rectangle(40*3, 24*3, rectangleWidth, rectangleHeight),
-            };
 
+            List<Rectangle> mouseActivationAreas = utilities.getMouseActivationAreas();
             MouseController mouse = (MouseController)controllerList[1];
             MouseState leftButtonPressed = new MouseState(0, 0, 0, ButtonState.Pressed, 0, 0, 0, 0);
 

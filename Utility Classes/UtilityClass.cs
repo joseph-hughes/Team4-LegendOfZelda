@@ -12,9 +12,20 @@ namespace Team4_LegendOfZelda.Utility_Classes
     {
         // LegendOfZelda.cs
 
-        public int WINDOW_WIDTH = 768;
-        public int ROOM_HEIGHT = 528;
-        public int HUD_HEIGHT = 158;
+        public int WINDOW_WIDTH()
+        {
+            return (768);
+        }
+        public int ROOM_HEIGHT()
+        {
+            return 528;
+        }
+        public int HUD_HEIGHT()
+        {
+            return 158;
+        }
+
+        
 
         public int linkInitialX = 96;
         public int linkInitialY = 260;
@@ -43,6 +54,10 @@ namespace Team4_LegendOfZelda.Utility_Classes
                 new Rectangle(40*3, 24*3, 7*3, 3*3),
             };
 
+        public List<Rectangle> getMouseActivationAreas()
+        {
+            return this.mouseActivationAreas;
+        }
         public List<Keys> keyList = new List<Keys>
             {
                 Keys.W,
