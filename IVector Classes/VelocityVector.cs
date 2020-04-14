@@ -3,12 +3,11 @@
     public class VelocityVector : IVector
     {
         public int Magnitude { get; set; }
-        public Orientation Direction { get; set ; }
-
-        public VelocityVector(int magnitude, Orientation direction)
+        public Orientation Directon { get; set ; }
+        public VelocityVector(int magnitude, Orientation directon)
         {
             Magnitude = magnitude;
-            Direction = direction;
+            Directon = directon;
         }
     }
 }

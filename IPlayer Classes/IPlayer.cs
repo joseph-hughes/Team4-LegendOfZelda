@@ -13,13 +13,11 @@ namespace Team4_LegendOfZelda
         int CurrentHitPoints { get; set; }
         int MaxHitPoints { get; set; }
         float Scale { get; set; }
-        Vector2 ItemPosition { get; set; }
+        Vector2 itemPosition { get; set; }
         IVector Velocity { get; set; }
-        IItem CurrentItem { get; set; }
-        bool IsAttacking { get; set; }
-        bool IsKnocked { get; set; }
-        bool IsDamaged { get; set; }
-
+        bool isAttacking { get; set; }
+        bool isKnocked { get; set; }
+        bool isDamaged { get; set; }
         void North();
         void East();
         void South();

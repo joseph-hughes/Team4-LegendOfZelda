@@ -23,7 +23,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 if (dx > 0)
                 {
-                    if (player.IsKnocked)
+                    if (player.isKnocked)
                     {
                         direction = Vector.Orientation.East;
                     }
@@ -33,7 +33,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                     }
                 }
                 else
-                    if (player.IsKnocked)
+                    if (player.isKnocked)
                 {
                     direction = Vector.Orientation.West;
                 }
@@ -47,7 +47,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 if (dy > 0)
                 {
-                    if (player.IsKnocked)
+                    if (player.isKnocked)
                     {
                         direction = Vector.Orientation.South;
                     }
@@ -58,7 +58,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 }
                 else
                 {
-                    if (player.IsKnocked)
+                    if (player.isKnocked)
                     {
                         direction = Vector.Orientation.North;
                     }
@@ -69,7 +69,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 }
             }
 
-            if (player.Velocity.Direction == direction)
+            if (player.Velocity.Directon == direction)
             {
                 player.Velocity.Magnitude = 0;
             }

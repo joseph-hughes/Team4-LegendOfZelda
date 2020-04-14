@@ -13,10 +13,10 @@ namespace Team4_LegendOfZelda.IState_Classes
             this.link = link;
             this.timer = timer;
             this.link.Velocity.Magnitude = 0;
-            this.link.Velocity.Direction = Vector.Orientation.East;
-            this.link.IsAttacking = false;
-            this.link.IsKnocked = false;
-            this.link.IsDamaged = false;
+            this.link.Velocity.Directon = Vector.Orientation.East;
+            this.link.isAttacking = false;
+            this.link.isKnocked = false;
+            this.link.isDamaged = false;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkUseItemEastSprite();
             this.link.ItemPosition = new Vector2(link.DestinationRectangle.X, link.DestinationRectangle.Y + this.link.DestinationRectangle.Height / 2);
         }
@@ -42,7 +42,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void BeDamaged()
         {
-            link.State = new LinkKnockbackEastState(link, Link.KNOCKBACK_TIMER);
+            link.State = new LinkKnockbackEastState(link, Link.knockback_timer);
         }
         public void UseItem()
         {

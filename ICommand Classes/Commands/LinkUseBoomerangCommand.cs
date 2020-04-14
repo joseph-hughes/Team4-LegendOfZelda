@@ -14,24 +14,24 @@ namespace Team4_LegendOfZelda
         }
         public void Execute()
         {
-            if (!player.IsDamaged) {
+            if (!player.isDamaged) {
 
                 player.UseItem();
-                if (player.Velocity.Direction == Vector.Orientation.North)
+                if (player.Velocity.Directon == Vector.Orientation.North)
                 {
-                    level.CurrentRoom.PlayerProjectiles.Add(new BoomerangProjectile(player.ItemPosition, 0));
+                    level.CurrentRoom.PlayerProjectiles.Add(new BoomerangProjectile(player.itemPosition, 0));
                 }
-                else if (player.Velocity.Direction == Vector.Orientation.East)
+                else if (player.Velocity.Directon == Vector.Orientation.East)
                 {
-                    level.CurrentRoom.PlayerProjectiles.Add(new BoomerangProjectile(player.ItemPosition, 90));
+                    level.CurrentRoom.PlayerProjectiles.Add(new BoomerangProjectile(player.itemPosition, 90));
                 }
-                else if (player.Velocity.Direction == Vector.Orientation.South)
+                else if (player.Velocity.Directon == Vector.Orientation.South)
                 {
-                    level.CurrentRoom.PlayerProjectiles.Add(new BoomerangProjectile(player.ItemPosition, 180));
+                    level.CurrentRoom.PlayerProjectiles.Add(new BoomerangProjectile(player.itemPosition, 180));
                 }
                 else
                 {
-                    level.CurrentRoom.PlayerProjectiles.Add(new BoomerangProjectile(player.ItemPosition, 270));
+                    level.CurrentRoom.PlayerProjectiles.Add(new BoomerangProjectile(player.itemPosition, 270));
                 }
             }
                 

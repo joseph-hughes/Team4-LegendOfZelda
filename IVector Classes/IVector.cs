@@ -3,6 +3,7 @@
     public interface IVector
     {
         int Magnitude { get; set; }
-        Orientation Direction { get; set; }
+        Orientation Directon { get; set; }
+
     }
 }
