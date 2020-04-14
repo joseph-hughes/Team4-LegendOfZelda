@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMaster_States
 {
@@ -7,7 +6,6 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMaster_States
     {
         private IEnemy enemy;
         private const int WIDTH = 16, HEIGHT = 16, SPEED = 1;
-        private UtilityClass utilities = new UtilityClass();
 
         public WallMasterSouthState(IEnemy enemy)
         {
@@ -15,7 +13,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMaster_States
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateWallMasterWestSprite();
             this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * WIDTH), (int)(this.enemy.Scale * HEIGHT));
             this.enemy.Velocity.Magnitude = SPEED;
-            this.enemy.Velocity.Directon = Vector.Orientation.South;
+            this.enemy.Velocity.Direction = Vector.Orientation.South;
         }
 
         public void North()

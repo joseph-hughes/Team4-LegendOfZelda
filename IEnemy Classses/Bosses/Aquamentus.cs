@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Team4_LegendOfZelda.IEnemy_Classses.Bosses.Aquamentus_States;
-using Team4_LegendOfZelda.Utility_Classes;
 using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.Vector;
 
@@ -14,7 +13,6 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         public IState State { get; set; }
         public IVector Velocity { get; set; }
         public Rectangle DestinationRectangle { get; set; }
-        private UtilityClass utilities = new UtilityClass();
         public float Scale { get; set; }
         private IController controller;
         private const int WIDTH = 24;
@@ -23,7 +21,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         public Aquamentus(IRoom room, Vector2 position)
         {
             Room = room;
-            Scale = utilities.Scale;
+            Scale = 3f;
             DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * WIDTH), (int)(Scale * HEIGHT));
             Velocity = new VelocityVector(0, Orientation.West);
             State = new AquamentusWestIdleState(this);
@@ -76,7 +74,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
             State.Update();
             Sprite.Update();
 
-            if (Velocity.Directon == Orientation.East)
+            if (Velocity.Direction == Orientation.East)
             {
                 DestinationRectangle = new Rectangle(DestinationRectangle.X + Velocity.Magnitude, DestinationRectangle.Y, DestinationRectangle.Width, DestinationRectangle.Height);
             }

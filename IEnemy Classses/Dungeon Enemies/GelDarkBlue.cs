@@ -1,17 +1,15 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GelDarkBlue_States;
 using Team4_LegendOfZelda.Vector;
-using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     class GelDarkBlue : IEnemy
     {
         public IRoom Room { get; set; }
-        private UtilityClass utilities = new UtilityClass();
-
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public IVector Velocity { get; set; }
@@ -23,7 +21,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public GelDarkBlue(IRoom room, Vector2 position)
         {
             Room = room;
-            Scale = utilities.Scale;
+            Scale = 3f;
             Sprite = EnemySpriteFactory.Instance.CreateGelDarkBlueSprite();
             Velocity = new VelocityVector(0, Orientation.South);
             State = new GelDarkBlueIdleState(this);

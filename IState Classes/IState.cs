@@ -2,6 +2,7 @@
 {
     public interface IState
     {
+ 
         void North();
         void East();
         void South();

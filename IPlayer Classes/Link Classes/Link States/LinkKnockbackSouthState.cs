@@ -12,14 +12,13 @@ namespace Team4_LegendOfZelda.IState_Classes
             this.link = link;
             this.timer = timer;
             this.link.Velocity.Magnitude = 10;
-            this.link.Velocity.Directon = Vector.Orientation.South;
-            this.link.isAttacking = false;
-            this.link.isKnocked = true;
-            this.link.isDamaged = true;
-            this.link.isDeath = false;
+            this.link.Velocity.Direction = Vector.Orientation.South;
+            this.link.IsAttacking = false;
+            this.link.IsKnocked = true;
+            this.link.IsDamaged = true;
+            this.link.IsDeath = false;
             this.link.LinkSwordRectangle = Rectangle.Empty;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkDamagedMovingSouthSprite();
-            SFXFactory.Instance.PlayLinkDamaged();
         }
 
         public void North()
@@ -67,7 +66,7 @@ namespace Team4_LegendOfZelda.IState_Classes
             this.timer -= 1;
             if (this.timer == 0)
             {
-                link.State = new LinkDamagedNonMovingSouthState(link, Link.damage_timer);
+                link.State = new LinkDamagedNonMovingSouthState(link, Link.DAMAGE_TIMER);
             }
             else
             {

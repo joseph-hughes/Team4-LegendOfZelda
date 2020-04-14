@@ -1,20 +1,17 @@
-using Team4_LegendOfZelda.Utility_Classes;
-
-namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses.Aquamentus_States
+﻿namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses.Aquamentus_States
 {
     class AquamentusWestAttackState : IState
     {
         private IEnemy enemy;
         private int attackCounter;
         public const int MAX_ATTACK_COUNTER = 60;
-        private UtilityClass utilities = new UtilityClass();
 
         public AquamentusWestAttackState(IEnemy enemy, int attackCounter)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateAquamentusWestAttackSprite();
             this.enemy.Velocity.Magnitude = 2;
-            this.enemy.Velocity.Directon = Vector.Orientation.West;
+            this.enemy.Velocity.Direction = Vector.Orientation.West;
 
             if (attackCounter > 0)
             {

@@ -17,7 +17,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         }
         public void Execute()
         {
-            if (!player.isDamaged)
+            if (!player.IsDamaged)
             {
 
                 if (player.DestinationRectangle.Intersects(enemy.DestinationRectangle))
