@@ -1,12 +1,13 @@
 ﻿using Microsoft.Xna.Framework;
 using Team4_LegendOfZelda.Random_Number_Generator;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
 {
     class AquamentusController : IController
     {
         private IEnemy enemy;
-        private static int MAX_DIRECTION_COUNTS = 40, MIN_ATTACK_COUNTS = 100, MAX_ATTACK_COUNTS = 180;
+        private UtilityClass utilities = new UtilityClass();
         private int directionCount, attackCount;
         private enum Direction { EAST, WEST };
         private Direction direction;
@@ -14,8 +15,8 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         public AquamentusController(IEnemy enemy)
         {
             this.enemy = enemy;
-            directionCount = MAX_DIRECTION_COUNTS;
-            attackCount = RandomIntGenerator.Instance.Next(MIN_ATTACK_COUNTS, MAX_ATTACK_COUNTS);
+            directionCount = utilities.MAX_DIRECTION_COUNTS;
+            attackCount = RandomIntGenerator.Instance.Next(utilities.MIN_ATTACK_COUNTS, utilities.MAX_ATTACK_COUNTS);
             direction = Direction.EAST;
         }
         public void Update()
@@ -46,14 +47,14 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
             if (directionCount <= 0)
             {
                 direction = 1 - direction;
-                directionCount = MAX_DIRECTION_COUNTS;
+                directionCount = utilities.MAX_DIRECTION_COUNTS;
             }
 
             attackCount--;
             if (attackCount <= 0)
             {
                 enemy.Attack();
-                attackCount = RandomIntGenerator.Instance.Next(MIN_ATTACK_COUNTS, MAX_ATTACK_COUNTS);
+                attackCount = RandomIntGenerator.Instance.Next(utilities.MIN_ATTACK_COUNTS, utilities.MAX_ATTACK_COUNTS);
             }
         }
     }

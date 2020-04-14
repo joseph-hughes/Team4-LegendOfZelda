@@ -1,17 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
-
+using Team4_LegendOfZelda.Utility_Classes;
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
 {
     class BladeTrapWestState : IState
     {
         private IEnemy enemy;
-        private static int MAX_DISPLACEMENT = 240, DELTA_DISPLACEMENT = 16;
         private int displacement;
+        private UtilityClass utilities = new UtilityClass();
 
         public BladeTrapWestState(IEnemy enemy)
         {
             this.enemy = enemy;
-            displacement = MAX_DISPLACEMENT;
+            displacement = utilities.MAX_DISPLACEMENT;
         }
 
         public void North()
@@ -58,15 +58,15 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
         {
             if (displacement > 0)
             {
-                if (enemy.DestinationRectangle.X > DELTA_DISPLACEMENT)
+                if (enemy.DestinationRectangle.X > utilities.DELTA_DISPLACEMENT)
                 {
-                    enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X - DELTA_DISPLACEMENT, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
+                    enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X - utilities.DELTA_DISPLACEMENT, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
                 }
                 else
                 {
-                    enemy.DestinationRectangle = new Rectangle(768 - (int)enemy.DestinationRectangle.X - DELTA_DISPLACEMENT, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
+                    enemy.DestinationRectangle = new Rectangle(768 - (int)enemy.DestinationRectangle.X - utilities.DELTA_DISPLACEMENT, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
                 }
-                displacement -= DELTA_DISPLACEMENT;
+                displacement -= utilities.DELTA_DISPLACEMENT;
             }
             else
             {

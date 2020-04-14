@@ -1,17 +1,18 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseBlue_States
 {
     class KeeseBlueEastState : IState
     {
         private IEnemy enemy;
-        private static int MAX_DISPLACEMENT = 48, DELTA_DISPLACEMENT = 2;
+        private UtilityClass utilities = new UtilityClass();
         private int displacement;
 
         public KeeseBlueEastState(IEnemy enemy)
         {
             this.enemy = enemy;
-            displacement = MAX_DISPLACEMENT;
+            displacement = utilities.MAX_DISPLACEMENT2;
         }
 
         public void North()
@@ -59,8 +60,8 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseBlue_States
             if (displacement > 0)
             {
                 //enemy.DestinationRectangle = new Rectangle((enemy.DestinationRectangle.X + 2) % 800, enemy.DestinationRectangle.Y);
-                enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X + DELTA_DISPLACEMENT, this.enemy.DestinationRectangle.Y, this.enemy.DestinationRectangle.Width, this.enemy.DestinationRectangle.Height); 
-                displacement -= DELTA_DISPLACEMENT;
+                enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X + utilities.DELTA_DISPLACEMENT2, this.enemy.DestinationRectangle.Y, this.enemy.DestinationRectangle.Width, this.enemy.DestinationRectangle.Height); 
+                displacement -= utilities.DELTA_DISPLACEMENT2;
             }
             else
             {

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.ILevel_Classes
 {
@@ -16,14 +17,11 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         public List<Rectangle> HeartDestinationRectangles { get; set; }
         public int CurrentPlayerHitPoints { get; set; }
 
+        private UtilityClass utilities = new UtilityClass();
         private ISprite levelNumSprite;
         private Rectangle levelNumDestinationRectangle;
 
-        private static int STD_HUD_X = 0, STD_HUD_Y = 0, STD_HUD_WIDTH = 256, STD_HUD_HEIGHT = 56;
-        private static int STD_MINIMAP_X = 16, STD_MINIMAP_Y = 16, STD_MINIMAP_WIDTH = 64, STD_MINIMAP_HEIGHT = 32;
-        private static int STD_LEVEL_NUM_X = 64, STD_LEVEL_NUM_Y = 8, STD_LEVEL_NUM_WIDTH = 8, STD_LEVEL_NUM_HEIGHT = 8;
-        private static int STD_HEART_1_X = 176, STD_HEART_1_Y = 40, STD_HEART_WIDTH = 8, STD_HEART_HEIGHT = 8;
-        private static int STD_HEART_COLUMNS = 8, STD_HEART_ROWS = 2;
+   
 
         public DungeonHUD(ILevel level, int levelNum)
         {
@@ -51,39 +49,39 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         public void Initialize(int hudXPosition, int hudYPosition, int hudWidth, int hudHeight)
         {
             HUDDestinationRectangle = new Rectangle(hudXPosition, hudYPosition, hudWidth, hudHeight);
-            int hudXOffset = hudXPosition - STD_HUD_X;
-            int hudYOffset = hudYPosition - STD_HUD_Y;
-            double hudWidthRatio = (double)hudWidth / STD_HUD_WIDTH;
-            double hudHeightRatio = (double)hudHeight / STD_HUD_HEIGHT;
+            int hudXOffset = hudXPosition - utilities.STD_HUD_X;
+            int hudYOffset = hudYPosition - utilities.STD_HUD_Y;
+            double hudWidthRatio = (double)hudWidth / utilities.STD_HUD_WIDTH;
+            double hudHeightRatio = (double)hudHeight / utilities.STD_HUD_HEIGHT;
 
             levelNumDestinationRectangle = new Rectangle(
-                (int)((STD_LEVEL_NUM_X + hudXOffset) * hudWidthRatio),
-                (int)((STD_LEVEL_NUM_Y + hudYOffset) * hudHeightRatio),
-                (int)(STD_LEVEL_NUM_WIDTH * hudWidthRatio),
-                (int)(STD_LEVEL_NUM_HEIGHT * hudHeightRatio)
+                (int)((utilities.STD_LEVEL_NUM_X + hudXOffset) * hudWidthRatio),
+                (int)((utilities.STD_LEVEL_NUM_Y + hudYOffset) * hudHeightRatio),
+                (int)(utilities.STD_LEVEL_NUM_WIDTH * hudWidthRatio),
+                (int)(utilities.STD_LEVEL_NUM_HEIGHT * hudHeightRatio)
                 );
 
             MinimapDestinationRectangle = new Rectangle(
-                (int)((STD_MINIMAP_X + hudXOffset) * hudWidthRatio),
-                (int)((STD_MINIMAP_Y + hudYOffset) * hudHeightRatio),
-                (int)(STD_MINIMAP_WIDTH * hudWidthRatio),
-                (int)(STD_MINIMAP_HEIGHT * hudHeightRatio)
+                (int)((utilities.STD_MINIMAP_X + hudXOffset) * hudWidthRatio),
+                (int)((utilities.STD_MINIMAP_Y + hudYOffset) * hudHeightRatio),
+                (int)(utilities.STD_MINIMAP_WIDTH * hudWidthRatio),
+                (int)(utilities.STD_MINIMAP_HEIGHT * hudHeightRatio)
                 );
 
-            int maxHearts = STD_HEART_COLUMNS * STD_HEART_ROWS;
+            int maxHearts = utilities.STD_HEART_COLUMNS * utilities.STD_HEART_ROWS;
             int heartRow = 0;
             int heartColumn = 0;
             for (int index = 0; index < maxHearts; index++)
             {
                 HeartValues.Add(0);
                 HeartDestinationRectangles.Add(new Rectangle(
-                    (int)((STD_HEART_1_X + (heartColumn * STD_HEART_WIDTH) + hudXOffset) * hudWidthRatio),
-                    (int)((STD_HEART_1_Y - (heartRow * STD_HEART_HEIGHT) + hudYOffset) * hudHeightRatio),
-                    (int)(STD_HEART_WIDTH * hudWidthRatio),
-                    (int)(STD_HEART_HEIGHT * hudHeightRatio)
+                    (int)((utilities.STD_HEART_1_X + (heartColumn * utilities.STD_HEART_WIDTH) + hudXOffset) * hudWidthRatio),
+                    (int)((utilities.STD_HEART_1_Y - (heartRow * utilities.STD_HEART_HEIGHT) + hudYOffset) * hudHeightRatio),
+                    (int)(utilities.STD_HEART_WIDTH * hudWidthRatio),
+                    (int)(utilities.STD_HEART_HEIGHT * hudHeightRatio)
                     ));
 
-                if (heartColumn == STD_HEART_COLUMNS - 1)
+                if (heartColumn == utilities.STD_HEART_COLUMNS - 1)
                 {
                     heartColumn = 0;
                     heartRow++; // This should never exceed the number of rows

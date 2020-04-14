@@ -3,12 +3,15 @@ using Microsoft.Xna.Framework.Graphics;
 using System;
 using Team4_LegendOfZelda.Enemy_Classses.Dungeon_Enemies.WallMaster_States;
 using Team4_LegendOfZelda.ILevel_Classes;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     class WallMaster : IEnemy
     {
         public IRoom Room { get; set; }
+        private UtilityClass utilities = new UtilityClass();
+
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public Rectangle DestinationRectangle { get; set; }
@@ -19,7 +22,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public WallMaster(IRoom room, Vector2 position)
         {
             Room = room;
-            Scale = 3f;
+            Scale = utilities.Scale;
             State = new WallMasterWestState(this);
             controller = new WallMasterController(this);
             DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, DestinationRectangle.Width, DestinationRectangle.Height);

@@ -6,6 +6,7 @@ using Team4_LegendOfZelda.ICollider_Classes;
 using Team4_LegendOfZelda.ICollider_Classes.Collider;
 using Team4_LegendOfZelda.IGameState_Classes;
 using Team4_LegendOfZelda.ILevel_Classes.Levels;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda
 {
@@ -18,19 +19,21 @@ namespace Team4_LegendOfZelda
         private static GraphicsDeviceManager graphics;
         private List<IController> controllerList;
         private List<ISpriteFactory> spriteFactories;
+        private ISFXFactory sfxfactory;
         private Color backgroundColor;
         public ILevel level;
         public IPlayer player;
         public IGameState gameState;
         private IDector dector;
-        public static int WINDOW_WIDTH = 768, ROOM_HEIGHT = 528, HUD_HEIGHT = 168;
+        private UtilityClass utilities = new UtilityClass();
+        
 
         public LegendOfZelda()
         {
             graphics = new GraphicsDeviceManager(this)
             {
-                PreferredBackBufferWidth = WINDOW_WIDTH,
-                PreferredBackBufferHeight = ROOM_HEIGHT + HUD_HEIGHT
+                PreferredBackBufferWidth = utilities.WINDOW_WIDTH,
+                PreferredBackBufferHeight = utilities.ROOM_HEIGHT + utilities.HUD_HEIGHT
             };
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
@@ -43,6 +46,7 @@ namespace Team4_LegendOfZelda
                 ProjectileSpriteFactory.Instance,
                 MapAndHUDSpriteFactory.Instance
             };
+            sfxfactory = SFXFactory.Instance;
         }
 
         /// <summary>
@@ -55,10 +59,10 @@ namespace Team4_LegendOfZelda
         {
             base.Initialize();
 
-            player = new Link(new Vector2(96, 260));
+            player = new Link(new Vector2(utilities.linkInitialX, utilities.linkInitialY));
 
             level = new DungeonLevel(player, 1);
-            level.Initialize(WINDOW_WIDTH, ROOM_HEIGHT, HUD_HEIGHT);
+            level.Initialize(utilities.WINDOW_WIDTH, utilities.ROOM_HEIGHT, utilities.HUD_HEIGHT);
 
             dector = new BoxDector(player);
             dector.Update(level);
@@ -89,17 +93,7 @@ namespace Team4_LegendOfZelda
             };
 
             KeyboardController keyboard = (KeyboardController)controllerList[0];
-            List<Keys> keyList = new List<Keys>
-            {
-                Keys.W,
-                Keys.A,
-                Keys.S,
-                Keys.D,
-                Keys.Up,
-                Keys.Left,
-                Keys.Down,
-                Keys.Right,
-            };
+            List<Keys> keyList = utilities.keyList;
 
             keyboard.RegisterUnpressedKeysCommand(keyList, keyboardCommandList[8]);
 
@@ -143,32 +137,11 @@ namespace Team4_LegendOfZelda
                 new GotoRoom18Command(this),    // 17
             };
 
-            int rectangleWidth = 7*3;
-            int rectangleHeight = 3 * 3;
-            List<Rectangle> mouseActivationAreas = new List<Rectangle>
-            {
-                new Rectangle(40*3, 44*3, rectangleWidth, rectangleHeight),
-                new Rectangle(32*3, 44*3, rectangleWidth, rectangleHeight),
-                new Rectangle(48*3, 44*3, rectangleWidth, rectangleHeight),
-                new Rectangle(40*3, 40*3, rectangleWidth, rectangleHeight),
-                new Rectangle(32*3, 36*3, rectangleWidth, rectangleHeight),
-                new Rectangle(40*3, 36*3, rectangleWidth, rectangleHeight),
-                new Rectangle(48*3, 36*3, rectangleWidth, rectangleHeight),
-                new Rectangle(24*3, 32*3, rectangleWidth, rectangleHeight),
-                new Rectangle(32*3, 32*3, rectangleWidth, rectangleHeight),
-                new Rectangle(40*3, 32*3, rectangleWidth, rectangleHeight),
-                new Rectangle(48*3, 32*3, rectangleWidth, rectangleHeight),
-                new Rectangle(56*3, 32*3, rectangleWidth, rectangleHeight),
-                new Rectangle(40*3, 28*3, rectangleWidth, rectangleHeight),
-                new Rectangle(56*3, 28*3, rectangleWidth, rectangleHeight),
-                new Rectangle(64*3, 28*3, rectangleWidth, rectangleHeight),
-                new Rectangle(24*3, 24*3, rectangleWidth, rectangleHeight),
-                new Rectangle(32*3, 24*3, rectangleWidth, rectangleHeight),
-                new Rectangle(40*3, 24*3, rectangleWidth, rectangleHeight),
-            };
+            
+            List<Rectangle> mouseActivationAreas = utilities.mouseActivationAreas;
 
             MouseController mouse = (MouseController)controllerList[1];
-            MouseState leftButtonPressed = new MouseState(0, 0, 0, ButtonState.Pressed, 0, 0, 0, 0);
+            MouseState leftButtonPressed = utilities.leftButtonPressed;
 
             for (int index = 0; index < mouseCommandList.Count; index++)
             {
@@ -191,7 +164,7 @@ namespace Team4_LegendOfZelda
             {
                 spriteFactory.LoadAllTextures(Content);
             }
-
+            sfxfactory.LoadAllSFX(Content);
         }
 
         /// <summary>
