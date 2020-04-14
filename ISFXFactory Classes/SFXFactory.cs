@@ -63,7 +63,7 @@ namespace Team4_LegendOfZelda
             FlamesShot = content.Load<SoundEffect>("Sounds/Flames_Shot");
             HealthPickup = content.Load<SoundEffect>("Sounds/Health_Heart");
             ItemObtained = content.Load<SoundEffect>("Sounds/Item_Obtained");
-            ItemReceived = content.Load<SoundEffect>("Sounds/Item_Revieved");
+            ItemReceived = content.Load<SoundEffect>("Sounds/Item_Recieved");
             KeyAppears = content.Load<SoundEffect>("Sounds/Key_Appears");
             LinkDamaged = content.Load<SoundEffect>("Sounds/Link_Damage");
             MagicWhistle = content.Load<SoundEffect>("Sounds/Magic_Whistle");

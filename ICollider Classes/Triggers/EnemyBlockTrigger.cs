@@ -43,9 +43,9 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 }
             }
 
- //           if (enemy.Direction == direction)
+           if (enemy.Direction == direction)
             {
-//                enemy.Velocity = 0;
+               enemy.Velocity = 0;
             }
 
         }
