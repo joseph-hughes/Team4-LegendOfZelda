@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 using Team4_LegendOfZelda.ICollider_Classes;
 using Team4_LegendOfZelda.ICollider_Classes.Collider;
+using Team4_LegendOfZelda.IGameState_Classes;
 using Team4_LegendOfZelda.ILevel_Classes.Levels;
 
 namespace Team4_LegendOfZelda
@@ -20,8 +21,8 @@ namespace Team4_LegendOfZelda
         private Color backgroundColor;
         public ILevel level;
         public IPlayer player;
+        public IGameState gameState;
         private IDector dector;
-        private IGameState gameState;
         public static int WINDOW_WIDTH = 768, ROOM_HEIGHT = 528, HUD_HEIGHT = 168;
 
         public LegendOfZelda()
@@ -61,6 +62,8 @@ namespace Team4_LegendOfZelda
 
             dector = new BoxDector(player);
             dector.Update(level);
+
+            gameState = new RoomGameState(this.gameState, level);
 
             controllerList = new List<IController>
             {

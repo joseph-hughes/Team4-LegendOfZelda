@@ -9,8 +9,8 @@ namespace Team4_LegendOfZelda.IGameState_Classes
 {
     class ItemSelectGameState : IGameState
     {
-        private IGameState gameState { get; set; }
-        private ILevel level { get; set; }
+        private IGameState gameState;
+        private ILevel level;
 
         public ItemSelectGameState(IGameState gameState, ILevel level)
         {

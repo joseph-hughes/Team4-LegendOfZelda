@@ -9,9 +9,10 @@ namespace Team4_LegendOfZelda.IGameState_Classes
 {
     class RoomChangeGameState : IGameState
     {
-        private IGameState gameState { get; set; }
-        private ILevel level { get; set; }
-        private IRoom nextRoom { get; set; }
+        private IGameState gameState;
+        private ILevel level;
+        private IRoom nextRoom;
+        private int transitionTimer = 100;
 
         public RoomChangeGameState(IGameState gameState, ILevel level, IRoom nextRoom)
         {
@@ -42,7 +43,13 @@ namespace Team4_LegendOfZelda.IGameState_Classes
         public void Update()
         {
             // TODO: trigger room transition
-            level.CurrentRoom = nextRoom;
+            if (transitionTimer > 0)
+            {
+                transitionTimer -= 1;
+            } else {
+                level.CurrentRoom = nextRoom;
+                this.gameState = new RoomGameState(gameState, level);
+            }
         }
     }
 }

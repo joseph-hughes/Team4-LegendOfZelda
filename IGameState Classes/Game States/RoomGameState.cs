@@ -9,8 +9,8 @@ namespace Team4_LegendOfZelda.IGameState_Classes
 {
     class RoomGameState : IGameState
     {
-        private IGameState gameState { get; set; }
-        private ILevel level { get; set; }
+        private IGameState gameState;
+        private ILevel level;
 
         public RoomGameState(IGameState gameState, ILevel level)
         {
