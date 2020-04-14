@@ -1,15 +1,15 @@
 ﻿Author of Code Review:	Neil Dey
 
-Date of Code Review:	03/06/20
+Date of Code Review:	04/13/2020
 
-Sprint number:			Sprint 3
+Sprint number:			Sprint 4
 
-Name of .cs file:		LegendOfZelda.Cs
+Name of .cs file:		BoxDector.cs
 
-Author of .cs file:		Joey Hughes, Peter Su, Steven Lister, Minkun Tian, Neil Dey
+Author of .cs file:		Minkun Tian
 
 Number of minutes:		10 minutes
 
-Comments:				This code has good maintainability. The main drawback of this class is that the initialization of the keyboard controller, command list, as well as some other	
-                        member variables could be moved to a separate class so that the beginning of this one isn't so long. Most of the initialization code isn't relevant to the main purpose of this class
-						so it's not necessary to have here. That being said, it's organized in a way that is clearly understandable. 
+Comments:				The maintainability of this code is good since its pretty simple. The function of the class is apparent but the one drawback
+I'd mention is that there aren't comments indicating what parts of the code are doing. For example, it took me a little bit to figure out exactly why the for each loop was necessary.
+Also, there are occasional spelling errors like the name of one of the methods, "detact" (should be detect)
