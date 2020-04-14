@@ -191,7 +191,6 @@
     <Compile Include="ICommand Classes\Commands\ResetGameCommand.cs" />
     <Compile Include="ICommand Classes\Commands\LinkBeDamagedCommand.cs" />
     <Compile Include="IProjectile Classes\IProjectile.cs" />
-    <Compile Include="ISFXFactoryClasses\ISFXFactory.cs" />
     <Compile Include="ISFXFactory Classes\SFXFactory.cs" />
     <Compile Include="ISprite Classes\Sprite\MapSprite.cs" />
     <Compile Include="ISprite Classes\Sprite\TextSprite.cs" />
@@ -309,7 +308,6 @@
     <Compile Include="ICommand Classes\Commands\QuitCommand.cs" />
     <Compile Include="Random Number Generator\IRandomInt.cs" />
     <Compile Include="Random Number Generator\RandomIntGenerator.cs" />
-    <Compile Include="ISFXFactoryClasses\SFXFactory.cs" />
     <Compile Include="Utility Classes\UtilityClass.cs" />
   </ItemGroup>
   <ItemGroup>
