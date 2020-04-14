@@ -9,7 +9,7 @@ namespace Team4_LegendOfZelda.IBlock_Classes
     {
         public Rectangle DestinationRectangle { get; set; }
         public bool CanBeMoved { get; set; }
-        public List<Vector.Orientation> OptionalDirection { get; set; }
+        public List<Vector.Orientation> OptionalDirecton { get; set; }
         public ISprite BlockSprite { get; set; }
 
         public Boundary(Rectangle DestinationRectangle)

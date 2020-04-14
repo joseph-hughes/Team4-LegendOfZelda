@@ -25,6 +25,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
             Room = room;
             Scale = utilities.Scale;
             Velocity = new VelocityVector(0, Orientation.South);
+            Sprite = EnemySpriteFactory.Instance.CreateStalfosSprite();
             State = new StalfosIdleState(this);
             controller = new StalfosController(this);
         }

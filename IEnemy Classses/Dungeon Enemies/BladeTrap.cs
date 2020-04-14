@@ -25,6 +25,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
             Room = room;
             Scale = 3f;
             Velocity = new VelocityVector(0, Orientation.South);
+            Sprite = EnemySpriteFactory.Instance.CreateBladeTrapSprite();
             State = new BladeTrapIdleState(this);
             controller = new BladeTrapController(this);
         }

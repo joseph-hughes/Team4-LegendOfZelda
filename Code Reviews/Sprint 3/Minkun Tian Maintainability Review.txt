@@ -13,4 +13,4 @@ Number of minutes:		15 minutes
 Comments:				The maintainability of this code is good. Though this class in very high cohesion, It keeps
 						track the transition of each room. It is a fundamental class that has parameters set up 
 						inside. The largest improvement of this class might be trying to decouple the transition
-						into different classes, which can be used for transition with different direction. 
+						into different classes, which can be used for transition with different Directon. 

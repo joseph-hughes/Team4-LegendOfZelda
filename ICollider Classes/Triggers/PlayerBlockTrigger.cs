@@ -15,7 +15,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         }
         public void Execute()
         {
-            Vector.Orientation direction;
+            Vector.Orientation Directon;
 
             float dx = player.DestinationRectangle.X - block.DestinationRectangle.X;
             float dy = player.DestinationRectangle.Y - block.DestinationRectangle.Y;
@@ -24,11 +24,11 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 if (dy > 0)
                 {
-                    direction = Vector.Orientation.North;
+                    Directon = Vector.Orientation.North;
                 }
                 else 
                 { 
-                    direction = Vector.Orientation.South;
+                    Directon = Vector.Orientation.South;
                 }
 
             }
@@ -36,20 +36,20 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 if (dx > 0)
                 {
-                    direction = Vector.Orientation.West;
+                    Directon = Vector.Orientation.West;
                 }
                 else
                 {
-                    direction = Vector.Orientation.East;
+                    Directon = Vector.Orientation.East;
                 }
             }
 
 
-            if(player.Velocity.Directon == direction)
+            if(player.Velocity.Directon == Directon)
             {
-                if (block.CanBeMoved&&block.OptionalDirection.Contains(direction)&&!player.isKnocked)
+                if (block.CanBeMoved&&block.OptionalDirecton.Contains(Directon)&&!player.isKnocked)
                 {
-                    switch (direction)
+                    switch (Directon)
                     {
                         default:
                             break;

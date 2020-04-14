@@ -10,7 +10,7 @@
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateAquamentusWestIdleSprite();
             this.enemy.Velocity.Magnitude = 2;
-            this.enemy.Velocity.Direction = Vector.Orientation.East;
+            this.enemy.Velocity.Directon = Vector.Orientation.East;
         }
 
         public void North()

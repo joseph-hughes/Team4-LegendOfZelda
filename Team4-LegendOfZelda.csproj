@@ -138,7 +138,6 @@
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenNorthState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenSouthState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenWestState.cs" />
-    <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreenController.cs" />
     <Compile Include="IGameState Classes\Game States\ItemSelectGameState.cs" />
     <Compile Include="IGameState Classes\Game States\OverGameState.cs" />
     <Compile Include="IGameState Classes\Game States\PauseGameState.cs" />

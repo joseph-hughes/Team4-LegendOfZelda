@@ -19,7 +19,7 @@ namespace Team4_LegendOfZelda.IState_Classes
             this.link.isDamaged = false;
             this.link.isDeath = false;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkUseItemWestSprite();
-            this.link.ItemPosition = new Vector2(link.DestinationRectangle.X, link.DestinationRectangle.Y + this.link.DestinationRectangle.Height / 2);
+            this.link.itemPosition = new Vector2(link.DestinationRectangle.X, link.DestinationRectangle.Y + this.link.DestinationRectangle.Height / 2);
 
         }
         public void South()
