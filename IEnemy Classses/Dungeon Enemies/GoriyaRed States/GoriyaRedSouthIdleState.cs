@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GoriyaRed_States
 {
@@ -6,6 +7,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GoriyaRed_States
     {
         IEnemy enemy;
         private const int WIDTH = 13, HEIGHT = 16;
+        private UtilityClass utilities = new UtilityClass();
 
         public GoriyaRedSouthIdleState(IEnemy enemy)
         {
@@ -13,7 +15,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GoriyaRed_States
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateGoriyaRedSouthSprite();
             this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * WIDTH), (int)(this.enemy.Scale * HEIGHT));
             this.enemy.Velocity.Magnitude = 0;
-            this.enemy.Velocity.Direction = Vector.Orientation.South;
+            this.enemy.Velocity.Directon = Vector.Orientation.South;
         }
 
         public void North()

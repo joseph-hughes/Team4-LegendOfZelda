@@ -2,12 +2,15 @@
 using Microsoft.Xna.Framework.Graphics;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMasterUpsideDown_States;
 using Team4_LegendOfZelda.ILevel_Classes;
+using Team4_LegendOfZelda.Utility_Classes;
 using Team4_LegendOfZelda.Vector;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     class WallMasterUpsideDown : IEnemy
     {
+        private UtilityClass utilities = new UtilityClass();
+
         public IRoom Room { get; set; }
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
@@ -20,7 +23,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public WallMasterUpsideDown(IRoom room, Vector2 position)
         {
             Room = room;
-            Scale = 3f;
+            Scale = utilities.Scale;
             Velocity = new VelocityVector(0, Orientation.South);
             State = new WallMasterUpsideDownIdleState(this);
             controller = new WallMasterController(this);

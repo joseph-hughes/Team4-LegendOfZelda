@@ -1,17 +1,18 @@
 ﻿using Microsoft.Xna.Framework;
-
+using Team4_LegendOfZelda.Utility_Classes;
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GelDarkBlue_States
 {
     class GelDarkBlueNorthState : IState
     {
         private IEnemy enemy;
         private const int SPEED = 2;
+        private UtilityClass utilities = new UtilityClass();
 
         public GelDarkBlueNorthState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Velocity.Magnitude = SPEED;
-            this.enemy.Velocity.Direction = Vector.Orientation.North;
+            this.enemy.Velocity.Directon = Vector.Orientation.North;
         }
 
         public void North()

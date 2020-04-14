@@ -26,13 +26,52 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 }
             }
         }
+        public static void PlayerWallDection(IPlayer player, IRoom room, List<ITrigger> triggerList)
+        {
+            foreach (IBlock currentWall in room.Wall)
+            {
+                if (player.DestinationRectangle.Intersects(currentWall.DestinationRectangle))
+                {
+                    triggerList.Add(new PlayerWallTrigger(player, currentWall));
+                }
+            }
+        }
         public static void PlayerBlockDection(IPlayer player, IRoom room, List<ITrigger> triggerList)
         {
-            foreach (IBlock currentBlock in room.Blocks)
+            foreach (IBlock currentBlock in room.Block)
             {
                 if (player.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
                 {
                     triggerList.Add(new PlayerBlockTrigger(player, currentBlock));
+                }
+            }
+        }
+        public static void BlockBlockDection(IRoom room, List<ITrigger> triggerList)
+        {
+            foreach (IBlock currentBlock in room.Block)
+            {
+                if (currentBlock.CanBeMoved)
+                {
+                    foreach (IBlock targetBlock in room.Block)
+                    {
+                        if (currentBlock != targetBlock&& currentBlock.DestinationRectangle.Intersects(targetBlock.DestinationRectangle))
+                        {
+                            triggerList.Add(new BlockBlockTrigger(currentBlock, targetBlock));
+                        }
+                    }
+                }
+            }
+        }
+        public static void BlockWallDection(IRoom room, List<ITrigger> triggerList)
+        {
+            foreach (IBlock currentBlock in room.Block)
+            {
+                foreach (IBlock currentWall in room.Wall)
+                {
+                    if (currentBlock.DestinationRectangle.Intersects(currentWall.DestinationRectangle))
+                    {
+                        triggerList.Add(new BlockWallTrigger(currentBlock, currentWall));
+                    }
                 }
             }
         }
@@ -63,7 +102,14 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         {
             foreach (IProjectile currentEnemyProjectile in room.EnemyProjectiles)
             {
-                foreach (IBlock currentBlock in room.Blocks)
+                foreach (IBlock currentBlock in room.Block)
+                {
+                    if (currentEnemyProjectile.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
+                    {
+                        triggerList.Add(new ProjectileBlockTrigger(currentEnemyProjectile, room));
+                    }
+                }
+                foreach (IBlock currentBlock in room.Wall)
                 {
                     if (currentEnemyProjectile.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
                     {
@@ -73,7 +119,14 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             }
             foreach (IProjectile currentPlayerProjectile in room.PlayerProjectiles)
             {
-                foreach (IBlock currentBlock in room.Blocks)
+                foreach (IBlock currentBlock in room.Block)
+                {
+                    if (currentPlayerProjectile.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
+                    {
+                        triggerList.Add(new ProjectileBlockTrigger(currentPlayerProjectile, room));
+                    }
+                }
+                foreach (IBlock currentBlock in room.Wall)
                 {
                     if (currentPlayerProjectile.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
                     {
@@ -87,7 +140,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
         {
             foreach (IEnemy currentEnemy in room.Enemies)
             {
-                foreach (IBlock currentBlock in room.Blocks)
+                foreach (IBlock currentBlock in room.Block)
                 {
                     if (currentEnemy.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
                     {

@@ -17,6 +17,7 @@ namespace Team4_LegendOfZelda.IState_Classes
             this.link.isAttacking = false;
             this.link.isKnocked = false;
             this.link.isDamaged = false;
+            this.link.isDeath = false;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkUseItemEastSprite();
             this.link.ItemPosition = new Vector2(link.DestinationRectangle.X, link.DestinationRectangle.Y + this.link.DestinationRectangle.Height / 2);
         }

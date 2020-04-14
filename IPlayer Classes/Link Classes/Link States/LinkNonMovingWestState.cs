@@ -11,6 +11,7 @@
             this.link.isAttacking = false;
             this.link.isKnocked = false;
             this.link.isDamaged = false;
+            this.link.isDeath = false;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkNonMovingWestSprite();
         }
 

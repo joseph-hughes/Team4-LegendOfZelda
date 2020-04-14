@@ -1,10 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GoriyaRed_States
 {
     class GoriyaRedWestAttackState : IState
     {
         IEnemy enemy;
+        private UtilityClass utilities = new UtilityClass();
         // Projectile item
         private const int WIDTH = 14, HEIGHT = 16, MAX_COUNTS = 60;
         int count;
@@ -15,7 +17,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GoriyaRed_States
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateGoriyaRedWestSprite();
             this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * WIDTH), (int)(this.enemy.Scale * HEIGHT));
             this.enemy.Velocity.Magnitude = 0;
-            this.enemy.Velocity.Direction = Vector.Orientation.West;
+            this.enemy.Velocity.Directon = Vector.Orientation.West;
             // Create boomerang
             count = MAX_COUNTS;
         }

@@ -21,6 +21,7 @@ namespace Team4_LegendOfZelda
         private Texture2D emptyHeartTexture;
         private Texture2D halfHeartTexture;
         private Texture2D fullHeartTexture;
+        private Texture2D singleBlock;
 
         private Texture2D level1MapTexture;
         private Texture2D level1MinimapTexture;
@@ -61,6 +62,7 @@ namespace Team4_LegendOfZelda
             emptyHeartTexture = content.Load<Texture2D>("MapSprites/emptyHeart");
             halfHeartTexture = content.Load<Texture2D>("MapSprites/halfHeart");
             fullHeartTexture = content.Load<Texture2D>("MapSprites/fullHeart");
+            singleBlock = content.Load<Texture2D>("MapSprites/single block");
 
 
             level1MapTexture = content.Load<Texture2D>("MapSprites/fullmap");
@@ -167,7 +169,10 @@ namespace Team4_LegendOfZelda
         {
             return new TextureSprite(miniMapRedDotTexture);
         }
-
+        public ISprite CreateSingleBlockSprite()
+        {
+            return new TextureSprite(singleBlock);
+        }
 
 
 

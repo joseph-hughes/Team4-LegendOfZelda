@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
 {
@@ -6,6 +7,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
     {
         private IEnemy enemy;
         private const int SPEED = 4;
+        private UtilityClass utilities = new UtilityClass();
 
         public BladeTrapEastRechargeState(IEnemy enemy)
         {

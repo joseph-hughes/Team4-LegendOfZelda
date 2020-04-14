@@ -46,16 +46,22 @@
     <StartupObject>Team4_LegendOfZelda.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ICollider Classes\Collider\BoxDector.cs" />
-    <Compile Include="ICollider Classes\Collider\Detection.cs" />
-    <Compile Include="ICollider Classes\Collider\EnemyBlockTrigger.cs" />
-    <Compile Include="ICollider Classes\Collider\PlayerBlockTrigger.cs" />
-    <Compile Include="ICollider Classes\Collider\PlayerProjectileEnemyTrigger.cs" />
-    <Compile Include="ICollider Classes\Collider\EnemyProjectilePlayerTrigger.cs" />
-    <Compile Include="ICollider Classes\Collider\PlayerEnemyTrigger.cs" />
-    <Compile Include="ICollider Classes\Collider\ProjectileBlockTrigger.cs" />
+    <Compile Include="IBlock Classes\Block.cs" />
+    <Compile Include="IBlock Classes\Boundary.cs" />
+    <Compile Include="IBlock Classes\IBlock.cs" />
+    <Compile Include="ICollider Classes\BoxDector.cs" />
+    <Compile Include="ICollider Classes\detection.cs" />
     <Compile Include="ICollider Classes\ITrigger.cs" />
     <Compile Include="ICollider Classes\IDector.cs" />
+    <Compile Include="ICollider Classes\Triggers\BlockBlockTrigger.cs" />
+    <Compile Include="ICollider Classes\Triggers\BlockWallTrigger.cs" />
+    <Compile Include="ICollider Classes\Triggers\EnemyBlockTrigger.cs" />
+    <Compile Include="ICollider Classes\Triggers\EnemyProjectilePlayerTrigger.cs" />
+    <Compile Include="ICollider Classes\Triggers\PlayerBlockTrigger.cs" />
+    <Compile Include="ICollider Classes\Triggers\PlayerEnemyTrigger.cs" />
+    <Compile Include="ICollider Classes\Triggers\PlayerProjectileEnemyTrigger.cs" />
+    <Compile Include="ICollider Classes\Triggers\PlayerWallTrigger.cs" />
+    <Compile Include="ICollider Classes\Triggers\projectileBlockTrigger.cs" />
     <Compile Include="ICommand Classes\Commands\GotoRoom18Command.cs" />
     <Compile Include="ICommand Classes\Commands\GotoRoom17Command.cs" />
     <Compile Include="ICommand Classes\Commands\GotoRoom16Command.cs" />
@@ -132,6 +138,14 @@
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenNorthState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenSouthState.cs" />
     <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreen States\ZolDarkGreenWestState.cs" />
+    <Compile Include="IEnemy Classses\Dungeon Enemies\ZolDarkGreenController.cs" />
+    <Compile Include="IGameState Classes\Game States\ItemSelectGameState.cs" />
+    <Compile Include="IGameState Classes\Game States\OverGameState.cs" />
+    <Compile Include="IGameState Classes\Game States\PauseGameState.cs" />
+    <Compile Include="IGameState Classes\Game States\RoomChangeGameState.cs" />
+    <Compile Include="IGameState Classes\Game States\RoomGameState.cs" />
+    <Compile Include="IGameState Classes\Game States\WinGameState.cs" />
+    <Compile Include="IGameState Classes\IGameState.cs" />
     <Compile Include="ILevel Classes\DungeonHUD.cs" />
     <Compile Include="ILevel Classes\DungeonRoom.cs" />
     <Compile Include="ILevel Classes\IHUD.cs" />
@@ -140,13 +154,13 @@
     <Compile Include="ILevel Classes\IFileLoader.cs" />
     <Compile Include="ILevel Classes\IRoom.cs" />
     <Compile Include="ILevel Classes\Levels\DungeonLevel.cs" />
-    <Compile Include="ILevel Classes\Levels\Block.cs" />
-    <Compile Include="ILevel Classes\IBlock.cs" />
     <Compile Include="ILevel Classes\Map.cs" />
+    <Compile Include="ISFXFactory Classes\ISFXFactory.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackEastState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackNorthState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackSouthState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackWestState.cs" />
+    <Compile Include="IPlayer Classes\Link Classes\Link States\LinkDeathState.cs" />
     <Compile Include="IProjectile Classes\Projectiles\BoomerangProjectile.cs" />
     <Compile Include="IProjectile Classes\Projectiles\MagicBoomerangProjectile.cs" />
     <Compile Include="IProjectile Classes\Projectiles\FireballProjectile.cs" />
@@ -178,6 +192,7 @@
     <Compile Include="ICommand Classes\Commands\ResetGameCommand.cs" />
     <Compile Include="ICommand Classes\Commands\LinkBeDamagedCommand.cs" />
     <Compile Include="IProjectile Classes\IProjectile.cs" />
+    <Compile Include="ISFXFactory Classes\SFXFactory.cs" />
     <Compile Include="ISprite Classes\Sprite\MapSprite.cs" />
     <Compile Include="ISprite Classes\Sprite\TextSprite.cs" />
     <Compile Include="ISpriteFactory Classes\SpriteFactories\MapAndHUDSpriteFactory.cs" />
@@ -294,6 +309,7 @@
     <Compile Include="ICommand Classes\Commands\QuitCommand.cs" />
     <Compile Include="Random Number Generator\IRandomInt.cs" />
     <Compile Include="Random Number Generator\RandomIntGenerator.cs" />
+    <Compile Include="Utility Classes\UtilityClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -478,6 +494,7 @@
     <None Include="Content\Content.mgcb" />
     <None Include="Content\Font.spritefont" />
     <None Include="README.md" />
+    <None Include="Sprint 3 Reflection.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\DesktopGL\AnyCPU\Debug\MonoGame.Framework.dll" />
@@ -501,8 +518,14 @@
     <Content Include="Code Reviews\Sprint 2\Minkun Tian Readability Review.txt" />
     <Content Include="Code Reviews\Sprint 2\Steven Lister Maintainability Review.txt" />
     <Content Include="Code Reviews\Sprint 2\Steven Lister Readability Review.txt" />
+    <Content Include="Code Reviews\Sprint 3\Neil Dey Maintainability.txt" />
+    <Content Include="Code Reviews\Sprint 3\Neil Dey Readability.txt" />
     <Content Include="Code Reviews\Sprint 3\Steven Lister Maintainability Review.txt" />
     <Content Include="Code Reviews\Sprint 3\Steven Lister Readability Review.txt" />
+    <Content Include="Code Reviews\Sprint 4\Minkun Tian Maintainability Review.txt" />
+    <Content Include="Code Reviews\Sprint 4\Minkun Tian Readability Review.txt" />
+    <Content Include="Code Reviews\Sprint 4\Steven Lister Maintainability Review.txt" />
+    <Content Include="Code Reviews\Sprint 4\Steven Lister Readability Review.txt" />
     <Content Include="Content\Bosses\Aquamentus\AquamentusEastAttack.png" />
     <Content Include="Content\Bosses\Aquamentus\AquamentusEastIdle.png" />
     <Content Include="Content\Bosses\Aquamentus\AquamentusWestAttack.png" />
@@ -641,6 +664,35 @@
     <Content Include="Content\Projectiles\ArrowUp.png" />
     <Content Include="Content\Projectiles\Fireball.png" />
     <Content Include="Content\Projectiles\Flame.png" />
+    <Content Include="Content\Sounds\Aquamentus_Defeated.wav" />
+    <Content Include="Content\Sounds\Aquamentus_Roaring.wav" />
+    <Content Include="Content\Sounds\Arrow_Hit.wav" />
+    <Content Include="Content\Sounds\Bomb_Explosion.wav" />
+    <Content Include="Content\Sounds\Bomb_Placement.wav" />
+    <Content Include="Content\Sounds\Boss_Zapped.wav" />
+    <Content Include="Content\Sounds\Dodongo_Defeated.wav" />
+    <Content Include="Content\Sounds\Dodongo_Roaring.wav" />
+    <Content Include="Content\Sounds\Door_Opened.wav" />
+    <Content Include="Content\Sounds\Enemy_Shrinking.wav" />
+    <Content Include="Content\Sounds\Enemy_Zapped.wav" />
+    <Content Include="Content\Sounds\Flames_Shot.wav" />
+    <Content Include="Content\Sounds\Health_Heart.wav" />
+    <Content Include="Content\Sounds\Item_Obtained.wav" />
+    <Content Include="Content\Sounds\Item_Recieved.wav" />
+    <Content Include="Content\Sounds\Key_Appears.wav" />
+    <Content Include="Content\Sounds\Link_Damage.wav" />
+    <Content Include="Content\Sounds\Magical.wav" />
+    <Content Include="Content\Sounds\Magical_Boomerang_Thrown.wav" />
+    <Content Include="Content\Sounds\Magic_Whistle.wav" />
+    <Content Include="Content\Sounds\Power_Zap.wav" />
+    <Content Include="Content\Sounds\Rupees_Decreasing.wav" />
+    <Content Include="Content\Sounds\Rupee_Pickup.wav" />
+    <Content Include="Content\Sounds\Sheild_Deflecting.wav" />
+    <Content Include="Content\Sounds\Sword_Sound.wav" />
+    <Content Include="Content\Sounds\Sword_Zap.wav" />
+    <Content Include="Content\Sounds\Triforce_Piece_Obtained.wav" />
+    <Content Include="Content\Sounds\Triforce_Reveals_Ganon.wav" />
+    <Content Include="Content\Sounds\Walking_Stairs.wav" />
     <Content Include="Icon.ico" />
     <Content Include="XML\Level1.xml" />
     <Content Include="XML\BlankLevel.xml" />

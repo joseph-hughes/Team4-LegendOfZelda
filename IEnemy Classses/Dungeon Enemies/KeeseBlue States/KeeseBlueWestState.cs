@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseBlue_States
 {
@@ -6,12 +7,13 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseBlue_States
     {
         private IEnemy enemy;
         private const int SPEED = 3;
+        private UtilityClass utilities = new UtilityClass();
 
         public KeeseBlueWestState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Velocity.Magnitude = SPEED;
-            this.enemy.Velocity.Direction = Vector.Orientation.West;
+            this.enemy.Velocity.Directon = Vector.Orientation.West;
         }
 
         public void North()

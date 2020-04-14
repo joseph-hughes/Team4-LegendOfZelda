@@ -20,6 +20,7 @@ namespace Team4_LegendOfZelda
         public bool isAttacking { get; set; }
         public bool isKnocked { get; set; }
         public bool isDamaged { get; set; }
+        public bool isDeath { get; set; }
         public const int damage_timer = 80;
         public const int use_item_timer = 20;
         public const int sword_timer = 20;
