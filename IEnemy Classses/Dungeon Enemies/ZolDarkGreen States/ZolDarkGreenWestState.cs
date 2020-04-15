@@ -1,16 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
+
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.ZolDarkGreen_States
 {
     class ZolDarkGreenWestState : IState
     {
         private IEnemy enemy;
-        private const int SPEED = 2;
 
         public ZolDarkGreenWestState(IEnemy enemy)
         {
             this.enemy = enemy;
-            this.enemy.Velocity.Magnitude = SPEED;
+            this.enemy.Velocity.Magnitude = UtilityClass.Instance.ZolDarkGreen_SPEED();
             this.enemy.Velocity.Direction = Vector.Orientation.West;
         }
 
@@ -56,7 +57,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.ZolDarkGreen_State
 
         public void Update()
         {
-            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X - SPEED, enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
+            enemy.DestinationRectangle = new Rectangle(enemy.DestinationRectangle.X - UtilityClass.Instance.ZolDarkGreen_SPEED(), enemy.DestinationRectangle.Y, enemy.DestinationRectangle.Width, enemy.DestinationRectangle.Height);
         }
     }
 }

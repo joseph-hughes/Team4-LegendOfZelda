@@ -1,18 +1,18 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMasterUpsideDown_States
 {
     class WallMasterUpsideDownEastState : IState
     {
         private IEnemy enemy;
-        private const int WIDTH = 16, HEIGHT = 16, SPEED = 1;
 
         public WallMasterUpsideDownEastState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateWallMasterUpsideDownEastSprite();
-            this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * WIDTH), (int)(this.enemy.Scale * HEIGHT));
-            this.enemy.Velocity.Magnitude = SPEED;
+            this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * UtilityClass.Instance.WallMaster_WIDTH()), (int)(this.enemy.Scale * UtilityClass.Instance.WallMaster_HEIGHT()));
+            this.enemy.Velocity.Magnitude = UtilityClass.Instance.WallMaster_SPEED();
             this.enemy.Velocity.Direction = Vector.Orientation.East;
         }
 

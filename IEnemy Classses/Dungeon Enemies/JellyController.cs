@@ -1,18 +1,18 @@
 ﻿using Team4_LegendOfZelda.Random_Number_Generator;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     public class JellyController : IController
     {
         private IEnemy enemy;
-        private const int MIN_WAIT_COUNTS = 5, MAX_WAIT_COUNTS = 20, MAX_DISPLACEMENT_STD = 16;
         private int waitCount, displacement, maxDisplacement;
 
         public JellyController(IEnemy enemy)
         {
             this.enemy = enemy;
-            waitCount = RandomIntGenerator.Instance.Next(MIN_WAIT_COUNTS, MAX_WAIT_COUNTS);
-            maxDisplacement = (int)(MAX_DISPLACEMENT_STD * this.enemy.Scale);
+            waitCount = RandomIntGenerator.Instance.Next(UtilityClass.Instance.JellyController_MIN_WAIT_COUNTS(), UtilityClass.Instance.JellyController_MAX_WAIT_COUNTS());
+            maxDisplacement = (int)(UtilityClass.Instance.JellyController_MAX_DISPLACEMENT_STD() * this.enemy.Scale);
             displacement = 0;
         }
 
@@ -35,22 +35,22 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
                         case 0:
                             enemy.North();
                             displacement = maxDisplacement;
-                            waitCount = RandomIntGenerator.Instance.Next(MIN_WAIT_COUNTS, MAX_WAIT_COUNTS);
+                            waitCount = RandomIntGenerator.Instance.Next(UtilityClass.Instance.JellyController_MIN_WAIT_COUNTS(), UtilityClass.Instance.JellyController_MAX_WAIT_COUNTS());
                             break;
                         case 1:
                             enemy.East();
                             displacement = maxDisplacement;
-                            waitCount = RandomIntGenerator.Instance.Next(MIN_WAIT_COUNTS, MAX_WAIT_COUNTS);
+                            waitCount = RandomIntGenerator.Instance.Next(UtilityClass.Instance.JellyController_MIN_WAIT_COUNTS(), UtilityClass.Instance.JellyController_MAX_WAIT_COUNTS());
                             break;
                         case 2:
                             enemy.South();
                             displacement = maxDisplacement;
-                            waitCount = RandomIntGenerator.Instance.Next(MIN_WAIT_COUNTS, MAX_WAIT_COUNTS);
+                            waitCount = RandomIntGenerator.Instance.Next(UtilityClass.Instance.JellyController_MIN_WAIT_COUNTS(), UtilityClass.Instance.JellyController_MAX_WAIT_COUNTS());
                             break;
                         case 3:
                             enemy.West();
                             displacement = maxDisplacement;
-                            waitCount = RandomIntGenerator.Instance.Next(MIN_WAIT_COUNTS, MAX_WAIT_COUNTS);
+                            waitCount = RandomIntGenerator.Instance.Next(UtilityClass.Instance.JellyController_MIN_WAIT_COUNTS(), UtilityClass.Instance.JellyController_MAX_WAIT_COUNTS());
                             break;
                         default:
                             // Do nothing, this isn't supposed to happen

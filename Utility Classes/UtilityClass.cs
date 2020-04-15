@@ -210,6 +210,44 @@ namespace Team4_LegendOfZelda.Utility_Classes
         {
             return 16;
         }
+        public int ZolDarkGreen_SPEED()
+        {
+            return 2;
+        }
+
+        public int BladeTrap_width()
+        {
+            return 16;
+        }
+        public int BladeTrap_height()
+        {
+            return 16;
+        }
+
+        public int BladeTrap_ACTIVATION_DISTANCE_STD()
+        {
+            return 300;
+        }
+        public int GoriyaController_MIN_DIRECTION_COUNTS()
+        {
+            return 30;
+        }
+        public int GoriyaController_MAX_DIRECTION_COUNTS()
+        {
+            return 120;
+        }
+        public int JellyController_MIN_WAIT_COUNTS()
+        {
+            return 5;
+        }
+        public int JellyController_MAX_WAIT_COUNTS()
+        {
+            return 20;
+        }
+        public int JellyController_MAX_DISPLACEMENT_STD()
+        {
+            return 16;
+        }
         public List<Keys> keyList = new List<Keys>
             {
                 Keys.W,
