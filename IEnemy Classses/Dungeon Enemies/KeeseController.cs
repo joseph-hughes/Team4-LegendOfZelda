@@ -1,17 +1,17 @@
 ﻿using Team4_LegendOfZelda.Random_Number_Generator;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     public class KeeseController : IController
     {
         private IEnemy enemy;
-        private const int MIN_FLYING_COUNTS = 60, MAX_FLYING_COUNTS = 100, MIN_WAITING_COUNT = 20, MAX_WAITNG_COUNT = 80, MIN_DIRECTION_COUNT = 0, MAX_DIRECTION_COUNT = 15;
         private int flyingCount, waitingCount, directionCount;
 
         public KeeseController(IEnemy enemy)
         {
             this.enemy = enemy;
-            flyingCount = RandomIntGenerator.Instance.Next(MIN_FLYING_COUNTS, MAX_FLYING_COUNTS);
+            flyingCount = RandomIntGenerator.Instance.Next(UtilityClass.Instance.KeeseController_MIN_FLYING_COUNTS(), UtilityClass.Instance.KeeseController_MAX_FLYING_COUNTS());
             waitingCount = 0;
             directionCount = 0;
         }
@@ -27,8 +27,8 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
                 
                 if (waitingCount <= 0)
                 {
-                    flyingCount = RandomIntGenerator.Instance.Next(MIN_FLYING_COUNTS, MAX_FLYING_COUNTS);
-                    waitingCount = RandomIntGenerator.Instance.Next(MIN_WAITING_COUNT, MAX_WAITNG_COUNT);
+                    flyingCount = RandomIntGenerator.Instance.Next(UtilityClass.Instance.KeeseController_MIN_FLYING_COUNTS(), UtilityClass.Instance.KeeseController_MAX_FLYING_COUNTS());
+                    waitingCount = RandomIntGenerator.Instance.Next(UtilityClass.Instance.KeeseController_MIN_WAITING_COUNT(), UtilityClass.Instance.KeeseController_MAX_WAITING_COUNT());
                 }
                 else
                 {
@@ -69,7 +69,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
                             // Do nothing, this is not supposed to happen
                             break;
                     }
-                    directionCount = RandomIntGenerator.Instance.Next(MIN_DIRECTION_COUNT, MAX_DIRECTION_COUNT);
+                    directionCount = RandomIntGenerator.Instance.Next(UtilityClass.Instance.KeeseController_MIN_DIRECTION_COUNT(), UtilityClass.Instance.KeeseController_MAX_DIRECTION_COUNT());
                 }
                 else
                 {

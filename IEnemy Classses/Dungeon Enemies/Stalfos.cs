@@ -4,6 +4,7 @@ using System;
 using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Stalfos_States;
 using Team4_LegendOfZelda.Vector;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
@@ -15,16 +16,15 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public IVector Velocity { get; set; }
         public Rectangle DestinationRectangle { get; set; }
         public float Scale { get; set; }
-        private const int width = 15;
-        private const int height = 16;
+      
         private IController controller;
 
         public Stalfos(IRoom room, Vector2 position)
         {
             Room = room;
-            Scale = 3f;
+            Scale = UtilityClass.Instance.Scale();
             Sprite = EnemySpriteFactory.Instance.CreateStalfosSprite();
-            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * width), (int)(Scale * height));
+            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(Scale * UtilityClass.Instance.Stalfos_WIDTH()), (int)(Scale * UtilityClass.Instance.Stalfos_HEIGHT()));
             Velocity = new VelocityVector(0, Orientation.South);
             State = new StalfosIdleState(this);
             controller = new StalfosController(this);

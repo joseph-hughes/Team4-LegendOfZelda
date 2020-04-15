@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMasterUpsideDown_States;
 using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.Vector;
-
+using Team4_LegendOfZelda.Utility_Classes;
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     class WallMasterUpsideDown : IEnemy
@@ -13,19 +13,17 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public IState State { get; set; }
         public IVector Velocity { get; set; }
         public Rectangle DestinationRectangle { get; set; }
-        public float Scale { get; set; }
         private IController controller;
-        private const int WIDTH = 16, HEIGHT = 16;
 
         public WallMasterUpsideDown(IRoom room, Vector2 position)
         {
             Room = room;
-            Scale = 3f;
+            Scale = UtilityClass.Instance.Scale();
             Velocity = new VelocityVector(0, Orientation.South);
             State = new WallMasterUpsideDownIdleState(this);
             controller = new WallMasterController(this);
             Sprite = ItemSpriteFactory.Instance.CreateEmptyItem();
-            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, WIDTH, HEIGHT);
+            DestinationRectangle = new Rectangle((int)position.X, (int)position.Y, UtilityClass.Instance.WallMaster_WIDTH(), UtilityClass.Instance.WallMaster_HEIGHT());
         }
 
         public void North()

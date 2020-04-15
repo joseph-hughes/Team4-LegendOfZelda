@@ -1,17 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
     public class WallMasterController : IController
     {
         private IEnemy enemy;
-        private const int ACTIVATION_DISTANCE_STD = 40;
         private int activationDistance;
 
         public WallMasterController(IEnemy enemy)
         {
             this.enemy = enemy;
-            activationDistance = (int)(enemy.Scale * ACTIVATION_DISTANCE_STD);
+            activationDistance = (int)(enemy.Scale * UtilityClass.Instance.WallMaster_ACTIVATION_DISTANCE_STD());
         }
 
         public void Update()

@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.ZolDarkGreen_States;
 using Team4_LegendOfZelda.Vector;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
@@ -19,7 +20,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public ZolDarkGreen(IRoom room, Vector2 position)
         {
             Room = room;
-            Scale = 3f;
+            Scale = UtilityClass.Instance.Scale();
             Sprite = EnemySpriteFactory.Instance.CreateZolDarkGreenSprite();
             Velocity = new VelocityVector(0, Orientation.South);
             State = new ZolDarkGreenIdleState(this);

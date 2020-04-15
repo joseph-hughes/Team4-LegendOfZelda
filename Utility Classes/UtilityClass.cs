@@ -248,6 +248,68 @@ namespace Team4_LegendOfZelda.Utility_Classes
         {
             return 16;
         }
+        public int KeeseBlue_WIDTH()
+        {
+            return 16;
+        }
+        public int KeeseBlue_HEIGHT()
+        {
+            return 10;
+        }
+        private const int MIN_FLYING_COUNTS = 60, MAX_FLYING_COUNTS = 100, MIN_WAITING_COUNT = 20, MAX_WAITNG_COUNT = 80, MIN_DIRECTION_COUNT = 0, MAX_DIRECTION_COUNT = 15;
+
+        public int KeeseController_MIN_FLYING_COUNTS()
+        {
+            return 60;
+        }
+        public int KeeseController_MAX_FLYING_COUNTS()
+        {
+            return 100;
+        }
+        public int KeeseController_MIN_WAITING_COUNT()
+        {
+            return 20;
+        }
+        public int KeeseController_MAX_WAITING_COUNT()
+        {
+            return 80;
+        }
+        public int KeeseController_MIN_DIRECTION_COUNT()
+        {
+            return 0;
+        }
+        public int KeeseController_MAX_DIRECTION_COUNT()
+        {
+            return 15;
+        }
+        public int RopeController_MIN_DIRECTION_COUNT()
+        {
+            return 10;
+        }
+        public int RopeController_MAX_DIRECTION_COUNT()
+        {
+            return 50;
+        }
+        public int Stalfos_WIDTH()
+        {
+            return 15;
+        }
+        public int Stalfos_HEIGHT()
+        {
+            return 16;
+        }
+        public int StalfosController_MIN_DIRECTION_COUNTS()
+        {
+            return 5;
+        }
+        public int StalfosController_MAX_DIRECTION_COUNTS()
+        {
+            return 30;
+        }
+        public int WallMaster_ACTIVATION_DISTANCE_STD()
+        {
+            return 40;
+        }
         public List<Keys> keyList = new List<Keys>
             {
                 Keys.W,

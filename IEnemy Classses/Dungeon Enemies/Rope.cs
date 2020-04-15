@@ -7,6 +7,7 @@ using Team4_LegendOfZelda.Vector;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
 {
+    using Team4_LegendOfZelda.Utility_Classes;
     class Rope : IEnemy
     {
         public IRoom Room { get; set; }
@@ -20,7 +21,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public Rope(IRoom room, Vector2 position)
         {
             Room = room;
-            Scale = 3f;
+            Scale = UtilityClass.Instance.Scale();
             Velocity = new VelocityVector(0, Orientation.South);
             State = new RopeWestState(this);
             controller = new RopeController(this);
