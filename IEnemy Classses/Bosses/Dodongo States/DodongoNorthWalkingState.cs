@@ -14,7 +14,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses.Dodongo_States
             this.enemy.Sprite = EnemySpriteFactory.Instance.CreateDodongoNorthWalkingSprite();
 
             this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * this.enemy.Sprite.SourceRectangle.Width), (int)(this.enemy.Scale * this.enemy.Sprite.SourceRectangle.Height));
-            this.enemy.Velocity.Magnitude = UtilityClass.Instance.Dodongo_Walking_Velocity;
+            this.enemy.Velocity.Magnitude = UtilityClass.Instance.Dodongo_Walking_Velocity();
             this.enemy.Velocity.Direction = Vector.Orientation.North;
         }
 
