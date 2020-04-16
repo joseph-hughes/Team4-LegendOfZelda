@@ -349,11 +349,11 @@ namespace Team4_LegendOfZelda.Utility_Classes
 
         // Aquamentus.cs
 
-        public float Scale = 3f;
+        //public float Scale = 3f;
 
         // AquamentusController
 
-        public int MAX_DIRECTION_COUNTS = 40, MIN_ATTACK_COUNTS = 100, MAX_ATTACK_COUNTS = 180;
+        //public int MAX_DIRECTION_COUNTS = 40, MIN_ATTACK_COUNTS = 100, MAX_ATTACK_COUNTS = 180;
 
         // DodongoController
 
