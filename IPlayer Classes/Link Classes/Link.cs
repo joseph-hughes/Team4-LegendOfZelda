@@ -28,6 +28,7 @@ namespace Team4_LegendOfZelda
         public const int KNOCKBACK_TIMER = 10;
         public const int LINK_WIDTH = 16;
         public const int LINK_HEIGHT = 16;
+        public const int DEATH_TIMER = 100;
 
         public Link(Vector2 position)
         {

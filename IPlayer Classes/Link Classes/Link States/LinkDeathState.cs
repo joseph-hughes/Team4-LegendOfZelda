@@ -3,6 +3,7 @@
     class LinkDeathState : IState
     {
         private Link link;
+        private int timer;
         public LinkDeathState(Link link)
         {
             this.link = link;
@@ -12,7 +13,8 @@
             this.link.IsKnocked = false;
             this.link.IsDamaged = false;
             this.link.IsDeath = true;
-            //this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkDeathSprite();
+            this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkDeathSprite();
+            timer = Link.DEATH_TIMER;
         }
 
         public void North()
@@ -57,7 +59,11 @@
 
         public void Update()
         {
-            // Do nothing
+            timer -= 1;
+            if (timer == 0)
+            {
+                link.State = new LinkNonMovingSouthState(link);
+            }
         }
     }
 }

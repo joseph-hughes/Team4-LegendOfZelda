@@ -65,8 +65,15 @@ namespace Team4_LegendOfZelda.IState_Classes
         {
             this.timer -= 1;
             if (this.timer == 0)
-            {
-                link.State = new LinkDamagedNonMovingEastState(link, Link.DAMAGE_TIMER);
+            {   
+                if (link.CurrentHitPoints == 0)
+                {
+                    link.State = new LinkDeathState(link);
+                }
+                else
+                {
+                    link.State = new LinkDamagedNonMovingEastState(link, Link.DAMAGE_TIMER);
+                }
             }
             else
             {
