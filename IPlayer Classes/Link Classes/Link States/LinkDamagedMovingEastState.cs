@@ -50,7 +50,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void Attack()
         {
-            // no action
+            link.State = new LinkDamagedAttackEastState(link, Link.SWORD_TIMER, timer);
         }
         public void Update()
         {

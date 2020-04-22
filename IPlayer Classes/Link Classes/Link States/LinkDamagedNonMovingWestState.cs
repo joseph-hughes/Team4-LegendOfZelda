@@ -46,7 +46,7 @@
         }
         public void Attack()
         {
-            // Do nothing
+            link.State = new LinkDamagedAttackWestState(link, Link.SWORD_TIMER, timer);
         }
         public void Update()
         {
