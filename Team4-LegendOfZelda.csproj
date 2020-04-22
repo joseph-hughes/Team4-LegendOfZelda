@@ -158,6 +158,7 @@
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkDamagedAttackNorthState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkDamagedAttackSouthState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkDamagedAttackWestState.cs" />
+    <Compile Include="IPlayer Classes\Link Classes\Link States\PickupItemState.cs" />
     <Compile Include="ISFXFactory Classes\ISFXFactory.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackEastState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackNorthState.cs" />

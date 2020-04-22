@@ -35,7 +35,8 @@ namespace Team4_LegendOfZelda.IState_Classes
 
         public void West()
         {
-            // Do nothing
+            // If Link collides with pickup item that needs sprite
+            //link.State = new PickupItemState(link);
         }
 
         public void Idle()
