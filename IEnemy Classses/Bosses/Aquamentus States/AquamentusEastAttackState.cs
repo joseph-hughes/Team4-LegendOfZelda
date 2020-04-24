@@ -42,7 +42,10 @@
         {
             enemy.State = new AquamentusWestAttackState(enemy, attackCounter);
         }
-
+        public void Freeze()
+        {
+            // Do nothing
+        }
         public void Idle()
         {
             // Do nothing

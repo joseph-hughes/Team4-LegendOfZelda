@@ -1,8 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GelDarkBlue_States;
+using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.Vector;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
@@ -16,7 +15,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public Rectangle DestinationRectangle { get; set; }
         public float Scale { get; set; }
         private IController controller;
-        
+
 
         public GelDarkBlue(IRoom room, Vector2 position)
         {
@@ -48,7 +47,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         {
             State.West();
         }
-
+        public void Freeze()
+        {
+            State.Freeze();
+        }
         public void Idle()
         {
             State.Idle();

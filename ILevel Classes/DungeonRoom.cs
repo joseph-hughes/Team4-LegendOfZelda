@@ -6,6 +6,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
     {
         public IPlayer Player { get; set; }
         public List<IEnemy> Enemies { get; set; }
+        public List<IEnemy> FlyingEnemies { get; set; }
         public List<IItem> Items { get; set; }
         public List<IProjectile> PlayerProjectiles { get; set; }
         public List<IProjectile> EnemyProjectiles { get; set; }
@@ -27,6 +28,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         public DungeonRoom()
         {
             Enemies = new List<IEnemy>();
+            FlyingEnemies = new List<IEnemy>();
             Items = new List<IItem>();
             PlayerProjectiles = new List<IProjectile>();
             EnemyProjectiles = new List<IProjectile>();
@@ -55,6 +57,11 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                 enemy.Update();
             }
 
+            foreach (IEnemy enemy in FlyingEnemies)
+            {
+                enemy.Update();
+            }
+
             foreach (IItem item in Items)
             {
                 item.Update();
@@ -74,6 +81,10 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         public void Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch spriteBatch)
         {
             foreach (IEnemy enemy in Enemies)
+            {
+                enemy.Draw(spriteBatch);
+            }
+            foreach (IEnemy enemy in FlyingEnemies)
             {
                 enemy.Draw(spriteBatch);
             }

@@ -80,10 +80,10 @@ namespace Team4_LegendOfZelda
                 new LinkAttackCommand(player),                  //6
                 new LinkBeDamagedCommand(player),               //7
                 new LinkIdleCommand(player),                    //8
-                new LinkUseArrowCommand(player, level),         //9
-                new LinkUseBoomerangCommand(player, level),     //10
-                new LinkUseFireballCommand(player, level),      //11
-                new LinkUseMagicBoomerangCommand(player, level) //12
+                new LinkUseArrowCommand(player, level.CurrentRoom),         //9
+                new LinkUseBoomerangCommand(player, level.CurrentRoom),     //10
+                new LinkUseFireballCommand(player, level.CurrentRoom),      //11
+                new LinkUseMagicBoomerangCommand(player, level.CurrentRoom) //12
             };
 
             KeyboardController keyboard = (KeyboardController)controllerList[0];
@@ -141,7 +141,7 @@ namespace Team4_LegendOfZelda
                 new GotoRoom18Command(this),    // 17
             };
 
-            int rectangleWidth = 7*3;
+            int rectangleWidth = 7 * 3;
             int rectangleHeight = 3 * 3;
             List<Rectangle> mouseActivationAreas = new List<Rectangle>
             {

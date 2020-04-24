@@ -5,30 +5,33 @@ namespace Team4_LegendOfZelda
     public class LinkUseArrowCommand : ICommand
     {
         private IPlayer player;
-        private ILevel level;
+        private IRoom room;
 
-        public LinkUseArrowCommand(IPlayer player, ILevel level)
+        public LinkUseArrowCommand(IPlayer player, IRoom room)
         {
             this.player = player;
-            this.level = level;
+            this.room = room;
         }
         public void Execute()
         {
             if (!player.IsDamaged)
             {
                 player.UseItem();
-                if(player.Velocity.Direction== Vector.Orientation.North) 
+                if (player.Velocity.Direction == Vector.Orientation.North)
                 {
-                    level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.ItemPosition,0)); 
-                }else if (player.Velocity.Direction == Vector.Orientation.East)
+                    room.PlayerProjectiles.Add(new ArrowProjectile(player.ItemPosition, 0));
+                }
+                else if (player.Velocity.Direction == Vector.Orientation.East)
                 {
-                    level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.ItemPosition, 90));
-                }else if (player.Velocity.Direction == Vector.Orientation.South)
+                    room.PlayerProjectiles.Add(new ArrowProjectile(player.ItemPosition, 90));
+                }
+                else if (player.Velocity.Direction == Vector.Orientation.South)
                 {
-                    level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.ItemPosition, 180));
-                }else
+                    room.PlayerProjectiles.Add(new ArrowProjectile(player.ItemPosition, 180));
+                }
+                else
                 {
-                    level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.ItemPosition, 270));
+                    room.PlayerProjectiles.Add(new ArrowProjectile(player.ItemPosition, 270));
                 }
 
             }

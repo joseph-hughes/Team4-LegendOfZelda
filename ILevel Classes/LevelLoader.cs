@@ -1,16 +1,16 @@
-﻿using System.Xml;
+﻿using Microsoft.Xna.Framework;
 using System.Collections.Generic;
-using Team4_LegendOfZelda.Item_Classes;
-using Microsoft.Xna.Framework;
+using System.Xml;
 using Team4_LegendOfZelda.IEnemy_Classses.Bosses;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies;
+using Team4_LegendOfZelda.Item_Classes;
 
 namespace Team4_LegendOfZelda.ILevel_Classes
 {
     class LevelLoader : IFileLoader
     {
         private XmlDocument LevelXml;
-        
+
 
         public LevelLoader(int levelNum)
         {
@@ -28,7 +28,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                     break;
             }
 
-            
+
         }
 
         public List<IRoom> LoadRooms(IPlayer player)
@@ -36,7 +36,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             List<IRoom> rooms = new List<IRoom>();
             XmlNode root = LevelXml.FirstChild.NextSibling;
 
-            foreach(XmlNode roomNode in root)
+            foreach (XmlNode roomNode in root)
             {
                 IRoom room = new DungeonRoom();
                 room.Player = player;
@@ -44,7 +44,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                 XmlNode enemiesNode = roomNode.FirstChild;
                 if (enemiesNode.Attributes["total"].Value != "0")
                 {
-                    foreach(XmlNode enemyNode in enemiesNode)
+                    foreach (XmlNode enemyNode in enemiesNode)
                     {
                         string enemyName = enemyNode["ObjectType"].InnerText;
                         float columnNum = float.Parse(enemyNode["ColumnNum"].InnerText);
@@ -68,7 +68,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                                 room.Enemies.Add(new GoriyaRed(room, position));
                                 break;
                             case "KeeseBlue":
-                                room.Enemies.Add(new KeeseBlue(room, position));
+                                room.FlyingEnemies.Add(new KeeseBlue(room, position));
                                 break;
                             case "Rope":
                                 room.Enemies.Add(new Rope(room, position));
@@ -199,7 +199,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                                 break;
                         }
 
-                     }
+                    }
                 }
                 rooms.Add(room);
             }
@@ -226,7 +226,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                     rooms[index].HasSouth = true;
                 }
                 XmlNode westNode = southNode.NextSibling;
-                if (westNode.InnerText!="")
+                if (westNode.InnerText != "")
                 {
                     rooms[index].West = rooms[int.Parse(westNode.InnerText) - 1];
                     rooms[index].HasWest = true;
@@ -240,7 +240,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                 index += 1;
             }
 
-                return rooms;
+            return rooms;
         }
 
 

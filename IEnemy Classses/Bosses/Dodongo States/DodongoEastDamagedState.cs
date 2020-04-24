@@ -36,6 +36,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses.Dodongo_States
         {
             // Do nothing
         }
+        public void Freeze()
+        {
+            // Do nothing
+        }
 
         public void Idle()
         {

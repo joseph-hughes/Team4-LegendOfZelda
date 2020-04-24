@@ -5,36 +5,37 @@ namespace Team4_LegendOfZelda
     public class LinkUseBoomerangCommand : ICommand
     {
         private IPlayer player;
-        private ILevel level;
+        private IRoom room;
 
-        public LinkUseBoomerangCommand(IPlayer player, ILevel level)
+        public LinkUseBoomerangCommand(IPlayer player, IRoom room)
         {
             this.player = player;
-            this.level = level;
+            this.room = room;
         }
         public void Execute()
         {
-            if (!player.IsDamaged) {
+            if (!player.IsDamaged)
+            {
 
                 player.UseItem();
                 if (player.Velocity.Direction == Vector.Orientation.North)
                 {
-                    level.CurrentRoom.PlayerProjectiles.Add(new BoomerangProjectile(player.ItemPosition, 0));
+                    room.PlayerProjectiles.Add(new BoomerangProjectile(player.ItemPosition, 0));
                 }
                 else if (player.Velocity.Direction == Vector.Orientation.East)
                 {
-                    level.CurrentRoom.PlayerProjectiles.Add(new BoomerangProjectile(player.ItemPosition, 90));
+                    room.PlayerProjectiles.Add(new BoomerangProjectile(player.ItemPosition, 90));
                 }
                 else if (player.Velocity.Direction == Vector.Orientation.South)
                 {
-                    level.CurrentRoom.PlayerProjectiles.Add(new BoomerangProjectile(player.ItemPosition, 180));
+                    room.PlayerProjectiles.Add(new BoomerangProjectile(player.ItemPosition, 180));
                 }
                 else
                 {
-                    level.CurrentRoom.PlayerProjectiles.Add(new BoomerangProjectile(player.ItemPosition, 270));
+                    room.PlayerProjectiles.Add(new BoomerangProjectile(player.ItemPosition, 270));
                 }
             }
-                
+
 
         }
     }

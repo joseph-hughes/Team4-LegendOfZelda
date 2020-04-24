@@ -1,6 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-using System.Collections.Generic;
-using Team4_LegendOfZelda.ILevel_Classes;
+﻿using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 {

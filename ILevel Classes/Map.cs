@@ -1,5 +1,5 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Team4_LegendOfZelda.ILevel_Classes
 {
@@ -26,7 +26,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 
         public void Initialize(int mapXPosition, int mapYPosition, int mapWidth, int mapHeight)
         {
-            DestinationRectangle = new Rectangle(mapXPosition, mapYPosition, mapWidth, mapHeight);            
+            DestinationRectangle = new Rectangle(mapXPosition, mapYPosition, mapWidth, mapHeight);
         }
 
         public void North()

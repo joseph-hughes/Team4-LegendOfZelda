@@ -1,6 +1,4 @@
-﻿using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States;
-
-namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
+﻿namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
 {
     class RopeIdleState : IState
     {
@@ -31,7 +29,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Rope_States
         {
             enemy.State = new RopeWestState(enemy);
         }
-
+        public void Freeze()
+        {
+            enemy.State = new RopeFreezeState(enemy);
+        }
         public void Idle()
         {
             enemy.Velocity.Magnitude = 0;

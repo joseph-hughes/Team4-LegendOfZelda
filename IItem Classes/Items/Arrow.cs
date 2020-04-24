@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.Item_Classes
 {
@@ -30,9 +31,10 @@ namespace Team4_LegendOfZelda.Item_Classes
             DestinationRectangle = new Rectangle((int)itemLocation.X, (int)itemLocation.Y, (int)(width * Scale), (int)(height * Scale));
         }
 
-        public void UseItem()
+        public void UseItem(IPlayer player, IRoom room)
         {
-            //TODO
+            // not a avalible
+
         }
     }
 }

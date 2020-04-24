@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Team4_LegendOfZelda.ILevel_Classes;
+﻿using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.IGameState_Classes
 {
@@ -41,6 +36,6 @@ namespace Team4_LegendOfZelda.IGameState_Classes
         {
             // TODO: trigger game over screen
         }
-        
+
     }
 }

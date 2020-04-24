@@ -11,7 +11,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 if (player.DestinationRectangle.Intersects(CurrentItem.DestinationRectangle))
                 {
-                    //triggerList.Add(new PlayerItemTrigger(Player, Item, room));
+                    triggerList.Add(new PlayerItemTrigger(player, CurrentItem, room));
                 }
             }
         }
@@ -54,7 +54,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 {
                     foreach (IBlock targetBlock in room.Block)
                     {
-                        if (currentBlock != targetBlock&& currentBlock.DestinationRectangle.Intersects(targetBlock.DestinationRectangle))
+                        if (currentBlock != targetBlock && currentBlock.DestinationRectangle.Intersects(targetBlock.DestinationRectangle))
                         {
                             triggerList.Add(new BlockBlockTrigger(currentBlock, targetBlock));
                         }
@@ -150,5 +150,18 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             }
         }
 
+        public static void EnemyBoundary(IRoom room, List<ITrigger> triggerList)
+        {
+            foreach (IEnemy currentEnemy in room.FlyingEnemies)
+            {
+                foreach (IBlock currentBlock in room.Boundary)
+                {
+                    if (currentEnemy.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
+                    {
+                        triggerList.Add(new EnemyBlockTrigger(currentEnemy, currentBlock));
+                    }
+                }
+            }
+        }
     }
 }

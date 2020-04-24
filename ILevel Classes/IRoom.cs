@@ -4,13 +4,14 @@
     {
         IPlayer Player { get; set; }
         System.Collections.Generic.List<IEnemy> Enemies { get; set; }
+        System.Collections.Generic.List<IEnemy> FlyingEnemies { get; set; }
         System.Collections.Generic.List<IItem> Items { get; set; }
         System.Collections.Generic.List<IProjectile> PlayerProjectiles { get; set; }
         System.Collections.Generic.List<IProjectile> EnemyProjectiles { get; set; }
         System.Collections.Generic.List<IBlock> Block { get; set; }
         System.Collections.Generic.List<IBlock> Wall { get; set; }
         System.Collections.Generic.List<IBlock> Boundary { get; set; }
-        //List<IBoundary> Boundaries { get; set; }
+
         IRoom North { get; set; }
         bool HasNorth { get; set; }
         IRoom East { get; set; }

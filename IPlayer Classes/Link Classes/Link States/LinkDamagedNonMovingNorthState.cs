@@ -34,6 +34,10 @@
         {
             link.State = new LinkDamagedMovingWestState(link, timer);
         }
+        public void Freeze()
+        {
+            // Do nothing
+        }
         public void Idle()
         {
             // Do nothing

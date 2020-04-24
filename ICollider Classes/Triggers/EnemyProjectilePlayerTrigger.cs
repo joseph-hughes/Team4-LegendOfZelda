@@ -1,5 +1,4 @@
 ﻿using Team4_LegendOfZelda.ILevel_Classes;
-using Team4_LegendOfZelda.IState_Classes;
 
 namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 {

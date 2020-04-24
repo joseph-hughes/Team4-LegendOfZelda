@@ -11,7 +11,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public BladeTrapController(IEnemy enemy)
         {
             this.enemy = enemy;
-            activationDistance = (int) (enemy.Scale * ACTIVATION_DISTANCE_STD);
+            activationDistance = (int)(enemy.Scale * ACTIVATION_DISTANCE_STD);
         }
 
         public void Update()

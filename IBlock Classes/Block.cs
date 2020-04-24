@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using System.Collections.Generic;
 
 namespace Team4_LegendOfZelda.ILevel_Classes
@@ -20,7 +19,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             }
             this.DestinationRectangle = DestinationRectangle;
             BlockSprite = Sprite;
-            
+
 
         }
         public void Draw(SpriteBatch spriteBatch)
