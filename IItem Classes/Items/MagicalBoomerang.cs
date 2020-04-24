@@ -27,9 +27,9 @@ namespace Team4_LegendOfZelda.Item_Classes
             itemSprite.Draw(spriteBatch, DestinationRectangle);
         }
 
-        public void Update()
+        public void Update(Rectangle rectangle)
         {
-            DestinationRectangle = new Rectangle((int)itemLocation.X, (int)itemLocation.Y, (int)(width * Scale), (int)(height * Scale));
+            DestinationRectangle = rectangle;
         }
 
         public void UseItem(IPlayer player, IRoom room)

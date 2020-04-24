@@ -7,7 +7,8 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         public IPlayer Player { get; set; }
         public List<IEnemy> Enemies { get; set; }
         public List<IEnemy> FlyingEnemies { get; set; }
-        public List<IItem> Items { get; set; }
+        public List<IItem> ReceivedItems { get; set; }
+        public List<IItem> ObtainedItems { get; set; }
         public List<IProjectile> PlayerProjectiles { get; set; }
         public List<IProjectile> EnemyProjectiles { get; set; }
         public List<IBlock> Block { get; set; }
@@ -29,7 +30,8 @@ namespace Team4_LegendOfZelda.ILevel_Classes
         {
             Enemies = new List<IEnemy>();
             FlyingEnemies = new List<IEnemy>();
-            Items = new List<IItem>();
+            ReceivedItems = new List<IItem>();
+            ObtainedItems = new List<IItem>();
             PlayerProjectiles = new List<IProjectile>();
             EnemyProjectiles = new List<IProjectile>();
             Block = new List<IBlock>();
@@ -42,11 +44,12 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             HasOther = false;
         }
 
-        public void Initialize(IPlayer player, List<IEnemy> enemies, List<IItem> items, List<IBlock> blocks)
+        public void Initialize(IPlayer player, List<IEnemy> enemies, List<IItem> receivedItems, List<IItem> obtainedItems, List<IBlock> blocks)
         {
             Player = player;
             Enemies.AddRange(enemies);
-            Items.AddRange(items);
+            ReceivedItems.AddRange(receivedItems);
+            ObtainedItems.AddRange(obtainedItems);
             Block.AddRange(blocks);
         }
 
@@ -60,11 +63,6 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             foreach (IEnemy enemy in FlyingEnemies)
             {
                 enemy.Update();
-            }
-
-            foreach (IItem item in Items)
-            {
-                item.Update();
             }
 
             foreach (IProjectile projectile in PlayerProjectiles)
@@ -89,7 +87,12 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                 enemy.Draw(spriteBatch);
             }
 
-            foreach (IItem item in Items)
+            foreach (IItem item in ReceivedItems)
+            {
+                item.Draw(spriteBatch);
+            }
+
+            foreach (IItem item in ObtainedItems)
             {
                 item.Draw(spriteBatch);
             }

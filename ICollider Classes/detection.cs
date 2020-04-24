@@ -5,13 +5,23 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 {
     public class Detection
     {
-        public static void PlayerItemDetection(IPlayer player, IRoom room, List<ITrigger> triggerList)
+        public static void PlayerReceiveItemDetection(IPlayer player, IRoom room, List<ITrigger> triggerList)
         {
-            foreach (IItem CurrentItem in room.Items)
+            foreach (IItem CurrentItem in room.ReceivedItems)
             {
                 if (player.DestinationRectangle.Intersects(CurrentItem.DestinationRectangle))
                 {
-                    triggerList.Add(new PlayerItemTrigger(player, CurrentItem, room));
+                    triggerList.Add(new PlayerReceiveItemTrigger(player, CurrentItem, room));
+                }
+            }
+        }
+        public static void PlayerObtainItemDetection(IPlayer player, IRoom room, List<ITrigger> triggerList)
+        {
+            foreach (IItem CurrentItem in room.ObtainedItems)
+            {
+                if (player.DestinationRectangle.Intersects(CurrentItem.DestinationRectangle))
+                {
+                    triggerList.Add(new PlayerObtainItemTrigger(player, CurrentItem, room));
                 }
             }
         }

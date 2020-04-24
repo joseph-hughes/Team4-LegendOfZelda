@@ -59,7 +59,8 @@
     <Compile Include="ICollider Classes\Triggers\EnemyProjectilePlayerTrigger.cs" />
     <Compile Include="ICollider Classes\Triggers\PlayerBlockTrigger.cs" />
     <Compile Include="ICollider Classes\Triggers\PlayerEnemyTrigger.cs" />
-    <Compile Include="ICollider Classes\Triggers\PlayerItemTrigger.cs" />
+    <Compile Include="ICollider Classes\Triggers\PlayerObtainItemTrigger.cs" />
+    <Compile Include="ICollider Classes\Triggers\PlayerReceiveItemTrigger.cs" />
     <Compile Include="ICollider Classes\Triggers\PlayerProjectileEnemyTrigger.cs" />
     <Compile Include="ICollider Classes\Triggers\PlayerWallTrigger.cs" />
     <Compile Include="ICollider Classes\Triggers\ProjectileBlockTrigger.cs" />
@@ -164,6 +165,7 @@
     <Compile Include="ILevel Classes\IRoom.cs" />
     <Compile Include="ILevel Classes\Levels\DungeonLevel.cs" />
     <Compile Include="ILevel Classes\Map.cs" />
+    <Compile Include="IPlayer Classes\Link Classes\Link States\LinkPickUpItemState.cs" />
     <Compile Include="ISFXFactory Classes\ISFXFactory.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackEastState.cs" />
     <Compile Include="IPlayer Classes\Link Classes\Link States\LinkKnockbackNorthState.cs" />
@@ -641,6 +643,7 @@
     <Content Include="Content\Link\Link NonMoving North.png" />
     <Content Include="Content\Link\Link NonMoving South.png" />
     <Content Include="Content\Link\Link NonMoving West.png" />
+    <Content Include="Content\Link\Link PickUpItem.png" />
     <Content Include="Content\Link\Link Sword East.png" />
     <Content Include="Content\Link\Link Sword North.png" />
     <Content Include="Content\Link\Link Sword South.png" />

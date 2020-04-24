@@ -16,9 +16,9 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 
         public void Detact()
         {
-            Detection.PlayerItemDetection(player, room, triggerList);
+            Detection.PlayerReceiveItemDetection(player, room, triggerList);
             Detection.PlayerEnemyDection(player, room, triggerList);
-            Detection.PlayerItemDetection(player, room, triggerList);
+            Detection.PlayerObtainItemDetection(player, room, triggerList);
             Detection.EnemyProjectilePlayerDection(player, room, triggerList);
             Detection.PlayerProjectileEnemyDection(room, triggerList);
             Detection.ProjectileBlock(room, triggerList);

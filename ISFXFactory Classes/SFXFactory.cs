@@ -85,5 +85,9 @@ namespace Team4_LegendOfZelda
         {
             ItemReceived.Play();
         }
+        public void PlayItemObtained()
+        {
+            ItemObtained.Play();
+        }
     }
 }

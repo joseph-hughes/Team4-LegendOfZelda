@@ -10,7 +10,7 @@ namespace Team4_LegendOfZelda
         Rectangle DestinationRectangle { get; set; }
         float Scale { get; set; }
         void Draw(SpriteBatch spriteBatch);
-        void Update();
+        void Update(Rectangle rectangle);
         void UseItem(IPlayer player, IRoom room);
     }
 }
