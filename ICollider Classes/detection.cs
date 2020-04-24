@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Team4_LegendOfZelda.IBlock_Classes;
 using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.ICollider_Classes.Collider
@@ -145,6 +146,19 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 }
             }
         }
+        public static void EnemyBlock(IRoom room, List<ITrigger> triggerList)
+        {
+            foreach (IEnemy currentEnemy in room.Enemies)
+            {
+                foreach (IBlock currentBlock in room.Block)
+                {
+                    if (currentEnemy.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
+                    {
+                        triggerList.Add(new EnemyBlockTrigger(currentEnemy, currentBlock));
+                    }
+                }
+            }
+        }
 
         public static void EnemyWall(IRoom room, List<ITrigger> triggerList)
         {
@@ -154,7 +168,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 {
                     if (currentEnemy.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
                     {
-                        triggerList.Add(new EnemyBlockTrigger(currentEnemy, currentBlock));
+                        triggerList.Add(new EnemyWallTrigger(currentEnemy, currentBlock));
                     }
                 }
             }
@@ -168,7 +182,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 {
                     if (currentEnemy.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
                     {
-                        triggerList.Add(new EnemyBlockTrigger(currentEnemy, currentBlock));
+                        triggerList.Add(new EnemyWallTrigger(currentEnemy, currentBlock));
                     }
                 }
             }

@@ -2,12 +2,12 @@
 
 namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 {
-    class EnemyWallTrigger : ITrigger
+    class EnemyBlockTrigger : ITrigger
     {
         private IEnemy enemy;
         private IBlock block;
 
-        public EnemyWallTrigger(IEnemy Enemy, IBlock Block)
+        public EnemyBlockTrigger(IEnemy Enemy, IBlock Block)
         {
             enemy = Enemy;
             block = Block;
@@ -21,6 +21,18 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 
             if (System.Math.Abs(dx) < System.Math.Abs(dy))
             {
+                if (dy > 0)
+                {
+                    Direction = Vector.Orientation.North;
+                }
+                else
+                {
+                    Direction = Vector.Orientation.South;
+                }
+            }
+
+            else
+            {
                 if (dx > 0)
                 {
                     Direction = Vector.Orientation.West;
@@ -28,20 +40,6 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 else
                 {
                     Direction = Vector.Orientation.East;
-                }
-
-            }
-            else
-            {
-                if (dy > 0)
-                {
-                    Direction = Vector.Orientation.North;
-                    
-                }
-                else
-                {
-                    Direction = Vector.Orientation.South;
-                   
                 }
             }
 

@@ -43,10 +43,10 @@ namespace Team4_LegendOfZelda.ILevel_Classes.Levels
                 new Block(false, new Microsoft.Xna.Framework.Rectangle(672, hudHeight, 93, 525), null),
                 };
                 room.Boundary = new List<IBlock>{
-                new Boundary(new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 1, 525)),
-                new Boundary(new Microsoft.Xna.Framework.Rectangle(0, hudHeight, 765, 1)),
-                new Boundary(new Microsoft.Xna.Framework.Rectangle(0, 525 + hudHeight, 765, 1)),
-                new Boundary(new Microsoft.Xna.Framework.Rectangle(765, hudHeight, 1, 525))
+                new Boundary(new Microsoft.Xna.Framework.Rectangle(-93, hudHeight, 93, 525)),
+                new Boundary(new Microsoft.Xna.Framework.Rectangle(0, hudHeight-93, 765, 93)),
+                new Boundary(new Microsoft.Xna.Framework.Rectangle(0, 525 + hudHeight, 765, 93)),
+                new Boundary(new Microsoft.Xna.Framework.Rectangle(765, hudHeight, 93, 525))
                 };
             }
         }
