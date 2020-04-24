@@ -16,7 +16,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GoriyaRed_States
             this.enemy.DestinationRectangle = new Rectangle(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y, (int)(this.enemy.Scale * WIDTH), (int)(this.enemy.Scale * HEIGHT));
             this.enemy.Velocity.Magnitude = 0;
             this.enemy.Velocity.Direction = Vector.Orientation.South;
-            // Create boomerang
+            this.enemy.Room.EnemyProjectiles.Add(new MagicBoomerangProjectile(new Vector2(this.enemy.DestinationRectangle.X, this.enemy.DestinationRectangle.Y), enemy.Velocity));
             count = MAX_COUNTS;
         }
 
