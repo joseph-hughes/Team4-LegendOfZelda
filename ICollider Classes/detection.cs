@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Team4_LegendOfZelda.IBlock_Classes;
 using Team4_LegendOfZelda.ILevel_Classes;
 
@@ -36,6 +37,14 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 
                 }
             }
+            foreach (IEnemy currentEnemy in room.FlyingEnemies)
+            {
+                if (currentEnemy.DestinationRectangle.Intersects(player.DestinationRectangle) || currentEnemy.DestinationRectangle.Intersects(player.LinkSwordRectangle))
+                {
+                    triggerList.Add(new PlayerEnemyTrigger(player, currentEnemy, room));
+
+                }
+            }
         }
         public static void PlayerWallDection(IPlayer player, IRoom room, List<ITrigger> triggerList)
         {
@@ -53,6 +62,7 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 if (player.DestinationRectangle.Intersects(currentBlock.DestinationRectangle))
                 {
+                    if(Rectangle.Intersect(player.DestinationRectangle, currentBlock.DestinationRectangle).Width>10|| Rectangle.Intersect(player.DestinationRectangle, currentBlock.DestinationRectangle).Height > 10)
                     triggerList.Add(new PlayerBlockTrigger(player, currentBlock));
                 }
             }
