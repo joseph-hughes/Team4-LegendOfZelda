@@ -21,6 +21,7 @@ namespace Team4_LegendOfZelda
         private Texture2D emptyHeartTexture;
         private Texture2D halfHeartTexture;
         private Texture2D fullHeartTexture;
+        private Texture2D itemSelectionScreen;
 
         private Texture2D level1MapTexture;
         private Texture2D level1MinimapTexture;
@@ -46,6 +47,7 @@ namespace Team4_LegendOfZelda
         {
             emptyRoomTexture = content.Load<Texture2D>("MapSprites/emptyroom");
             hudTexture = content.Load<Texture2D>("MapSprites/HUD");
+            itemSelectionScreen = content.Load<Texture2D>("MapSprites/Item Selection Screen");
 
             number0Texture = content.Load<Texture2D>("MapSprites/0");
             number1Texture = content.Load<Texture2D>("MapSprites/1");
@@ -78,6 +80,10 @@ namespace Team4_LegendOfZelda
         public ISprite CreateHudSprite()
         {
             return new TextureSprite(hudTexture);
+        }
+        public ISprite CreateItemSelectionScreen()
+        {
+            return new TextureSprite(itemSelectionScreen);
         }
         // Level 1 Sprites
         public ISprite CreateLevel1MapSprite()
