@@ -1,0 +1,16 @@
+Author of Code Review:	Joseph Hughes
+
+Date of Code Review:	04/24/2020
+
+Sprint number:			Sprint 5
+
+Name of .cs file:		SFXFactory.cs
+
+Author of .cs file:		Kyle Ziman
+
+Number of minutes:		5 minutes
+
+Comments:         This class is much more complete than before, and it is easy to 
+					follow and read since it has descriptive variable and method 
+					names. The only thing is, you could maybe group up the sounds 
+					by type, such as player, enemy, etc.
