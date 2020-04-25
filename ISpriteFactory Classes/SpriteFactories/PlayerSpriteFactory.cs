@@ -30,7 +30,16 @@ namespace Team4_LegendOfZelda
         private Texture2D LinkUseItemNorthTexture;
         private Texture2D LinkUseItemEastTexture;
         private Texture2D LinkUseItemWestTexture;
+
+        private Texture2D LinkDamagedSwordNorthTexture;
+        private Texture2D LinkDamagedSwordEastTexture;
+        private Texture2D LinkDamagedSwordSouthTexture;
+        private Texture2D LinkDamagedSwordWestTexture;
+        private Texture2D PickupItemTexture;
+        private Texture2D LinkDeathTexture;
+
         private Texture2D LinkPickUpItemTexture;
+
 
         private static PlayerSpriteFactory instance = new PlayerSpriteFactory();
 
@@ -72,6 +81,13 @@ namespace Team4_LegendOfZelda
             LinkUseItemNorthTexture = content.Load<Texture2D>("Link/Link UseItem North");
             LinkUseItemEastTexture = content.Load<Texture2D>("Link/Link UseItem East");
             LinkUseItemWestTexture = content.Load<Texture2D>("Link/Link UseItem West");
+            LinkDamagedSwordNorthTexture = content.Load<Texture2D>("Link/Link Damaged Sword North");
+            LinkDamagedSwordEastTexture = content.Load<Texture2D>("Link/Link Damaged Sword East");
+            LinkDamagedSwordSouthTexture = content.Load<Texture2D>("Link/Link Damaged Sword South");
+            LinkDamagedSwordWestTexture = content.Load<Texture2D>("Link/Link Damaged Sword West");
+            PickupItemTexture = content.Load<Texture2D>("Link/Pickup Item");
+            LinkDeathTexture = content.Load<Texture2D>("Link/Link Death");
+    }
             LinkPickUpItemTexture = content.Load<Texture2D>("Link/Link PickUpItem");
         }
 
@@ -176,9 +192,35 @@ namespace Team4_LegendOfZelda
         {
             return new TextureSprite(LinkUseItemWestTexture, 1, 1, 5);
         }
+
+        public ISprite CreateLinkDamagedSwordSouthSprite()
+        {
+            return new TextureSprite(LinkDamagedSwordSouthTexture, 1, 4, 5);
+        }
+        public ISprite CreateLinkDamagedSwordNorthSprite()
+        {
+            return new TextureSprite(LinkDamagedSwordNorthTexture, 1, 4, 5);
+        }
+        public ISprite CreateLinkDamagedSwordEastSprite()
+        {
+            return new TextureSprite(LinkDamagedSwordEastTexture, 4, 1, 5);
+        }
+        public ISprite CreateLinkDamagedSwordWestSprite()
+        {
+            return new TextureSprite(LinkDamagedSwordWestTexture, 4, 1, 5);
+        }
+        public ISprite CreatePickupItemSprite()
+        {
+            return new TextureSprite(PickupItemTexture, 1, 2, 5);
+        }
+        public ISprite CreateLinkDeathSprite()
+        {
+            return new TextureSprite(LinkDeathTexture, 4, 4, 7);
+        }
         public ISprite CreateLinkPickUpItemSprite()
         {
             return new TextureSprite(LinkPickUpItemTexture, 1, 2,50);
+
         }
     }
 }

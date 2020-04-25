@@ -55,7 +55,7 @@ namespace Team4_LegendOfZelda.IState_Classes
         }
         public void Attack()
         {
-            // no action
+            link.State = new LinkDamagedAttackNorthState(link, Link.SWORD_TIMER, timer);
         }
         public void Update()
         {

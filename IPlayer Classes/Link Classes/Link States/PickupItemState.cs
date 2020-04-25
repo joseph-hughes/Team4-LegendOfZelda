@@ -1,63 +1,64 @@
-﻿namespace Team4_LegendOfZelda.IState_Classes
+﻿using Microsoft.Xna.Framework;
+
+namespace Team4_LegendOfZelda.IState_Classes
 {
-    class LinkDeathState : IState
+    class PickupItemState : IState
     {
         private Link link;
         private int timer;
-        public LinkDeathState(Link link)
+
+        public PickupItemState(Link link)
         {
             this.link = link;
             this.link.Velocity.Magnitude = 0;
-            this.link.Velocity.Direction = Vector.Orientation.East;
+            this.link.Velocity.Direction = Vector.Orientation.South;
             this.link.IsAttacking = false;
             this.link.IsKnocked = false;
             this.link.IsDamaged = false;
-            this.link.IsDeath = true;
-            this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkDeathSprite();
-            timer = Link.DEATH_TIMER;
+            this.link.IsDeath = false;
+            this.link.Sprite = PlayerSpriteFactory.Instance.CreatePickupItemSprite();
+            timer = Link.USE_ITEM_TIMER;
+            SFXFactory.Instance.PlayItemRecieved();
         }
 
         public void North()
         {
-            // Do nothing
+            //No action
         }
 
         public void East()
         {
-            // Do nothing
+            //No action
         }
 
         public void South()
         {
-            // Do nothing
+            //No action
         }
 
         public void West()
         {
-            // Do nothing
+            //No action
         }
-        public void Freeze()
-        {
-            // Do nothing
-        }
+
         public void Idle()
         {
-            // Do nothing
+            //No action
         }
 
         public void BeDamaged()
         {
-            // Do nothing
+            //No action
         }
 
         public void UseItem()
         {
-            // Do nothing
+            //No action
         }
 
         public void Attack()
         {
-            // Do nothing
+            //No action
         }
 
         public void Update()

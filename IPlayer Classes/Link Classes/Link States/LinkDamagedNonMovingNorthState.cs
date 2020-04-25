@@ -52,7 +52,7 @@
         }
         public void Attack()
         {
-            // Do nothing
+            link.State = new LinkDamagedAttackNorthState(link, Link.SWORD_TIMER, timer);
         }
         public void Update()
         {
