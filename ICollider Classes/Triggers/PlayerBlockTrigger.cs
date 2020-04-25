@@ -24,11 +24,26 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 if (dy > 0)
                 {
-                    direction = Vector.Orientation.North;
+                    if (player.IsKnocked)
+                    {
+                        direction = Vector.Orientation.South;
+                    }
+                    else
+                    {
+                        direction = Vector.Orientation.North;
+                    }
+
                 }
                 else
                 {
-                    direction = Vector.Orientation.South;
+                    if (player.IsKnocked)
+                    {
+                        direction = Vector.Orientation.North;
+                    }
+                    else
+                    {
+                        direction = Vector.Orientation.South;
+                    }
                 }
 
             }
@@ -36,11 +51,25 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
             {
                 if (dx > 0)
                 {
-                    direction = Vector.Orientation.West;
+                    if (player.IsKnocked)
+                    {
+                        direction = Vector.Orientation.East;
+                    }
+                    else
+                    {
+                        direction = Vector.Orientation.West;
+                    }
                 }
                 else
                 {
-                    direction = Vector.Orientation.East;
+                    if (player.IsKnocked)
+                    {
+                        direction = Vector.Orientation.West;
+                    }
+                    else
+                    {
+                        direction = Vector.Orientation.East;
+                    }
                 }
             }
 

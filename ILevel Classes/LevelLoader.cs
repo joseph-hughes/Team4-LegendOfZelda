@@ -213,14 +213,14 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                         switch (BlockName)
                         {
                             case "NoneMoveableBlock":
-                                //room.Block.Add(new Block(false, new Rectangle((int)position.X, (int)position.Y, 44, 44), MapAndHUDSpriteFactory.Instance.CreateSignleBlock()));
-                                room.Block.Add(new Block(false, new Rectangle((int)position.X, (int)position.Y, 45, 45), null));
+                                //room.Block.Add(new Block(false, new Rectangle((int)position.X, (int)position.Y, 48, 48), MapAndHUDSpriteFactory.Instance.CreateSignleBlock()));
+                                room.Block.Add(new Block(false, new Rectangle((int)position.X, (int)position.Y, 48, 48), null));
                                 break;
                             case "MoveableBlock":
                                 room.Block.Add(new Block(true, new Rectangle((int)position.X, (int)position.Y, 48, 48), MapAndHUDSpriteFactory.Instance.CreateSignleBlock()));
                                 break;
                             case "River":
-                                room.Block.Add(new Block(false, new Rectangle((int)position.X, (int)position.Y, 45, 45), null));
+                                room.Block.Add(new Block(false, new Rectangle((int)position.X, (int)position.Y, 48, 48), null));
                                 break;
                         }
                     }
