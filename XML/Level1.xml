@@ -30,6 +30,48 @@
         <RowNum>7</RowNum>
       </Item>
     </Items>
+    <Blocks total ="0"></Blocks>
+    <North></North>
+    <East></East>
+    <South></South>
+    <West>1</West>
+    <Other></Other>
+  </Room>
+  <Room number="3">
+    <Enemies total="5">
+      <Enemy>
+        <ObjectType>Stalfos</ObjectType>
+        <ColumnNum>4</ColumnNum>
+        <RowNum>1</RowNum>
+      </Enemy>
+      <Enemy>
+        <ObjectType>Stalfos</ObjectType>
+        <ColumnNum>4</ColumnNum>
+        <RowNum>7</RowNum>
+      </Enemy>
+      <Enemy>
+        <ObjectType>Stalfos</ObjectType>
+        <ColumnNum>7</ColumnNum>
+        <RowNum>3</RowNum>
+      </Enemy>
+      <Enemy>
+        <ObjectType>Stalfos</ObjectType>
+        <ColumnNum>7</ColumnNum>
+        <RowNum>5</RowNum>
+      </Enemy>
+      <Enemy>
+        <ObjectType>Stalfos</ObjectType>
+        <ColumnNum>11</ColumnNum>
+        <RowNum>2</RowNum>
+      </Enemy>
+    </Enemies>
+    <Items total="1">
+      <Item>
+        <ObjectType>Key</ObjectType>
+        <ColumnNum>4</ColumnNum>
+        <RowNum>1</RowNum>
+      </Item>
+    </Items>
     <Blocks total ="12">
       <Block>
         <ObjectType>NoneMoveableBlock</ObjectType>
@@ -92,48 +134,6 @@
         <RowNum>5</RowNum>
       </Block>
     </Blocks>
-    <North></North>
-    <East></East>
-    <South></South>
-    <West>1</West>
-    <Other></Other>
-  </Room>
-  <Room number="3">
-    <Enemies total="5">
-      <Enemy>
-        <ObjectType>Stalfos</ObjectType>
-        <ColumnNum>4</ColumnNum>
-        <RowNum>1</RowNum>
-      </Enemy>
-      <Enemy>
-        <ObjectType>Stalfos</ObjectType>
-        <ColumnNum>4</ColumnNum>
-        <RowNum>7</RowNum>
-      </Enemy>
-      <Enemy>
-        <ObjectType>Stalfos</ObjectType>
-        <ColumnNum>7</ColumnNum>
-        <RowNum>3</RowNum>
-      </Enemy>
-      <Enemy>
-        <ObjectType>Stalfos</ObjectType>
-        <ColumnNum>7</ColumnNum>
-        <RowNum>5</RowNum>
-      </Enemy>
-      <Enemy>
-        <ObjectType>Stalfos</ObjectType>
-        <ColumnNum>11</ColumnNum>
-        <RowNum>2</RowNum>
-      </Enemy>
-    </Enemies>
-    <Items total="1">
-      <Item>
-        <ObjectType>Key</ObjectType>
-        <ColumnNum>4</ColumnNum>
-        <RowNum>1</RowNum>
-      </Item>
-    </Items>
-    <Blocks total ="0"></Blocks>
     <North></North>
     <East>1</East>
     <South></South>

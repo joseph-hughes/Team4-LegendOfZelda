@@ -200,8 +200,6 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                         }
 
                     }
-
-                    rooms.Add(room);
                 }
                 XmlNode blocksNode = itemsNode.NextSibling;
                 if (blocksNode.Attributes["total"].Value != "0")
@@ -211,18 +209,18 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                         string BlockName = blockNode["ObjectType"].InnerText;
                         float columnNum = float.Parse(blockNode["ColumnNum"].InnerText);
                         float rowNum = float.Parse(blockNode["RowNum"].InnerText);
-                        Vector2 position = new Vector2(columnNum * 48 + 33, rowNum * 48 + 33 + 168);
+                        Vector2 position = new Vector2(columnNum * 48 + 50, rowNum * 48 + 50 + 168);
                         switch (BlockName)
                         {
                             case "NoneMoveableBlock":
-                                room.Block.Add(new Block(false, new Rectangle((int)position.X, (int)position.Y, 48, 48), MapAndHUDSpriteFactory.Instance.CreateSignleBlock()));
-                                //room.Block.Add(new Block(false, new Rectangle((int)position.X, (int)position.Y, 48, 48), null));
+                                //room.Block.Add(new Block(false, new Rectangle((int)position.X, (int)position.Y, 44, 44), MapAndHUDSpriteFactory.Instance.CreateSignleBlock()));
+                                room.Block.Add(new Block(false, new Rectangle((int)position.X, (int)position.Y, 45, 45), null));
                                 break;
                             case "MoveableBlock":
                                 room.Block.Add(new Block(true, new Rectangle((int)position.X, (int)position.Y, 48, 48), MapAndHUDSpriteFactory.Instance.CreateSignleBlock()));
                                 break;
                             case "River":
-                                room.Block.Add(new Block(false, new Rectangle((int)position.X, (int)position.Y, 48, 48), MapAndHUDSpriteFactory.Instance.CreateRiverBlock()));
+                                room.Block.Add(new Block(false, new Rectangle((int)position.X, (int)position.Y, 45, 45), null));
                                 break;
                         }
                     }
