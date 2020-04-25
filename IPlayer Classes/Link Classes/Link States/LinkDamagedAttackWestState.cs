@@ -73,5 +73,10 @@ namespace Team4_LegendOfZelda.IState_Classes
                 link.State = new LinkDamagedNonMovingWestState(link, this.damage_timer);
             }
         }
+
+        public void Freeze()
+        {
+            //no action
+        }
     }
 }

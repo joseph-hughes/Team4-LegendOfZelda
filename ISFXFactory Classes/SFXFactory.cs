@@ -143,11 +143,6 @@ namespace Team4_LegendOfZelda
             ItemObtained.Play();
         }
 
-        public void PlayItemRecieved()
-        {
-            ItemReceived.Play();
-        }
-
         public void PlayKeyAppears()
         {
             KeyAppears.Play();
@@ -201,13 +196,10 @@ namespace Team4_LegendOfZelda
         {
             WalkingStairs.Play();
 
+        }
         public void PlayItemReceived()
         {
             ItemReceived.Play();
-        }
-        public void PlayItemObtained()
-        {
-            ItemObtained.Play();
         }
     }
 }

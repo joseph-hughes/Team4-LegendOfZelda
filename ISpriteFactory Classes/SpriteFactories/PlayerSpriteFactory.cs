@@ -81,13 +81,12 @@ namespace Team4_LegendOfZelda
             LinkUseItemNorthTexture = content.Load<Texture2D>("Link/Link UseItem North");
             LinkUseItemEastTexture = content.Load<Texture2D>("Link/Link UseItem East");
             LinkUseItemWestTexture = content.Load<Texture2D>("Link/Link UseItem West");
-            LinkDamagedSwordNorthTexture = content.Load<Texture2D>("Link/Link Damaged Sword North");
+            wwLinkDamagedSwordNorthTexture = content.Load<Texture2D>("Link/Link Damaged Sword North");
             LinkDamagedSwordEastTexture = content.Load<Texture2D>("Link/Link Damaged Sword East");
             LinkDamagedSwordSouthTexture = content.Load<Texture2D>("Link/Link Damaged Sword South");
             LinkDamagedSwordWestTexture = content.Load<Texture2D>("Link/Link Damaged Sword West");
             PickupItemTexture = content.Load<Texture2D>("Link/Pickup Item");
             LinkDeathTexture = content.Load<Texture2D>("Link/Link Death");
-    }
             LinkPickUpItemTexture = content.Load<Texture2D>("Link/Link PickUpItem");
         }
 
