@@ -29,6 +29,9 @@ namespace Team4_LegendOfZelda
         private Texture2D miniMapRedDotTexture;
         private Texture2D miniMapGreenDotTexture;
 
+        private Texture2D blockSprite;
+        private Texture2D riverSprite;
+
         private static MapAndHUDSpriteFactory instance = new MapAndHUDSpriteFactory();
 
         public static MapAndHUDSpriteFactory Instance
@@ -69,6 +72,11 @@ namespace Team4_LegendOfZelda
             level1MinimapTexture = content.Load<Texture2D>("MapSprites/level1_minimap");
             miniMapRedDotTexture = content.Load<Texture2D>("MapSprites/minimapReddot");
             miniMapGreenDotTexture = content.Load<Texture2D>("MapSprites/minimapGreendot");
+
+            blockSprite = content.Load<Texture2D>("MapSprites/single block");
+            riverSprite = content.Load<Texture2D>("MapSprites/river block");
+
+
 
         }
 
@@ -172,6 +180,14 @@ namespace Team4_LegendOfZelda
         public ISprite CreateMiniMapRedDotSprite()
         {
             return new TextureSprite(miniMapRedDotTexture);
+        }
+        public ISprite CreateSignleBlock()
+        {
+            return new TextureSprite(blockSprite);
+        }
+        public ISprite CreateRiverBlock()
+        {
+            return new TextureSprite(riverSprite);
         }
 
 
