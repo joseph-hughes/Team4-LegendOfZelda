@@ -310,6 +310,292 @@ namespace Team4_LegendOfZelda.Utility_Classes
         {
             return 40;
         }
+        public int RoomChangeGameState_transitionTimer()
+        {
+            return 100;
+        }
+
+        public int Arrow_WIDTH()
+        {
+            return 5;
+        }
+        public int Arrow_HEIGHT()
+        {
+            return 16;
+        }
+        public int BlueCandle_WIDTH()
+        {
+            return 8;
+        }
+        public int BlueCandle_HEIGHT()
+        {
+            return 16;
+        }
+        public int BlueRing_WIDTH()
+        {
+            return 7;
+        }
+        public int BlueRing_HEIGHT()
+        {
+            return 9;
+        }
+        public int Bomb_WIDTH()
+        {
+            return 8;
+        }
+        public int Bomb_HEIGHT()
+        {
+            return 14;
+        }
+        public int BookOfMagic_WIDTH()
+        {
+            return 8;
+        }
+        public int BookOfMagic_HEIGHT()
+        {
+            return 16;
+        }
+        public int Boomerang_WIDTH()
+        {
+            return 5;
+        } 
+        public int Boomerang_HEIGHT()
+        {
+            return 8;
+        }
+        public int Bow_WIDTH()
+        {
+            return 8;
+        }
+        public int Bow_HEIGHT()
+        {
+            return 16;
+        }
+        public int Clock_WIDTH()
+        {
+            return 11;
+        }
+        public int Clock_HEIGHT()
+        {
+            return 16;
+        }
+        public int Compass_WIDTH()
+        {
+            return 11;
+        }
+        public int Compass_HEIGHT()
+        {
+            return 12;
+        }
+        public int EmptyItem_WIDTH()
+        {
+            return 1;
+        }
+        public int EmptyItem_HEIGHT()
+        {
+            return 1;
+        }
+        public int Fairy_WIDTH()
+        {
+            return 8;
+        }
+        public int Fairy_HEIGHT()
+        {
+            return 16;
+        }
+       public int FiveRupies_WIDTH()
+        {
+            return 8;
+        }
+        public int FiveRupies_HEIGHT()
+        {
+            return 16;
+        }
+        public int Food_WIDTH()
+        {
+            return 8;
+        }
+        public int Food_HEIGHT()
+        {
+            return 16;
+        }
+        public int Heart_WIDTH()
+        {
+            return 7;
+        }
+        public int Heart_HEIGHT()
+        {
+            return 8;
+        }
+        public int HeartContainer_WIDTH()
+        {
+            return 13;
+        }
+        public int HeartContainer_HEIGHT()
+        {
+            return 13;
+        }
+        public int Key_WIDTH()
+        {
+            return 8;
+        }
+        public int Key_HEIGHT()
+        {
+            return 16;
+        }
+        public int Letter_WIDTH()
+        {
+            return 8;
+        }
+        public int Letter_HEIGHT()
+        {
+            return 16;
+        }
+        public int LifePotion_WIDTH()
+        {
+            return 8;
+        }
+        public int LifePotion_HEIGHT()
+        {
+            return 16;
+        }
+        public int MagicalBoomerang_WIDTH()
+        {
+            return 5;
+        }
+        public int MagicalBoomerang_HEIGHT()
+        {
+            return 8;
+        }
+        public int MagicalKey_WIDTH()
+        {
+            return 8;
+        }
+        public int MagicalKey_HEIGHT()
+        {
+            return 16;
+        }
+        public int MagicalRod_WIDTH()
+        {
+            return 4;
+        }
+        public int MagicalRod_HEIGHT()
+        {
+            return 16;
+        }
+        public int MagicalShield_WIDTH()
+        {
+            return 8;
+        }
+        public int MagicalShield_HEIGHT()
+        {
+            return 12;
+        }
+        public int MapItem_WIDTH()
+        {
+            return 8;
+        }
+        public int MapItem_HEIGHT()
+        {
+            return 16;
+        }
+        public int PowerBracelet_WIDTH()
+        {
+            return 8;
+        }
+        public int PowerBracelet_HEIGHT()
+        {
+            return 14;
+        }
+        public int Raft_WIDTH()
+        {
+            return 14;
+        }
+        public int Raft_HEIGHT()
+        {
+            return 16;
+        }
+        public int Recorder_WIDTH()
+        {
+            return 3;
+        }
+        public int Recorder_HEIGHT()
+        {
+            return 16;
+        }
+        public int RedCandle_WIDTH()
+        {
+            return 8;
+        }
+        public int RedCandle_HEIGHT()
+        {
+            return 16;
+        }
+        public int RedRing_WIDTH()
+        {
+            return 7;
+        }
+        public int RedRing_HEIGHT()
+        {
+            return 9;
+        }
+        public int Rupy_WIDTH()
+        {
+            return 8;
+        }
+        public int Rupy_HEIGHT()
+        {
+            return 16;
+        }
+        public int SecondPotion_WIDTH()
+        {
+            return 8;
+        }
+        public int SecondPotion_HEIGHT()
+        {
+            return 16;
+        }
+        public int SilverArrow_WIDTH()
+        {
+            return 5;
+        }
+        public int SilverArrow_HEIGHT()
+        {
+            return 16;
+        }
+        public int Stepladder_WIDTH()
+        {
+            return 16;
+        }
+        public int Stepladder_HEIGHT()
+        {
+            return 16;
+        }
+        public int Sword_WIDTH()
+        {
+            return 7;
+        }
+        public int Sword_HEIGHT()
+        {
+            return 16;
+        }
+        public int Triforce_WIDTH()
+        {
+            return 10;
+        }
+        public int Triforce_HEIGHT()
+        {
+            return 10;
+        }
+        public int WhiteSword_WIDTH()
+        {
+            return 7;
+        }
+        public int WhiteSword_HEIGHT()
+        {
+            return 16;
+        }
+
         public List<Keys> keyList = new List<Keys>
             {
                 Keys.W,
@@ -324,97 +610,10 @@ namespace Team4_LegendOfZelda.Utility_Classes
 
         public MouseState leftButtonPressed = new MouseState(0, 0, 0, ButtonState.Pressed, 0, 0, 0, 0);
 
-        //DungeonHUD.cs
+   
 
-        public int STD_HUD_X = 0, STD_HUD_Y = 0, STD_HUD_WIDTH = 256, STD_HUD_HEIGHT = 56;
-        public int STD_MINIMAP_X = 16, STD_MINIMAP_Y = 16, STD_MINIMAP_WIDTH = 64, STD_MINIMAP_HEIGHT = 32;
-        public int STD_LEVEL_NUM_X = 64, STD_LEVEL_NUM_Y = 8, STD_LEVEL_NUM_WIDTH = 8, STD_LEVEL_NUM_HEIGHT = 8;
-        public int STD_HEART_1_X = 176, STD_HEART_1_Y = 40, STD_HEART_WIDTH = 8, STD_HEART_HEIGHT = 8;
-        public int STD_HEART_COLUMNS = 8, STD_HEART_ROWS = 2;
 
-        //LevelLoader.cs
 
-        public int RowColumnMultiplier = 48;
-        public int ColumnAddVal = 33;
-        public int RowAddVal = 168;
-
-        //AquamentusEastAttackState
-
-        public int count = 0;
-        public int maxcount = 60;
-
-        //DodongoEastDamagedState.. plus other dodongo states
-
-        //public int maxcount2;
-
-        // Aquamentus.cs
-
-        public float Scale = 3f;
-
-        // AquamentusController
-
-        public int MAX_DIRECTION_COUNTS = 40, MIN_ATTACK_COUNTS = 100, MAX_ATTACK_COUNTS = 180;
-
-        // DodongoController
-
-        public int MIN_DIRECTION_COUNTS = 100, MAX_DIRECTION_COUNTS2 = 300;
-
-        // BladeTrapEastState.cs
-
-        public int MAX_DISPLACEMENT = 240, DELTA_DISPLACEMENT = 16;
-
-        // Boomerang.cs
-
-        public int MAX_DISPLACEMENT2 = 48, DELTA_DISPLACEMENT2 = 2;
-
-        // GoriyaBlueEastAttackState.cs
-
-        public int width = 14, height = 16;
-
-        // GoriyaBlueNorthAttackState
-        public int width2 = 13;
-
-        //ropeeaststate.cs
-
-        public int height2 = 15;
-        public int width3 = 16;
-
-        // StalfosEastState.cs
-
-        public int speed = 2;
-
-        // ZolDarkGreenState.cs
-
-        public int DELTA_DISPLACEMENT3 = 10;
-
-        // BladeTrapController
-
-        public int MIN_DIRECTION_COUNTS2 = 60;
-        public int MAX_DIRECTION_COUNTS3 = 180;
-
-        // GelDarkBlueController.cs
-
-        public int MAX_DIRECTION_COUNTS4 = 60;
-
-        // GoriyaController.cs
-
-        public int MAX_DIRECTION_COUNTS5 = 240;
-
-        // KeeseBlue.cs
-
-        public int height3 = 10;
-
-        //KeeseController
-
-        public int MAX_DIRECTION_COUNTS6 = 30;
-
-        // Stalfos.cs
-
-        public int width4 = 15;
-
-        // wallmastercontroller.cs
-
-        public int MAX_DIRECTION_COUNTS7 = 240;
 
 
 

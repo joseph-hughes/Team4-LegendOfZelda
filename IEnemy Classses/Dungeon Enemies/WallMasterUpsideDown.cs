@@ -12,6 +12,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public ISprite Sprite { get; set; }
         public IState State { get; set; }
         public IVector Velocity { get; set; }
+        public float Scale { get; set; }
         public Rectangle DestinationRectangle { get; set; }
         private IController controller;
 

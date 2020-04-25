@@ -1,13 +1,13 @@
 ﻿
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.Item_Classes
 {
     class RedRing : IItem
     {
-        private const int width = 7;
-        private const int height = 9;
+       
         private ISprite itemSprite;
         public Rectangle DestinationRectangle { get; set; }
         public float Scale { get; set; }
@@ -17,8 +17,8 @@ namespace Team4_LegendOfZelda.Item_Classes
         {
             itemSprite = ItemSpriteFactory.Instance.CreateRedRing();
             itemLocation = location;
-            Scale = 3f;
-            DestinationRectangle = new Rectangle((int)location.X, (int)location.Y, (int)(width * Scale), (int)(height * Scale));
+            Scale = UtilityClass.Instance.Scale();
+            DestinationRectangle = new Rectangle((int)location.X, (int)location.Y, (int)(UtilityClass.Instance.RedRing_WIDTH() * Scale), (int)(UtilityClass.Instance.RedRing_HEIGHT() * Scale));
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -28,7 +28,7 @@ namespace Team4_LegendOfZelda.Item_Classes
 
         public void Update()
         {
-            DestinationRectangle = new Rectangle((int)itemLocation.X, (int)itemLocation.Y, (int)(width * Scale), (int)(height * Scale));
+            DestinationRectangle = new Rectangle((int)itemLocation.X, (int)itemLocation.Y, (int)(UtilityClass.Instance.RedRing_WIDTH() * Scale), (int)(UtilityClass.Instance.RedRing_HEIGHT() * Scale));
         }
 
         public void UseItem()

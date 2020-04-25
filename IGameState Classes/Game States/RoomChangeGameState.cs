@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Team4_LegendOfZelda.ILevel_Classes;
+using Team4_LegendOfZelda.Utility_Classes;
 
 namespace Team4_LegendOfZelda.IGameState_Classes
 {
@@ -12,7 +13,7 @@ namespace Team4_LegendOfZelda.IGameState_Classes
         private IGameState gameState;
         private ILevel level;
         private IRoom nextRoom;
-        private int transitionTimer = 100;
+        private int transitionTimer = UtilityClass.Instance.RoomChangeGameState_transitionTimer();
 
         public RoomChangeGameState(IGameState gameState, ILevel level, IRoom nextRoom)
         {

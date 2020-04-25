@@ -1,5 +1,6 @@
-﻿namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
-    using Team4_LegendOfZelda.Utility_Classes;
+﻿using Team4_LegendOfZelda.Utility_Classes;
+namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
+    
 
 {
     class BladeTrapIdleState : IState
