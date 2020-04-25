@@ -215,7 +215,8 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                         switch (BlockName)
                         {
                             case "NoneMoveableBlock":
-                                room.Block.Add(new Block(false, new Rectangle((int)position.X, (int)position.Y, 48, 48), null));
+                                room.Block.Add(new Block(false, new Rectangle((int)position.X, (int)position.Y, 48, 48), MapAndHUDSpriteFactory.Instance.CreateSignleBlock()));
+                                //room.Block.Add(new Block(false, new Rectangle((int)position.X, (int)position.Y, 48, 48), null));
                                 break;
                             case "MoveableBlock":
                                 room.Block.Add(new Block(true, new Rectangle((int)position.X, (int)position.Y, 48, 48), MapAndHUDSpriteFactory.Instance.CreateSignleBlock()));
@@ -226,6 +227,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                         }
                     }
                 }
+                rooms.Add(room);
             }
             int index = 0;
             foreach (XmlNode roomNode in root)

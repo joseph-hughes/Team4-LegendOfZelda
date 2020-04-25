@@ -38,8 +38,8 @@
       </Block>
       <Block>
         <ObjectType>NoneMoveableBlock</ObjectType>
-        <ColumnNum>4</ColumnNum>
-        <RowNum>3</RowNum>
+        <ColumnNum>3</ColumnNum>
+        <RowNum>4</RowNum>
       </Block>
       <Block>
         <ObjectType>NoneMoveableBlock</ObjectType>
