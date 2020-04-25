@@ -1,36 +1,26 @@
 ﻿using Team4_LegendOfZelda.ILevel_Classes;
+using Team4_LegendOfZelda.Vector;
 
 namespace Team4_LegendOfZelda
 {
     public class LinkUseArrowCommand : ICommand
     {
         private IPlayer player;
-        private ILevel level;
+        private IRoom room;
+        private IVector vector;
 
-        public LinkUseArrowCommand(IPlayer player, ILevel level)
+        public LinkUseArrowCommand(IPlayer player, IRoom room)
         {
             this.player = player;
-            this.level = level;
+            this.room = room;
+            vector = player.Velocity;
         }
         public void Execute()
         {
             if (!player.IsDamaged)
             {
                 player.UseItem();
-                if(player.Velocity.Direction== Vector.Orientation.North) 
-                {
-                    level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.ItemPosition,0)); 
-                }else if (player.Velocity.Direction == Vector.Orientation.East)
-                {
-                    level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.ItemPosition, 90));
-                }else if (player.Velocity.Direction == Vector.Orientation.South)
-                {
-                    level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.ItemPosition, 180));
-                }else
-                {
-                    level.CurrentRoom.PlayerProjectiles.Add(new ArrowProjectile(player.ItemPosition, 270));
-                }
-
+                room.PlayerProjectiles.Add(new ArrowProjectile(player.ItemPosition, vector));
             }
 
 

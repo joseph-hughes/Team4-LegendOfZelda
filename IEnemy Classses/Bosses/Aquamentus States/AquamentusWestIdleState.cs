@@ -32,7 +32,10 @@
         {
             // Do nothing
         }
-
+        public void Freeze()
+        {
+            // Do nothing
+        }
         public void Idle()
         {
             // Do nothing
@@ -41,6 +44,7 @@
         public void BeDamaged()
         {
             // TODO
+            SFXFactory.Instance.PlayBossZapped();
         }
 
         public void Attack()

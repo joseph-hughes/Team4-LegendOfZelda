@@ -1076,6 +1076,18 @@
 /processorParam:TextureFormat=Color
 /build:Link/Link NonMoving West.png
 
+#begin Link/Link PickUpItem.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Link/Link PickUpItem.png
+
 #begin Link/Link Sword East.png
 /importer:TextureImporter
 /processor:TextureProcessor

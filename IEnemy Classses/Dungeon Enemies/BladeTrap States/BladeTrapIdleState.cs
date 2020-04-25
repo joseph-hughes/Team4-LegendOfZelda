@@ -34,6 +34,10 @@
         {
             // Do nothing
         }
+        public void Freeze()
+        {
+            enemy.State = new BladeTrapFreezeState(enemy);
+        }
 
         public void BeDamaged()
         {

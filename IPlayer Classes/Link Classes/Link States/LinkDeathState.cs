@@ -36,7 +36,10 @@
         {
             // Do nothing
         }
-
+        public void Freeze()
+        {
+            // Do nothing
+        }
         public void Idle()
         {
             // Do nothing

@@ -1,6 +1,5 @@
-﻿using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Audio;
-using Team4_LegendOfZelda.ISprite_Classes;
+﻿using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
 
 namespace Team4_LegendOfZelda
 {
@@ -77,15 +76,138 @@ namespace Team4_LegendOfZelda
             WalkingStairs = content.Load<SoundEffect>("Sounds/Walking_Stairs");
         }
 
-        // Not sure if something like this is necessary.
-        public void PlayLinkDamaged()
+        public void PlayAquamentusDefeated()
         {
-            LinkDamaged.Play();
+            AquamentusDefeated.Play();
+        }
+
+        public void PlayAquamentusRoaring()
+        {
+            AquamentusRoaring.Play();
+        }
+
+        public void PlayArrowHit()
+        {
+            ArrowHit.Play();
+        }
+
+        public void PlayBombExplosion()
+        {
+            BombExplosion.Play();
+        }
+
+        public void PlayBombPlacement()
+        {
+            BombPlacement.Play();
+        }
+
+        public void PlayBossZapped()
+        {
+            BossZapped.Play();
+        }
+
+        public void PlayDodongoDefeated()
+        {
+            DodongoDefeated.Play();
+        }
+
+        public void PlayDodongoRoaring()
+        {
+            DodongoRoaring.Play();
+        }
+
+        public void PlayDoorOpened()
+        {
+            DoorOpened.Play();
+        }
+
+        public void PlayEnemyShrinking()
+        {
+            EnemyShrinking.Play();
+        }
+        public void PlayEnemyHit()
+        {
+            EnemyHit.Play();
+        }
+        public void PlayFlamesShot()
+        {
+            FlamesShot.Play();
+        }
+
+        public void PlayHealthPickup()
+        {
+            HealthPickup.Play();
+        }
+        public void PlayItemObtained()
+        {
+            ItemObtained.Play();
         }
 
         public void PlayItemRecieved()
         {
             ItemReceived.Play();
+        }
+
+        public void PlayKeyAppears()
+        {
+            KeyAppears.Play();
+        }
+
+        public void PlayLinkDamaged()
+        {
+            LinkDamaged.Play();
+        }
+
+        public void PlayMagicWhistle()
+        {
+            MagicWhistle.Play();
+        }
+
+        public void PlayMagical()
+        {
+            Magical.Play();
+        }
+
+        public void PlayPowerZap()
+        {
+            PowerZap.Play();
+        }
+
+        public void PlayRupeePickup()
+        {
+            RupeePickup.Play();
+        }
+        public void PlaySheildDeflecting()
+        {
+            SheildDeflecting.Play();
+        }
+
+        public void PlaySwordSound()
+        {
+            SwordSound.Play();
+        }
+
+        public void PlaySwordZap()
+        {
+            SwordZap.Play();
+        }
+
+        public void PlayTriforcePickup()
+        {
+            TriforcePickup.Play();
+        }
+
+        public void PlayWalkingStairs()
+        {
+            WalkingStairs.Play();
+
+        public void PlayItemReceived()
+        {
+            ItemReceived.Play();
+        }
+        public void PlayItemObtained()
+        {
+            ItemObtained.Play();
         }
     }
 }

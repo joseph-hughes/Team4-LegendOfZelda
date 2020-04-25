@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.Item_Classes
 {
@@ -26,14 +27,22 @@ namespace Team4_LegendOfZelda.Item_Classes
             itemSprite.Draw(spriteBatch, DestinationRectangle);
         }
 
-        public void Update()
+        public void Update(Rectangle rectangle)
         {
-            DestinationRectangle = new Rectangle((int)itemLocation.X, (int)itemLocation.Y, (int)(width * Scale), (int)(height * Scale));
+            DestinationRectangle = rectangle;
         }
 
-        public void UseItem()
+        public void UseItem(IPlayer player, IRoom room)
         {
-            //TODO
+            foreach (IEnemy enemy in room.Enemies)
+            {
+                enemy.Freeze();
+            }
+            foreach (IEnemy enemy in room.FlyingEnemies)
+            {
+                enemy.Freeze();
+            }
+
         }
     }
 }

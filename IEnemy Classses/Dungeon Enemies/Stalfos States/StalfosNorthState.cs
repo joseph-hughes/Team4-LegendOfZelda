@@ -33,6 +33,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Stalfos_States
         {
             enemy.State = new StalfosWestState(enemy);
         }
+        public void Freeze()
+        {
+            enemy.State = new StalfosFreezeState(enemy);
+        }
         public void Idle()
         {
             enemy.State = new StalfosIdleState(enemy);

@@ -19,6 +19,7 @@ namespace Team4_LegendOfZelda.IState_Classes
             this.link.IsDeath = false;
             this.link.LinkSwordRectangle = Rectangle.Empty;
             this.link.Sprite = PlayerSpriteFactory.Instance.CreateLinkDamagedMovingWestSprite();
+            SFXFactory.Instance.PlayLinkDamaged();
         }
 
         public void North()
@@ -40,7 +41,10 @@ namespace Team4_LegendOfZelda.IState_Classes
         {
             // Do nothing
         }
-
+        public void Freeze()
+        {
+            // Do nothing
+        }
         public void Idle()
         {
             // Do nothing

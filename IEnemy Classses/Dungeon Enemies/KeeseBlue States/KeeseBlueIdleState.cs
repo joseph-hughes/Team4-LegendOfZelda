@@ -29,7 +29,10 @@
         {
             enemy.State = new KeeseBlueWestState(enemy);
         }
-
+        public void Freeze()
+        {
+            enemy.State = new KeeseBlueFreezeState(enemy);
+        }
         public void Idle()
         {
             enemy.Velocity.Magnitude = 0;

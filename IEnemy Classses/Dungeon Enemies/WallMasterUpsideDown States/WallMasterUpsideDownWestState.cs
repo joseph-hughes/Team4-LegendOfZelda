@@ -35,6 +35,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMasterUpsideDo
         {
             // Do nothing
         }
+        public void Freeze()
+        {
+            enemy.State = new WallMasterUpsideDownFreezeState(enemy);
+        }
         public void Idle()
         {
             enemy.State = new WallMasterUpsideDownIdleState(enemy);

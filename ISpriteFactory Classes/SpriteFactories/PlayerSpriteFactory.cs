@@ -30,12 +30,16 @@ namespace Team4_LegendOfZelda
         private Texture2D LinkUseItemNorthTexture;
         private Texture2D LinkUseItemEastTexture;
         private Texture2D LinkUseItemWestTexture;
+
         private Texture2D LinkDamagedSwordNorthTexture;
         private Texture2D LinkDamagedSwordEastTexture;
         private Texture2D LinkDamagedSwordSouthTexture;
         private Texture2D LinkDamagedSwordWestTexture;
         private Texture2D PickupItemTexture;
         private Texture2D LinkDeathTexture;
+
+        private Texture2D LinkPickUpItemTexture;
+
 
         private static PlayerSpriteFactory instance = new PlayerSpriteFactory();
 
@@ -84,6 +88,8 @@ namespace Team4_LegendOfZelda
             PickupItemTexture = content.Load<Texture2D>("Link/Pickup Item");
             LinkDeathTexture = content.Load<Texture2D>("Link/Link Death");
     }
+            LinkPickUpItemTexture = content.Load<Texture2D>("Link/Link PickUpItem");
+        }
 
         public ISprite CreateLinkDamagedMovingSouthSprite()
         {
@@ -186,6 +192,7 @@ namespace Team4_LegendOfZelda
         {
             return new TextureSprite(LinkUseItemWestTexture, 1, 1, 5);
         }
+
         public ISprite CreateLinkDamagedSwordSouthSprite()
         {
             return new TextureSprite(LinkDamagedSwordSouthTexture, 1, 4, 5);
@@ -209,6 +216,11 @@ namespace Team4_LegendOfZelda
         public ISprite CreateLinkDeathSprite()
         {
             return new TextureSprite(LinkDeathTexture, 4, 4, 7);
+        }
+        public ISprite CreateLinkPickUpItemSprite()
+        {
+            return new TextureSprite(LinkPickUpItemTexture, 1, 2,50);
+
         }
     }
 }

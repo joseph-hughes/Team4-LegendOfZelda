@@ -38,6 +38,10 @@ namespace Team4_LegendOfZelda.IState_Classes
             // If Link collides with pickup item that needs sprite
             //link.State = new PickupItemState(link);
         }
+        public void Freeze()
+        {
+            // Do nothing
+        }
 
         public void Idle()
         {

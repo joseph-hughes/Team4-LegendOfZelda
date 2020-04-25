@@ -24,7 +24,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
                 {
                     enemy.Idle();
                 }
-                
+
                 if (waitingCount <= 0)
                 {
                     flyingCount = RandomIntGenerator.Instance.Next(MIN_FLYING_COUNTS, MAX_FLYING_COUNTS);
@@ -75,7 +75,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
                 {
                     directionCount--;
                 }
-                
+
                 flyingCount--;
             }
         }

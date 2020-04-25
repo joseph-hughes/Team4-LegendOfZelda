@@ -5,7 +5,7 @@ using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.IBlock_Classes
 {
-    class Boundary: IBlock
+    class Boundary : IBlock
     {
         public Rectangle DestinationRectangle { get; set; }
         public bool CanBeMoved { get; set; }

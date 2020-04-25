@@ -29,7 +29,10 @@
         {
             enemy.State = new GelDarkBlueWestState(enemy);
         }
-
+        public void Freeze()
+        {
+            enemy.State = new GelDarkBlueFreezeState(enemy);
+        }
         public void Idle()
         {
             // Do nothing

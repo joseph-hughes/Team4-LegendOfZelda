@@ -1,9 +1,12 @@
-﻿namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses.Aquamentus_States
+﻿using Microsoft.Xna.Framework;
+
+namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses.Aquamentus_States
 {
     class AquamentusWestAttackState : IState
     {
         private IEnemy enemy;
         private int attackCounter;
+        private const int FIREBALL_GAP = 75;
         public const int MAX_ATTACK_COUNTER = 60;
 
         public AquamentusWestAttackState(IEnemy enemy, int attackCounter)
@@ -42,7 +45,10 @@
         {
             // Do nothing
         }
-
+        public void Freeze()
+        {
+            // Do nothing
+        }
         public void Idle()
         {
             // Do nothing
@@ -51,6 +57,7 @@
         public void BeDamaged()
         {
             // TODO
+            SFXFactory.Instance.PlayBossZapped();
         }
 
         public void Attack()
@@ -68,7 +75,9 @@
             attackCounter--;
             if (attackCounter <= 0)
             {
-                // Create fireballs
+                enemy.Room.EnemyProjectiles.Add(new FireballProjectile(new Vector2(enemy.DestinationRectangle.X, enemy.DestinationRectangle.Y), enemy.Velocity));
+                enemy.Room.EnemyProjectiles.Add(new FireballProjectile(new Vector2(enemy.DestinationRectangle.X, enemy.DestinationRectangle.Y + FIREBALL_GAP), enemy.Velocity));
+                enemy.Room.EnemyProjectiles.Add(new FireballProjectile(new Vector2(enemy.DestinationRectangle.X, enemy.DestinationRectangle.Y - FIREBALL_GAP), enemy.Velocity));
                 enemy.State = new AquamentusWestIdleState(enemy);
             }
         }

@@ -1,16 +1,16 @@
-﻿using System.Xml;
+﻿using Microsoft.Xna.Framework;
 using System.Collections.Generic;
-using Team4_LegendOfZelda.Item_Classes;
-using Microsoft.Xna.Framework;
+using System.Xml;
 using Team4_LegendOfZelda.IEnemy_Classses.Bosses;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies;
+using Team4_LegendOfZelda.Item_Classes;
 
 namespace Team4_LegendOfZelda.ILevel_Classes
 {
     class LevelLoader : IFileLoader
     {
         private XmlDocument LevelXml;
-        
+
 
         public LevelLoader(int levelNum)
         {
@@ -28,7 +28,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                     break;
             }
 
-            
+
         }
 
         public List<IRoom> LoadRooms(IPlayer player)
@@ -36,7 +36,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             List<IRoom> rooms = new List<IRoom>();
             XmlNode root = LevelXml.FirstChild.NextSibling;
 
-            foreach(XmlNode roomNode in root)
+            foreach (XmlNode roomNode in root)
             {
                 IRoom room = new DungeonRoom();
                 room.Player = player;
@@ -44,7 +44,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                 XmlNode enemiesNode = roomNode.FirstChild;
                 if (enemiesNode.Attributes["total"].Value != "0")
                 {
-                    foreach(XmlNode enemyNode in enemiesNode)
+                    foreach (XmlNode enemyNode in enemiesNode)
                     {
                         string enemyName = enemyNode["ObjectType"].InnerText;
                         float columnNum = float.Parse(enemyNode["ColumnNum"].InnerText);
@@ -68,7 +68,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                                 room.Enemies.Add(new GoriyaRed(room, position));
                                 break;
                             case "KeeseBlue":
-                                room.Enemies.Add(new KeeseBlue(room, position));
+                                room.FlyingEnemies.Add(new KeeseBlue(room, position));
                                 break;
                             case "Rope":
                                 room.Enemies.Add(new Rope(room, position));
@@ -102,104 +102,104 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                         switch (itemName)
                         {
                             case "BlueCandle":
-                                room.Items.Add(new BlueCandle(position));
+                                room.ReceivedItems.Add(new BlueCandle(position));
                                 break;
                             case "BlueRing":
-                                room.Items.Add(new BlueRing(position));
+                                room.ReceivedItems.Add(new BlueRing(position));
                                 break;
                             case "Bomb":
-                                room.Items.Add(new Bomb(position));
+                                room.ReceivedItems.Add(new Bomb(position));
                                 break;
                             case "BookOfMagic":
-                                room.Items.Add(new BookOfMagic(position));
+                                room.ReceivedItems.Add(new BookOfMagic(position));
                                 break;
                             case "Bow":
-                                room.Items.Add(new Bow(position));
+                                room.ReceivedItems.Add(new Bow(position));
                                 break;
                             case "Clock":
-                                room.Items.Add(new Clock(position));
+                                room.ObtainedItems.Add(new Clock(position));
                                 break;
                             case "Compass":
-                                room.Items.Add(new Compass(position));
+                                room.ReceivedItems.Add(new Compass(position));
                                 break;
                             case "EmptyItem":
-                                room.Items.Add(new EmptyItem(position));
+                                room.ReceivedItems.Add(new EmptyItem(position));
                                 break;
                             case "Fairy":
-                                room.Items.Add(new Fairy(position));
+                                room.ObtainedItems.Add(new Fairy(position));
                                 break;
                             case "FiveRupies":
-                                room.Items.Add(new FiveRupies(position));
+                                room.ObtainedItems.Add(new FiveRupies(position));
                                 break;
                             case "Food":
-                                room.Items.Add(new Food(position));
+                                room.ObtainedItems.Add(new Food(position));
                                 break;
                             case "Heart":
-                                room.Items.Add(new Heart(position));
+                                room.ObtainedItems.Add(new Heart(position));
                                 break;
                             case "HeartContainer":
-                                room.Items.Add(new HeartContainer(position));
+                                room.ObtainedItems.Add(new HeartContainer(position));
                                 break;
                             case "Key":
-                                room.Items.Add(new Key(position));
+                                room.ObtainedItems.Add(new Key(position));
                                 break;
                             case "Letter":
-                                room.Items.Add(new Letter(position));
+                                room.ReceivedItems.Add(new Letter(position));
                                 break;
                             case "LifePotion":
-                                room.Items.Add(new LifePotion(position));
+                                room.ReceivedItems.Add(new LifePotion(position));
                                 break;
                             case "MagicalKey":
-                                room.Items.Add(new MagicalKey(position));
+                                room.ObtainedItems.Add(new MagicalKey(position));
                                 break;
                             case "MagicalRod":
-                                room.Items.Add(new MagicalRod(position));
+                                room.ReceivedItems.Add(new MagicalRod(position));
                                 break;
                             case "MagicalShield":
-                                room.Items.Add(new MagicalShield(position));
+                                room.ReceivedItems.Add(new MagicalShield(position));
                                 break;
                             case "MapItem":
-                                room.Items.Add(new MapItem(position));
+                                room.ReceivedItems.Add(new MapItem(position));
                                 break;
                             case "PowerBracelet":
-                                room.Items.Add(new PowerBracelet(position));
+                                room.ReceivedItems.Add(new PowerBracelet(position));
                                 break;
                             case "Raft":
-                                room.Items.Add(new Raft(position));
+                                room.ReceivedItems.Add(new Raft(position));
                                 break;
                             case "Recorder":
-                                room.Items.Add(new Recorder(position));
+                                room.ReceivedItems.Add(new Recorder(position));
                                 break;
                             case "RedCandle":
-                                room.Items.Add(new RedCandle(position));
+                                room.ReceivedItems.Add(new RedCandle(position));
                                 break;
                             case "RedRing":
-                                room.Items.Add(new RedRing(position));
+                                room.ReceivedItems.Add(new RedRing(position));
                                 break;
                             case "Rupy":
-                                room.Items.Add(new Rupy(position));
+                                room.ObtainedItems.Add(new Rupy(position));
                                 break;
                             case "SecondPotion":
-                                room.Items.Add(new SecondPotion(position));
+                                room.ReceivedItems.Add(new SecondPotion(position));
                                 break;
                             case "SilverArrow":
-                                room.Items.Add(new SilverArrow(position));
+                                room.ReceivedItems.Add(new SilverArrow(position));
                                 break;
                             case "Stepladder":
-                                room.Items.Add(new Stepladder(position));
+                                room.ReceivedItems.Add(new Stepladder(position));
                                 break;
                             case "Sword":
-                                room.Items.Add(new Sword(position));
+                                room.ReceivedItems.Add(new Sword(position));
                                 break;
                             case "Triforce":
-                                room.Items.Add(new Triforce(position));
+                                room.ReceivedItems.Add(new Triforce(position));
                                 break;
                             case "WhiteSword":
-                                room.Items.Add(new WhiteSword(position));
+                                room.ReceivedItems.Add(new WhiteSword(position));
                                 break;
                         }
 
-                     }
+                    }
                 }
                 rooms.Add(room);
             }
@@ -226,7 +226,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                     rooms[index].HasSouth = true;
                 }
                 XmlNode westNode = southNode.NextSibling;
-                if (westNode.InnerText!="")
+                if (westNode.InnerText != "")
                 {
                     rooms[index].West = rooms[int.Parse(westNode.InnerText) - 1];
                     rooms[index].HasWest = true;
@@ -240,7 +240,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                 index += 1;
             }
 
-                return rooms;
+            return rooms;
         }
 
 

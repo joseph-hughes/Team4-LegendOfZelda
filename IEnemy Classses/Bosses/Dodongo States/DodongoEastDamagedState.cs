@@ -15,6 +15,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses.Dodongo_States
             this.enemy.Velocity.Magnitude = 0;
             this.enemy.Velocity.Direction = Vector.Orientation.East;
             damageCounter = 120;
+            SFXFactory.Instance.PlayBossZapped();
         }
 
         public void North()
@@ -33,6 +34,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses.Dodongo_States
         }
 
         public void West()
+        {
+            // Do nothing
+        }
+        public void Freeze()
         {
             // Do nothing
         }

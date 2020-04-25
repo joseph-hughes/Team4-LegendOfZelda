@@ -39,7 +39,10 @@ namespace Team4_LegendOfZelda.IState_Classes
         {
             link.State = new LinkMovingWestState(link);
         }
-
+        public void Freeze()
+        {
+            // Do nothing
+        }
         public void Idle()
         {
             link.State = new LinkNonMovingEastState(link);

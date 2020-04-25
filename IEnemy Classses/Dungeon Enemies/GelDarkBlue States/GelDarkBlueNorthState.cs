@@ -33,7 +33,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GelDarkBlue_States
         {
             // Do nothing
         }
-
+        public void Freeze()
+        {
+            enemy.State = new GelDarkBlueFreezeState(enemy);
+        }
         public void Idle()
         {
             enemy.State = new GelDarkBlueIdleState(enemy);

@@ -32,6 +32,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States
         {
             // Do nothing
         }
+        public void Freeze()
+        {
+            enemy.State = new BladeTrapFreezeState(enemy);
+        }
 
         public void Idle()
         {

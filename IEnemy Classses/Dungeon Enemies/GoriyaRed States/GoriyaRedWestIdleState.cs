@@ -30,7 +30,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.GoriyaRed_States
         {
             enemy.State = new GoriyaRedSouthWalkingState(enemy);
         }
-
+        public void Freeze()
+        {
+            enemy.State = new GoriyaRedFreezeState(enemy);
+        }
         public void West()
         {
             enemy.State = new GoriyaRedWestWalkingState(enemy);

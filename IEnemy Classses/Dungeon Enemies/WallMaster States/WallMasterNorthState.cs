@@ -35,6 +35,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMaster_States
         {
             enemy.State = new WallMasterWestState(enemy);
         }
+        public void Freeze()
+        {
+            enemy.State = new WallMasterFreezeState(enemy);
+        }
         public void Idle()
         {
             enemy.State = new WallMasterIdleState(enemy);
