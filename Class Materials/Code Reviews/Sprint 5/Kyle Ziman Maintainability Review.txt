@@ -1,0 +1,15 @@
+﻿Author of Code Review:	Kyle Ziman
+
+Date of Code Review:	04/24/2020
+
+Sprint number:			Sprint 5
+
+Name of .cs file:		VelocityVector.cs
+
+Author of .cs file:		Mingkun Tian
+
+Number of minutes:		10 minutes
+
+Comments:				The high levels of cohesion allow this code to be highly maintainable on any future visits. The simplicity of this codes design allows it to be easily adjusted, being that the
+						only method it hasis the constructor for it. It is very useful to have this class for use throughout the project as it allows the rest of the project to be able to get a sense
+						of direction and speed which in turn allows the rest of the project to be cleaner and more maintainable.

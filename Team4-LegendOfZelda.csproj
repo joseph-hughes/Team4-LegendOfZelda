@@ -547,6 +547,8 @@
     <Content Include="Class Materials\Code Reviews\Sprint 4\neildey_readability.txt" />
     <Content Include="Class Materials\Code Reviews\Sprint 4\Steven Lister Maintainability Review.txt" />
     <Content Include="Class Materials\Code Reviews\Sprint 4\Steven Lister Readability Review.txt" />
+    <Content Include="Class Materials\Code Reviews\Sprint 5\Kyle Ziman Maintainability Review.txt" />
+    <Content Include="Class Materials\Code Reviews\Sprint 5\Kyle Ziman Readability Review.txt" />
     <Content Include="Content\Aquamentus_Defeated.wav" />
     <Content Include="Content\Aquamentus_Roaring.wav" />
     <Content Include="Content\Arrow_Hit.wav" />

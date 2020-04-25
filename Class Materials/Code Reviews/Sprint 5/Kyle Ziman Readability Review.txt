@@ -1,0 +1,14 @@
+﻿Author of Code Review:	Kyle Ziman
+
+Date of Code Review:	04/24/2020
+
+Sprint number:			Sprint 5
+
+Name of .cs file:		LinkPickUpItemState.cs
+
+Author of .cs file:		Mingkun Tian
+
+Number of minutes:		15 minutes
+
+Comments:				This class has high readability as all variables are very descriptive and all methods that dont contain any
+						code say no action as to be apparant that they are empty for a reason.
