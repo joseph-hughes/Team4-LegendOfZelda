@@ -1,0 +1,15 @@
+﻿Author of Code Review:	Steven Lister
+
+Date of Code Review:	04/24/2020
+
+Sprint number:			Sprint 5
+
+Name of .cs file:		DungeonLevel.cs
+
+Author of .cs file:		Joey Hughes
+
+Number of minutes:		10 minutes
+
+Comments:				The readability of this class is pretty good. Overall the file is very simple and bare-bones, but the portion in which the rooms are initialized is a bit confusing. The
+						the statements are long, which makes them hard to follow, but for the sake of concise code, it really can't be helped that the Rectangle objects require parameters with long
+						but descriptive names. Plus, once you read one, you've pretty much read the other three.
