@@ -1,6 +1,5 @@
-﻿using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Audio;
-using Team4_LegendOfZelda.ISprite_Classes;
+﻿using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
 
 namespace Team4_LegendOfZelda
 {
@@ -201,6 +200,14 @@ namespace Team4_LegendOfZelda
         public void PlayWalkingStairs()
         {
             WalkingStairs.Play();
+
+        public void PlayItemReceived()
+        {
+            ItemReceived.Play();
+        }
+        public void PlayItemObtained()
+        {
+            ItemObtained.Play();
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMaster_States;
-
-namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMaster_States
+﻿namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMaster_States
 {
     class WallMasterIdleState : IState
     {
@@ -31,7 +29,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.WallMaster_States
         {
             enemy.State = new WallMasterWestState(enemy);
         }
-
+        public void Freeze()
+        {
+            enemy.State = new WallMasterFreezeState(enemy);
+        }
         public void Idle()
         {
             // Do nothing

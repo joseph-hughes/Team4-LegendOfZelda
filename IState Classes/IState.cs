@@ -2,12 +2,13 @@
 {
     public interface IState
     {
- 
+
         void North();
         void East();
         void South();
         void West();
         void Idle();
+        void Freeze();
         void BeDamaged();
         void Attack();
         void UseItem();

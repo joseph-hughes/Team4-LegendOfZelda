@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Team4_LegendOfZelda.ILevel_Classes;
+﻿using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.IGameState_Classes
 {
@@ -46,7 +41,9 @@ namespace Team4_LegendOfZelda.IGameState_Classes
             if (transitionTimer > 0)
             {
                 transitionTimer -= 1;
-            } else {
+            }
+            else
+            {
                 level.CurrentRoom = nextRoom;
                 this.gameState = new RoomGameState(gameState, level);
             }

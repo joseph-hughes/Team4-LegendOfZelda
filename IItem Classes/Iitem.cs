@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda
 {
@@ -9,7 +10,7 @@ namespace Team4_LegendOfZelda
         Rectangle DestinationRectangle { get; set; }
         float Scale { get; set; }
         void Draw(SpriteBatch spriteBatch);
-        void Update();
-        void UseItem();
+        void Update(Rectangle rectangle);
+        void UseItem(IPlayer player, IRoom room);
     }
 }

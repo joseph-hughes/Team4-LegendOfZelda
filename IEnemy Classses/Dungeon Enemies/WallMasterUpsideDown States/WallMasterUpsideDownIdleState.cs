@@ -29,7 +29,10 @@
         {
             enemy.State = new WallMasterUpsideDownWestState(enemy);
         }
-
+        public void Freeze()
+        {
+            enemy.State = new WallMasterUpsideDownFreezeState(enemy);
+        }
         public void Idle()
         {
             // Do nothing

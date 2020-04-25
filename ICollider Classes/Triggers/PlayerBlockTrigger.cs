@@ -26,8 +26,8 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 {
                     direction = Vector.Orientation.North;
                 }
-                else 
-                { 
+                else
+                {
                     direction = Vector.Orientation.South;
                 }
 
@@ -44,9 +44,9 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 }
             }
 
-            if(player.Velocity.Direction == direction)
+            if (player.Velocity.Direction == direction)
             {
-                if (block.CanBeMoved&&block.OptionalDirection.Contains(direction)&&!player.IsKnocked)
+                if (block.CanBeMoved && block.OptionalDirection.Contains(direction) && !player.IsKnocked)
                 {
                     switch (direction)
                     {

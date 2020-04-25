@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Team4_LegendOfZelda.Vector;
 
 namespace Team4_LegendOfZelda
 {
@@ -8,16 +9,16 @@ namespace Team4_LegendOfZelda
         public ISprite Sprite { get; set; }
         public Vector2 Position { get; set; }
         public Rectangle DestinationRectangle { get; set; }
+        public Orientation Direction { get; set; }
         public float Scale { get; set; }
-        public int Angle { get; set; }
         private const int width = 8;
         private const int height = 8;
 
-        public BoomerangProjectile(Vector2 position, int angle)
+        public BoomerangProjectile(Vector2 position, IVector vector)
         {
             Position = position;
             Scale = 3f;
-            Angle = angle;
+            Direction = vector.Direction;
             Sprite = ProjectileSpriteFactory.Instance.CreateBoomerangSprite();
             DestinationRectangle = new Rectangle((int)Position.X, (int)Position.Y, (int)(width * Scale), (int)(height * Scale));
 
@@ -29,20 +30,19 @@ namespace Team4_LegendOfZelda
             float X = Position.X;
             int speed = 5;
 
-            if (Angle == 0)
+            if (Direction == Orientation.North)
             {
                 Y -= speed;
-
             }
-            else if (Angle == 90)
+            else if (Direction == Orientation.East)
             {
                 X += speed;
             }
-            else if (Angle == 180)
+            else if (Direction == Orientation.South)
             {
                 Y += speed;
             }
-            else if (Angle == 270)
+            else if (Direction == Orientation.West)
             {
                 X -= speed;
             }

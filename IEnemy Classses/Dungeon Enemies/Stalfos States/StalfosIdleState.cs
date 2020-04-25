@@ -1,10 +1,10 @@
 ﻿namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.Stalfos_States
 {
-    class StalfosIdleState : IState
+    class StalfosFreezeState : IState
     {
         private IEnemy enemy;
 
-        public StalfosIdleState(IEnemy enemy)
+        public StalfosFreezeState(IEnemy enemy)
         {
             this.enemy = enemy;
             this.enemy.Velocity.Magnitude = 0;
@@ -12,24 +12,27 @@
 
         public void North()
         {
-            enemy.State = new StalfosNorthState(enemy);
+            // Do nothing
         }
 
         public void East()
         {
-            enemy.State = new StalfosEastState(enemy);
+            // Do nothing
         }
 
         public void South()
         {
-            enemy.State = new StalfosSouthState(enemy);
+            // Do nothing
         }
 
         public void West()
         {
-            enemy.State = new StalfosWestState(enemy);
+            // Do nothing
         }
-
+        public void Freeze()
+        {
+            enemy.State = new StalfosFreezeState(enemy);
+        }
         public void Idle()
         {
             // Do nothing

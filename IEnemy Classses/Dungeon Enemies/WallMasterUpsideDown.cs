@@ -47,7 +47,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         {
             State.West();
         }
-
+        public void Freeze()
+        {
+            State.Freeze();
+        }
         public void Idle()
         {
             State.Idle();

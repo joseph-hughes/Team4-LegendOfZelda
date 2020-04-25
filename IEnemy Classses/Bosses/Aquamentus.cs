@@ -47,7 +47,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses
         {
             State.West();
         }
-
+        public void Freeze()
+        {
+            State.Freeze();
+        }
         public void Idle()
         {
             Velocity.Magnitude = 0;

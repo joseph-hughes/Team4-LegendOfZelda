@@ -41,7 +41,10 @@ namespace Team4_LegendOfZelda.IState_Classes
         {
             // Do nothing
         }
-
+        public void Freeze()
+        {
+            // Do nothing
+        }
         public void Idle()
         {
             // Do nothing

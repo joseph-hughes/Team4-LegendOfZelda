@@ -33,7 +33,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.KeeseBlue_States
         {
             // Do nothing
         }
-
+        public void Freeze()
+        {
+            enemy.State = new KeeseBlueFreezeState(enemy);
+        }
         public void Idle()
         {
             enemy.State = new KeeseBlueIdleState(enemy);

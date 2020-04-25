@@ -1,5 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-using Team4_LegendOfZelda.ILevel_Classes;
+﻿using Team4_LegendOfZelda.ILevel_Classes;
 
 namespace Team4_LegendOfZelda.ICollider_Classes.Collider
 {
@@ -70,9 +69,9 @@ namespace Team4_LegendOfZelda.ICollider_Classes.Collider
                 }
             }
 
-            if(player.Velocity.Direction == direction)
+            if (player.Velocity.Direction == direction)
             {
-                    player.Velocity.Magnitude = 0;
+                player.Velocity.Magnitude = 0;
             }
 
         }

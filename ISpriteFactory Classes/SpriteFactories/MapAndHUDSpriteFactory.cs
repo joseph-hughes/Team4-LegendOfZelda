@@ -141,7 +141,7 @@ namespace Team4_LegendOfZelda
             return new TextureSprite(number9Texture);
         }
 
-        
+
 
         public ISprite CreateEmptyHeartSprite()
         {

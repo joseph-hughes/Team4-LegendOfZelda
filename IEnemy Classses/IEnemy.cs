@@ -13,7 +13,7 @@ namespace Team4_LegendOfZelda
         IVector Velocity { get; set; }
         Rectangle DestinationRectangle { get; set; }
         float Scale { get; set; }
-
+        void Freeze();
         void North();
         void East();
         void South();

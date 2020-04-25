@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies.BladeTrap_States;
+using Team4_LegendOfZelda.ILevel_Classes;
 using Team4_LegendOfZelda.Vector;
 
 namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
@@ -53,6 +53,10 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public void Idle()
         {
             State.Idle();
+        }
+        public void Freeze()
+        {
+            State.Freeze();
         }
 
         public void BeDamaged()
