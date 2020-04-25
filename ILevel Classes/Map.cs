@@ -7,6 +7,7 @@ namespace Team4_LegendOfZelda.ILevel_Classes
     {
         public Rectangle DestinationRectangle { get; set; }
         public ISprite MapSprite { get; set; }
+        const int ROOM_WIDTH = 256, ROOM_HEIGHT = 176;
 
         public Map(int levelNum)
         {
@@ -31,22 +32,26 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 
         public void North()
         {
-            // Transition to room north of current room
+            int newRoomY = MapSprite.SourceRectangle.Y - ROOM_HEIGHT;
+            MapSprite.SourceRectangle = new Rectangle(MapSprite.SourceRectangle.X, newRoomY, MapSprite.SourceRectangle.Width, MapSprite.SourceRectangle.Height);
         }
 
         public void East()
         {
-            // Transition to room north of current room
+            int newRoomX = MapSprite.SourceRectangle.X + ROOM_WIDTH;
+            MapSprite.SourceRectangle = new Rectangle(newRoomX, MapSprite.SourceRectangle.Y, MapSprite.SourceRectangle.Width, MapSprite.SourceRectangle.Height);
         }
 
         public void South()
         {
-            // Transition to room north of current room
+            int newRoomY = MapSprite.SourceRectangle.Y + ROOM_HEIGHT;
+            MapSprite.SourceRectangle = new Rectangle(MapSprite.SourceRectangle.X, newRoomY, MapSprite.SourceRectangle.Width, MapSprite.SourceRectangle.Height);
         }
 
         public void West()
         {
-            // Transition to room north of current room
+            int newRoomX = MapSprite.SourceRectangle.X - ROOM_WIDTH;
+            MapSprite.SourceRectangle = new Rectangle(newRoomX, MapSprite.SourceRectangle.Y, MapSprite.SourceRectangle.Width, MapSprite.SourceRectangle.Height);
         }
 
         public void Other()
