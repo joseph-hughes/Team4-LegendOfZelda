@@ -1,0 +1,15 @@
+﻿Author of Code Review:	Steven Lister
+
+Date of Code Review:	04/24/2020
+
+Sprint number:			Sprint 5
+
+Name of .cs file:		Block.cs
+
+Author of .cs file:		Mingkun Tian
+
+Number of minutes:		5 minutes
+
+Comments:				The code is incredibly simple and easy to understand, making its maintainability great. It would be easy for anyone with a basic understanding of the project to go in and
+						perform any necessary updates or implement changes. The moveability of the block item is also elegantly implemented. The code can be reused for any block, making it a central
+						point of control.

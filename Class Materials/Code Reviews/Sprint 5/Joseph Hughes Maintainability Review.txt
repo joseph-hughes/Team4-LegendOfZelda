@@ -1,0 +1,16 @@
+Author of Code Review:	Joseph Hughes
+
+Date of Code Review:	04/24/2020
+
+Sprint number:			Sprint 5
+
+Name of .cs file:		UtilityClass.cs
+
+Author of .cs file:		Neil Dey
+
+Number of minutes:		5 minutes
+
+Comments:				This class looks much better than before. The maintainability 
+						of this is slightly low though, because you have to search 
+						through the entire file to find something. Maybe it could 
+						be ordered in some way?

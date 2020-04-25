@@ -78,15 +78,6 @@ namespace Team4_LegendOfZelda.ILevel_Classes
 
         public void Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch spriteBatch)
         {
-            foreach (IEnemy enemy in Enemies)
-            {
-                enemy.Draw(spriteBatch);
-            }
-            foreach (IEnemy enemy in FlyingEnemies)
-            {
-                enemy.Draw(spriteBatch);
-            }
-
             foreach (IItem item in ReceivedItems)
             {
                 item.Draw(spriteBatch);
@@ -96,7 +87,14 @@ namespace Team4_LegendOfZelda.ILevel_Classes
             {
                 item.Draw(spriteBatch);
             }
-
+            foreach (IEnemy enemy in Enemies)
+            {
+                enemy.Draw(spriteBatch);
+            }
+            foreach (IEnemy enemy in FlyingEnemies)
+            {
+                enemy.Draw(spriteBatch);
+            }
             foreach (IProjectile projectile in PlayerProjectiles)
             {
                 projectile.Draw(spriteBatch);
