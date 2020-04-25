@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Team4_LegendOfZelda.Vector;
 
 namespace Team4_LegendOfZelda
 {
@@ -9,35 +10,35 @@ namespace Team4_LegendOfZelda
         public Vector2 Position { get; set; }
         public Rectangle DestinationRectangle { get; set; }
         public float Scale { get; set; }
-        public int Angle { get; set; }
+        public Orientation Direction { get; set; }
+
         private int width;
         private int height;
 
-        public ArrowProjectile(Vector2 position, int angle)
+        public ArrowProjectile(Vector2 position, IVector vector)
         {
             Position = position;
             Scale = 3f;
-            Angle = angle;
-
-            if (angle == 0)
+            Direction = vector.Direction;
+            if (Direction == Orientation.North)
             {
                 Sprite = ProjectileSpriteFactory.Instance.CreateArrowUpSprite();
                 width = 5;
                 height = 16;
             }
-            else if (angle == 90)
+            else if (Direction == Orientation.East)
             {
                 Sprite = ProjectileSpriteFactory.Instance.CreateArrowRightSprite();
                 width = 16;
                 height = 5;
             }
-            else if (angle == 180)
+            else if (Direction == Orientation.South)
             {
                 Sprite = ProjectileSpriteFactory.Instance.CreateArrowDownSprite();
                 width = 5;
                 height = 16;
             }
-            else if (angle == 270)
+            else if (Direction == Orientation.West)
             {
                 Sprite = ProjectileSpriteFactory.Instance.CreateArrowLeftSprite();
                 width = 16;
@@ -55,19 +56,19 @@ namespace Team4_LegendOfZelda
             float X = Position.X;
             int speed = 5;
 
-            if (Angle == 0)
+            if (Direction == Orientation.North)
             {
                 Y -= speed;
             }
-            else if (Angle == 90)
+            else if (Direction == Orientation.East)
             {
                 X += speed;
             }
-            else if (Angle == 180)
+            else if (Direction == Orientation.South)
             {
                 Y += speed;
             }
-            else if (Angle == 270)
+            else if (Direction == Orientation.West)
             {
                 X -= speed;
             }
@@ -79,11 +80,6 @@ namespace Team4_LegendOfZelda
         public void Draw(SpriteBatch spriteBatch)
         {
             Sprite.Draw(spriteBatch, DestinationRectangle);
-        }
-
-        public bool Equals(IProjectile projectile)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }
