@@ -57,6 +57,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Bosses.Aquamentus_States
         public void BeDamaged()
         {
             // TODO
+            SFXFactory.Instance.PlayBossZapped();
         }
 
         public void Attack()

@@ -54,6 +54,7 @@
         public void BeDamaged()
         {
             // TODO
+            SFXFactory.Instance.PlayBossZapped();
         }
 
         public void Attack()
