@@ -200,14 +200,37 @@ namespace Team4_LegendOfZelda.ILevel_Classes
                         }
 
                     }
-                }
-                rooms.Add(room);
-            }
 
+                    rooms.Add(room);
+                }
+                XmlNode blocksNode = itemsNode.NextSibling;
+                if (blocksNode.Attributes["total"].Value != "0")
+                {
+                    foreach (XmlNode blockNode in blocksNode)
+                    {
+                        string BlockName = blockNode["ObjectType"].InnerText;
+                        float columnNum = float.Parse(blockNode["ColumnNum"].InnerText);
+                        float rowNum = float.Parse(blockNode["RowNum"].InnerText);
+                        Vector2 position = new Vector2(columnNum * 48 + 33, rowNum * 48 + 33 + 168);
+                        switch (BlockName)
+                        {
+                            case "NoneMoveableBlock":
+                                room.Block.Add(new Block(false, new Rectangle((int)position.X, (int)position.Y, 48, 48), null));
+                                break;
+                            case "MoveableBlock":
+                                room.Block.Add(new Block(true, new Rectangle((int)position.X, (int)position.Y, 48, 48), MapAndHUDSpriteFactory.Instance.CreateSignleBlock()));
+                                break;
+                            case "River":
+                                room.Block.Add(new Block(false, new Rectangle((int)position.X, (int)position.Y, 48, 48), MapAndHUDSpriteFactory.Instance.CreateRiverBlock()));
+                                break;
+                        }
+                    }
+                }
+            }
             int index = 0;
             foreach (XmlNode roomNode in root)
             {
-                XmlNode northNode = roomNode.FirstChild.NextSibling.NextSibling;
+                XmlNode northNode = roomNode.FirstChild.NextSibling.NextSibling.NextSibling;
                 if (northNode.InnerText != "")
                 {
                     rooms[index].North = rooms[int.Parse(northNode.InnerText) - 1];
