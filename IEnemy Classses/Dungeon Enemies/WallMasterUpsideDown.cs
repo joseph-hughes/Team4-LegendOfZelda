@@ -14,6 +14,7 @@ namespace Team4_LegendOfZelda.IEnemy_Classses.Dungeon_Enemies
         public IVector Velocity { get; set; }
         public float Scale { get; set; }
         public Rectangle DestinationRectangle { get; set; }
+        public float Scale { get; set; }
         private IController controller;
 
         public WallMasterUpsideDown(IRoom room, Vector2 position)
